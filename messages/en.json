@@ -1,0 +1,1223 @@
+{
+  "Nav": {
+    "logo": "Tech Solutions RDC",
+    "cta": "Schedule a meeting",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "menuTitle": "Menu",
+    "banner": {
+      "text": "Need a website, custom app, attendance automation, Power BI dashboard or AI workflow?",
+      "cta": "Schedule a meeting",
+      "ctaHref": "/schedule"
+    },
+    "links": {
+      "services": "Services",
+      "industries": "Industries",
+      "useCases": "Use cases",
+      "about": "About",
+      "clients": "Clients",
+      "portfolio": "Portfolio",
+      "blog": "Insights",
+      "career": "Careers"
+    },
+    "serviceCards": {
+      "development": {
+        "title": "Software, websites & apps",
+        "description": "Websites, portals, web apps and custom software for any business workflow."
+      },
+      "automation": {
+        "title": "Attendance & automation",
+        "description": "Attendance dashboards, HR workflows and operations automation."
+      },
+      "data": {
+        "title": "Analytics, Power BI & AI",
+        "description": "Business dashboards, KPI reports, data engineering and practical AI tools."
+      }
+    },
+    "industryCards": {
+      "companies": {
+        "title": "Companies",
+        "description": "Operational dashboards, approvals and reporting for growing teams."
+      },
+      "factories": {
+        "title": "Factories",
+        "description": "Attendance, shifts, overtime and production reporting that teams can trust."
+      },
+      "construction": {
+        "title": "Construction companies",
+        "description": "Project-site attendance, field teams, costs and progress reporting."
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Shift tracking, staff coordination and service operations dashboards."
+      },
+      "hospitals": {
+        "title": "Hospitals",
+        "description": "Reliable staff presence, department reports and operational follow-up."
+      },
+      "stores": {
+        "title": "Stores & e-commerce",
+        "description": "Branch scheduling, staff attendance, stock and online-order operations."
+      }
+    },
+    "mobile": {
+      "backToMenu": "Back to menu",
+      "toggleLocale": "Toggle language"
+    }
+  },
+  "HomePage": {
+    "vision": {
+      "heading": "Digital systems for businesses in DRC",
+      "body": "",
+      "cta": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "chips": [
+        "Software & apps",
+        "Attendance automation",
+        "Power BI & AI"
+      ]
+    },
+    "attendanceSpotlight": {
+      "eyebrow": "Popular starting point",
+      "title": "More than an attendance machine.",
+      "body": "We connect your attendance data to clear business rules, HR workflows, payroll-ready reports and dashboards for management.",
+      "points": [
+        "Custom schedules, shifts and attendance rules",
+        "Late arrivals, absences and overtime tracking",
+        "Works with fingerprint, Face ID, and time clock machines",
+        "Reliable dashboards instead of confusing exported files"
+      ],
+      "target": "Ideal for companies, factories, construction companies, hotels and hospitals in Kinshasa.",
+      "ctaLabel": "View attendance solution",
+      "ctaHref": "/services/attendance"
+    },
+    "blueprints": {
+      "title": "",
+      "cta": {
+        "learnMore": "Learn more",
+        "contact": "Schedule a meeting"
+      },
+      "development": {
+        "title": "Software, websites & apps",
+        "description": "We build company websites, landing pages, portals, web applications, admin panels and custom software for any business workflow, not only data projects.",
+        "tags": [
+          "Websites",
+          "Web apps",
+          "Portals",
+          "Admin panels",
+          "Custom apps"
+        ],
+        "learnHref": "/services/development",
+        "contactHref": "/schedule"
+      },
+      "design": {
+        "title": "Attendance & HR automation",
+        "description": "We connect attendance machines to clear rules, HR workflows, payroll-ready summaries and dashboards for managers.",
+        "tags": [
+          "Fingerprint",
+          "Face ID",
+          "Shifts",
+          "Payroll",
+          "HR workflows"
+        ],
+        "learnHref": "/services/attendance",
+        "contactHref": "/schedule"
+      },
+      "engagement": {
+        "title": "Analytics, Power BI & AI",
+        "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
+        "tags": [
+          "Power BI",
+          "KPIs",
+          "Dashboards",
+          "Data engineering",
+          "AI insights"
+        ],
+        "learnHref": "/services/analytics",
+        "contactHref": "/schedule"
+      }
+    },
+    "partnerSection": {
+      "heading": "Build useful software and trusted business intelligence",
+      "bodyPrimary": "Tech Solutions RDC helps teams move from scattered Excel files, manual follow-up and disconnected tools to websites, apps, dashboards and automated workflows that match real business rules.",
+      "bodySecondary": "",
+      "ctaLabel": "Explore services",
+      "ctaHref": "/services",
+      "gallery": {
+        "topLeftAlt": "Team planning a software workflow",
+        "bottomLeftAlt": "Dashboard screens on a workspace",
+        "columnTwoAlt": "Team analyzing operational data",
+        "columnThreeAlt": "Business application on mobile screens",
+        "columnFourAlt": "Tablet showing analytics dashboard"
+      }
+    },
+    "solutions": {
+      "heading": "Software, analytics, automation and AI for daily operations",
+      "body": "Choose focused services for <strong>companies, factories, construction companies, hotels and hospitals in Kinshasa</strong> that want websites, apps, dashboards and workflow automation without unnecessary complexity.",
+      "support": "What do you need to improve first?",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "cards": {
+        "customDevelopment": {
+          "title": "Software, websites and custom apps",
+          "body": "Company websites, landing pages, portals, booking systems, admin panels, inventory tools, HR tools and custom apps built around your real workflow."
+        },
+        "digitalTransformation": {
+          "title": "Attendance and HR automation",
+          "body": "Attendance dashboards that track late arrivals, absences, shifts, overtime, and payroll summaries from fingerprint, Face ID, or time clock data."
+        },
+        "topDevelopers": {
+          "title": "Business analytics and Power BI",
+          "body": "Power BI dashboards, KPI tracking, sales analytics, HR/payroll analytics, operations reports and Excel-to-dashboard migration for better decisions."
+        },
+        "consulting": {
+          "title": "AI tools and workflow integration",
+          "body": "Practical AI assistants for summaries, report checking, document search, alerts and workflow support inside your existing business processes."
+        },
+        "holisticApproach": {
+          "title": "Data engineering and reporting systems",
+          "body": "Clean data models, databases, pipelines and reporting flows so your numbers are consistent, traceable and ready for dashboards or AI."
+        },
+        "creativeExpertise": {
+          "title": "Automation for business processes",
+          "body": "Approval flows, forms, reminders, task tracking and integrations that reduce repeated manual work across departments."
+        }
+      }
+    },
+    "clients": {
+      "heading": "Built for teams that need clearer operations",
+      "trustedHeading": "Practical systems for practical teams.",
+      "focusAreas": [
+        "Companies",
+        "Factories",
+        "Construction",
+        "Hotels",
+        "Hospitals",
+        "Stores",
+        "Websites",
+        "Attendance",
+        "Power BI",
+        "Data pipelines",
+        "HR reports",
+        "AI workflows"
+      ]
+    },
+    "techStack": {
+      "title": "Custom software development toolbox",
+      "languagesTitle": "In alphabetical order",
+      "languagesCta": "Development services"
+    },
+    "imageSlider": {
+      "heading": "Compare the manual process with a cleaner digital flow"
+    },
+    "caseStudies": {
+      "ctaLabel": "Explore services",
+      "ctaHref": "/services",
+      "slides": {
+        "pricingEngine": {
+          "title": "Attendance reports for HR and payroll",
+          "description": "We turn time clock exports into clear reports: late arrivals, absences, shifts, overtime, and summaries that HR, payroll, and management can trust.",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop"
+        },
+        "designSystem": {
+          "title": "Business portals and custom apps",
+          "description": "We build websites, client portals, admin panels, forms, workflows and custom applications for daily operations, not only data projects.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+        },
+        "workflowAutomation": {
+          "title": "Power BI, data engineering and practical AI",
+          "description": "We connect Excel files, databases and existing systems to Power BI dashboards, data models, pipelines and AI assistants that support decisions.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+        }
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Outcomes",
+      "heading": "What your systems should deliver",
+      "bodyPrimary": "We build for practical outcomes: less manual work, cleaner reports, faster decisions and tools your team can actually use.",
+      "bodySecondary": "Every project starts with your business rules, files, machines and current workflow.",
+      "ctaPrimaryLabel": "Schedule a meeting",
+      "ctaPrimaryHref": "/schedule",
+      "ctaSecondaryLabel": "View use cases",
+      "ctaSecondaryHref": "/industries/use-cases",
+      "badgeLabel": "Software + data + AI",
+      "badgeSubtext": "Practical systems for operations",
+      "clientLabel": "Outcome",
+      "items": [
+        {
+          "quote": "HR should verify attendance and overtime without rebuilding spreadsheets every month.",
+          "author": "Attendance and payroll",
+          "role": "HR",
+          "company": "Tech Solutions RDC",
+          "industry": "Operations"
+        },
+        {
+          "quote": "Management should see key numbers in Power BI without waiting for several manual files.",
+          "author": "Business analytics",
+          "role": "Leadership",
+          "company": "Tech Solutions RDC",
+          "industry": "Power BI"
+        },
+        {
+          "quote": "Teams should use one simple app to track requests, approvals, stock, projects or daily work.",
+          "author": "Custom software",
+          "role": "Operations",
+          "company": "Tech Solutions RDC",
+          "industry": "Web apps"
+        },
+        {
+          "quote": "Data should be cleaned, structured and ready for reporting, automation and AI.",
+          "author": "Data engineering",
+          "role": "Reporting",
+          "company": "Tech Solutions RDC",
+          "industry": "Data"
+        },
+        {
+          "quote": "AI should help with summaries, search, alerts and report checks when the data is reliable.",
+          "author": "AI integration",
+          "role": "Workflow",
+          "company": "Tech Solutions RDC",
+          "industry": "AI"
+        }
+      ]
+    },
+    "contactBridge": {
+      "title": "Ready to build the system your team actually needs?",
+      "subtitle": "Start with a short meeting about your website, app, attendance workflow, Power BI dashboard, data system or AI integration.",
+      "cardTitle": "Talk to Tech Solutions RDC",
+      "cardBody": "Tell us your company rules, files, machines and reporting needs. We will show the cleanest path from current process to working system.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule"
+    }
+  },
+  "Footer": {
+    "brand": "Tech Solutions RDC",
+    "navLinks": [
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Industries",
+        "href": "/industries"
+      },
+      {
+        "label": "Use cases",
+        "href": "/industries/use-cases"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      }
+    ],
+    "serviceDots": [
+      {
+        "label": "Software, websites & apps",
+        "href": "/services/development"
+      },
+      {
+        "label": "Attendance & automation",
+        "href": "/services/attendance"
+      },
+      {
+        "label": "Analytics, Power BI & AI",
+        "href": "/services/analytics"
+      }
+    ],
+    "locations": [
+      {
+        "title": "Gombe, Kinshasa — DRC",
+        "subtitle": "Software, analytics, automation and data services"
+      }
+    ],
+    "phone": "+243 905 600 055",
+    "email": "sales@techsolutionsrdc.com",
+    "ctaGradient": "Build smarter operations",
+    "newsletterHeading": "Ready to discuss your website, app, dashboard or automation?",
+    "emailPlaceholder": "name@company.com",
+    "consentText": "By checking this box, I consent to marketing communications and data processing, and confirm that I have read the Privacy Policy.",
+    "privacy": "Privacy Policy",
+    "legal": "© Tech Solutions RDC 2026. All Rights Reserved.",
+    "newsletterBody": "Schedule a short meeting or send us the details by email. We will reply with a practical next step.",
+    "meetingCta": "Schedule a meeting",
+    "emailCta": "Email sales"
+  },
+  "ServicesPage": {
+    "hero": {
+      "titleLine1": "Software, analytics and AI",
+      "titleLine2": "for real work",
+      "body": "Websites, custom apps, attendance automation, Power BI dashboards, data engineering and AI integrations adapted to the way your company actually operates.",
+      "cta": "Schedule a meeting"
+    },
+    "blueprints": {
+      "heading": "Build, automate, analyze",
+      "sections": [
+        {
+          "id": "development",
+          "title": "Software & apps",
+          "description": "Company websites, landing pages, portals, web applications, admin panels and custom software for any business workflow.",
+          "ctaLabel": "Explore software",
+          "ctaHref": "/services/development",
+          "tags": [
+            "Websites",
+            "Web apps",
+            "Portals",
+            "Admin panels",
+            "Custom software"
+          ]
+        },
+        {
+          "id": "design",
+          "title": "Attendance",
+          "description": "Attendance automation that applies your schedules, rules, shifts, overtime and payroll logic to machine data.",
+          "ctaLabel": "See attendance solution",
+          "ctaHref": "/services/attendance",
+          "tags": [
+            "Late arrivals",
+            "Absences",
+            "Overtime",
+            "Fingerprint",
+            "Payroll"
+          ]
+        },
+        {
+          "id": "engagement",
+          "title": "Analytics & AI",
+          "description": "Power BI dashboards, business analytics, KPI reports, data engineering and AI tools for clearer decisions.",
+          "ctaLabel": "Explore analytics",
+          "ctaHref": "/services/analytics",
+          "tags": [
+            "Power BI",
+            "KPIs",
+            "Dashboards",
+            "Data models",
+            "AI tools"
+          ]
+        }
+      ]
+    },
+    "cooperation": {
+      "title": "How we work",
+      "subtitle": "Start with a clear business rule, then build the website, app, dashboard, automation, AI workflow or report around it.",
+      "hero": {
+        "title": "Start with a focused meeting",
+        "description": "We review the main need: website, app, attendance, Power BI dashboard, data engineering, automation or AI, then propose the simplest path.",
+        "tags": [
+          "Scope",
+          "Rules",
+          "Solution"
+        ],
+        "ctaLabel": "Schedule a meeting",
+        "ctaHref": "/schedule"
+      },
+      "models": [
+        {
+          "id": "audit",
+          "title": "Workflow audit",
+          "description": "We inspect your files, machines, existing software, reports and current pain points.",
+          "tag": "Discovery"
+        },
+        {
+          "id": "build",
+          "title": "Implementation",
+          "description": "We configure or build the tool, dashboard, automation or integration around your structure.",
+          "tag": "Build"
+        },
+        {
+          "id": "support",
+          "title": "Support",
+          "description": "We help your teams keep reports, apps and workflows reliable after launch.",
+          "tag": "Care"
+        }
+      ],
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule"
+    },
+    "upgradeGrid": {
+      "heading": "What Tech Solutions RDC delivers",
+      "items": [
+        {
+          "title": "Software, websites and apps",
+          "body": "Websites, portals, internal tools, admin panels and custom applications for any business workflow."
+        },
+        {
+          "title": "Business analytics and Power BI",
+          "body": "Executive dashboards, KPI reports, Excel-to-dashboard migration, sales, HR, payroll and operations analytics."
+        },
+        {
+          "title": "Data engineering and reporting systems",
+          "body": "Clean data models, databases, pipelines and reporting flows that make numbers consistent and traceable."
+        },
+        {
+          "title": "Attendance, automation and AI tools",
+          "body": "Attendance reports, approval workflows, alerts, document help, report summaries and AI-assisted tasks."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "Good software captures the work. Good analytics explains what is happening. Good AI becomes useful only when the data and workflow are reliable.",
+      "name": "Tech Solutions RDC",
+      "role": "Software, automation and data team"
+    },
+    "process": {
+      "title": "Meet our process",
+      "description": "We keep each project practical: understand the rules, connect the data, build the tool, verify the reports and support the team.",
+      "steps": [
+        {
+          "title": "Understand rules",
+          "body": "We map your schedules, shifts, exceptions, approval flow and reporting expectations.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Connect data",
+          "body": "We import or connect machine exports, spreadsheets, databases or existing systems.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Build",
+          "body": "We create the dashboard, application, automation or reporting workflow your team needs.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Verify",
+          "body": "We test the results with real scenarios: late arrivals, absences, overtime and edge cases.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Support",
+          "body": "We help your team use, maintain, and improve the solution after launch.",
+          "color": "#365fd9"
+        }
+      ]
+    },
+    "selectedServices": {
+      "title": "Selected services",
+      "description": "A quick look at the <strong>services companies ask us about most often</strong>.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "items": [
+        {
+          "title": "Software, websites and custom apps",
+          "body": "<p>We build websites, landing pages, portals, admin panels, booking systems, HR tools, inventory tools and custom web apps for any business workflow.</p><ul><li>Company websites and landing pages</li><li>Client portals and internal dashboards</li><li>Custom apps for operations, HR, stock, requests or reporting</li></ul>"
+        },
+        {
+          "title": "Attendance management software",
+          "body": "<p><strong>More than an attendance machine.</strong></p><p>We turn raw check-in/check-out data into clear reports adapted to your company rules.</p><ul><li><strong>Custom schedules and rules:</strong> configure shifts, grace periods, exceptions and company policies.</li><li><strong>Attendance results:</strong> track late arrivals, absences, shifts, and overtime.</li><li><strong>Power BI and dashboards:</strong> prepare HR, payroll, and management analytics from attendance data.</li><li><strong>Machine compatibility:</strong> works with fingerprint, Face ID, and time clock machines.</li></ul>"
+        },
+        {
+          "title": "Business analytics and Power BI",
+          "body": "<p>We replace manual Excel reporting with dashboards leaders can refresh and trust.</p><ul><li>Power BI executive dashboards</li><li>Sales, stock, HR, payroll and operations KPIs</li><li>Excel, database and system-report consolidation</li></ul>"
+        },
+        {
+          "title": "Data engineering and reporting systems",
+          "body": "<p>We clean, structure and connect data so reporting, automation and AI can work reliably.</p><ul><li>Data models and pipelines</li><li>Databases and reporting architecture</li><li>Consistent numbers across departments</li></ul>"
+        },
+        {
+          "title": "AI tools and workflow integration",
+          "body": "<p>We add practical AI to reports, documents, approvals and internal tools: summaries, search, alerts, report checks and workflow assistance.</p>"
+        }
+      ]
+    },
+    "partnerGrid": {
+      "title": "Partner with Tech Solutions RDC",
+      "body1": "Start with the system you need most: website, custom app, attendance automation, Power BI dashboard, data pipeline or AI-assisted workflow.",
+      "body2": "Then expand into connected tools, cleaner reports and automation that reduces manual work.",
+      "body3": "Your workflow, your data, your decisions.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule"
+    }
+  },
+  "DevelopmentPage": {
+    "hero": {
+      "title": "Software, websites, web apps and custom business tools",
+      "description": "Build any digital product your company needs: a website, landing page, portal, admin panel, booking system, inventory tool, HR workflow, dashboard or custom app.",
+      "cta": "Schedule a meeting"
+    },
+    "whyCustom": {
+      "eyebrow": "Why custom software?",
+      "body": "Your company rules, departments and workflows are specific. Custom software helps you build the exact tool you need instead of forcing your team into generic apps."
+    },
+    "showcase": {
+      "cards": [
+        {
+          "title": "Business websites and landing pages",
+          "body": "Professional websites that explain your company clearly, present services, capture leads and connect visitors to the right action.",
+          "tags": [
+            "Corporate sites",
+            "Landing pages",
+            "Lead capture"
+          ],
+          "ctaLabel": "Schedule a meeting",
+          "ctaHref": "/schedule"
+        },
+        {
+          "title": "Web apps, portals and admin panels",
+          "body": "Custom applications for requests, bookings, HR, inventory, operations, client portals, project tracking and internal administration.",
+          "tags": [
+            "Portals",
+            "Admin panels",
+            "Internal tools"
+          ],
+          "ctaLabel": "Learn more",
+          "ctaHref": "/services/development"
+        },
+        {
+          "title": "Software connected to analytics and AI",
+          "body": "When useful, your app can connect to Power BI, reports, AI assistants, alerts, document search and automated workflows.",
+          "tags": [
+            "Power BI",
+            "AI tools",
+            "Integrations"
+          ],
+          "ctaLabel": "Schedule a meeting",
+          "ctaHref": "/schedule"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "What software can include",
+      "body": "Software is not limited to data. It can be any useful website, app, portal or internal tool your business needs.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "cards": [
+        {
+          "icon": "cloud",
+          "title": "Websites and web applications",
+          "body": "Responsive websites, portals, dashboards, admin panels and web apps with secure foundations.",
+          "tags": [
+            "Websites",
+            "Portals",
+            "Web apps"
+          ]
+        },
+        {
+          "icon": "settings",
+          "title": "Workflow and business logic",
+          "body": "Forms, approvals, requests, bookings, HR flows, inventory rules, alerts and scheduled actions.",
+          "tags": [
+            "Approvals",
+            "Requests",
+            "Automation"
+          ]
+        },
+        {
+          "icon": "target",
+          "title": "Integrations, reports and AI",
+          "body": "Connect your app to APIs, databases, Power BI, reporting tools or practical AI assistants when it creates value.",
+          "tags": [
+            "APIs",
+            "Power BI",
+            "AI tools"
+          ]
+        }
+      ]
+    },
+    "toolbox": {
+      "titleLines": [
+        "Web applications.",
+        "AI integrations.",
+        "Data-ready systems."
+      ],
+      "body": "We use modern technologies, automation patterns and AI-ready architecture to build software that is maintainable, secure and practical for local teams.",
+      "icons": [
+        "React",
+        "Next.js",
+        "Python",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+        "Azure",
+        "GraphQL",
+        "WordPress",
+        "Airtable",
+        "GitLab",
+        "Cypress"
+      ],
+      "cards": [
+        {
+          "title": "Programming languages",
+          "columns": [
+            [
+              "JavaScript",
+              "C#",
+              "Dart",
+              "Kotlin"
+            ],
+            [
+              "TypeScript",
+              "Python",
+              "Swift"
+            ]
+          ]
+        },
+        {
+          "title": "Infrastructure",
+          "columns": [
+            [
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "New Relic"
+            ],
+            [
+              "Amazon Web Services",
+              "Microsoft Azure",
+              "Google Cloud"
+            ]
+          ]
+        },
+        {
+          "title": "Frontend toolbox",
+          "columns": [
+            [
+              "Angular",
+              "Vue.js",
+              "JavaScript",
+              "TailwindCSS"
+            ],
+            [
+              "React",
+              "TypeScript",
+              "Next.js"
+            ]
+          ]
+        },
+        {
+          "title": "Backend toolbox",
+          "columns": [
+            [
+              ".NET",
+              "Python",
+              "Ruby on Rails",
+              "Node.js"
+            ]
+          ]
+        },
+        {
+          "title": "Mobile & TV apps toolbox",
+          "columns": [
+            [
+              "Android (Kotlin)",
+              "Samsung TV (Tizen)",
+              "Android TV"
+            ],
+            [
+              "iOS (Swift)",
+              "Flutter (multiplatform)",
+              "iOS TV"
+            ]
+          ]
+        },
+        {
+          "title": "Operating systems",
+          "columns": [
+            [
+              "iOS",
+              "Android",
+              "Tizen",
+              "WebOS"
+            ]
+          ]
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Build tools your team can actually use."
+    },
+    "upgrade": {
+      "heading": "What we can build for you",
+      "ctaLabel": "Schedule a meeting",
+      "items": [
+        {
+          "title": "Built for your workflow",
+          "body": "The app follows your rules, users, approvals, data entry and reporting needs."
+        },
+        {
+          "title": "Not limited to data projects",
+          "body": "We can build websites, portals, admin panels, booking tools, inventory tools, HR tools or any custom app."
+        },
+        {
+          "title": "Ready for analytics",
+          "body": "When the app captures clean data, it can feed Power BI dashboards and business reports."
+        },
+        {
+          "title": "AI where it helps",
+          "body": "AI can support summaries, search, alerts, report checking and workflow assistance."
+        },
+        {
+          "title": "Maintainable technology",
+          "body": "We use modern stacks and practical architecture so the software can grow with your business."
+        },
+        {
+          "title": "Clear handover",
+          "body": "Your team gets a usable system, not just code."
+        }
+      ]
+    },
+    "insights": {
+      "headline": "What could you build first?",
+      "title": "Start with a practical digital system",
+      "body": "Tell us about the website, app, Power BI dashboard, attendance workflow, data pipeline or AI integration your team needs most.",
+      "placeholder": "Email address",
+      "button": "Schedule a meeting",
+      "consent": "Use the meeting link or email us directly.",
+      "tags": [
+        "Websites & apps",
+        "Power BI dashboards",
+        "AI workflows"
+      ]
+    },
+    "process": {
+      "title": "Our software process",
+      "description": "We define the workflow, build the tool, verify the data and support your team after launch.",
+      "steps": [
+        {
+          "title": "Scope",
+          "body": "We clarify users, rules, data sources and expected reports.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Build",
+          "body": "We develop the website, application, automation or integration.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Test",
+          "body": "We verify real scenarios and make sure the output is reliable.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Support",
+          "body": "We maintain and improve the solution as your needs evolve.",
+          "color": "#365fd9"
+        }
+      ]
+    },
+    "reasons": {
+      "heading": "Why choose our software services?",
+      "cards": [
+        {
+          "title": "Built around your rules",
+          "body": "We adapt the tool to your company policies, schedules, teams and reports.",
+          "icon": "layers"
+        },
+        {
+          "title": "Useful for operations",
+          "body": "The focus is not only code. The focus is reducing manual work and improving decisions.",
+          "icon": "users"
+        },
+        {
+          "title": "Reliable data",
+          "body": "We design systems so reports can be checked, repeated and trusted.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Local business focus",
+          "body": "We build for the realities of companies, factories, construction companies, hotels and hospitals in Kinshasa.",
+          "icon": "lightbulb"
+        }
+      ]
+    },
+    "ceoContact": {
+      "heading": "Need a software or automation solution?",
+      "body": "can review your workflow and propose a practical system for your business.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "linkedinLabel": "",
+      "linkedinHref": ""
+    }
+  },
+  "DesignPage": {
+    "hero": {
+      "title": "More than an attendance machine.",
+      "description": "We turn raw check-in/check-out data into clear HR reports, payroll summaries, dashboards, and attendance analytics adapted to your rules.",
+      "cta": "Schedule a meeting"
+    },
+    "whyDesign": {
+      "eyebrow": "Attendance management software",
+      "body": "A normal machine only records punches. Our software analyzes the data, prepares clean reports, and creates a foundation for alerts, summaries, and payroll checks."
+    },
+    "showcase": {
+      "heading": "Attendance automation for Kinshasa organizations",
+      "cards": [
+        {
+          "title": "From punches to reliable reports",
+          "body": "We work with fingerprint, Face ID, and time clock machines, then apply your schedules, attendance rules, shifts, and overtime logic.",
+          "tags": [
+            "Fingerprint",
+            "Face ID",
+            "Time clocks",
+            "HR reports"
+          ],
+          "imageAlt": "Attendance dashboard and time clock data"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "What attendance data can become",
+      "body": "Attendance data can support HR, payroll, management reports, and decision-ready dashboards when it is cleaned and structured correctly.",
+      "cards": [
+        {
+          "icon": "target",
+          "title": "Custom schedules and rules",
+          "body": "Configure grace periods, shifts, exceptions, rest days and company-specific attendance policies.",
+          "tags": [
+            "Schedules",
+            "Rules",
+            "Shifts"
+          ]
+        },
+        {
+          "icon": "toggle",
+          "title": "Late arrivals, absences and overtime",
+          "body": "The system calculates attendance results from raw check-in/check-out data according to your logic.",
+          "tags": [
+            "Late arrivals",
+            "Absences",
+            "Overtime"
+          ]
+        },
+        {
+          "icon": "cloud",
+          "title": "Power BI, dashboards and clean reports",
+          "body": "HR, payroll, and management get reliable summaries, dashboard-ready datasets, and clearer reports instead of confusing machine exports.",
+          "tags": [
+            "Power BI",
+            "Dashboards",
+            "Payroll"
+          ]
+        }
+      ],
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule"
+    },
+    "process": {
+      "title": "How the attendance setup works",
+      "description": "We connect your machine data, configure your rules and verify results with real attendance cases.",
+      "steps": [
+        {
+          "title": "Review machines",
+          "body": "We check your fingerprint, Face ID, or time clock data format and export process.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Define rules",
+          "body": "We map schedules, shifts, late rules, absences, overtime and exceptions.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Configure dashboard",
+          "body": "We set up reports for HR, payroll, and management.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Demo and adjust",
+          "body": "We test real cases and adjust the system until the results match your rules.",
+          "color": "var(--design-400)"
+        }
+      ]
+    },
+    "upgrade": {
+      "heading": "Why it is different from a normal machine",
+      "ctaLabel": "Schedule a meeting",
+      "items": [
+        {
+          "title": "Rules adapted to your company",
+          "body": "The system follows your schedules, grace periods, departments and exceptions."
+        },
+        {
+          "title": "Clear HR view",
+          "body": "HR can quickly see who was late, absent, on shift, or working overtime."
+        },
+        {
+          "title": "Power BI-ready summaries",
+          "body": "Attendance results can feed payroll checks, Power BI dashboards and management reports."
+        },
+        {
+          "title": "Management dashboard",
+          "body": "Managers see reliable attendance trends instead of manual spreadsheet work."
+        },
+        {
+          "title": "Machine compatibility",
+          "body": "Works with fingerprint, Face ID, and time clock machine exports."
+        },
+        {
+          "title": "Ideal in Kinshasa",
+          "body": "Built for companies, factories, construction companies, hotels and hospitals in Kinshasa."
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Reliable attendance data, not just exported files."
+    },
+    "testimonial": {
+      "quote": "A normal attendance machine records punches. The real value comes when the data becomes payroll analytics, dashboards and decisions.",
+      "name": "Tech Solutions RDC",
+      "role": "Attendance automation team"
+    },
+    "clientsHeading": "Built for companies, factories, construction companies, hotels and hospitals",
+    "reasons": {
+      "heading": "Why choose this attendance solution?",
+      "cards": [
+        {
+          "title": "Rule-based",
+          "body": "Reports follow your real schedules, shifts and overtime rules.",
+          "icon": "lightbulb"
+        },
+        {
+          "title": "HR-friendly",
+          "body": "The dashboard is designed for fast review by HR, payroll and management.",
+          "icon": "layers"
+        },
+        {
+          "title": "Machine-ready",
+          "body": "Use the machines you already have where possible.",
+          "icon": "users"
+        },
+        {
+          "title": "Decision-ready",
+          "body": "Turn attendance records into clean operational insight.",
+          "icon": "handshake"
+        }
+      ]
+    }
+  },
+  "EngagementPage": {
+    "hero": {
+      "title": "Analytics, Power BI and AI integration",
+      "description": "Turn Excel files, databases and business exports into dashboards, reports, pipelines and useful AI assistants.",
+      "cta": "Schedule a meeting"
+    },
+    "whyEngagement": {
+      "eyebrow": "Why analytics and AI?",
+      "body": "Decisions get faster when data is clean, KPIs are visible and workflows are connected. We build the reliable foundation before adding Power BI, automation or AI."
+    },
+    "showcase": {
+      "heading": "Analytics systems for decisions you can defend",
+      "cards": [
+        {
+          "title": "Power BI dashboards",
+          "body": "Executive, sales, HR, payroll, stock, and operations KPIs in reports that are easier to refresh, share, and trust.",
+          "tags": [
+            "Power BI",
+            "KPIs",
+            "Management"
+          ],
+          "ctaLabel": "Schedule a meeting",
+          "ctaHref": "/schedule"
+        },
+        {
+          "title": "Data engineering",
+          "body": "Data models, databases, pipelines and reporting flows that keep numbers consistent across departments.",
+          "tags": [
+            "Pipelines",
+            "Databases",
+            "Reporting"
+          ],
+          "ctaLabel": "Schedule a meeting",
+          "ctaHref": "/schedule"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "What your business data can become",
+      "body": "Clean data can become KPI reports, data pipelines, Power BI dashboards, and AI-assisted summaries that managers can trust.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "cards": [
+        {
+          "icon": "target",
+          "title": "KPIs and data models",
+          "body": "We clarify indicators, data sources, calculations and verification rules.",
+          "tags": [
+            "KPIs",
+            "Models",
+            "Quality"
+          ]
+        },
+        {
+          "icon": "megaphone",
+          "title": "Dashboards and reports",
+          "body": "We create useful views for leadership, finance, HR, operations and field teams.",
+          "tags": [
+            "Power BI",
+            "Reports",
+            "Alerts"
+          ]
+        },
+        {
+          "icon": "users",
+          "title": "Practical AI",
+          "body": "We add summaries, document search, report checks and workflow help when the data foundation is ready.",
+          "tags": [
+            "AI",
+            "Search",
+            "Summaries"
+          ]
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Data your team can use to decide.",
+      "subheading": "Power BI, reporting and AI on a clean foundation."
+    },
+    "process": {
+      "title": "Our data process",
+      "description": "We start with the business questions, then connect, clean, model and visualize the data.",
+      "steps": [
+        {
+          "title": "Questions",
+          "body": "Define decisions, KPIs and users.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Data",
+          "body": "Connect files, databases, exports and existing tools.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Models",
+          "body": "Clean, structure and verify calculations.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Dashboards",
+          "body": "Deliver useful reports, Power BI views and AI workflows.",
+          "color": "var(--engagement-400)"
+        }
+      ]
+    },
+    "upgrade": {
+      "heading": "What we can set up for you",
+      "ctaLabel": "Schedule a meeting",
+      "items": [
+        {
+          "title": "Power BI dashboards",
+          "body": "Leadership, sales, HR, payroll, stock and operations views."
+        },
+        {
+          "title": "Excel migration",
+          "body": "Move from manual files to reliable, refreshable reports."
+        },
+        {
+          "title": "Data pipelines",
+          "body": "Clean flows between sources, databases, tools and dashboards."
+        },
+        {
+          "title": "KPIs and governance",
+          "body": "Clear definitions so teams stop arguing about different numbers."
+        },
+        {
+          "title": "AI assistants",
+          "body": "Summaries, search, alerts and report checks."
+        },
+        {
+          "title": "Reporting support",
+          "body": "Improvements, maintenance and new needs after launch."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "Dashboards become useful when the data, definitions and daily workflow are reliable.",
+      "name": "Tech Solutions RDC",
+      "role": "Analytics and AI team"
+    },
+    "clientsHeading": "Analytics for operations, HR, finance and leadership",
+    "principles": {
+      "heading": "4 principles for useful analytics",
+      "body": "Dashboards should not only look good. They should be reliable, readable and connected to decisions.",
+      "support": "Tell us about your current files, KPIs and reports.",
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "cards": {
+        "humanCentred": {
+          "title": "Readable",
+          "body": "Every view should be quick to understand for the teams using it."
+        },
+        "clientFocused": {
+          "title": "Reliable",
+          "body": "Calculations, sources and definitions should be clear and checkable."
+        },
+        "multidisciplinary": {
+          "title": "Connected",
+          "body": "Dashboards should stand on clean data flows, not copy-paste work."
+        },
+        "strategyDriven": {
+          "title": "Actionable",
+          "body": "A useful report helps the team decide what to do next."
+        }
+      }
+    }
+  },
+  "AboutPage": {
+    "hero": {
+      "title": "Practical software, dashboards and automation for DRC businesses",
+      "bodyLines": [
+        "Tech Solutions RDC builds websites, custom apps, attendance systems, Power BI dashboards and AI-ready workflows that make daily operations clearer."
+      ],
+      "ctaLabel": "Schedule a meeting",
+      "ctaHref": "/schedule",
+      "servicesLabel": "About us",
+      "servicesHref": "/about",
+      "clientsLabel": "Explore services",
+      "clientsHref": "/services"
+    },
+    "intro": {
+      "eyebrow": "What we stand for",
+      "title": "Technology should connect business, design and data.",
+      "body": [
+        "We start from the real workflow: people, rules, files, approvals and reports.",
+        "Then we build the cleanest useful system, from a public website to an internal app or dashboard."
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "Apps",
+          "label": "Websites, portals, admin panels and custom workflow tools."
+        },
+        {
+          "value": "BI",
+          "label": "Power BI dashboards for HR, payroll, sales, stock and operations."
+        },
+        {
+          "value": "AI",
+          "label": "AI tools that support real reports, data and processes."
+        }
+      ]
+    },
+    "localTrust": {
+      "eyebrow": "Built for local reality",
+      "title": "Ready to build something useful and easier to run?",
+      "body": "We keep projects focused: understand the workflow, build the right system, improve it with real feedback.",
+      "points": [
+        "Start with the workflow",
+        "Build only what is useful",
+        "Make reporting trustworthy",
+        "Improve with real feedback"
+      ]
+    },
+    "pillars": {
+      "eyebrow": "Our values",
+      "title": "Small principles, applied every day",
+      "cards": [
+        {
+          "title": "Clarity first",
+          "body": "A system should make work easier to understand, not harder to explain."
+        },
+        {
+          "title": "Useful before fancy",
+          "body": "We choose practical features that help teams save time and make decisions."
+        },
+        {
+          "title": "Reliable data",
+          "body": "Reports, dashboards and AI tools are only valuable when the data behind them is clean."
+        },
+        {
+          "title": "Local fit",
+          "body": "We adapt tools to company rules, teams and daily operations in DRC."
+        }
+      ]
+    }
+  }
+}

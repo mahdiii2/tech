@@ -1,0 +1,490 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* =========================================================================
+   1. Engagement Scale (Base: #17AC87 at 400)
+   -------------------------------------------------------------------------
+   Usage: Primary CTAs, high-priority notifications, primary focus color.
+   ========================================================================= */
+  --engagement-50: #e8f8f3;
+  --engagement-100: #ccf1e5;
+  --engagement-200: #99e3cc;
+  --engagement-300: #66d6b2;
+  --engagement-400: #17ac87; /* Base */
+  --engagement-500: #149874;
+  --engagement-600: #0f7a5e;
+  --engagement-700: #0a5a45;
+  --engagement-800: #063f30;
+  --engagement-900: #042c22;
+  --engagement-950: #021812;
+
+  /* =========================================================================
+   2. Dev Scale (Base: #365FD9 at 500)
+   -------------------------------------------------------------------------
+   Usage: High-contrast text, success messages, secondary branding color.
+   ========================================================================= */
+  --dev-50: #eef2ff;
+  --dev-100: #dce4ff;
+  --dev-200: #b8c9ff;
+  --dev-300: #94adff;
+  --dev-400: #6f92ff;
+  --dev-500: #365fd9; /* Base */
+  --dev-600: #2f54c4;
+  --dev-700: #2646a3;
+  --dev-800: #1d357a;
+  --dev-900: #16285b;
+  --dev-950: #0e1936;
+
+  /* =========================================================================
+   3. Design Scale (Base: #E3F94C at 300)
+   -------------------------------------------------------------------------
+   Usage: Backgrounds, subtle highlights, tertiary color.
+   ========================================================================= */
+  --design-50: #fcffe8;
+  --design-100: #f7ffcc;
+  --design-200: #f0ff99;
+  --design-300: #e3f94c; /* Base */
+  --design-400: #c7e437;
+  --design-500: #accf2a;
+  --design-600: #8eb81f;
+  --design-700: #6a8e17;
+  --design-800: #4c6812;
+  --design-900: #32480d;
+  --design-950: #1d2b07;
+
+  /* =========================================================================
+     4. Neutral Scale (Standard Gray)
+     -------------------------------------------------------------------------
+     Usage: Text, borders, backgrounds for structure.
+     ========================================================================= */
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  --neutral-950: #030712;
+
+  --neutral-white: #ffffff;
+  --neutral-black: #000000;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+body {
+  @apply font-sans;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+/* Allow Swiper fade effect to work normally */
+.swiper {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* All non-active slides must fade AND must not block clicks */
+.swiper-slide {
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s ease !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+
+/* Active slide is fully visible + interactive */
+.swiper-slide-active {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Make sure fade effect shadows don't block clicks */
+.swiper-slide-shadow,
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  pointer-events: none !important;
+}
+
+/* Vertical pagination styles remain the same */
+.swiper-pagination {
+  position: absolute !important;
+  left: 24px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  z-index: 10 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  background: transparent;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+  border-color: black;
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #cfcfcf;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.custom-bullet-active {
+  border-color: #0a84ff;
+  background-color: white;
+  transform: scale(1.25);
+  box-shadow: 0 0 10px rgba(0, 132, 255, 0.5);
+}
+
+html.lenis {
+  pointer-events: auto !important;
+}
+
+.lenis-smooth {
+  pointer-events: auto !important;
+}
+
+.lenis-stopped {
+  pointer-events: auto !important;
+}
+/* Root container */
+.triad-root {
+  position: relative;
+  width: min(360px, 72vw);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+/* Circles wrapper */
+.triad-circles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Base circle style */
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background: transparent;
+}
+
+/* Each circle gets its own motion */
+.circle-1 {
+  animation: circle1Motion 6s ease-in-out infinite;
+}
+
+.circle-2 {
+  animation: circle2Motion 6s ease-in-out infinite;
+}
+
+.circle-3 {
+  animation: circle3Motion 6s ease-in-out infinite;
+}
+
+/* Labels */
+.triad-labels {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.triad-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: labelCycle 6s ease-in-out infinite;
+}
+
+.triad-label--dev {
+  color: #111111;
+  animation-delay: 0s;
+}
+
+.triad-label--design {
+  color: #4b4b4b;
+  animation-delay: 2s;
+}
+
+.triad-label--engage {
+  color: #111111;
+  animation-delay: 4s;
+}
+
+/* ------------------ CIRCLE MOTIONS ------------------ */
+/*
+Timeline (6s total):
+0–2s: Develop   (triangle, dev colors)
+2–4s: Design    (concentric, design colors)
+4–6s: Engage    (outer + 2 vertical inner, engagement colors)
+*/
+
+@keyframes circle1Motion {
+  /* DEVELOP – top circle */
+  0%,
+  20%,
+  100% {
+    transform: translate(-50%, -100%) scale(1);
+    border-color: var(--dev-500);
+  }
+
+  /* DESIGN – biggest outer circle */
+  33%,
+  53% {
+    transform: translate(-50%, -50%) scale(1.45);
+    border-color: var(--design-300);
+  }
+
+  /* ENGAGE – outer circle */
+  66%,
+  86% {
+    transform: translate(-50%, -50%) scale(1.4);
+    border-color: var(--engagement-400);
+  }
+}
+
+@keyframes circle2Motion {
+  /* DEVELOP – bottom-left */
+  0%,
+  20%,
+  100% {
+    transform: translate(-100%, -5%) scale(1);
+    border-color: var(--dev-300);
+  }
+
+  /* DESIGN – middle circle */
+  33%,
+  53% {
+    transform: translate(-50%, -50%) scale(1.25);
+    border-color: var(--design-300);
+  }
+
+  /* ENGAGE – top inner circle */
+  66%,
+  86% {
+    transform: translate(-50%, -90%) scale(1);
+    border-color: var(--engagement-100);
+  }
+}
+
+@keyframes circle3Motion {
+  /* DEVELOP – bottom-right */
+  0%,
+  20%,
+  100% {
+    transform: translate(0%, -5%) scale(1);
+    border-color: var(--dev-300);
+  }
+
+  /* DESIGN – inner circle */
+  33%,
+  53% {
+    transform: translate(-50%, -50%) scale(1.05);
+    border-color: var(--design-300);
+  }
+
+  /* ENGAGE – bottom inner circle */
+  66%,
+  86% {
+    transform: translate(-50%, -10%) scale(1);
+    border-color: var(--engagement-100);
+  }
+}
+
+/* ------------------ LABEL FADE ------------------ */
+
+@keyframes labelCycle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  38% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-8px);
+  }
+}

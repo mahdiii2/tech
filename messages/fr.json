@@ -1,0 +1,1223 @@
+{
+  "Nav": {
+    "logo": "Tech Solutions RDC",
+    "cta": "Planifier un rendez-vous",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "menuTitle": "Menu",
+    "banner": {
+      "text": "Besoin d'un site web, app sur mesure, presence automatisee, dashboard Power BI ou workflow IA ?",
+      "cta": "Planifier un rendez-vous",
+      "ctaHref": "/schedule"
+    },
+    "links": {
+      "services": "Services",
+      "industries": "Secteurs",
+      "useCases": "Cas d'usage",
+      "about": "A propos",
+      "clients": "Clients",
+      "portfolio": "Projets",
+      "blog": "Conseils",
+      "career": "Carrieres"
+    },
+    "serviceCards": {
+      "development": {
+        "title": "Logiciels, sites web & apps",
+        "description": "Sites, portails, applications web et logiciels sur mesure pour tout workflow metier."
+      },
+      "automation": {
+        "title": "Presence & automatisation",
+        "description": "Dashboards de presence, workflows RH et automatisation operationnelle."
+      },
+      "data": {
+        "title": "Analytics, Power BI & IA",
+        "description": "Dashboards metier, KPI, data engineering et outils IA pratiques."
+      }
+    },
+    "industryCards": {
+      "companies": {
+        "title": "Entreprises",
+        "description": "Dashboards operationnels, validations et rapports pour equipes en croissance."
+      },
+      "factories": {
+        "title": "Usines",
+        "description": "Presence, shifts, heures supplementaires et rapports de production fiables."
+      },
+      "construction": {
+        "title": "Construction",
+        "description": "Presence sur chantier, equipes terrain, couts et rapports d'avancement."
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Suivi des shifts, coordination du personnel et dashboards operationnels."
+      },
+      "hospitals": {
+        "title": "Hopitaux",
+        "description": "Presence du personnel, rapports par service et suivi operationnel fiable."
+      },
+      "stores": {
+        "title": "Magasins & e-commerce",
+        "description": "Planning des points de vente, presence, stock et commandes en ligne."
+      }
+    },
+    "mobile": {
+      "backToMenu": "Retour au menu",
+      "toggleLocale": "Changer de langue"
+    }
+  },
+  "HomePage": {
+    "vision": {
+      "heading": "Systèmes numériques pour les entreprises en RDC",
+      "body": "",
+      "cta": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "chips": [
+        "Logiciels & apps",
+        "Automatisation de presence",
+        "Power BI & IA"
+      ]
+    },
+    "attendanceSpotlight": {
+      "eyebrow": "Point de départ populaire",
+      "title": "Plus qu'une pointeuse.",
+      "body": "Nous connectons vos donnees de presence a des regles metier claires, des workflows RH, des rapports prets pour la paie et des dashboards pour la direction.",
+      "points": [
+        "Horaires, shifts et regles de presence sur mesure",
+        "Suivi des retards, absences et heures supplementaires",
+        "Compatible avec empreinte digitale, Face ID et pointeuses",
+        "Dashboards fiables au lieu de fichiers exportes confus"
+      ],
+      "target": "Ideal pour les entreprises, usines, construction, hotels et hopitaux a Kinshasa.",
+      "ctaLabel": "Voir la solution presence",
+      "ctaHref": "/services/attendance"
+    },
+    "blueprints": {
+      "title": "",
+      "cta": {
+        "learnMore": "En savoir plus",
+        "contact": "Planifier un rendez-vous"
+      },
+      "development": {
+        "title": "Logiciels, sites web & apps",
+        "description": "Nous créons des sites d'entreprise, landing pages, portails, applications web, panneaux admin et logiciels sur mesure pour vos workflows métier.",
+        "tags": [
+          "Sites web",
+          "Apps web",
+          "Portails",
+          "Admin panels",
+          "Apps sur mesure"
+        ],
+        "learnHref": "/services/development",
+        "contactHref": "/schedule"
+      },
+      "design": {
+        "title": "Presence & automatisation RH",
+        "description": "Nous connectons les machines de presence a vos regles, workflows RH, syntheses paie et dashboards de management.",
+        "tags": [
+          "Empreinte",
+          "Face ID",
+          "Shifts",
+          "Paie",
+          "Workflows RH"
+        ],
+        "learnHref": "/services/attendance",
+        "contactHref": "/schedule"
+      },
+      "engagement": {
+        "title": "Analytics, Power BI & IA",
+        "description": "Nous transformons fichiers Excel, bases de donnees et donnees metier en dashboards Power BI, KPI, modeles de donnees, pipelines et insights IA.",
+        "tags": [
+          "Power BI",
+          "KPI",
+          "Dashboards",
+          "Data engineering",
+          "Insights IA"
+        ],
+        "learnHref": "/services/analytics",
+        "contactHref": "/schedule"
+      }
+    },
+    "partnerSection": {
+      "heading": "Construire des logiciels utiles et une business intelligence fiable",
+      "bodyPrimary": "Tech Solutions RDC aide les equipes a passer des fichiers Excel disperses, du suivi manuel et des outils deconnectes vers des sites, apps, dashboards et workflows automatises adaptes aux vraies regles metier.",
+      "bodySecondary": "",
+      "ctaLabel": "Voir les services",
+      "ctaHref": "/services",
+      "gallery": {
+        "topLeftAlt": "Equipe planifiant un workflow logiciel",
+        "bottomLeftAlt": "Tableaux de bord sur un espace de travail",
+        "columnTwoAlt": "Equipe analysant des donnees operationnelles",
+        "columnThreeAlt": "Application metier sur mobiles",
+        "columnFourAlt": "Tablette affichant un dashboard analytique"
+      }
+    },
+    "solutions": {
+      "heading": "Logiciels, analytics, automatisation et IA pour les operations",
+      "body": "Choisissez des services concrets pour les <strong>entreprises, usines, construction, hotels et hopitaux a Kinshasa</strong> qui veulent utiliser les technologies modernes sans complexite inutile.",
+      "support": "Que voulez-vous ameliorer en premier ?",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "cards": {
+        "customDevelopment": {
+          "title": "Logiciels, sites web et apps sur mesure",
+          "body": "Sites d entreprise, landing pages, portails, systemes de reservation, admin panels, outils stock, outils RH et apps metier adaptes a vos workflows."
+        },
+        "digitalTransformation": {
+          "title": "Presence et automatisation RH",
+          "body": "Dashboards de presence pour suivre retards, absences, shifts, heures supplementaires et syntheses paie depuis empreinte, Face ID ou pointeuse."
+        },
+        "topDevelopers": {
+          "title": "Business analytics et Power BI",
+          "body": "Dashboards Power BI, KPI, analytics ventes, RH, paie, operations et migration Excel vers dashboards pour mieux decider."
+        },
+        "consulting": {
+          "title": "Outils IA et integration workflow",
+          "body": "Assistants IA pratiques pour resumes, verification de rapports, recherche documentaire, alertes et aide aux workflows."
+        },
+        "holisticApproach": {
+          "title": "Data engineering et reporting",
+          "body": "Modeles de donnees, bases, pipelines et flux de reporting pour des chiffres coherents, tracables et exploitables."
+        },
+        "creativeExpertise": {
+          "title": "Automatisation des processus",
+          "body": "Validations, formulaires, rappels, suivi des taches et integrations pour reduire le travail manuel repete."
+        }
+      }
+    },
+    "clients": {
+      "heading": "Conçu pour les équipes qui veulent des opérations plus claires",
+      "trustedHeading": "Des systèmes pratiques pour des équipes concrètes.",
+      "focusAreas": [
+        "Entreprises",
+        "Usines",
+        "Construction",
+        "Hôtels",
+        "Hôpitaux",
+        "Magasins",
+        "Sites web",
+        "Présence",
+        "Power BI",
+        "Pipelines data",
+        "Rapports RH",
+        "Workflows IA"
+      ]
+    },
+    "caseStudies": {
+      "ctaLabel": "Explorer les services",
+      "ctaHref": "/services",
+      "slides": {
+        "pricingEngine": {
+          "title": "Rapports de presence pour RH et paie",
+          "description": "Nous transformons les exports de pointeuses en rapports clairs: retards, absences, shifts, heures supplementaires et syntheses utilisables par les RH, la paie et la direction.",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop"
+        },
+        "designSystem": {
+          "title": "Portails et applications metier",
+          "description": "Nous creons sites web, portails clients, admin panels, formulaires, workflows et applications sur mesure pour les operations quotidiennes, pas seulement pour les projets data.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+        },
+        "workflowAutomation": {
+          "title": "Power BI, data engineering et IA pratique",
+          "description": "Nous connectons fichiers Excel, bases de donnees et systemes existants a des dashboards Power BI, modeles de donnees, pipelines et assistants IA utiles pour les decisions.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+        }
+      }
+    },
+    "techStack": {
+      "title": "Boite a outils du developpement logiciel sur mesure",
+      "languagesTitle": "Par ordre alphabetique",
+      "languagesCta": "Services de developpement"
+    },
+    "imageSlider": {
+      "heading": "Comparez le processus manuel avec un flux numérique plus clair"
+    },
+    "testimonials": {
+      "eyebrow": "Resultats",
+      "heading": "Ce que vos systemes doivent apporter",
+      "bodyPrimary": "Nous construisons pour des resultats pratiques: moins de travail manuel, des rapports plus propres, des decisions plus rapides et des outils que les equipes peuvent vraiment utiliser.",
+      "bodySecondary": "Chaque projet commence par vos regles metier, vos fichiers, vos machines et votre workflow actuel.",
+      "ctaPrimaryLabel": "Planifier un rendez-vous",
+      "ctaPrimaryHref": "/schedule",
+      "ctaSecondaryLabel": "Voir les cas d'usage",
+      "ctaSecondaryHref": "/industries/use-cases",
+      "badgeLabel": "Logiciels + data + IA",
+      "badgeSubtext": "Solutions pratiques pour les operations",
+      "clientLabel": "Resultat",
+      "items": [
+        {
+          "quote": "Les RH doivent verifier la presence et les heures supplementaires sans reconstruire des feuilles Excel chaque mois.",
+          "author": "Presence et paie",
+          "role": "RH",
+          "company": "Tech Solutions RDC",
+          "industry": "Operations"
+        },
+        {
+          "quote": "La direction doit voir les KPI essentiels dans Power BI sans attendre plusieurs fichiers manuels.",
+          "author": "Business analytics",
+          "role": "Direction",
+          "company": "Tech Solutions RDC",
+          "industry": "Power BI"
+        },
+        {
+          "quote": "Les equipes doivent utiliser une application simple qui suit leurs demandes, validations, stocks ou projets.",
+          "author": "Logiciel sur mesure",
+          "role": "Operations",
+          "company": "Tech Solutions RDC",
+          "industry": "Applications web"
+        },
+        {
+          "quote": "Les donnees doivent etre nettoyees, structurees et pretes pour le reporting, l'automatisation et l'IA.",
+          "author": "Data engineering",
+          "role": "Reporting",
+          "company": "Tech Solutions RDC",
+          "industry": "Donnees"
+        },
+        {
+          "quote": "L'IA doit aider avec resumes, recherche, alertes et controles de rapports quand les donnees sont fiables.",
+          "author": "Integration IA",
+          "role": "Workflow",
+          "company": "Tech Solutions RDC",
+          "industry": "IA"
+        }
+      ]
+    },
+    "contactBridge": {
+      "title": "Pret a construire le systeme dont votre equipe a besoin ?",
+      "subtitle": "Parlons de votre site, app, workflow de presence, dashboard Power BI, systeme de donnees ou integration IA.",
+      "cardTitle": "Parler a Tech Solutions RDC",
+      "cardBody": "Expliquez-nous vos regles, fichiers, machines et besoins de reporting. Nous montrons le chemin le plus simple entre le processus actuel et un systeme qui fonctionne.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule"
+    }
+  },
+  "Footer": {
+    "brand": "Tech Solutions RDC",
+    "navLinks": [
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Secteurs",
+        "href": "/industries"
+      },
+      {
+        "label": "Cas d'usage",
+        "href": "/industries/use-cases"
+      },
+      {
+        "label": "A propos",
+        "href": "/about"
+      }
+    ],
+    "serviceDots": [
+      {
+        "label": "Logiciels, sites web & apps",
+        "href": "/services/development"
+      },
+      {
+        "label": "Presence & automatisation",
+        "href": "/services/attendance"
+      },
+      {
+        "label": "Analytics, Power BI & IA",
+        "href": "/services/analytics"
+      }
+    ],
+    "locations": [
+      {
+        "title": "Gombe, Kinshasa — RDC",
+        "subtitle": "Logiciels, analytics, automatisation et data services"
+      }
+    ],
+    "phone": "+243 905 600 055",
+    "email": "sales@techsolutionsrdc.com",
+    "ctaGradient": "Construisons des operations plus intelligentes",
+    "newsletterHeading": "Pret a parler de votre site, app, dashboard ou automatisation ?",
+    "emailPlaceholder": "votre@email.com",
+    "consentText": "En cochant cette case, j'accepte de recevoir des communications et confirme avoir lu la politique de confidentialité.",
+    "privacy": "Politique de confidentialité",
+    "legal": "© Tech Solutions RDC 2026. Tous droits réservés.",
+    "newsletterBody": "Planifiez un court rendez-vous ou envoyez-nous les détails par email. Nous vous répondrons avec une prochaine étape concrète.",
+    "meetingCta": "Planifier un rendez-vous",
+    "emailCta": "Envoyer un email"
+  },
+  "ServicesPage": {
+    "hero": {
+      "titleLine1": "Logiciels, analytics et IA",
+      "titleLine2": "pour le vrai travail",
+      "body": "Sites web, apps sur mesure, automatisation de presence, dashboards Power BI, data engineering et integrations IA adaptes a vos operations.",
+      "cta": "Planifier un rendez-vous"
+    },
+    "blueprints": {
+      "heading": "Creer, automatiser, analyser",
+      "sections": [
+        {
+          "id": "development",
+          "title": "Logiciels & apps",
+          "description": "Sites web, landing pages, portails, applications web, admin panels et logiciels sur mesure pour tout workflow metier.",
+          "ctaLabel": "Explorer les logiciels",
+          "ctaHref": "/services/development",
+          "tags": [
+            "Sites web",
+            "Apps web",
+            "Portails",
+            "Admin panels",
+            "Logiciel sur mesure"
+          ]
+        },
+        {
+          "id": "design",
+          "title": "Presence",
+          "description": "Automatisation de presence selon vos horaires, regles, shifts, heures supplementaires et logique de paie.",
+          "ctaLabel": "Voir la solution presence",
+          "ctaHref": "/services/attendance",
+          "tags": [
+            "Retards",
+            "Absences",
+            "Heures sup.",
+            "Empreinte",
+            "Paie"
+          ]
+        },
+        {
+          "id": "engagement",
+          "title": "Analytics & IA",
+          "description": "Dashboards Power BI, analytics metier, KPI, data engineering et outils IA pour mieux decider.",
+          "ctaLabel": "Explorer analytics",
+          "ctaHref": "/services/analytics",
+          "tags": [
+            "Power BI",
+            "KPI",
+            "Dashboards",
+            "Modeles data",
+            "Outils IA"
+          ]
+        }
+      ]
+    },
+    "cooperation": {
+      "title": "Notre methode",
+      "subtitle": "Nous partons de vos regles metier, puis nous construisons le logiciel, l'automatisation, le workflow IA ou le rapport autour.",
+      "hero": {
+        "title": "Commencer par un rendez-vous clair",
+        "description": "Nous examinons le besoin principal: site web, application, presence, dashboard Power BI, data engineering, automatisation ou IA, puis nous proposons le chemin le plus simple.",
+        "tags": [
+          "Cadrage",
+          "Regles",
+          "Solution"
+        ],
+        "ctaLabel": "Planifier un rendez-vous",
+        "ctaHref": "/schedule"
+      },
+      "models": [
+        {
+          "id": "audit",
+          "title": "Audit du workflow",
+          "description": "Nous inspectons vos fichiers, machines, logiciels existants, rapports et points de blocage.",
+          "tag": "Decouverte"
+        },
+        {
+          "id": "build",
+          "title": "Implementation",
+          "description": "Nous configurons ou construisons l'outil, le dashboard, l'automatisation ou l'integration selon votre structure.",
+          "tag": "Creation"
+        },
+        {
+          "id": "support",
+          "title": "Support",
+          "description": "Nous aidons vos equipes a garder les rapports, applications et workflows fiables.",
+          "tag": "Suivi"
+        }
+      ],
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule"
+    },
+    "upgradeGrid": {
+      "heading": "Services livres par Tech Solutions RDC",
+      "items": [
+        {
+          "title": "Logiciels, sites web et apps",
+          "body": "Sites, portails, outils internes, admin panels et applications sur mesure pour tout workflow."
+        },
+        {
+          "title": "Business analytics et Power BI",
+          "body": "Dashboards direction, KPI, migration Excel vers dashboard, analytics ventes, RH, paie et operations."
+        },
+        {
+          "title": "Data engineering et reporting",
+          "body": "Modeles de donnees, bases, pipelines et reporting pour des chiffres coherents et tracables."
+        },
+        {
+          "title": "Presence, automatisation et IA",
+          "body": "Rapports de presence, validations, alertes, aide documentaire, resumes et taches assistees par IA."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "Un bon logiciel capture le travail. Un bon dashboard explique ce qui se passe. Une bonne IA devient utile quand les donnees et le workflow sont fiables.",
+      "name": "Tech Solutions RDC",
+      "role": "Equipe logiciels, automatisation et donnees"
+    },
+    "process": {
+      "title": "Notre processus",
+      "description": "Chaque projet reste pratique : comprendre les regles, connecter les donnees, creer l'outil, verifier les rapports et accompagner l'equipe.",
+      "steps": [
+        {
+          "title": "Comprendre les regles",
+          "body": "Nous cartographions horaires, shifts, exceptions, validations et attentes de reporting.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Connecter les donnees",
+          "body": "Nous importons ou connectons exports de machines, fichiers Excel, bases de donnees ou systemes existants.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Construire",
+          "body": "Nous creons le tableau de bord, l'application, l'automatisation ou le rapport necessaire.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Verifier",
+          "body": "Nous testons les resultats avec des cas reels : retards, absences, heures supplementaires et exceptions.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Accompagner",
+          "body": "Nous aidons votre equipe a utiliser, maintenir et ameliorer la solution.",
+          "color": "#365fd9"
+        }
+      ]
+    },
+    "selectedServices": {
+      "title": "Services selectionnes",
+      "description": "Un apercu des <strong>services les plus demandes par les entreprises</strong>.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "items": [
+        {
+          "title": "Logiciels, sites web et apps sur mesure",
+          "body": "<p>Nous creons sites web, landing pages, portails, admin panels, systemes de reservation, outils RH, outils stock et applications web sur mesure pour tout workflow metier.</p><ul><li>Sites d'entreprise et landing pages</li><li>Portails clients et dashboards internes</li><li>Apps pour operations, RH, stock, demandes ou reporting</li></ul>"
+        },
+        {
+          "title": "Logiciel de gestion de presence",
+          "body": "<p><strong>Plus qu'une pointeuse.</strong></p><p>Nous transformons les donnees brutes d'entree et de sortie en rapports clairs adaptes aux regles de votre entreprise.</p><ul><li><strong>Horaires et regles sur mesure :</strong> configurez shifts, tolerances, exceptions et politiques internes.</li><li><strong>Resultats de presence :</strong> suivez retards, absences, shifts et heures supplementaires.</li><li><strong>Power BI et dashboards :</strong> preparez des analytics RH, paie et direction a partir de la presence.</li><li><strong>Compatible machines :</strong> fonctionne avec empreinte digitale, Face ID et pointeuses.</li></ul>"
+        },
+        {
+          "title": "Business analytics et Power BI",
+          "body": "<p>Nous remplacons les rapports Excel manuels par des dashboards que la direction peut actualiser et utiliser.</p><ul><li>Dashboards Power BI de direction</li><li>KPI ventes, stock, RH, paie et operations</li><li>Consolidation Excel, bases de donnees et rapports systemes</li></ul>"
+        },
+        {
+          "title": "Data engineering et reporting",
+          "body": "<p>Nous nettoyons, structurons et connectons les donnees pour fiabiliser reporting, automatisation et IA.</p><ul><li>Modeles de donnees et pipelines</li><li>Bases de donnees et architecture reporting</li><li>Chiffres coherents entre departements</li></ul>"
+        },
+        {
+          "title": "Outils IA et integration workflow",
+          "body": "<p>Nous ajoutons une IA pratique aux rapports, documents, validations et outils internes: resumes, recherche, alertes, controles de rapports et aide au workflow.</p>"
+        }
+      ]
+    },
+    "partnerGrid": {
+      "title": "Travaillez avec Tech Solutions RDC",
+      "body1": "Commencez par le systeme le plus utile: site web, app sur mesure, automatisation de presence, dashboard Power BI, pipeline de donnees ou workflow assiste par IA.",
+      "body2": "Ensuite, evoluez vers des outils connectes, des rapports plus propres et des automatisations qui reduisent le travail manuel.",
+      "body3": "Votre workflow, vos donnees, vos decisions.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule"
+    }
+  },
+  "DevelopmentPage": {
+    "hero": {
+      "title": "Logiciels, sites web, apps web et outils metier",
+      "description": "Construisez le produit digital dont votre entreprise a besoin : site, landing page, portail, admin panel, reservation, stock, RH, dashboard ou app sur mesure.",
+      "cta": "Planifier un rendez-vous"
+    },
+    "whyCustom": {
+      "eyebrow": "Pourquoi un logiciel sur mesure ?",
+      "body": "Vos regles, departements et workflows sont specifiques. Un logiciel sur mesure et l'integration IA automatisent votre vraie maniere de travailler au lieu d'imposer un outil generique."
+    },
+    "showcase": {
+      "cards": [
+        {
+          "title": "Sites web professionnels",
+          "body": "Des sites qui presentent clairement votre entreprise et orientent les visiteurs vers le bon service, la demo ou le contact.",
+          "tags": [
+            "Sites vitrines",
+            "Landing pages",
+            "Structure SEO"
+          ],
+          "ctaLabel": "Planifier un rendez-vous",
+          "ctaHref": "/schedule"
+        },
+        {
+          "title": "Applications web",
+          "body": "Tableaux de bord, portails et plateformes internes pour les operations quotidiennes, validations, reporting et saisie de donnees.",
+          "tags": [
+            "Portails",
+            "Dashboards",
+            "Outils internes"
+          ],
+          "ctaLabel": "En savoir plus",
+          "ctaHref": "/services/development"
+        },
+        {
+          "title": "Logiciels connectes aux analytics et a l'IA",
+          "body": "Quand c'est utile, votre app peut se connecter a Power BI, aux rapports, assistants IA, alertes, recherche documentaire et workflows automatises.",
+          "tags": [
+            "Power BI",
+            "Outils IA",
+            "Integrations"
+          ],
+          "ctaLabel": "Planifier un rendez-vous",
+          "ctaHref": "/schedule"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "Ce que le logiciel peut inclure",
+      "body": "Le logiciel n'est pas limite a la data. Il peut etre n'importe quel site, app, portail, dashboard ou outil interne utile a votre entreprise.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "cards": [
+        {
+          "icon": "cloud",
+          "title": "Plateformes web",
+          "body": "Sites modernes, portails et applications web avec interfaces responsives et bases securisees.",
+          "tags": [
+            "Next.js",
+            "React",
+            "API"
+          ]
+        },
+        {
+          "icon": "settings",
+          "title": "Logique d'automatisation et IA",
+          "body": "Regles, validations, alertes, taches assistees par IA et actions planifiees pour reduire le travail manuel repetitif.",
+          "tags": [
+            "Workflows",
+            "Alertes",
+            "Integration IA"
+          ]
+        },
+        {
+          "icon": "target",
+          "title": "Integrations, rapports et IA",
+          "body": "Connectez votre app aux API, bases de donnees, Power BI, outils de reporting ou assistants IA pratiques quand cela cree de la valeur.",
+          "tags": [
+            "API",
+            "Power BI",
+            "Outils IA"
+          ]
+        }
+      ]
+    },
+    "toolbox": {
+      "titleLines": [
+        "Applications web.",
+        "Integrations IA.",
+        "Systemes prets pour la data."
+      ],
+      "body": "Nous utilisons des technologies modernes, des patterns d'automatisation et une architecture prete pour la data et l'IA afin de creer des logiciels maintenables, securises et pratiques.",
+      "icons": [
+        "React",
+        "Next.js",
+        "Python",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+        "Azure",
+        "GraphQL",
+        "WordPress",
+        "Airtable",
+        "GitLab",
+        "Cypress"
+      ],
+      "cards": [
+        {
+          "title": "Langages de programmation",
+          "columns": [
+            [
+              "JavaScript",
+              "C#",
+              "Dart",
+              "Kotlin"
+            ],
+            [
+              "TypeScript",
+              "Python",
+              "Swift"
+            ]
+          ]
+        },
+        {
+          "title": "Infrastructure",
+          "columns": [
+            [
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "New Relic"
+            ],
+            [
+              "Amazon Web Services",
+              "Microsoft Azure",
+              "Google Cloud"
+            ]
+          ]
+        },
+        {
+          "title": "Boite a outils Frontend",
+          "columns": [
+            [
+              "Angular",
+              "Vue.js",
+              "JavaScript",
+              "TailwindCSS"
+            ],
+            [
+              "React",
+              "TypeScript",
+              "Next.js"
+            ]
+          ]
+        },
+        {
+          "title": "Boite a outils Backend",
+          "columns": [
+            [
+              ".NET",
+              "Python",
+              "Ruby on Rails",
+              "Node.js"
+            ]
+          ]
+        },
+        {
+          "title": "Boite a outils apps mobiles & TV",
+          "columns": [
+            [
+              "Android (Kotlin)",
+              "Samsung TV (Tizen)",
+              "Android TV"
+            ],
+            [
+              "iOS (Swift)",
+              "Flutter (multiplatform)",
+              "iOS TV"
+            ]
+          ]
+        },
+        {
+          "title": "Systemes d'exploitation",
+          "columns": [
+            [
+              "iOS",
+              "Android",
+              "Tizen",
+              "WebOS"
+            ]
+          ]
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Creez des outils que votre equipe utilise vraiment."
+    },
+    "upgrade": {
+      "heading": "Ce que nous pouvons creer pour vous",
+      "ctaLabel": "Planifier un rendez-vous",
+      "items": [
+        {
+          "title": "Construit pour votre workflow",
+          "body": "L'application suit vos regles, utilisateurs, validations, saisies et besoins de reporting."
+        },
+        {
+          "title": "Pas limite aux projets data",
+          "body": "Nous pouvons creer sites web, portails, admin panels, reservation, stock, RH ou toute app sur mesure."
+        },
+        {
+          "title": "Pret pour analytics",
+          "body": "Quand l'app capture des donnees propres, elle peut alimenter Power BI et les rapports business."
+        },
+        {
+          "title": "IA la ou elle aide",
+          "body": "L'IA peut aider avec resumes, recherche, alertes, controle de rapports et assistance workflow."
+        },
+        {
+          "title": "Technologie maintenable",
+          "body": "Nous utilisons des stacks modernes et une architecture pratique pour faire grandir le logiciel."
+        },
+        {
+          "title": "Transmission claire",
+          "body": "Votre equipe recoit un systeme utilisable, pas seulement du code."
+        }
+      ]
+    },
+    "insights": {
+      "headline": "Que voulez-vous construire en premier ?",
+      "title": "Commencez par un systeme digital pratique",
+      "body": "Parlez-nous du site, app, dashboard Power BI, workflow de presence, pipeline de donnees ou integration IA dont votre equipe a besoin.",
+      "placeholder": "Adresse e-mail",
+      "button": "Planifier un rendez-vous",
+      "consent": "Pas de formulaire ici. Utilisez le lien de rendez-vous ou contactez-nous par email.",
+      "tags": [
+        "Sites & apps",
+        "Dashboards Power BI",
+        "Workflows IA"
+      ]
+    },
+    "process": {
+      "title": "Notre processus logiciel",
+      "description": "Nous cadrons le workflow, creons l'outil, verifions les donnees et accompagnons votre equipe apres lancement.",
+      "steps": [
+        {
+          "title": "Cadrage",
+          "body": "Nous clarifions utilisateurs, regles, sources de donnees et rapports attendus.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Creation",
+          "body": "Nous developpons le site, l'application, l'automatisation ou l'integration.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Test",
+          "body": "Nous verifions les scenarios reels et la fiabilite des resultats.",
+          "color": "#365fd9"
+        },
+        {
+          "title": "Support",
+          "body": "Nous maintenons et ameliorons la solution selon vos besoins.",
+          "color": "#365fd9"
+        }
+      ]
+    },
+    "reasons": {
+      "heading": "Pourquoi choisir nos services logiciels ?",
+      "cards": [
+        {
+          "title": "Adapte a vos regles",
+          "body": "Nous adaptons l'outil a vos politiques, horaires, equipes et rapports.",
+          "icon": "layers"
+        },
+        {
+          "title": "Utile aux operations",
+          "body": "Le but n'est pas seulement le code. Le but est de reduire le manuel et ameliorer les decisions.",
+          "icon": "users"
+        },
+        {
+          "title": "Donnees fiables",
+          "body": "Nous concevons des systemes avec des rapports verifiables, repetables et fiables.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Focus business local",
+          "body": "Nous construisons pour les realites des entreprises, usines, construction, hotels et hopitaux a Kinshasa.",
+          "icon": "lightbulb"
+        }
+      ]
+    },
+    "ceoContact": {
+      "heading": "Besoin d'un logiciel ou d'une automatisation ?",
+      "body": "peut analyser votre workflow et proposer un systeme pratique pour votre entreprise.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "linkedinLabel": "",
+      "linkedinHref": ""
+    }
+  },
+  "DesignPage": {
+    "hero": {
+      "title": "Plus qu'une pointeuse.",
+      "description": "Nous transformons les pointages en rapports RH, synthèses paie, dashboards Power BI et analytics de présence prêts pour l'IA.",
+      "cta": "Planifier un rendez-vous"
+    },
+    "whyDesign": {
+      "eyebrow": "Logiciel de gestion de presence",
+      "body": "Une machine normale enregistre seulement les pointages. Notre logiciel analyse les données, prépare des rapports propres et crée une base pour les alertes, résumés et contrôles de paie."
+    },
+    "showcase": {
+      "heading": "Automatisation de presence pour les organisations a Kinshasa",
+      "cards": [
+        {
+          "title": "Des pointages aux rapports fiables",
+          "body": "Nous travaillons avec les machines à empreinte digitale, Face ID et pointeuses, puis appliquons vos horaires, règles de présence, shifts et heures supplémentaires.",
+          "tags": [
+            "Empreinte",
+            "Face ID",
+            "Pointeuses",
+            "Rapports RH"
+          ],
+          "imageAlt": "Dashboard de presence et donnees de pointeuse"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "Ce que les donnees de presence peuvent devenir",
+      "body": "Les données de présence peuvent soutenir les RH, la paie, les rapports de direction et les dashboards quand elles sont propres et structurées.",
+      "cards": [
+        {
+          "icon": "target",
+          "title": "Horaires et regles sur mesure",
+          "body": "Configurez tolerances, shifts, exceptions, jours de repos et politiques de presence propres a votre entreprise.",
+          "tags": [
+            "Horaires",
+            "Regles",
+            "Shifts"
+          ]
+        },
+        {
+          "icon": "toggle",
+          "title": "Retards, absences et heures sup.",
+          "body": "Le systeme calcule les resultats de presence depuis les entrees/sorties selon votre logique.",
+          "tags": [
+            "Retards",
+            "Absences",
+            "Heures sup."
+          ]
+        },
+        {
+          "icon": "cloud",
+          "title": "Power BI, dashboards et rapports propres",
+          "body": "Les RH, la paie et la direction obtiennent des synthèses fiables, des datasets prêts pour dashboard et des rapports clairs au lieu de simples exports de machine.",
+          "tags": [
+            "Power BI",
+            "Dashboards",
+            "Paie"
+          ]
+        }
+      ],
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule"
+    },
+    "process": {
+      "title": "Comment se passe la mise en place",
+      "description": "Nous connectons les données de vos machines, configurons vos règles et vérifions les résultats avec des cas réels.",
+      "steps": [
+        {
+          "title": "Verifier les machines",
+          "body": "Nous analysons le format des données de vos machines à empreinte, Face ID ou pointeuses.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Definir les regles",
+          "body": "Nous cartographions horaires, shifts, retards, absences, heures supplementaires et exceptions.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Configurer le dashboard",
+          "body": "Nous mettons en place les rapports pour les RH, la paie et la direction.",
+          "color": "var(--design-400)"
+        },
+        {
+          "title": "Demo et ajustement",
+          "body": "Nous testons des cas reels et ajustons le systeme jusqu'a correspondre a vos regles.",
+          "color": "var(--design-400)"
+        }
+      ]
+    },
+    "upgrade": {
+      "heading": "Pourquoi c'est different d'une simple pointeuse",
+      "ctaLabel": "Planifier un rendez-vous",
+      "items": [
+        {
+          "title": "Regles adaptees a votre entreprise",
+          "body": "Le systeme suit vos horaires, tolerances, departements et exceptions."
+        },
+        {
+          "title": "Vue claire pour les RH",
+          "body": "Les RH voient rapidement les retards, absences, shifts et heures supplementaires."
+        },
+        {
+          "title": "Synthèses prêtes pour Power BI",
+          "body": "Les résultats de présence peuvent alimenter les contrôles de paie, dashboards Power BI et rapports de direction."
+        },
+        {
+          "title": "Dashboard de direction",
+          "body": "La direction consulte les tendances fiables sans travail manuel dans Excel."
+        },
+        {
+          "title": "Compatible machines",
+          "body": "Fonctionne avec les exports de machines a empreinte digitale, Face ID et pointeuses."
+        },
+        {
+          "title": "Ideal a Kinshasa",
+          "body": "Cree pour les entreprises, usines, construction, hotels et hopitaux a Kinshasa."
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Des donnees de presence fiables, pas seulement des fichiers exportes."
+    },
+    "testimonial": {
+      "quote": "Une pointeuse normale enregistre les pointages. La vraie valeur arrive lorsque les données deviennent analyses paie, dashboards et décisions.",
+      "name": "Tech Solutions RDC",
+      "role": "Equipe automatisation de presence"
+    },
+    "clientsHeading": "Conçu pour les entreprises, usines, chantiers, hôtels et hôpitaux",
+    "reasons": {
+      "heading": "Pourquoi choisir cette solution de presence ?",
+      "cards": [
+        {
+          "title": "Basee sur vos regles",
+          "body": "Les rapports suivent vos vrais horaires, shifts et regles d'heures supplementaires.",
+          "icon": "lightbulb"
+        },
+        {
+          "title": "Simple pour les RH",
+          "body": "Le dashboard est pense pour une revue rapide par les RH, la paie et la direction.",
+          "icon": "layers"
+        },
+        {
+          "title": "Compatible machines",
+          "body": "Utilisez vos machines existantes lorsque c'est possible.",
+          "icon": "users"
+        },
+        {
+          "title": "Prêt pour la décision",
+          "body": "Transformez les pointages en information opérationnelle claire, exploitable dans les rapports et dashboards.",
+          "icon": "handshake"
+        }
+      ]
+    }
+  },
+  "EngagementPage": {
+    "hero": {
+      "title": "Analytics, Power BI et integration IA",
+      "description": "Transformez fichiers Excel, bases de donnees et exports metier en dashboards, rapports, pipelines et assistants IA utiles.",
+      "cta": "Planifier un rendez-vous"
+    },
+    "whyEngagement": {
+      "eyebrow": "Pourquoi analytics et IA ?",
+      "body": "Les decisions deviennent plus rapides quand les donnees sont propres, les KPI visibles et les workflows connectes. Nous construisons une base fiable avant d'ajouter Power BI, automatisation ou IA."
+    },
+    "showcase": {
+      "heading": "Systemes analytics pour mieux decider",
+      "cards": [
+        {
+          "title": "Dashboards Power BI",
+          "body": "KPI direction, ventes, RH, paie, stock et operations dans des dashboards faciles a actualiser et a partager.",
+          "tags": [
+            "Power BI",
+            "KPI",
+            "Direction"
+          ],
+          "ctaLabel": "Planifier un rendez-vous",
+          "ctaHref": "/schedule"
+        },
+        {
+          "title": "Data engineering",
+          "body": "Modeles de donnees, bases, pipelines et flux de reporting pour des chiffres coherents entre departements.",
+          "tags": [
+            "Pipelines",
+            "Bases de donnees",
+            "Reporting"
+          ],
+          "ctaLabel": "Planifier un rendez-vous",
+          "ctaHref": "/schedule"
+        }
+      ]
+    },
+    "capabilities": {
+      "heading": "Ce que vos donnees metier peuvent devenir",
+      "body": "Des donnees propres peuvent devenir dashboards Power BI, rapports KPI, pipelines data et resumes assistes par IA fiables pour la direction.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "cards": [
+        {
+          "icon": "target",
+          "title": "KPI et modeles de donnees",
+          "body": "Nous clarifions les indicateurs, sources de donnees, calculs et regles de verification.",
+          "tags": [
+            "KPI",
+            "Modeles",
+            "Qualite"
+          ]
+        },
+        {
+          "icon": "megaphone",
+          "title": "Dashboards et rapports",
+          "body": "Nous creons des vues utiles pour direction, finance, RH, operations et equipes terrain.",
+          "tags": [
+            "Power BI",
+            "Rapports",
+            "Alertes"
+          ]
+        },
+        {
+          "icon": "users",
+          "title": "IA pratique",
+          "body": "Nous ajoutons resumes, recherche documentaire, controles de rapports et aide aux workflows quand les donnees le permettent.",
+          "tags": [
+            "IA",
+            "Recherche",
+            "Resumes"
+          ]
+        }
+      ]
+    },
+    "imageSlider": {
+      "heading": "Des donnees utilisables pour decider.",
+      "subheading": "Power BI, reporting et IA sur une base propre."
+    },
+    "process": {
+      "title": "Notre processus data",
+      "description": "Nous partons des questions business, puis nous connectons, nettoyons, modelisons et visualisons les donnees.",
+      "steps": [
+        {
+          "title": "Questions",
+          "body": "Definir les decisions, KPI et utilisateurs.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Donnees",
+          "body": "Connecter fichiers, bases, exports et outils existants.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Modeles",
+          "body": "Nettoyer, structurer et verifier les calculs.",
+          "color": "var(--engagement-400)"
+        },
+        {
+          "title": "Dashboards",
+          "body": "Livrer rapports, Power BI et workflows IA utiles.",
+          "color": "var(--engagement-400)"
+        }
+      ]
+    },
+    "upgrade": {
+      "heading": "Ce que nous pouvons mettre en place",
+      "ctaLabel": "Planifier un rendez-vous",
+      "items": [
+        {
+          "title": "Dashboards Power BI",
+          "body": "Vues direction, ventes, RH, paie, stock et operations."
+        },
+        {
+          "title": "Migration Excel",
+          "body": "Passer des fichiers manuels a des rapports fiables et actualisables."
+        },
+        {
+          "title": "Pipelines de donnees",
+          "body": "Flux propres entre sources, bases, outils et dashboards."
+        },
+        {
+          "title": "KPI et gouvernance",
+          "body": "Definitions claires pour eviter plusieurs versions du meme chiffre."
+        },
+        {
+          "title": "Assistants IA",
+          "body": "Resumes, recherche, alertes et controles de rapports."
+        },
+        {
+          "title": "Support reporting",
+          "body": "Ameliorations, maintenance et nouveaux besoins apres lancement."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "Les dashboards deviennent utiles quand les donnees, les definitions et le workflow quotidien sont fiables.",
+      "name": "Tech Solutions RDC",
+      "role": "Equipe analytics et IA"
+    },
+    "clientsHeading": "Analytics pour operations, RH, finance et direction",
+    "principles": {
+      "heading": "4 principes pour des analytics utiles",
+      "body": "Les dashboards ne doivent pas seulement etre beaux. Ils doivent etre fiables, lisibles et connectes aux decisions.",
+      "support": "Parlons de vos fichiers, KPI et rapports actuels.",
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "cards": {
+        "humanCentred": {
+          "title": "Lisible",
+          "body": "Chaque vue doit etre comprise rapidement par les equipes qui l'utilisent."
+        },
+        "clientFocused": {
+          "title": "Fiable",
+          "body": "Les calculs, sources et definitions doivent etre clairs et verifiables."
+        },
+        "multidisciplinary": {
+          "title": "Connecte",
+          "body": "Les dashboards doivent s'appuyer sur des flux de donnees propres."
+        },
+        "strategyDriven": {
+          "title": "Actionnable",
+          "body": "Un rapport utile aide a decider quoi faire ensuite."
+        }
+      }
+    }
+  },
+  "AboutPage": {
+    "hero": {
+      "title": "Logiciels, dashboards et automatisation pratiques pour les entreprises en RDC",
+      "bodyLines": [
+        "Tech Solutions RDC cree des sites web, applications sur mesure, systemes de presence, dashboards Power BI et workflows prets pour l'IA qui rendent les operations plus claires."
+      ],
+      "ctaLabel": "Planifier un rendez-vous",
+      "ctaHref": "/schedule",
+      "servicesLabel": "A propos",
+      "servicesHref": "/about",
+      "clientsLabel": "Explorer les services",
+      "clientsHref": "/services"
+    },
+    "intro": {
+      "eyebrow": "Ce que nous defendons",
+      "title": "La technologie doit connecter business, design et donnees.",
+      "body": [
+        "Nous partons du vrai workflow : personnes, regles, fichiers, validations et rapports.",
+        "Ensuite, nous construisons le systeme utile le plus simple, du site public a l'application interne ou au dashboard."
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "Apps",
+          "label": "Sites web, portails, admin panels et outils metier sur mesure."
+        },
+        {
+          "value": "BI",
+          "label": "Dashboards Power BI pour RH, paie, ventes, stock et operations."
+        },
+        {
+          "value": "IA",
+          "label": "Outils IA qui soutiennent les rapports, donnees et processus reels."
+        }
+      ]
+    },
+    "localTrust": {
+      "eyebrow": "Concu pour la realite locale",
+      "title": "Pret a construire un outil utile et plus simple a gerer ?",
+      "body": "Nous gardons les projets concentres : comprendre le workflow, construire le bon systeme, puis l'ameliorer avec le retour terrain.",
+      "points": [
+        "Partir du workflow",
+        "Construire ce qui est utile",
+        "Rendre les rapports fiables",
+        "Ameliorer avec le terrain"
+      ]
+    },
+    "pillars": {
+      "eyebrow": "Nos valeurs",
+      "title": "Des principes simples, appliques chaque jour",
+      "cards": [
+        {
+          "title": "Clarite d'abord",
+          "body": "Un systeme doit rendre le travail plus facile a comprendre, pas plus difficile a expliquer."
+        },
+        {
+          "title": "Utile avant spectaculaire",
+          "body": "Nous choisissons des fonctions pratiques qui font gagner du temps et aident a decider."
+        },
+        {
+          "title": "Donnees fiables",
+          "body": "Les rapports, dashboards et outils IA valent seulement si les donnees derriere sont propres."
+        },
+        {
+          "title": "Adapte au terrain",
+          "body": "Nous adaptons les outils aux regles, aux equipes et aux operations quotidiennes en RDC."
+        }
+      ]
+    }
+  }
+}
