@@ -1,0 +1,12 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+# Official Netlify runtime for Next.js (handles SSR, middleware, image
+# optimization, static + dynamic routes). Required for next-intl middleware.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Next.js 16 requires Node 20+. Netlify still defaults to 18, which fails.
+  NODE_VERSION = "20"

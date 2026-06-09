@@ -1,14 +1,10 @@
 export const bookingUrl =
-  process.env.NEXT_PUBLIC_BOOKING_URL?.trim() ||
-  "https://calendly.com/techsolutionsrdc-sales/30min";
+  process.env.NEXT_PUBLIC_BOOKING_URL?.trim() || "";
 
-export const salesEmail = "sales@techsolutionsrdc.com";
+export const salesEmail =
+  process.env.NEXT_PUBLIC_SALES_EMAIL?.trim() || "hello@servicely.digital";
 
-export function gmailComposeHref(
-  to: string,
-  subject = "",
-  body = ""
-) {
+export function gmailComposeHref(to: string, subject = "", body = "") {
   const params = new URLSearchParams({
     view: "cm",
     fs: "1",
@@ -28,8 +24,7 @@ export function gmailComposeHref(
 
 export function meetingEmailHref(slot: string) {
   const subject = `Schedule a meeting: ${slot}`;
-  const body =
-    `Hello Tech Solutions RDC,\n\nI would like to schedule a meeting for ${slot}.\n\nCompany:\nPhone:\nService needed:\n\nThank you.`
+  const body = `Hello Servicely,\n\nI would like to schedule a meeting for ${slot}.\n\nCompany:\nPhone:\nService needed:\n\nThank you.`;
 
   return gmailComposeHref(salesEmail, subject, body);
 }

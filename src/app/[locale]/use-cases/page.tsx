@@ -1,20 +1,46 @@
-import Link from "next/link";
-import { getLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import {
   ArrowLeft,
-  ArrowRight,
   BarChart3,
   CheckCircle2,
   Clock3,
   Workflow,
 } from "lucide-react";
 
+import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
+import { localizedAlternates, localePath } from "@/lib/site";
 
-export default async function UseCasesPage() {
-  const locale = await getLocale();
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+
+  return {
+    title: isAr
+      ? "حالات الاستخدام - أنظمة عملاء عملية"
+      : "Use Cases - Practical Customer Systems",
+    description: isAr
+      ? "حالات استخدام لأنظمة الذكاء الاصطناعي، واتساب، المواعيد، العملاء، المواقع والتطبيقات للشركات في لبنان والعراق ودبي/الإمارات."
+      : "Use cases for AI, WhatsApp, appointment, lead, website and app systems for businesses in Lebanon, Iraq and Dubai.",
+    alternates: localizedAlternates("/use-cases", locale),
+    openGraph: {
+      title: isAr ? "حالات الاستخدام | Servicely" : "Use Cases | Servicely",
+      description: isAr
+        ? "مشكلات عملاء يومية نحولها إلى أنظمة رقمية تعمل."
+        : "Daily customer problems turned into working digital systems.",
+      url: localePath(locale, "/use-cases"),
+    },
+  };
+}
+
+export default async function UseCasesPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const pageCopy = getIndustriesCopy(locale);
   const { detail, problemsLabels } = pageCopy;
 
@@ -49,7 +75,6 @@ export default async function UseCasesPage() {
         </div>
       </AnimatedHeroBackground>
 
-      {/* Industry quick-nav */}
       <div className="border-y border-neutral-200 bg-white">
         <nav className="mx-auto flex max-w-6xl flex-wrap gap-2 px-4 py-4 md:px-6 lg:px-8">
           {pageCopy.industries.map((industry) => (
@@ -64,7 +89,6 @@ export default async function UseCasesPage() {
         </nav>
       </div>
 
-      {/* Per-industry sections, each with 3 P/S/R use cases */}
       {pageCopy.industries.map((industry, sectionIndex) => {
         const Icon = industry.Icon;
         const isAlt = sectionIndex % 2 === 1;

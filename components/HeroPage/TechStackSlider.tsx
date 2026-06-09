@@ -1,7 +1,7 @@
-import InfiniteLogos from "@/components/HeroPage/ClientsSlider";
+﻿import InfiniteLogos from "@/components/HeroPage/ClientsSlider";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 
 type Technology = {

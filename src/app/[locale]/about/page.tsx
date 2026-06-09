@@ -1,8 +1,12 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, BarChart3, Clock3, Code2, Workflow } from "lucide-react";
-import Link from "next/link";
 
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
+import { localizedAlternates, localePath } from "@/lib/site";
+
+type Props = { params: Promise<{ locale: string }> };
 
 type AboutHero = {
   title: string;
@@ -22,7 +26,25 @@ type AboutCard = {
 
 const icons = [Code2, Clock3, Workflow, BarChart3];
 
-export default async function AboutPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "AboutPage.meta" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: localizedAlternates("/about", locale),
+    openGraph: {
+      title: t("ogTitle"),
+      description: t("description"),
+      url: localePath(locale, "/about"),
+    },
+  };
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("AboutPage");
   const hero = t.raw("hero") as AboutHero;
   const pillars = t.raw("pillars.cards") as AboutCard[];
@@ -146,7 +168,7 @@ export default async function AboutPage() {
           <div className="rounded-3xl bg-neutral-950 p-6 text-white sm:p-8 md:flex md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                Tech Solutions RDC
+                {t("localTrust.eyebrow")}
               </p>
               <h2 className="mt-2 max-w-2xl text-2xl font-semibold md:text-3xl">
                 {t("localTrust.title")}

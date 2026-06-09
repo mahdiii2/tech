@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import {
   ArrowRight,
   BarChart3,
@@ -8,12 +8,39 @@ import {
   Workflow,
 } from "lucide-react";
 
+import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
+import { localizedAlternates, localePath } from "@/lib/site";
 
-export default async function IndustriesPage() {
-  const locale = await getLocale();
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+
+  return {
+    title: isAr
+      ? "القطاعات - عيادات، عقارات، خدمات مميزة وتعليم"
+      : "Industries - Clinics, Real Estate, Premium Services & Education",
+    description: isAr
+      ? "قطاعات نخدمها في لبنان والعراق ودبي/الإمارات: العيادات، العقارات، الخدمات المميزة، التدريب، السياحة، والشركات متعددة الفروع."
+      : "Industries served in Lebanon, Iraq and Dubai: clinics, real estate, premium services, training, hospitality and multi-branch businesses.",
+    alternates: localizedAlternates("/industries", locale),
+    openGraph: {
+      title: isAr ? "القطاعات | Servicely" : "Industries | Servicely",
+      description: isAr
+        ? "أنظمة عملية لتحسين الاستفسارات، المواعيد، واتساب، والتجربة الرقمية."
+        : "Practical systems for inquiries, appointments, WhatsApp, and digital customer journeys.",
+      url: localePath(locale, "/industries"),
+    },
+  };
+}
+
+export default async function IndustriesPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const pageCopy = getIndustriesCopy(locale);
 
   return (
@@ -50,7 +77,7 @@ export default async function IndustriesPage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/industries/use-cases"
+                href="/use-cases"
                 className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-7 py-3 text-sm font-semibold text-neutral-800 transition hover:border-neutral-400"
               >
                 {pageCopy.viewUseCasesLabel}
@@ -97,7 +124,8 @@ export default async function IndustriesPage() {
             return (
               <Reveal key={industry.id} delay={(index % 3) * 0.08}>
                 <article
-                  className="group flex h-full flex-col rounded-3xl p-7 transition hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.08)]"
+                  id={industry.id}
+                  className="group flex h-full scroll-mt-32 flex-col rounded-3xl p-7 transition hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.08)]"
                   style={{ backgroundColor: industry.bg }}
                 >
                   <div className="flex items-center gap-4">
@@ -150,7 +178,7 @@ export default async function IndustriesPage() {
                   ) : null}
 
                   <Link
-                    href={`/industries/use-cases#${industry.id}`}
+                    href={`/use-cases#${industry.id}`}
                     className="mt-auto flex items-center gap-3 pt-8 text-base font-semibold text-neutral-900"
                   >
                     <span>{pageCopy.viewUseCasesLabel}</span>

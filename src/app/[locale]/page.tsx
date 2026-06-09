@@ -1,15 +1,53 @@
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { HomeHeroSequence } from "@/components/HeroPage/HomeHeroSequence";
 import { Skiper16 } from "@/components/HeroPage/ServiceCards";
 import { HeroWithFloatingImages } from "@/components/HeroPage/AgencyPartnerSection";
 import { DigitalSolutionsSection } from "@/components/HeroPage/DigitalSolutionsSection";
-import { AttendanceSpotlight } from "@/components/HeroPage/AttendanceSpotlight";
-import ContactBridge from "@/components/HeroPage/ContactBridge";
-import { getTranslations } from "next-intl/server";
-import TechStackSlider from "@/components/HeroPage/TechStackSlider";
-import CaseStudySlider from "@/components/HeroPage/ClientSwiper";
-import ImageSlider from "@/components/Services/ImageSlider";
+import { getMarketContent } from "@/lib/market-content";
+import { localizedAlternates, localePath } from "@/lib/site";
+
+const ImageSlider = dynamic(() => import("@/components/Services/ImageSlider"));
+const CaseStudySlider = dynamic(
+  () => import("@/components/HeroPage/ClientSwiper")
+);
+const TechStackSlider = dynamic(
+  () => import("@/components/HeroPage/TechStackSlider")
+);
+const ContactBridge = dynamic(
+  () => import("@/components/HeroPage/ContactBridge")
+);
+const TestimonialStack = dynamic(
+  () =>
+    import("@/components/HeroPage/TestimonialStack").then(
+      (mod) => mod.TestimonialStack
+    )
+);
+
+type Props = { params: Promise<{ locale: string }> };
+
 const BLUEPRINT_KEYS = ["development", "design", "engagement"] as const;
-export default async function HomePage() {
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const content = getMarketContent(locale);
+
+  return {
+    title: content.home.hero.title,
+    description: content.home.hero.body,
+    alternates: localizedAlternates("/", locale),
+    openGraph: {
+      title: content.home.hero.title,
+      description: content.home.hero.body,
+      url: localePath(locale, "/"),
+    },
+  };
+}
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("HomePage");
   const blueprints = BLUEPRINT_KEYS.map((key) => ({
     key,
@@ -21,7 +59,7 @@ export default async function HomePage() {
   }));
 
   return (
-    <div className="space-y-8 mb-10">
+    <div className="mb-10 space-y-8">
       <HomeHeroSequence
         vision={{
           heading: t("vision.heading"),
@@ -30,14 +68,6 @@ export default async function HomePage() {
           ctaHref: t("vision.ctaHref"),
           chips: t.raw("vision.chips") as string[],
         }}
-      />
-      <AttendanceSpotlight
-        title={t("attendanceSpotlight.title")}
-        body={t("attendanceSpotlight.body")}
-        points={t.raw("attendanceSpotlight.points") as string[]}
-        target={t("attendanceSpotlight.target")}
-        ctaLabel={t("attendanceSpotlight.ctaLabel")}
-        ctaHref={t("attendanceSpotlight.ctaHref")}
       />
       <Skiper16
         blueprints={blueprints}
@@ -55,6 +85,7 @@ export default async function HomePage() {
       />
       <CaseStudySlider />
       <TechStackSlider />
+      <TestimonialStack />
       <ContactBridge />
     </div>
   );

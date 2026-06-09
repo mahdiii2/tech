@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";

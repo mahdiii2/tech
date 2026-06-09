@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import { Link } from "@/i18n/navigation";
 import { BarChart3, CheckCircle2, Clock3, Fingerprint } from "lucide-react";
 
 import { Button } from "@/components/ui/button";

@@ -1,18 +1,15 @@
 import {
-  AlertTriangle,
   BarChart3,
   Building2,
-  ClipboardCheck,
-  Factory,
-  Fingerprint,
+  CalendarCheck,
+  Gem,
   Globe,
-  HardHat,
+  GraduationCap,
   HeartPulse,
   Hotel,
-  MapPin,
-  Store,
-  TrendingUp,
-  Zap,
+  MessageCircle,
+  Network,
+  UserCheck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -32,28 +29,6 @@ export type Problem = {
   Icon: LucideIcon;
   accent: string;
   accentBg: string;
-};
-
-const PROBLEM_ICONS: Record<string, LucideIcon> = {
-  visibility: BarChart3,
-  attendance: Fingerprint,
-  credibility: Globe,
-  approvals: ClipboardCheck,
-  field: MapPin,
-  growth: TrendingUp,
-  reports: Zap,
-  alerts: AlertTriangle,
-};
-
-const PROBLEM_ACCENTS: Record<string, { accent: string; accentBg: string }> = {
-  visibility: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
-  attendance: { accent: "var(--design-500)", accentBg: "var(--design-50)" },
-  credibility: { accent: "var(--engagement-500)", accentBg: "var(--engagement-50)" },
-  approvals: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
-  field: { accent: "var(--engagement-500)", accentBg: "var(--engagement-50)" },
-  growth: { accent: "var(--design-500)", accentBg: "var(--design-50)" },
-  reports: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
-  alerts: { accent: "var(--design-500)", accentBg: "var(--design-50)" },
 };
 
 export type Industry = {
@@ -113,70 +88,85 @@ export type IndustriesCopy = {
   industries: Industry[];
 };
 
-const ICONS: Record<string, LucideIcon> = {
-  companies: Building2,
-  factories: Factory,
-  construction: HardHat,
-  hotels: Hotel,
-  hospitals: HeartPulse,
-  stores: Store,
+const problemAccents = {
+  response: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
+  appointments: {
+    accent: "var(--design-500)",
+    accentBg: "var(--design-50)",
+  },
+  leads: {
+    accent: "var(--engagement-500)",
+    accentBg: "var(--engagement-50)",
+  },
+  handoff: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
+  visibility: {
+    accent: "var(--design-500)",
+    accentBg: "var(--design-50)",
+  },
+  credibility: {
+    accent: "var(--engagement-500)",
+    accentBg: "var(--engagement-50)",
+  },
 };
 
-const COLORS: Record<string, { color: string; bg: string }> = {
-  companies: { color: "var(--dev-500)", bg: "var(--dev-50)" },
-  factories: { color: "var(--design-500)", bg: "var(--design-50)" },
-  construction: { color: "var(--engagement-500)", bg: "var(--engagement-50)" },
-  hotels: { color: "var(--dev-500)", bg: "var(--dev-50)" },
-  hospitals: { color: "var(--engagement-500)", bg: "var(--engagement-50)" },
-  stores: { color: "var(--design-500)", bg: "var(--design-50)" },
+const industryStyle = {
+  clinics: { color: "var(--dev-500)", bg: "var(--dev-50)" },
+  realEstate: { color: "var(--design-500)", bg: "var(--design-50)" },
+  premium: { color: "var(--engagement-500)", bg: "var(--engagement-50)" },
+  training: { color: "var(--dev-500)", bg: "var(--dev-50)" },
+  hospitality: {
+    color: "var(--engagement-500)",
+    bg: "var(--engagement-50)",
+  },
+  branches: { color: "var(--design-500)", bg: "var(--design-50)" },
 };
 
 const copy: Record<string, IndustriesCopy> = {
   en: {
     eyebrow: "Industries we support",
-    title: "Technology for teams with real schedules, approvals, reports and operations",
-    body: "Tech Solutions RDC builds websites, custom apps, attendance automation, Power BI dashboards, data pipelines and AI-assisted workflows for organizations that need cleaner daily operations and better management visibility.",
+    title: "AI, automation and websites for customer-driven businesses",
+    body: "Servicely builds practical customer systems for businesses in Lebanon, Iraq and Dubai/UAE: AI assistants, WhatsApp automation, appointment flows, websites, apps, portals and dashboards.",
     support:
-      "We do not start with generic software. We start with your real workflow: your teams, schedules, machines, Excel files, approval rules and reports.",
-    cta: "Schedule a meeting",
-    ctaHref: "/schedule",
+      "We start with the real customer journey: questions, messages, handoff, appointments, leads, branches, follow-up and reporting.",
+    cta: "Start a project",
+    ctaHref: "/contact",
     metrics: [
-      { value: "6", label: "priority industries" },
-      { value: "BI", label: "Power BI and KPI dashboards" },
-      { value: "AI", label: "workflow and report assistants" },
+      { value: "3", label: "priority markets: Lebanon, Iraq and Dubai/UAE" },
+      { value: "2", label: "languages for customer journeys: English and Arabic" },
+      { value: "AI", label: "assistants, WhatsApp flows and dashboards" },
     ],
-    sectionTitle: "Where Tech Solutions RDC fits",
+    sectionTitle: "Where Servicely fits",
     sectionBody:
-      "Every industry has different operational problems. Some need better attendance tracking. Others need field reporting, stock visibility, production dashboards, appointment tools or internal approval systems. Choose your industry to see the type of systems we can build for your organization.",
-    closingTitle: "Build a practical system for your organization",
+      "Every business receives inquiries differently. Clinics need appointment clarity. Real estate agencies need qualified leads. Premium service teams need a trustworthy digital journey. We shape the system around the way customers actually contact you.",
+    closingTitle: "Build the customer system your team can actually use",
     closingBody:
-      "Bring your schedules, machines, spreadsheets, forms or current process. We will map how the work happens today and show the simplest path to cleaner operations.",
+      "Bring your messages, forms, appointment process, property inquiry flow, service catalog or branch routing. We will map the simplest useful system and build it cleanly.",
     closingChecklist: [
-      "Business websites and custom web applications",
-      "Workflow automation and approval flows",
-      "Attendance dashboards and HR reporting",
-      "Power BI dashboards and KPI reports",
-      "Data pipelines and AI-ready reporting",
+      "AI customer support and FAQ assistants",
+      "WhatsApp inquiry and handoff automation",
+      "Appointment request and lead qualification flows",
+      "Business websites, apps, portals and dashboards",
+      "Support, hosting, monitoring and practical improvements",
     ],
     helpsWithLabel: "We help with",
     viewUseCasesLabel: "View use cases",
-    useCasesHeroEyebrow: "Real use cases for real operations",
-    useCasesHeroTitle: "Daily problems we turn into working systems",
+    useCasesHeroEyebrow: "Real use cases",
+    useCasesHeroTitle: "Customer problems we turn into working systems",
     useCasesHeroBody:
-      "Every organization has daily problems that are easy to ignore until they cost time, money or trust.",
-    problemsEyebrow: "Common problems we solve",
-    problemsTitle: "You don't need technology for decoration",
+      "The right system makes first contact clearer, response faster and follow-up easier for your team.",
+    problemsEyebrow: "Common problems",
+    problemsTitle: "You do not need digital tools for decoration",
     problemsBody:
-      "You need systems that remove confusion, save time and give management clear visibility. Here are the problems almost every company in DRC recognizes and what changes when they are solved.",
+      "You need systems that remove confusion, save time and help customers take the next step.",
     problemsLabels: {
       problem: "Problem",
       solution: "Solution",
       result: "Result",
     },
     industriesEyebrow: "Where this applies",
-    industriesShortTitle: "Built for the industries we work with daily",
+    industriesShortTitle: "Built for businesses that rely on inquiries",
     industriesShortBody:
-      "Companies, factories, construction, hotels, hospitals and stores all face the same core problems in different ways. Pick yours to see how we shape the solution.",
+      "Clinics, real estate agencies, premium service businesses, training centers, hospitality teams and multi-branch companies all need cleaner customer workflows.",
     detail: {
       backLabel: "All industries",
       exploreLabel: "Explore use cases",
@@ -184,832 +174,609 @@ const copy: Record<string, IndustriesCopy> = {
       overviewLabel: "Overview",
       benefitsTitle: "What you get",
       useCasesTitle: "Use cases",
-      useCasesBody: "Real-life scenarios we build for teams in this industry.",
+      useCasesBody: "Practical scenarios we build for this type of business.",
       otherTitle: "Other industries",
     },
     problems: [
       {
-        id: "visibility",
-        title: "Management cannot see what is happening across the business",
+        id: "response",
+        title: "Customers wait too long for basic answers",
         problem:
-          "Reports are spread across Excel files, WhatsApp messages, paper sheets and different departments. By the time management receives the numbers, they are already outdated.",
+          "Staff repeat the same answers across WhatsApp, calls, Instagram, website forms and direct messages.",
         solution:
-          "We build Power BI dashboards that connect your attendance, sales, production, HR or operations data into one clear management view.",
+          "We build AI assistants and structured inquiry flows that answer common questions and collect the right details.",
         result:
-          "Leaders see performance, problems, delays and costs before they become expensive.",
-        ...PROBLEM_ACCENTS.visibility,
-        Icon: PROBLEM_ICONS.visibility,
+          "Customers get faster answers and staff handle the serious requests with better context.",
+        Icon: MessageCircle,
+        ...problemAccents.response,
       },
       {
-        id: "attendance",
-        title: "Staff attendance is difficult to verify",
+        id: "appointments",
+        title: "Appointment requests are messy",
         problem:
-          "HR spends too much time checking attendance, overtime, lateness, absences and payroll data manually.",
+          "Requests arrive incomplete, double-booking risk increases and staff spend time asking the same follow-up questions.",
         solution:
-          "We connect fingerprint machines, time clock systems or attendance files to automated dashboards and payroll-ready reports.",
+          "We build appointment request flows that collect preferred date, service, contact details and notes before staff confirm.",
         result:
-          "Fewer payroll disputes, faster HR reporting and clear proof of who worked, when and where.",
-        ...PROBLEM_ACCENTS.attendance,
-        Icon: PROBLEM_ICONS.attendance,
+          "Teams receive cleaner appointment requests and customers understand the next step.",
+        Icon: CalendarCheck,
+        ...problemAccents.appointments,
+      },
+      {
+        id: "leads",
+        title: "Leads arrive without useful details",
+        problem:
+          "Sales teams receive vague messages like pricing requests with no budget, location, timeline or preference.",
+        solution:
+          "We build qualification flows for real estate and service businesses before handoff to staff.",
+        result:
+          "Teams spend less time chasing basic information and more time with serious customers.",
+        Icon: UserCheck,
+        ...problemAccents.leads,
+      },
+      {
+        id: "handoff",
+        title: "WhatsApp conversations are hard to organize",
+        problem:
+          "Different people answer from different places and important requests can be missed or forgotten.",
+        solution:
+          "We structure intake, routing, summaries and handoff so the right person receives the right request.",
+        result:
+          "Customer conversations become easier to manage and follow up.",
+        Icon: MessageCircle,
+        ...problemAccents.handoff,
+      },
+      {
+        id: "visibility",
+        title: "Owners cannot see what is happening",
+        problem:
+          "Leads, appointments, branch requests and follow-up status are spread across messages and spreadsheets.",
+        solution:
+          "We build dashboards that show inquiries, requests, status, branches and follow-up activity.",
+        result:
+          "Owners and managers get a clearer view of customer demand and team response.",
+        Icon: BarChart3,
+        ...problemAccents.visibility,
       },
       {
         id: "credibility",
-        title: "Customers judge the company before speaking to you",
+        title: "The website does not help customers act",
         problem:
-          "A serious client searches for your business online but finds no professional website, outdated information or only a PDF brochure.",
+          "The site looks outdated, lacks clear service pages or only describes the company without action flows.",
         solution:
-          "We create a professional website that presents your services, projects, contact details and booking options clearly.",
+          "We build websites connected to inquiry, appointment, lead capture, portal or customer support workflows.",
         result:
-          "Your company looks credible, clients understand what you offer and they can contact you easily.",
-        ...PROBLEM_ACCENTS.credibility,
-        Icon: PROBLEM_ICONS.credibility,
-      },
-      {
-        id: "approvals",
-        title: "Internal requests get lost in WhatsApp",
-        problem:
-          "Leave requests, purchase approvals, maintenance reports and field updates are sent through WhatsApp or paper forms. Some are forgotten, delayed or disputed.",
-        solution:
-          "We build simple internal apps for approvals, requests, task tracking and follow-up.",
-        result: "Every request has a status, owner, date and decision history.",
-        ...PROBLEM_ACCENTS.approvals,
-        Icon: PROBLEM_ICONS.approvals,
-      },
-      {
-        id: "field",
-        title: "Field teams send late or incomplete updates",
-        problem:
-          "Construction sites, branches, factories or departments send updates manually. Managers spend the day calling people just to know what is happening.",
-        solution:
-          "We create field reporting apps where supervisors submit daily progress, attendance, photos, materials used, blockers or incidents.",
-        result:
-          "Management gets reliable updates from every location without chasing people.",
-        ...PROBLEM_ACCENTS.field,
-        Icon: PROBLEM_ICONS.field,
-      },
-      {
-        id: "growth",
-        title: "The company is growing but the workflow is still manual",
-        problem:
-          "Processes that worked with 10 employees break when the company grows to 50, 100 or more. Excel, paper and WhatsApp become too messy.",
-        solution:
-          "We map the workflow and build custom software around how the business actually works.",
-        result:
-          "The company grows with cleaner systems, better control and less dependence on manual follow-up.",
-        ...PROBLEM_ACCENTS.growth,
-        Icon: PROBLEM_ICONS.growth,
-      },
-      {
-        id: "reports",
-        title: "Reports take days instead of minutes",
-        problem:
-          "Managers ask for weekly or monthly reports, and teams spend hours copying data, cleaning Excel files and preparing slides.",
-        solution:
-          "We automate recurring reports using Power BI, clean data pipelines and AI summaries.",
-        result:
-          "Reports are ready faster, more accurate and easier to understand.",
-        ...PROBLEM_ACCENTS.reports,
-        Icon: PROBLEM_ICONS.reports,
-      },
-      {
-        id: "alerts",
-        title: "Problems are discovered too late",
-        problem:
-          "Management only finds out about overtime abuse, stock issues, production delays, missed shifts or project overruns after the damage is already done.",
-        solution:
-          "We set up dashboards and alerts that highlight unusual numbers, missing data, delays or risks.",
-        result:
-          "Teams act early instead of reacting after the problem becomes expensive.",
-        ...PROBLEM_ACCENTS.alerts,
-        Icon: PROBLEM_ICONS.alerts,
+          "The website becomes part of the customer journey, not just a brochure.",
+        Icon: Globe,
+        ...problemAccents.credibility,
       },
     ],
     industries: [
       {
-        id: "companies",
-        title: "Companies",
-        subtitle: "Websites, operations, HR and management dashboards",
-        body: "For offices and growing businesses that need professional websites, internal tools, approval flows, HR automation, attendance reports and management dashboards.",
+        id: "clinics-medical-centers",
+        title: "Clinics & medical centers",
+        subtitle: "Appointment requests, patient inquiries and AI support",
+        body: "For clinics that need clearer appointment requests, faster answers to basic non-medical questions and cleaner staff handoff.",
         points: [
-          "Company websites and client portals",
-          "Leave, purchase and document approvals",
-          "Attendance and payroll summaries",
-          "Power BI dashboards for managers",
-          "AI report summaries and alerts",
+          "Appointment request flows",
+          "Patient inquiry assistants",
+          "Service and branch information",
+          "Staff handoff and follow-up",
+          "Request dashboards",
         ],
-        outcome: "Better visibility for management and cleaner daily operations.",
+        tags: ["Appointments", "AI assistant", "WhatsApp", "Dashboard"],
+        outcome: "Patients ask clearly, staff receive cleaner requests, and follow-up becomes easier.",
         useCases: [
           {
-            title: "Management waits too long for reports",
-            problem:
-              "Sales, HR, finance and operations each send Excel files at different times. Management spends days waiting, checking and combining information before making decisions.",
-            solution:
-              "We build Power BI dashboards that bring key numbers into one management view.",
-            result:
-              "Managers see performance, attendance, sales, costs and operations without waiting for manual reports.",
+            title: "Patients ask the same questions every day",
+            problem: "Staff repeat location, hours, services, preparation and contact answers manually.",
+            solution: "An assistant answers common non-medical questions and collects appointment intent.",
+            result: "Staff spend more time confirming serious requests instead of repeating basics.",
           },
           {
-            title: "Approval requests get lost in WhatsApp",
-            problem:
-              "Leave requests, purchase approvals and document validations are sent by WhatsApp or email. Some are forgotten, delayed or disputed later.",
-            solution:
-              "We build an internal approval system where every request has a status, approver, date and decision history.",
-            result: "Requests become easier to track, approve and audit.",
+            title: "Appointment requests arrive incomplete",
+            problem: "Patients send vague messages without service, preferred time or contact details.",
+            solution: "A request flow collects the required details before staff confirmation.",
+            result: "The clinic receives clearer requests and fewer back-and-forth messages.",
           },
           {
-            title: "The company looks less serious than it really is",
-            problem:
-              "A potential client asks for your website and receives a PDF, old brochure or WhatsApp message instead.",
-            solution:
-              "We build a professional company website or client portal that presents your services, projects, team and contact options.",
-            result:
-              "The company looks more credible and prospects can understand your offer before contacting you.",
+            title: "Follow-up is hard to track",
+            problem: "Some requests are answered late or forgotten when messages become busy.",
+            solution: "A dashboard tracks request status, handoff and follow-up.",
+            result: "The team sees what still needs attention.",
           },
         ],
-        ...COLORS.companies,
-        Icon: ICONS.companies,
+        Icon: HeartPulse,
+        ...industryStyle.clinics,
       },
       {
-        id: "factories",
-        title: "Factories",
-        subtitle: "Production reporting, shifts, overtime and dashboards",
-        body: "For factories that need reliable production reporting, shift tracking, overtime verification, attendance dashboards and operational data that management can trust.",
+        id: "real-estate-agencies",
+        title: "Real estate agencies",
+        subtitle: "Qualified property leads and viewing requests",
+        body: "For agencies that need cleaner leads, property inquiry tools, viewing requests and better agent handoff.",
         points: [
-          "Production reporting by shift, line or team",
-          "Worker attendance and overtime tracking",
-          "Equipment downtime follow-up",
-          "Power BI dashboards for output, labor and costs",
-          "Payroll-ready attendance summaries",
+          "Lead qualification flows",
+          "Viewing request intake",
+          "Property landing pages",
+          "Agent routing",
+          "Lead dashboards",
         ],
-        outcome:
-          "Clear production numbers, verified hours and fewer surprises at month-end.",
+        tags: ["Leads", "Listings", "Viewing", "Agents"],
+        outcome: "Agents receive better-qualified leads with budget, location, timeline and preference.",
         useCases: [
           {
-            title: "Production numbers arrive too late",
-            problem:
-              "Supervisors submit production numbers after the shift or the next morning. Management only sees problems after the day is already lost.",
-            solution:
-              "We build a production reporting app connected to Power BI dashboards.",
-            result:
-              "Managers can see output by line, team, shift or product faster and take action earlier.",
+            title: "Agents receive vague messages",
+            problem: "A lead asks for prices but gives no budget, location, property type or timeline.",
+            solution: "A qualification flow collects the right details before agent handoff.",
+            result: "Agents can prioritize serious leads faster.",
           },
           {
-            title: "Overtime creates disputes every month",
-            problem:
-              "Workers, supervisors and HR disagree about overtime hours during payroll preparation.",
-            solution:
-              "We connect attendance or fingerprint data to automated overtime calculations and payroll-ready reports.",
-            result:
-              "Overtime becomes easier to verify and payroll disputes are reduced.",
+            title: "Property inquiries are scattered",
+            problem: "Messages arrive from WhatsApp, social media and website forms without a shared view.",
+            solution: "A lead dashboard centralizes inquiries and status.",
+            result: "The agency sees which leads need follow-up.",
           },
           {
-            title: "Machine downtime is reported too slowly",
-            problem:
-              "A machine stops, but the issue is reported late or informally. Maintenance loses time and production falls behind.",
-            solution:
-              "We build a downtime reporting workflow where operators can report issues and maintenance can track resolution.",
-            result: "Downtime becomes visible, traceable and easier to reduce.",
+            title: "Viewings take too much manual coordination",
+            problem: "Staff ask the same availability and property questions repeatedly.",
+            solution: "A viewing request flow collects preferences and availability first.",
+            result: "Scheduling becomes clearer for customers and agents.",
           },
         ],
-        ...COLORS.factories,
-        Icon: ICONS.factories,
+        Icon: Building2,
+        ...industryStyle.realEstate,
       },
       {
-        id: "construction",
-        title: "Construction companies",
-        subtitle: "Project portal, field apps, cost and progress tracking",
-        body: "For construction companies managing multiple sites, field teams, project costs, materials, equipment and daily progress reporting.",
+        id: "premium-service-businesses",
+        title: "Premium service businesses",
+        subtitle: "Trustworthy digital journeys for high-value services",
+        body: "For aesthetic, wellness, consulting, legal, financial, repair or specialist service companies that need a polished online journey.",
         points: [
-          "Company websites showing projects and capabilities",
-          "Field apps for daily site reporting",
-          "Site attendance and crew tracking",
-          "Cost and progress dashboards",
-          "Material, subcontractor and equipment follow-up",
+          "Premium service pages",
+          "Inquiry and consultation flows",
+          "Client intake forms",
+          "Customer portals",
+          "Service dashboards",
         ],
-        outcome: "Clear visibility across sites, costs, progress and crew.",
+        tags: ["Premium", "Consultation", "Intake", "Portal"],
+        outcome: "Customers understand the offer and know exactly how to start.",
         useCases: [
           {
-            title: "Site updates are late or incomplete",
-            problem:
-              "Managers call multiple site supervisors every morning to ask about progress, workers, materials and blockers.",
-            solution: "We build a field reporting app for daily site updates.",
-            result:
-              "Management sees progress, attendance, materials and issues across all sites from one dashboard.",
+            title: "Customers do not understand the service quickly",
+            problem: "Service pages are vague and customers need manual explanation before taking action.",
+            solution: "We build clear service pages with inquiry flows and next steps.",
+            result: "Serious customers know what to ask for and how to begin.",
           },
           {
-            title: "Project costs drift before anyone notices",
-            problem:
-              "Labor, overtime, materials and equipment costs increase slowly across sites. The issue is only noticed near the end of the project.",
-            solution:
-              "We build Power BI dashboards that track cost, progress, attendance and site activity.",
-            result:
-              "Managers can identify risky sites before costs become harder to control.",
+            title: "Client intake happens manually",
+            problem: "Staff collect the same customer details through repeated messages.",
+            solution: "A structured intake form or portal collects the important details first.",
+            result: "Teams start conversations with better context.",
           },
           {
-            title: "Crew attendance is hard to verify",
-            problem:
-              "Workers move between sites, supervisors report attendance manually, and payroll becomes difficult to confirm.",
-            solution: "We build site-based attendance tracking and reporting.",
-            result:
-              "The company can verify who worked, where, when and under which supervisor.",
+            title: "The brand feels less premium online",
+            problem: "The digital experience does not match the value of the service.",
+            solution: "We create a polished website connected to inquiry and follow-up workflows.",
+            result: "The customer journey feels more professional from first click.",
           },
         ],
-        ...COLORS.construction,
-        Icon: ICONS.construction,
+        Icon: Gem,
+        ...industryStyle.premium,
       },
       {
-        id: "hotels",
-        title: "Hotels",
-        subtitle: "Hotel website, guest workflows and department dashboards",
-        body: "For hotels that need guest-facing websites, booking inquiries, guest request tracking, staff shift coordination and department dashboards.",
+        id: "training-education",
+        title: "Training & education",
+        subtitle: "Course pages, registration flows and student inquiries",
+        body: "For academies, training centers and education businesses that need clearer course information, registration and student support.",
         points: [
-          "Hotel websites with rooms and booking inquiries",
-          "Guest service request workflows",
-          "Housekeeping and front-desk coordination",
-          "Staff scheduling and attendance reports",
-          "Department performance dashboards",
+          "Course landing pages",
+          "Registration flows",
+          "Student inquiry assistants",
+          "Payment or document intake",
+          "Enrollment dashboards",
         ],
-        outcome:
-          "Happy guests, coordinated teams and department visibility on one screen.",
+        tags: ["Courses", "Registration", "Students", "Support"],
+        outcome: "Students understand courses faster and registration becomes easier to manage.",
         useCases: [
           {
-            title: "Guest requests get lost between shifts",
-            problem:
-              "A guest reports an issue at reception, but the message is passed verbally and forgotten by the next shift.",
-            solution:
-              "We build a guest request workflow for reception, housekeeping and maintenance.",
-            result: "Every request is logged, assigned, tracked and closed properly.",
+            title: "Students ask the same course questions",
+            problem: "Staff repeat dates, prices, schedules and requirements manually.",
+            solution: "An assistant answers common course questions and routes serious inquiries.",
+            result: "The team spends less time repeating basics.",
           },
           {
-            title: "Staff scheduling creates service gaps",
-            problem:
-              "Housekeeping, reception, restaurant and security schedules are managed manually. Some shifts are overstaffed while others lack coverage.",
-            solution:
-              "We build staff scheduling and attendance dashboards by department.",
-            result:
-              "Managers can see coverage, absences and lateness before service quality suffers.",
+            title: "Registration data is incomplete",
+            problem: "Student details arrive in different formats across messages and forms.",
+            solution: "A registration flow collects required information consistently.",
+            result: "Enrollment data becomes easier to review and follow up.",
           },
           {
-            title: "Department reports take too long to collect",
-            problem:
-              "The hotel manager waits for reports from housekeeping, front desk, restaurant and finance before understanding performance.",
-            solution: "We build department dashboards in Power BI.",
-            result:
-              "Management gets a daily view of service, staffing, occupancy-related work and department activity.",
+            title: "Course demand is hard to see",
+            problem: "Management cannot quickly see which programs are getting attention.",
+            solution: "A dashboard shows inquiries, registrations and course interest.",
+            result: "The center can plan marketing and schedules with better visibility.",
           },
         ],
-        ...COLORS.hotels,
-        Icon: ICONS.hotels,
+        Icon: GraduationCap,
+        ...industryStyle.training,
       },
       {
-        id: "hospitals",
-        title: "Hospitals",
-        subtitle: "Appointments, scheduling and department reports",
-        body: "For hospitals and clinics that need appointment tools, staff scheduling, department reports, attendance tracking and compliance-ready records.",
+        id: "hospitality-tourism",
+        title: "Hospitality & tourism",
+        subtitle: "Booking inquiries, guest requests and multilingual flows",
+        body: "For hotels, tour operators and hospitality teams that need cleaner guest inquiries, booking requests and service handoff.",
         points: [
-          "Appointment request and patient intake systems",
-          "Staff scheduling and on-call planning",
-          "Attendance reports by department",
-          "Department-level Power BI dashboards",
-          "Compliance and staffing reports",
+          "Booking inquiry flows",
+          "Guest request intake",
+          "Multilingual support journeys",
+          "WhatsApp routing",
+          "Request dashboards",
         ],
-        outcome:
-          "Reliable systems for patients, staff scheduling and reporting.",
+        tags: ["Bookings", "Guests", "WhatsApp", "Multilingual"],
+        outcome: "Guest requests become easier to answer, route and follow up.",
         useCases: [
           {
-            title: "Appointments are handled manually",
-            problem:
-              "Patients call the front desk, appointments are written manually, and mistakes can lead to confusion or double booking.",
-            solution: "We build an appointment request or patient intake system.",
-            result:
-              "Patients can request appointments more easily and administrators can manage confirmations with a clear record.",
+            title: "Booking questions repeat all day",
+            problem: "Guests ask the same availability, location, policy and package questions.",
+            solution: "An assistant answers common questions and collects booking intent.",
+            result: "Staff receive better requests and answer serious guests faster.",
           },
           {
-            title: "Staff rotations are difficult to manage",
-            problem:
-              "On-call schedules, night shifts and department rotations are prepared manually. It is easy to miss gaps.",
-            solution:
-              "We build a scheduling tool for staff availability, leave, shifts and rotations.",
-            result:
-              "Departments can plan coverage more clearly and reduce scheduling mistakes.",
+            title: "Guest requests are missed between shifts",
+            problem: "Requests move through calls or WhatsApp and can be forgotten.",
+            solution: "A request workflow logs, routes and tracks guest requests.",
+            result: "Teams know what is open, assigned and completed.",
           },
           {
-            title: "Compliance reports take too long to prepare",
-            problem:
-              "When management or inspectors ask for attendance, staffing or department records, the team searches through paper files and Excel sheets.",
-            solution:
-              "We build attendance dashboards and department-level reporting.",
-            result:
-              "The hospital can prepare staffing and compliance reports faster and with cleaner data.",
+            title: "Tour inquiries need better qualification",
+            problem: "Customers ask broadly without dates, group size, budget or preference.",
+            solution: "A tour inquiry flow collects the details before staff follow-up.",
+            result: "The team can respond with more relevant options.",
           },
         ],
-        ...COLORS.hospitals,
-        Icon: ICONS.hospitals,
+        Icon: Hotel,
+        ...industryStyle.hospitality,
       },
       {
-        id: "stores",
-        title: "Stores & e-commerce",
-        subtitle: "Online stores, branch dashboards and order management",
-        body: "For shops, branches and online stores that need e-commerce websites, order tracking, stock visibility, sales dashboards and staff scheduling.",
+        id: "multi-branch-businesses",
+        title: "Multi-branch businesses",
+        subtitle: "Branch routing, request visibility and owner dashboards",
+        body: "For businesses with several branches, locations or teams that need centralized customer requests and clearer routing.",
         points: [
-          "Online stores with product catalogs",
-          "Order tracking from payment to delivery",
-          "Stock dashboards by branch",
-          "Sales and customer dashboards",
-          "Staff attendance and scheduling",
+          "Branch-based inquiry routing",
+          "Central request dashboards",
+          "Location pages",
+          "Staff handoff",
+          "Owner reporting",
         ],
-        outcome:
-          "An online store that sells, stock that is tracked and branches that are visible.",
+        tags: ["Branches", "Routing", "Dashboard", "Reporting"],
+        outcome: "Owners see demand across locations and customers reach the right branch faster.",
         useCases: [
           {
-            title: "Stock visibility is unclear across branches",
-            problem:
-              "Managers call each branch to ask what is selling, what is low and what needs to be transferred.",
-            solution: "We build stock and sales dashboards by branch.",
-            result:
-              "Management sees stock levels, top products and branch performance without calling every store.",
+            title: "Customers contact the wrong branch",
+            problem: "Requests arrive centrally or to the wrong location and need manual forwarding.",
+            solution: "A branch routing flow sends requests to the right team.",
+            result: "Customers reach the right branch with less delay.",
           },
           {
-            title: "Online orders are not tracked properly",
-            problem:
-              "Orders arrive through WhatsApp, Instagram or a basic website. Some are missed, delayed or shipped incorrectly.",
-            solution: "We build an online store or order tracking workflow.",
-            result:
-              "Every order moves through a clear process: received, confirmed, prepared, shipped and delivered.",
+            title: "Owners cannot compare branch demand",
+            problem: "Each branch handles messages differently and reports are inconsistent.",
+            solution: "A dashboard shows inquiries, requests and response status by branch.",
+            result: "Management sees which locations need attention.",
           },
           {
-            title: "Sales reports arrive too late",
-            problem:
-              "By the time sales numbers are collected and cleaned, the week is already over.",
-            solution:
-              "We build Power BI dashboards for sales, stock, branches and customers.",
-            result:
-              "Owners can see what is selling, where performance is dropping and which products need attention.",
+            title: "Service information changes by location",
+            problem: "Customers receive outdated or inconsistent branch details.",
+            solution: "Location pages and assistant flows present current services, hours and contacts.",
+            result: "Customers get clearer information before contacting staff.",
           },
         ],
-        ...COLORS.stores,
-        Icon: ICONS.stores,
+        Icon: Network,
+        ...industryStyle.branches,
       },
     ],
   },
-  fr: {
-    eyebrow: "Secteurs que nous accompagnons",
-    title: "Technologie pour equipes avec horaires, validations, rapports et operations reels",
-    body: "Tech Solutions RDC cree des sites web, apps sur mesure, automatisation de presence, dashboards Power BI, pipelines de donnees et workflows assistes par IA pour les organisations qui ont besoin d'operations quotidiennes plus propres et d'une meilleure visibilite de direction.",
+  ar: {
+    eyebrow: "القطاعات التي نخدمها",
+    title: "ذكاء اصطناعي وأتمتة ومواقع للشركات التي تعتمد على التواصل مع العملاء",
+    body: "تبني Servicely أنظمة عملية للشركات في لبنان والعراق ودبي/الإمارات: مساعدين أذكياء بالذكاء الاصطناعي، أتمتة واتساب، مسارات مواعيد، مواقع، تطبيقات، بوابات، ولوحات تحكم.",
     support:
-      "Nous ne partons pas d'un logiciel generique. Nous partons de votre workflow reel : equipes, horaires, machines, fichiers Excel, regles de validation et rapports.",
-    cta: "Planifier un rendez-vous",
-    ctaHref: "/schedule",
+      "نبدأ من رحلة العميل الفعلية: الأسئلة، الرسائل، تحويل الطلبات، المواعيد، العملاء المحتملون، الفروع، المتابعة، والتقارير.",
+    cta: "ابدأ مشروعاً",
+    ctaHref: "/contact",
     metrics: [
-      { value: "6", label: "secteurs prioritaires" },
-      { value: "BI", label: "dashboards Power BI et KPI" },
-      { value: "IA", label: "assistants workflow et rapports" },
+      { value: "3", label: "أسواق رئيسية: لبنان، العراق، ودبي/الإمارات" },
+      { value: "2", label: "لغتان لرحلات العملاء: العربية والإنجليزية" },
+      { value: "AI", label: "مساعدون أذكياء، مسارات واتساب، ولوحات تحكم" },
     ],
-    sectionTitle: "La ou Tech Solutions RDC aide",
+    sectionTitle: "أين يمكن أن تساعدك Servicely؟",
     sectionBody:
-      "Chaque secteur a ses propres problemes operationnels. Certains ont besoin d'un meilleur suivi de presence. D'autres de reporting terrain, visibilite stock, dashboards de production, outils de rendez-vous ou systemes de validation interne. Choisissez votre secteur pour voir les systemes que nous pouvons construire.",
-    closingTitle: "Construire un systeme pratique pour votre organisation",
+      "كل شركة تستقبل الاستفسارات بطريقة مختلفة. العيادات تحتاج مواعيد أوضح. شركات العقارات تحتاج عملاء مؤهلين. شركات الخدمات المميزة تحتاج رحلة رقمية موثوقة. نشكل النظام حول طريقة تواصل العملاء معك فعلاً.",
+    closingTitle: "ابنِ نظام خدمة العملاء الذي يستطيع فريقك استخدامه فعلاً",
     closingBody:
-      "Apportez vos horaires, machines, fichiers Excel, formulaires ou processus actuel. Nous cartographions comment le travail se fait aujourd'hui et montrons le chemin le plus simple vers des operations plus propres.",
+      "شارك معنا رسائلك، نماذجك، مسار المواعيد، استفسارات العقارات، كتالوج الخدمات، أو طريقة توجيه الفروع. سنرسم أبسط نظام مفيد، ثم نبنيه بطريقة واضحة ومنظمة.",
     closingChecklist: [
-      "Sites web et applications web sur mesure",
-      "Automatisation metier et workflows de validation",
-      "Dashboards de presence et reporting RH",
-      "Dashboards Power BI et rapports KPI",
-      "Pipelines de donnees et reporting pret pour l'IA",
+      "دعم عملاء بالذكاء الاصطناعي ومساعدو أسئلة متكررة",
+      "أتمتة استفسارات واتساب وتحويلها إلى الفريق",
+      "مسارات مواعيد وتأهيل عملاء محتملين",
+      "مواقع أعمال وتطبيقات وبوابات ولوحات تحكم",
+      "دعم واستضافة ومراقبة وتحسينات عملية",
     ],
-    helpsWithLabel: "Nous aidons sur",
-    viewUseCasesLabel: "Voir les cas d'usage",
-    useCasesHeroEyebrow: "Cas d'usage reels pour des operations reelles",
-    useCasesHeroTitle: "Les problemes quotidiens que nous transformons en systemes operationnels",
+    helpsWithLabel: "نساعد في",
+    viewUseCasesLabel: "شاهد حالات الاستخدام",
+    useCasesHeroEyebrow: "حالات استخدام عملية",
+    useCasesHeroTitle: "مشكلات العملاء التي نحولها إلى أنظمة تعمل فعلاً",
     useCasesHeroBody:
-      "Chaque organisation a des problemes quotidiens faciles a ignorer jusqu'a ce qu'ils coutent du temps, de l'argent ou de la confiance.",
-    problemsEyebrow: "Problemes courants que nous resolvons",
-    problemsTitle: "Vous n'avez pas besoin de technologie pour faire joli",
+      "النظام المناسب يجعل أول تواصل أوضح، الاستجابة أسرع، والمتابعة أسهل على فريقك.",
+    problemsEyebrow: "مشكلات شائعة",
+    problemsTitle: "لا تحتاج أدوات رقمية للزينة",
     problemsBody:
-      "Vous avez besoin de systemes qui suppriment la confusion, font gagner du temps et donnent a la direction une visibilite claire. Voici les problemes que presque toute entreprise en RDC reconnait — et ce qui change quand ils sont resolus.",
+      "تحتاج إلى أنظمة تزيل الفوضى، توفر الوقت، وتساعد العملاء على اتخاذ الخطوة التالية.",
     problemsLabels: {
-      problem: "Probleme",
-      solution: "Solution",
-      result: "Resultat",
+      problem: "المشكلة",
+      solution: "الحل",
+      result: "النتيجة",
     },
-    industriesEyebrow: "Ou ca s'applique",
-    industriesShortTitle: "Construit pour les secteurs avec lesquels nous travaillons chaque jour",
+    industriesEyebrow: "أين ينطبق ذلك",
+    industriesShortTitle: "مصمم للشركات التي تعتمد على الاستفسارات",
     industriesShortBody:
-      "Entreprises, usines, construction, hotels, hopitaux et magasins font tous face aux memes problemes de fond, sous des formes differentes. Choisissez le votre pour voir comment nous adaptons la solution.",
+      "العيادات، شركات العقارات، الخدمات المميزة، مراكز التدريب، الضيافة والشركات متعددة الفروع تحتاج جميعها إلى مسارات عملاء أوضح.",
     detail: {
-      backLabel: "Tous les secteurs",
-      exploreLabel: "Voir les cas d'usage",
-      learnMore: "En savoir plus",
-      overviewLabel: "Apercu",
-      benefitsTitle: "Ce que vous obtenez",
-      useCasesTitle: "Cas d'usage",
-      useCasesBody:
-        "Des scenarios reels que nous construisons pour ce secteur.",
-      otherTitle: "Autres secteurs",
+      backLabel: "كل القطاعات",
+      exploreLabel: "استكشف حالات الاستخدام",
+      learnMore: "اعرف المزيد",
+      overviewLabel: "نظرة عامة",
+      benefitsTitle: "ما الذي تحصل عليه",
+      useCasesTitle: "حالات الاستخدام",
+      useCasesBody: "سيناريوهات عملية نبنيها لهذا النوع من الأعمال.",
+      otherTitle: "قطاعات أخرى",
     },
     problems: [
       {
-        id: "visibility",
-        title: "La direction ne voit pas ce qui se passe dans l'entreprise",
-        problem:
-          "Les rapports sont eparpilles entre fichiers Excel, messages WhatsApp, feuilles papier et differents departements. Quand la direction recoit les chiffres, ils sont deja perimes.",
-        solution:
-          "Nous construisons des dashboards Power BI qui connectent vos donnees de presence, ventes, production, RH ou operations dans une vue de direction claire.",
-        result:
-          "Les dirigeants voient performance, problemes, retards et couts avant qu'ils ne deviennent couteux.",
-        ...PROBLEM_ACCENTS.visibility,
-        Icon: PROBLEM_ICONS.visibility,
+        id: "response",
+        title: "العملاء ينتظرون طويلاً للإجابات الأساسية",
+        problem: "يكرر الموظفون نفس الإجابات عبر واتساب والمكالمات وإنستغرام ونماذج الموقع والرسائل.",
+        solution: "نبني مساعدين أذكياء بالذكاء الاصطناعي ومسارات استفسار منظمة تجيب عن الأسئلة الشائعة وتجمع التفاصيل الصحيحة.",
+        result: "يحصل العملاء على إجابات أسرع ويتعامل الموظفون مع الطلبات الجدية بسياق أفضل.",
+        Icon: MessageCircle,
+        ...problemAccents.response,
       },
       {
-        id: "attendance",
-        title: "La presence du personnel est difficile a verifier",
-        problem:
-          "Les RH passent trop de temps a verifier presence, heures supplementaires, retards, absences et donnees de paie manuellement.",
-        solution:
-          "Nous connectons les pointeuses à empreinte, systèmes de pointage ou fichiers de présence à des dashboards automatisés et des rapports prêts pour la paie.",
-        result:
-          "Moins de litiges sur la paie, reporting RH plus rapide et preuve claire de qui a travaille, quand et ou.",
-        ...PROBLEM_ACCENTS.attendance,
-        Icon: PROBLEM_ICONS.attendance,
+        id: "appointments",
+        title: "طلبات المواعيد غير منظمة",
+        problem: "تصل الطلبات ناقصة، يزيد خطر التداخل، ويقضي الموظفون وقتاً في طرح نفس أسئلة المتابعة.",
+        solution: "نبني مسارات طلب مواعيد تجمع التاريخ المفضل والخدمة وبيانات التواصل والملاحظات قبل التأكيد.",
+        result: "يستقبل الفريق طلبات أوضح ويفهم العملاء الخطوة التالية.",
+        Icon: CalendarCheck,
+        ...problemAccents.appointments,
+      },
+      {
+        id: "leads",
+        title: "العملاء المحتملون يصلون بدون تفاصيل مفيدة",
+        problem: "تصل لفرق المبيعات رسائل عامة بدون ميزانية أو موقع أو جدول زمني أو تفضيلات.",
+        solution: "نبني مسارات تأهيل لشركات العقارات والخدمات قبل تسليم العميل للموظفين.",
+        result: "يقضي الفريق وقتاً أقل في جمع المعلومات الأساسية ووقتاً أكثر مع العملاء الجديين.",
+        Icon: UserCheck,
+        ...problemAccents.leads,
+      },
+      {
+        id: "handoff",
+        title: "محادثات واتساب صعبة التنظيم",
+        problem: "يرد أشخاص مختلفون من أماكن مختلفة وقد تضيع الطلبات المهمة أو تُنسى.",
+        solution: "ننظم استقبال الطلبات والتوجيه والملخصات وتحويل الطلب حتى يصل إلى الشخص الصحيح.",
+        result: "تصبح محادثات العملاء أسهل في الإدارة والمتابعة.",
+        Icon: MessageCircle,
+        ...problemAccents.handoff,
+      },
+      {
+        id: "visibility",
+        title: "المالكون لا يرون ما يحدث بوضوح",
+        problem: "العملاء والمواعيد وطلبات الفروع وحالة المتابعة متفرقة بين الرسائل والجداول.",
+        solution: "نبني لوحات تحكم تعرض الاستفسارات والطلبات والحالة والفروع ونشاط المتابعة.",
+        result: "يحصل المالكون والمديرون على رؤية أوضح لطلب العملاء واستجابة الفريق.",
+        Icon: BarChart3,
+        ...problemAccents.visibility,
       },
       {
         id: "credibility",
-        title: "Les clients vous jugent avant meme de vous parler",
-        problem:
-          "Un client serieux cherche votre entreprise en ligne mais ne trouve pas de site professionnel, des infos depassees ou seulement une brochure PDF.",
-        solution:
-          "Nous creons un site professionnel qui presente vos services, projets, contacts et options de prise de rendez-vous clairement.",
-        result:
-          "Votre entreprise inspire confiance, les clients comprennent ce que vous offrez et peuvent vous contacter facilement.",
-        ...PROBLEM_ACCENTS.credibility,
-        Icon: PROBLEM_ICONS.credibility,
-      },
-      {
-        id: "approvals",
-        title: "Les demandes internes se perdent dans WhatsApp",
-        problem:
-          "Demandes de conge, validations d'achat, rapports de maintenance et mises a jour terrain passent par WhatsApp ou des formulaires papier. Certaines sont oubliees, retardees ou contestees.",
-        solution:
-          "Nous construisons des applications internes simples pour les validations, demandes, suivi de taches et follow-up.",
-        result:
-          "Chaque demande a un statut, un proprietaire, une date et un historique des decisions.",
-        ...PROBLEM_ACCENTS.approvals,
-        Icon: PROBLEM_ICONS.approvals,
-      },
-      {
-        id: "field",
-        title: "Les equipes terrain envoient des mises a jour tardives ou incompletes",
-        problem:
-          "Chantiers, points de vente, usines ou departements envoient leurs infos manuellement. Les managers passent la journee a appeler les gens juste pour savoir ce qui se passe.",
-        solution:
-          "Nous creons des apps de reporting terrain ou les superviseurs soumettent avancement quotidien, presence, photos, materiaux, blocages ou incidents.",
-        result:
-          "La direction recoit des mises a jour fiables de chaque site sans courir apres personne.",
-        ...PROBLEM_ACCENTS.field,
-        Icon: PROBLEM_ICONS.field,
-      },
-      {
-        id: "growth",
-        title: "L'entreprise grandit mais le workflow est encore manuel",
-        problem:
-          "Des processus qui marchaient avec 10 employes craquent quand l'entreprise passe a 50, 100 ou plus. Excel, papier et WhatsApp deviennent ingerables.",
-        solution:
-          "Nous cartographions le workflow et construisons un logiciel sur mesure autour du fonctionnement reel de l'entreprise.",
-        result:
-          "L'entreprise grandit avec des systemes plus propres, un meilleur controle et moins de dependance au suivi manuel.",
-        ...PROBLEM_ACCENTS.growth,
-        Icon: PROBLEM_ICONS.growth,
-      },
-      {
-        id: "reports",
-        title: "Les rapports prennent des jours au lieu de minutes",
-        problem:
-          "Les managers demandent des rapports hebdo ou mensuels, et les equipes passent des heures a copier des donnees, nettoyer Excel et preparer des slides.",
-        solution:
-          "Nous automatisons les rapports recurrents avec Power BI, des pipelines de donnees propres et des resumes IA.",
-        result:
-          "Les rapports sont prets plus vite, plus precis et plus faciles a comprendre.",
-        ...PROBLEM_ACCENTS.reports,
-        Icon: PROBLEM_ICONS.reports,
-      },
-      {
-        id: "alerts",
-        title: "Les problemes sont decouverts trop tard",
-        problem:
-          "La direction ne decouvre les abus d'heures supplementaires, problemes de stock, retards de production, shifts manques ou depassements de projet qu'apres les degats.",
-        solution:
-          "Nous mettons en place des dashboards et alertes qui signalent les chiffres anormaux, donnees manquantes, retards ou risques.",
-        result:
-          "Les equipes agissent tot au lieu de reagir une fois le probleme devenu couteux.",
-        ...PROBLEM_ACCENTS.alerts,
-        Icon: PROBLEM_ICONS.alerts,
+        title: "الموقع لا يساعد العملاء على اتخاذ إجراء",
+        problem: "الموقع قديم أو لا يحتوي صفحات خدمات واضحة أو يصف الشركة فقط بدون مسارات فعل.",
+        solution: "نبني مواقع مرتبطة بالاستفسارات أو المواعيد أو جمع العملاء أو البوابات أو دعم العملاء.",
+        result: "يصبح الموقع جزءاً من رحلة العميل وليس مجرد بروشور.",
+        Icon: Globe,
+        ...problemAccents.credibility,
       },
     ],
     industries: [
       {
-        id: "companies",
-        title: "Entreprises",
-        subtitle: "Sites web, operations, RH et dashboards de direction",
-        body: "Pour les bureaux et entreprises en croissance qui ont besoin de sites professionnels, d'outils internes, de workflows de validation, d'automatisation RH, de rapports de presence et de dashboards de direction.",
-        points: [
-          "Sites web d'entreprise et portails clients",
-          "Validations de conge, d'achat et de documents",
-          "Syntheses de presence et de paie",
-          "Dashboards Power BI pour les managers",
-          "Resumes IA et alertes operationnelles",
-        ],
-        outcome:
-          "Meilleure visibilite pour la direction et operations quotidiennes plus propres.",
+        id: "clinics-medical-centers",
+        title: "العيادات والمراكز الطبية",
+        subtitle: "طلبات مواعيد واستفسارات مرضى ودعم ذكي",
+        body: "للعيادات التي تحتاج إلى طلبات مواعيد أوضح، إجابات أسرع عن الأسئلة الأساسية غير الطبية، وتحويل أنظف للطلبات إلى الموظفين.",
+        points: ["مسارات طلب مواعيد", "مساعد استفسارات المرضى", "معلومات الخدمات والفروع", "تسليم ومتابعة", "لوحات طلبات"],
+        tags: ["مواعيد", "مساعد ذكي", "واتساب", "لوحة تحكم"],
+        outcome: "يساعد النظام المرضى على إرسال طلبات أوضح، ويمنح الموظفين معلومات أنظف، ويجعل المتابعة أسهل.",
         useCases: [
           {
-            title: "La direction attend trop longtemps pour ses rapports",
-            problem:
-              "Ventes, RH, finance et operations envoient leurs fichiers Excel a des moments differents. La direction perd des jours a attendre, verifier et combiner les informations avant de pouvoir decider.",
-            solution:
-              "Nous construisons des dashboards Power BI qui regroupent les chiffres cles dans une vue de direction unique.",
-            result:
-              "Les managers voient performance, presence, ventes, couts et operations sans attendre les rapports manuels.",
+            title: "المرضى يطرحون نفس الأسئلة يومياً",
+            problem: "يكرر الموظفون معلومات الموقع، أوقات الدوام، الخدمات، التحضير، وطرق التواصل يدوياً.",
+            solution: "مساعد ذكي يجيب عن الأسئلة غير الطبية الشائعة ويجمع نية حجز الموعد.",
+            result: "يقضي الموظفون وقتاً أكثر في تأكيد الطلبات الجدية بدلاً من تكرار الأساسيات.",
           },
           {
-            title: "Les demandes de validation se perdent dans WhatsApp",
-            problem:
-              "Demandes de conge, validations d'achat et validations de documents passent par WhatsApp ou email. Certaines sont oubliees, retardees ou contestees plus tard.",
-            solution:
-              "Nous construisons un systeme interne de validation ou chaque demande a un statut, un valideur, une date et un historique des decisions.",
-            result:
-              "Les demandes deviennent plus faciles a suivre, valider et auditer.",
+            title: "طلبات المواعيد تصل ناقصة",
+            problem: "يرسل المرضى رسائل غامضة بدون خدمة أو وقت مفضل أو بيانات تواصل.",
+            solution: "مسار طلب يجمع التفاصيل المطلوبة قبل تأكيد الموظفين.",
+            result: "تستقبل العيادة طلبات أوضح ورسائل متابعة أقل.",
           },
           {
-            title: "L'entreprise parait moins serieuse qu'elle ne l'est vraiment",
-            problem:
-              "Un client potentiel demande votre site et recoit un PDF, une vieille brochure ou un message WhatsApp a la place.",
-            solution:
-              "Nous creons un site d'entreprise ou un portail client qui presente vos services, projets, equipe et options de contact.",
-            result:
-              "L'entreprise inspire plus confiance et les prospects comprennent votre offre avant meme de vous contacter.",
+            title: "المتابعة صعبة التتبع",
+            problem: "بعض الطلبات يتم الرد عليها متأخراً أو تُنسى عندما تصبح الرسائل كثيرة.",
+            solution: "لوحة تحكم تتبع حالة الطلب والتسليم والمتابعة.",
+            result: "يرى الفريق ما الذي لا يزال يحتاج انتباهاً.",
           },
         ],
-        ...COLORS.companies,
-        Icon: ICONS.companies,
+        Icon: HeartPulse,
+        ...industryStyle.clinics,
       },
       {
-        id: "factories",
-        title: "Usines",
-        subtitle: "Reporting production, shifts, heures sup. et dashboards",
-        body: "Pour les usines qui ont besoin d'un reporting de production fiable, du suivi des shifts, de la verification des heures supplementaires, de dashboards de presence et de donnees operationnelles auxquelles la direction peut se fier.",
-        points: [
-          "Reporting production par shift, ligne ou equipe",
-          "Suivi de presence et heures supplementaires des ouvriers",
-          "Suivi des pannes equipement",
-          "Dashboards Power BI production, main-d'oeuvre et couts",
-          "Syntheses de presence pretes pour la paie",
-        ],
-        outcome:
-          "Chiffres de production clairs, heures verifiees et moins de surprises en fin de mois.",
+        id: "real-estate-agencies",
+        title: "شركات العقارات",
+        subtitle: "عملاء عقارات مؤهلون وطلبات معاينة",
+        body: "لشركات العقارات التي تحتاج إلى عملاء محتملين أكثر وضوحاً، أدوات استفسار عن العقارات، طلبات معاينة، وتسليم أفضل للوكلاء.",
+        points: ["تأهيل العملاء", "طلبات معاينة", "صفحات عقارات", "توجيه للوكلاء", "لوحات العملاء"],
+        tags: ["عملاء", "عقارات", "معاينة", "وكلاء"],
+        outcome: "يتلقى الوكلاء عملاء محتملين مؤهلين، مع ميزانية وموقع وجدول زمني وتفضيلات أوضح.",
         useCases: [
           {
-            title: "Les chiffres de production arrivent trop tard",
-            problem:
-              "Les superviseurs remontent les chiffres de production apres le shift ou le lendemain matin. La direction ne voit les problemes qu'une fois la journee deja perdue.",
-            solution:
-              "Nous construisons une application de reporting production connectee a des dashboards Power BI.",
-            result:
-              "Les managers voient la production par ligne, equipe, shift ou produit plus vite et peuvent agir plus tot.",
+            title: "الوكلاء يستلمون رسائل غامضة",
+            problem: "يسأل العميل عن الأسعار دون توضيح الميزانية، الموقع، نوع العقار، أو الجدول الزمني.",
+            solution: "مسار تأهيل يجمع التفاصيل الصحيحة قبل تسليمها للوكيل.",
+            result: "يمكن للوكلاء ترتيب العملاء الجديين بسرعة أكبر.",
           },
           {
-            title: "Les heures supplementaires creent des litiges chaque mois",
-            problem:
-              "Ouvriers, superviseurs et RH ne sont pas d'accord sur les heures supplementaires au moment de preparer la paie.",
-            solution:
-              "Nous connectons les donnees de presence ou d'empreinte a un calcul automatique des heures supplementaires et a des rapports prets pour la paie.",
-            result:
-              "Les heures supplementaires deviennent plus faciles a verifier et les litiges de paie se reduisent.",
+            title: "استفسارات العقارات متفرقة",
+            problem: "تصل الرسائل من واتساب والسوشيال ونماذج الموقع بدون رؤية مشتركة.",
+            solution: "لوحة عملاء تجمع الاستفسارات والحالة.",
+            result: "ترى الشركة العملاء الذين يحتاجون متابعة.",
           },
           {
-            title: "Les pannes machine sont signalees trop lentement",
-            problem:
-              "Une machine s'arrete, mais le probleme est signale tardivement ou informellement. La maintenance perd du temps et la production prend du retard.",
-            solution:
-              "Nous construisons un workflow de signalement de panne ou les operateurs peuvent declarer les incidents et la maintenance peut suivre leur resolution.",
-            result:
-              "Les pannes deviennent visibles, tracables et plus faciles a reduire.",
+            title: "تنسيق المعاينات يأخذ وقتاً كبيراً",
+            problem: "يسأل الموظفون نفس أسئلة التوفر والعقار مراراً.",
+            solution: "مسار طلب معاينة يجمع التفضيلات والتوفر أولاً.",
+            result: "يصبح الجدولة أوضح للعملاء والوكلاء.",
           },
         ],
-        ...COLORS.factories,
-        Icon: ICONS.factories,
+        Icon: Building2,
+        ...industryStyle.realEstate,
       },
       {
-        id: "construction",
-        title: "Construction",
-        subtitle: "Portail projet, apps terrain, suivi couts et avancement",
-        body: "Pour les entreprises de construction qui gerent plusieurs chantiers, equipes terrain, couts de projet, materiaux, equipements et reporting d'avancement quotidien.",
-        points: [
-          "Sites web montrant projets et capacites",
-          "Apps terrain pour le reporting quotidien des chantiers",
-          "Presence et suivi des equipes sur chaque site",
-          "Dashboards de couts et d'avancement",
-          "Suivi des materiaux, sous-traitants et equipements",
-        ],
-        outcome: "Vision claire sur les chantiers, couts, avancement et equipes.",
+        id: "premium-service-businesses",
+        title: "الخدمات المميزة",
+        subtitle: "رحلات رقمية موثوقة للخدمات المميزة",
+        body: "لشركات التجميل، العافية، الاستشارات، والخدمات القانونية أو المالية أو المتخصصة التي تحتاج إلى رحلة رقمية احترافية.",
+        points: ["صفحات خدمات مميزة", "مسارات استفسار واستشارة", "نماذج استقبال العملاء", "بوابات عملاء", "لوحات خدمات"],
+        tags: ["مميز", "استشارة", "استقبال", "بوابة"],
+        outcome: "يفهم العملاء العرض ويعرفون بالضبط كيف يبدأون.",
         useCases: [
           {
-            title: "Les mises a jour des chantiers sont tardives ou incompletes",
-            problem:
-              "Les managers appellent chaque matin plusieurs superviseurs de chantier pour connaitre avancement, ouvriers, materiaux et blocages.",
-            solution:
-              "Nous construisons une app de reporting terrain pour les mises a jour quotidiennes des chantiers.",
-            result:
-              "La direction voit avancement, presence, materiaux et incidents sur tous les chantiers depuis un seul dashboard.",
+            title: "العملاء لا يفهمون الخدمة بسرعة",
+            problem: "صفحات الخدمات عامة ويحتاج العملاء شرحاً يدوياً قبل اتخاذ خطوة.",
+            solution: "نبني صفحات خدمات واضحة مع مسارات استفسار وخطوات تالية.",
+            result: "يعرف العملاء الجديون ماذا يطلبون وكيف يبدأون.",
           },
           {
-            title: "Les couts projet derivent avant qu'on ne s'en rende compte",
-            problem:
-              "Couts main-d'oeuvre, heures supplementaires, materiaux et equipements augmentent lentement sur les chantiers. Le probleme n'est detecte qu'a la fin du projet.",
-            solution:
-              "Nous construisons des dashboards Power BI qui suivent cout, avancement, presence et activite des chantiers.",
-            result:
-              "Les managers peuvent identifier les chantiers risques avant que les couts ne soient plus difficiles a controler.",
+            title: "استقبال بيانات العميل يتم يدوياً",
+            problem: "يجمع الموظفون نفس تفاصيل العميل عبر رسائل متكررة.",
+            solution: "نموذج أو بوابة تجمع التفاصيل المهمة أولاً.",
+            result: "يبدأ الفريق المحادثات بسياق أفضل.",
           },
           {
-            title: "La presence des equipes est difficile a verifier",
-            problem:
-              "Les ouvriers changent de chantier, les superviseurs remontent la presence manuellement, et la paie devient difficile a confirmer.",
-            solution:
-              "Nous construisons un suivi de presence et un reporting par site.",
-            result:
-              "L'entreprise peut verifier qui a travaille, ou, quand et sous quel superviseur.",
+            title: "العلامة لا تبدو مميزة رقمياً",
+            problem: "التجربة الرقمية لا تعكس قيمة الخدمة.",
+            solution: "ننشئ موقعاً مصقولاً مرتبطاً بالاستفسار والمتابعة.",
+            result: "تشعر رحلة العميل بمهنية أكبر من أول نقرة.",
           },
         ],
-        ...COLORS.construction,
-        Icon: ICONS.construction,
+        Icon: Gem,
+        ...industryStyle.premium,
       },
       {
-        id: "hotels",
-        title: "Hotels",
-        subtitle: "Site hotel, workflows clients et dashboards par departement",
-        body: "Pour les hotels qui ont besoin de sites accessibles aux clients, de demandes de reservation, de suivi des demandes clients, de coordination des shifts du personnel et de dashboards par departement.",
-        points: [
-          "Sites hotels avec chambres et demandes de reservation",
-          "Workflows de demandes de service client",
-          "Coordination housekeeping et reception",
-          "Planning du personnel et rapports de presence",
-          "Dashboards de performance par departement",
-        ],
-        outcome:
-          "Clients satisfaits, equipes coordonnees et visibilite departement sur un seul ecran.",
+        id: "training-education",
+        title: "التدريب والتعليم",
+        subtitle: "صفحات دورات وتسجيل واستفسارات طلاب",
+        body: "للأكاديميات ومراكز التدريب التي تحتاج إلى معلومات أوضح عن الدورات، ومسارات تسجيل، ودعم أفضل للطلاب.",
+        points: ["صفحات دورات", "مسارات تسجيل", "مساعد استفسارات الطلاب", "استقبال مستندات أو دفع", "لوحات تسجيل"],
+        tags: ["دورات", "تسجيل", "طلاب", "دعم"],
+        outcome: "يفهم الطلاب تفاصيل الدورات بسرعة، وتصبح إدارة التسجيل أسهل.",
         useCases: [
           {
-            title: "Les demandes des clients se perdent entre les shifts",
-            problem:
-              "Un client signale un probleme a la reception, mais le message est transmis oralement et oublie par l'equipe suivante.",
-            solution:
-              "Nous construisons un workflow de demandes clients pour la reception, le housekeeping et la maintenance.",
-            result:
-              "Chaque demande est enregistree, affectee, suivie et fermee correctement.",
+            title: "الطلاب يسألون نفس أسئلة الدورات",
+            problem: "يكرر الموظفون المواعيد والأسعار والجداول والمتطلبات يدوياً.",
+            solution: "مساعد يجيب عن الأسئلة الشائعة ويوجه الاستفسارات الجدية.",
+            result: "يقضي الفريق وقتاً أقل في تكرار الأساسيات.",
           },
           {
-            title: "Le planning du personnel cree des trous de service",
-            problem:
-              "Housekeeping, reception, restaurant et securite sont planifies manuellement. Certains shifts sont en sureffectif tandis que d'autres manquent de couverture.",
-            solution:
-              "Nous construisons des dashboards de planning et de presence par departement.",
-            result:
-              "Les managers voient couverture, absences et retards avant que la qualite de service ne soit affectee.",
+            title: "بيانات التسجيل ناقصة",
+            problem: "تصل تفاصيل الطلاب بصيغ مختلفة عبر الرسائل والنماذج.",
+            solution: "مسار تسجيل يجمع المعلومات المطلوبة بشكل ثابت.",
+            result: "تصبح بيانات التسجيل أسهل للمراجعة والمتابعة.",
           },
           {
-            title: "Les rapports par departement sont trop longs a collecter",
-            problem:
-              "Le directeur d'hotel attend des rapports de housekeeping, reception, restaurant et finance avant de comprendre la performance.",
-            solution:
-              "Nous construisons des dashboards par departement dans Power BI.",
-            result:
-              "La direction obtient une vue quotidienne du service, du personnel, du travail lie a l'occupation et de l'activite par departement.",
+            title: "طلب الدورات غير واضح",
+            problem: "لا تستطيع الإدارة رؤية البرامج التي تحصل على اهتمام بسرعة.",
+            solution: "لوحة تعرض الاستفسارات والتسجيل والاهتمام بالدورات.",
+            result: "يمكن للمركز تخطيط التسويق والجداول برؤية أفضل.",
           },
         ],
-        ...COLORS.hotels,
-        Icon: ICONS.hotels,
+        Icon: GraduationCap,
+        ...industryStyle.training,
       },
       {
-        id: "hospitals",
-        title: "Hopitaux",
-        subtitle: "Rendez-vous, planning et rapports par service",
-        body: "Pour les hopitaux et cliniques qui ont besoin d'outils de prise de rendez-vous, de planification du personnel, de rapports par service, de suivi de presence et de dossiers conformes aux audits.",
-        points: [
-          "Systemes de prise de rendez-vous et d'admission patient",
-          "Planning du personnel et gardes",
-          "Rapports de presence par service",
-          "Dashboards Power BI par service",
-          "Rapports de conformite et d'effectifs",
-        ],
-        outcome:
-          "Systemes fiables pour les patients, la planification du personnel et le reporting.",
+        id: "hospitality-tourism",
+        title: "الضيافة والسياحة",
+        subtitle: "استفسارات حجز وطلبات ضيوف ومسارات متعددة اللغات",
+        body: "للفنادق وشركات السياحة والضيافة التي تحتاج إلى استفسارات ضيوف أوضح، طلبات حجز منظمة، وتسليم أفضل للخدمات.",
+        points: ["مسارات استفسار الحجز", "طلبات الضيوف", "رحلات دعم متعددة اللغات", "توجيه واتساب", "لوحات طلبات"],
+        tags: ["حجوزات", "ضيوف", "واتساب", "متعدد اللغات"],
+        outcome: "تصبح طلبات الضيوف أسهل في الرد عليها، توجيهها، ومتابعتها.",
         useCases: [
           {
-            title: "Les rendez-vous sont geres manuellement",
-            problem:
-              "Les patients appellent l'accueil, les rendez-vous sont notes a la main, et des erreurs peuvent entrainer confusion ou double reservation.",
-            solution:
-              "Nous construisons un systeme de demande de rendez-vous ou d'admission patient.",
-            result:
-              "Les patients peuvent demander un rendez-vous plus facilement et les administrateurs peuvent gerer les confirmations avec un historique clair.",
+            title: "أسئلة الحجز تتكرر طوال اليوم",
+            problem: "يسأل الضيوف نفس أسئلة التوفر والموقع والسياسات والباقات.",
+            solution: "مساعد يجيب عن الأسئلة الشائعة ويجمع نية الحجز.",
+            result: "يستقبل الموظفون طلبات أفضل ويردون على الضيوف الجديين أسرع.",
           },
           {
-            title: "Les rotations du personnel sont difficiles a gerer",
-            problem:
-              "Les plannings de garde, shifts de nuit et rotations par service sont prepares manuellement. Il est facile de manquer des trous.",
-            solution:
-              "Nous construisons un outil de planification pour la disponibilite, les conges, les shifts et les rotations du personnel.",
-            result:
-              "Les services peuvent planifier la couverture plus clairement et reduire les erreurs de planning.",
+            title: "طلبات الضيوف تضيع بين المناوبات",
+            problem: "تنتقل الطلبات عبر المكالمات أو واتساب وقد تُنسى.",
+            solution: "مسار طلبات يسجل ويوجه ويتتبع طلبات الضيوف.",
+            result: "يعرف الفريق ما هو مفتوح ومخصص ومكتمل.",
           },
           {
-            title: "Les rapports de conformite sont trop longs a preparer",
-            problem:
-              "Quand la direction ou les inspecteurs demandent des donnees de presence, d'effectifs ou par service, l'equipe cherche dans des dossiers papier et des fichiers Excel.",
-            solution:
-              "Nous construisons des dashboards de presence et un reporting par service.",
-            result:
-              "L'hopital peut preparer des rapports d'effectifs et de conformite plus vite et avec des donnees plus propres.",
+            title: "استفسارات الجولات تحتاج تأهيلاً أفضل",
+            problem: "يسأل العملاء بشكل عام بدون تواريخ أو حجم مجموعة أو ميزانية أو تفضيل.",
+            solution: "مسار استفسار يجمع التفاصيل قبل متابعة الموظفين.",
+            result: "يمكن للفريق الرد بخيارات أكثر صلة.",
           },
         ],
-        ...COLORS.hospitals,
-        Icon: ICONS.hospitals,
+        Icon: Hotel,
+        ...industryStyle.hospitality,
       },
       {
-        id: "stores",
-        title: "Magasins & e-commerce",
-        subtitle: "Boutique en ligne, dashboards par magasin et gestion des commandes",
-        body: "Pour les magasins, points de vente et boutiques en ligne qui ont besoin de sites e-commerce, de suivi des commandes, de visibilite stock, de dashboards de ventes et de planning du personnel.",
-        points: [
-          "Boutiques en ligne avec catalogues produits",
-          "Suivi des commandes du paiement a la livraison",
-          "Dashboards de stock par magasin",
-          "Dashboards de ventes et clients",
-          "Presence et planning du personnel",
-        ],
-        outcome:
-          "Une boutique en ligne qui vend, un stock suivi et des magasins visibles.",
+        id: "multi-branch-businesses",
+        title: "الشركات متعددة الفروع",
+        subtitle: "توجيه الفروع ورؤية الطلبات ولوحات المالكين",
+        body: "للشركات التي لديها عدة فروع أو مواقع أو فرق، وتحتاج إلى إدارة مركزية لطلبات العملاء وتوجيه أوضح.",
+        points: ["توجيه حسب الفرع", "لوحات طلبات مركزية", "صفحات مواقع", "تحويل للموظفين", "تقارير للمالك"],
+        tags: ["فروع", "توجيه", "لوحة", "تقارير"],
+        outcome: "يرى المالكون الطلبات عبر الفروع، ويصل العملاء إلى الفرع الصحيح بسرعة أكبر.",
         useCases: [
           {
-            title: "La visibilite du stock n'est pas claire entre les magasins",
-            problem:
-              "Les managers appellent chaque magasin pour savoir ce qui se vend, ce qui manque et ce qui doit etre transfere.",
-            solution:
-              "Nous construisons des dashboards de stock et de ventes par magasin.",
-            result:
-              "La direction voit niveaux de stock, meilleurs produits et performance par magasin sans appeler chaque boutique.",
+            title: "العملاء يتواصلون مع الفرع الخطأ",
+            problem: "تصل الطلبات مركزياً أو إلى موقع غير مناسب وتحتاج تحويل يدوي.",
+            solution: "مسار توجيه حسب الفرع يرسل الطلب إلى الفريق الصحيح.",
+            result: "يصل العملاء للفرع المناسب بتأخير أقل.",
           },
           {
-            title: "Les commandes en ligne ne sont pas suivies correctement",
-            problem:
-              "Les commandes arrivent via WhatsApp, Instagram ou un site basique. Certaines sont manquees, retardees ou expediees a tort.",
-            solution:
-              "Nous construisons une boutique en ligne ou un workflow de suivi de commandes.",
-            result:
-              "Chaque commande passe par un processus clair : recue, confirmee, preparee, expediee et livree.",
+            title: "المالكون لا يقارنون طلب الفروع",
+            problem: "كل فرع يتعامل مع الرسائل بطريقة مختلفة والتقارير غير موحدة.",
+            solution: "لوحة تعرض الاستفسارات والطلبات وحالة الرد حسب الفرع.",
+            result: "ترى الإدارة المواقع التي تحتاج اهتماماً.",
           },
           {
-            title: "Les rapports de ventes arrivent trop tard",
-            problem:
-              "Le temps que les chiffres de ventes soient collectes et nettoyes, la semaine est deja finie.",
-            solution:
-              "Nous construisons des dashboards Power BI pour ventes, stock, magasins et clients.",
-            result:
-              "Les proprietaires voient ce qui se vend, ou la performance baisse et quels produits demandent attention.",
+            title: "معلومات الخدمة تختلف حسب الموقع",
+            problem: "يحصل العملاء على تفاصيل فروع قديمة أو غير متناسقة.",
+            solution: "صفحات مواقع ومسارات مساعد تعرض الخدمات والدوام ووسائل التواصل الحالية.",
+            result: "يحصل العملاء على معلومات أوضح قبل التواصل مع الموظفين.",
           },
         ],
-        ...COLORS.stores,
-        Icon: ICONS.stores,
+        Icon: Network,
+        ...industryStyle.branches,
       },
     ],
   },
 };
-
-const TAGS: Record<string, Record<string, string[]>> = {
-  en: {
-    companies: ["Website", "Approvals", "HR", "Power BI"],
-    factories: ["Production", "Shifts", "Overtime", "Dashboards"],
-    construction: ["Website", "Field app", "Costs", "Progress"],
-    hotels: ["Website", "Service", "Shifts", "Dashboards"],
-    hospitals: ["Appointments", "Scheduling", "Departments", "Compliance"],
-    stores: ["Online store", "Stock", "Orders", "Sales"],
-  },
-  fr: {
-    companies: ["Site web", "Validations", "RH", "Power BI"],
-    factories: ["Production", "Shifts", "Heures sup.", "Dashboards"],
-    construction: ["Site web", "App terrain", "Couts", "Avancement"],
-    hotels: ["Site web", "Service", "Shifts", "Dashboards"],
-    hospitals: ["Rendez-vous", "Planning", "Services", "Conformite"],
-    stores: ["Boutique", "Stock", "Commandes", "Ventes"],
-  },
-};
-
-(["en", "fr"] as const).forEach((loc) => {
-  copy[loc].industries.forEach((industry) => {
-    industry.tags = TAGS[loc][industry.id];
-  });
-});
 
 export function getIndustriesCopy(locale: string): IndustriesCopy {
   return copy[locale] ?? copy.en;

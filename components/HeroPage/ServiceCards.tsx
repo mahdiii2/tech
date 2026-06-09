@@ -1,9 +1,9 @@
-//Version with nbutton
+﻿//Version with nbutton
 
 // "use client";
 
 // import React, { useRef } from "react";
-// import Link from "next/link";
+// import { Link } from "@/i18n/navigation";
 // import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 // import ReactLenis from "lenis/react";
 // import animationdev from "@/public/lottie/DevCubes.json";
@@ -80,7 +80,7 @@
 //   const container = useRef<HTMLDivElement>(null);
 
 //   const theme = COLOR_THEMES[blueprint.key];
-//   const animation = ANIMATIONS[blueprint.key]; // ✅ this picks the correct animation
+//   const animation = ANIMATIONS[blueprint.key]; // âœ… this picks the correct animation
 
 //   const scale = useTransform(progress, range, [1, targetScale]);
 
@@ -126,7 +126,7 @@
 //                 {blueprint.description}
 //               </p>
 
-//               {/* MOBILE ANIMATION — only visible on small screens */}
+//               {/* MOBILE ANIMATION â€” only visible on small screens */}
 //               <div className="flex items-center justify-center order-1 lg:hidden">
 //                 <div
 //                   className={cn(
@@ -160,7 +160,7 @@
 //               </div>
 //             </div>
 
-//             {/* DESKTOP ANIMATION — visible only on large screens */}
+//             {/* DESKTOP ANIMATION â€” visible only on large screens */}
 //             <div className="hidden lg:flex items-center justify-center">
 //               <div
 //                 className={cn(
@@ -228,7 +228,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   motion,
   MotionValue,
@@ -327,9 +327,9 @@ type StickyCardProps = {
 //       style={{
 //         scale,
 //         top: `calc(-5vh + ${i * 20 + 200}px)`,
-//         // static stacking order – no popping
+//         // static stacking order â€“ no popping
 //         zIndex: 10 + i,
-//         // only the card that’s mostly visible can catch clicks
+//         // only the card thatâ€™s mostly visible can catch clicks
 //         pointerEvents: isInView ? "auto" : "none",
 //       }}
 //     >
@@ -444,7 +444,7 @@ const StickyCard_001 = ({
       style={{
         // keep them stacked: later cards are simply on top
         zIndex: 10 + i,
-        // only the card that’s mostly visible can receive clicks
+        // only the card thatâ€™s mostly visible can receive clicks
         pointerEvents: isInView ? "auto" : "none",
       }}
     >

@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import ReactLenis from "lenis/react";
 import { useRef } from "react";

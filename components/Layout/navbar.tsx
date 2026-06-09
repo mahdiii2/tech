@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import {
   ArrowLeft,
@@ -10,16 +10,15 @@ import {
   Building2,
   Clock3,
   Code2,
-  Factory,
-  HardHat,
+  GraduationCap,
   HeartPulse,
   Hotel,
+  Gem,
   Menu,
   MessageCircle,
-  Store,
+  Network,
   X,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import type { LucideIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -36,7 +35,7 @@ import {
 const NAV_ITEMS: { key: string; href: string }[] = [
   { key: "services", href: "/services" },
   { key: "industries", href: "/industries" },
-  { key: "useCases", href: "/industries/use-cases" },
+  { key: "useCases", href: "/use-cases" },
   { key: "about", href: "/about" },
 ];
 
@@ -52,7 +51,7 @@ type NavCardConfig = {
 const SERVICE_CARDS: NavCardConfig[] = [
   {
     key: "development",
-    href: "/services/development",
+    href: "/services#ai-customer-automation",
     bg: "var(--dev-50)",
     accent: "var(--dev-200)",
     iconAccent: "var(--dev-500)",
@@ -60,7 +59,7 @@ const SERVICE_CARDS: NavCardConfig[] = [
   },
   {
     key: "automation",
-    href: "/services/attendance",
+    href: "/services#websites-web-apps-portals",
     bg: "var(--design-50)",
     accent: "var(--design-200)",
     iconAccent: "var(--design-500)",
@@ -68,7 +67,7 @@ const SERVICE_CARDS: NavCardConfig[] = [
   },
   {
     key: "data",
-    href: "/services/analytics",
+    href: "/services#whatsapp-lead-automation",
     bg: "var(--engagement-50)",
     accent: "var(--engagement-200)",
     iconAccent: "var(--engagement-500)",
@@ -78,58 +77,58 @@ const SERVICE_CARDS: NavCardConfig[] = [
 
 const INDUSTRY_CARDS: NavCardConfig[] = [
   {
-    key: "companies",
-    href: "/industries/use-cases#companies",
+    key: "clinics",
+    href: "/industries#clinics-medical-centers",
     bg: "var(--dev-50)",
     accent: "var(--dev-200)",
     iconAccent: "var(--dev-500)",
-    icon: Building2,
-  },
-  {
-    key: "factories",
-    href: "/industries/use-cases#factories",
-    bg: "var(--design-50)",
-    accent: "var(--design-200)",
-    iconAccent: "var(--design-500)",
-    icon: Factory,
-  },
-  {
-    key: "construction",
-    href: "/industries/use-cases#construction",
-    bg: "var(--engagement-50)",
-    accent: "var(--engagement-200)",
-    iconAccent: "var(--engagement-500)",
-    icon: HardHat,
-  },
-  {
-    key: "hotels",
-    href: "/industries/use-cases#hotels",
-    bg: "var(--dev-50)",
-    accent: "var(--dev-200)",
-    iconAccent: "var(--dev-500)",
-    icon: Hotel,
-  },
-  {
-    key: "hospitals",
-    href: "/industries/use-cases#hospitals",
-    bg: "var(--engagement-50)",
-    accent: "var(--engagement-200)",
-    iconAccent: "var(--engagement-500)",
     icon: HeartPulse,
   },
   {
-    key: "stores",
-    href: "/industries/use-cases#stores",
+    key: "realEstate",
+    href: "/industries#real-estate-agencies",
     bg: "var(--design-50)",
     accent: "var(--design-200)",
     iconAccent: "var(--design-500)",
-    icon: Store,
+    icon: Building2,
+  },
+  {
+    key: "premium",
+    href: "/industries#premium-service-businesses",
+    bg: "var(--engagement-50)",
+    accent: "var(--engagement-200)",
+    iconAccent: "var(--engagement-500)",
+    icon: Gem,
+  },
+  {
+    key: "training",
+    href: "/industries#training-education",
+    bg: "var(--dev-50)",
+    accent: "var(--dev-200)",
+    iconAccent: "var(--dev-500)",
+    icon: GraduationCap,
+  },
+  {
+    key: "hospitality",
+    href: "/industries#hospitality-tourism",
+    bg: "var(--engagement-50)",
+    accent: "var(--engagement-200)",
+    iconAccent: "var(--engagement-500)",
+    icon: Hotel,
+  },
+  {
+    key: "branches",
+    href: "/industries#multi-branch-businesses",
+    bg: "var(--design-50)",
+    accent: "var(--design-200)",
+    iconAccent: "var(--design-500)",
+    icon: Network,
   },
 ];
 
 const LOCALE_OPTIONS = [
   { value: "en", label: "English", shortLabel: "EN" },
-  { value: "fr", label: "Francais", shortLabel: "FR" },
+  { value: "ar", label: "العربية", shortLabel: "AR" },
 ];
 
 type MobileSheetView = "menu" | "services" | "industries";
@@ -138,6 +137,7 @@ export function Navbar() {
   const t = useTranslations("Nav");
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
   const serviceCardsContent = SERVICE_CARDS.map((card) => ({
     ...card,
     title: t(`serviceCards.${card.key}.title`),
@@ -151,12 +151,13 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileSheetView, setMobileSheetView] =
     useState<MobileSheetView>("menu");
+
   const handleLocaleChange = (targetLocale: string) => {
     if (targetLocale === locale) {
       return;
     }
-    document.cookie = `locale=${targetLocale}; path=/; max-age=31536000`;
-    router.refresh();
+
+    router.replace(pathname, { locale: targetLocale });
   };
 
   useEffect(() => {
@@ -164,7 +165,7 @@ export function Navbar() {
       setIsScrolled(window.scrollY > 0);
     };
 
-    handleScroll(); // run once on mount
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -236,7 +237,7 @@ export function Navbar() {
               asChild
               className="rounded-full px-6 py-5 text-md font-semibold bg-blue-500 hover:bg-blue-600"
             >
-              <Link href="/schedule">{t("cta")}</Link>
+              <Link href="/contact">{t("cta")}</Link>
             </Button>
           </div>
 
@@ -384,23 +385,14 @@ export function Navbar() {
                     </div>
 
                     <div className="mt-10">
-                      {mobileSheetView !== "menu" ? (
+                      <SheetClose asChild>
                         <Button
-                          className="h-14 w-full rounded-full bg-blue-600 text-lg font-semibold text-white opacity-60"
-                          disabled
+                          asChild
+                          className="h-14 w-full rounded-full bg-blue-600 text-lg font-semibold text-white shadow-[0_15px_45px_rgba(59,130,246,0.35)] hover:bg-blue-500"
                         >
-                          {t("cta")}
+                          <Link href="/contact">{t("cta")}</Link>
                         </Button>
-                      ) : (
-                        <SheetClose asChild>
-                          <Button
-                            asChild
-                            className="h-14 w-full rounded-full bg-blue-600 text-lg font-semibold text-white shadow-[0_15px_45px_rgba(59,130,246,0.35)] hover:bg-blue-500"
-                          >
-                            <Link href="/schedule">{t("cta")}</Link>
-                          </Button>
-                        </SheetClose>
-                      )}
+                      </SheetClose>
                     </div>
                   </div>
                 </div>

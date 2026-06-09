@@ -1,11 +1,28 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
+import { Instagram, Facebook } from "lucide-react";
 import { useTranslations } from "next-intl";
 import HeroAnimation from "../AnimationVideos.tsx/AnimationVideo";
 import animationContact from "@/public/lottie/ContactUs.json";
+import { siteConfig } from "@/lib/site";
+
+const SOCIALS = [
+  {
+    label: "Instagram",
+    Icon: Instagram,
+    href: siteConfig.social.instagram,
+    color: "#E1306C",
+  },
+  {
+    label: "Facebook",
+    Icon: Facebook,
+    href: siteConfig.social.facebook,
+    color: "#1877F2",
+  },
+];
 
 export default function ContactBridge() {
   const [hoverRight, setHoverRight] = useState(false);
@@ -49,6 +66,27 @@ export default function ContactBridge() {
             >
               {t("ctaLabel")}
             </Link>
+
+            <div className="mt-4 flex flex-col items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--neutral-500)]">
+                {t("followLabel")}
+              </span>
+              <div className="flex items-center gap-3">
+                {SOCIALS.map(({ label, Icon, href, color }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white/70 backdrop-blur transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md"
+                    style={{ color }}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

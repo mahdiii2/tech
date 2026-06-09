@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -261,7 +261,7 @@ export function AboutHeroOrbits({
 
 /*
 // --- Previous orbiting canvas hero retained for reference ---
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 
