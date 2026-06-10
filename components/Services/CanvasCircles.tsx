@@ -129,10 +129,10 @@ export default function AnimatedCircles() {
 
   return (
     <div className="flex items-center justify-center w-full h-full p-10 pb-0 mb-0 bg-white">
-      <div className="relative flex items-center justify-center w-full max-w-[800px] aspect-square">
+      <div className="relative flex items-center justify-center w-full max-w-[760px] aspect-square">
         <canvas ref={canvasRef} className="absolute inset-0" />
-        <div className="relative z-10 flex flex-col items-center justify-center gap-6 px-8 text-center">
-          <h1 className="text-5xl font-semibold leading-tight text-neutral-900 md:text-6xl">
+        <div className="relative z-10 flex max-w-[520px] flex-col items-center justify-center gap-4 px-8 text-center">
+          <h1 className="text-4xl font-semibold leading-tight tracking-normal text-neutral-900 md:text-5xl">
             {t("titleLine1")} <span className="block">{t("titleLine2")}</span>
           </h1>
         </div>

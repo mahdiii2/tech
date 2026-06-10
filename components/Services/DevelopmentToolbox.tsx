@@ -29,7 +29,6 @@ export function DevelopmentToolbox({ titleLines, body, icons, cards }: Props) {
       React: "react",
       Angular: "angular",
       CSS3: "css3",
-      ".NET": "dotnet",
       "C#": "csharp",
       Azure: "microsoftazure",
       "C++": "cplusplus",

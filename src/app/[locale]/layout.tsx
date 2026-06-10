@@ -39,6 +39,22 @@ export async function generateMetadata({
     authors: [{ name: siteConfig.name, url: siteUrl }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
+    icons: {
+      icon: [
+        {
+          url: "/icon.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+      apple: [
+        {
+          url: "/icon.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
     alternates: localizedAlternates("/", locale),
     openGraph: {
       type: "website",

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { useMessages } from "next-intl";
 import type { AbstractIntlMessages } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
 
 type CooperationHero = {
@@ -89,13 +90,13 @@ export default function CooperationModels() {
                   </span>
                 ))}
               </div>
-              <a
+              <Link
                 href={hero.ctaHref}
                 className="inline-flex items-center gap-2 text-base font-semibold text-neutral-900 underline decoration-2 decoration-transparent transition hover:decoration-neutral-900"
               >
                 {hero.ctaLabel}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
+              </Link>
             </div>
             <div className="flex items-center justify-center">
               <div className="relative md:h-56 md:w-56 max-w-full h-32 w-32">

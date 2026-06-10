@@ -8,15 +8,13 @@ import {
   ArrowRight,
   BarChart3,
   Building2,
+  CarFront,
   Clock3,
   Code2,
-  GraduationCap,
   HeartPulse,
-  Hotel,
-  Gem,
   Menu,
   MessageCircle,
-  Network,
+  Wrench,
   X,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -51,7 +49,7 @@ type NavCardConfig = {
 const SERVICE_CARDS: NavCardConfig[] = [
   {
     key: "development",
-    href: "/services#ai-customer-automation",
+    href: "/services#development",
     bg: "var(--dev-50)",
     accent: "var(--dev-200)",
     iconAccent: "var(--dev-500)",
@@ -59,7 +57,7 @@ const SERVICE_CARDS: NavCardConfig[] = [
   },
   {
     key: "automation",
-    href: "/services#websites-web-apps-portals",
+    href: "/services#design",
     bg: "var(--design-50)",
     accent: "var(--design-200)",
     iconAccent: "var(--design-500)",
@@ -67,7 +65,7 @@ const SERVICE_CARDS: NavCardConfig[] = [
   },
   {
     key: "data",
-    href: "/services#whatsapp-lead-automation",
+    href: "/services#engagement",
     bg: "var(--engagement-50)",
     accent: "var(--engagement-200)",
     iconAccent: "var(--engagement-500)",
@@ -93,36 +91,20 @@ const INDUSTRY_CARDS: NavCardConfig[] = [
     icon: Building2,
   },
   {
-    key: "premium",
-    href: "/industries#premium-service-businesses",
+    key: "automotive",
+    href: "/industries#automotive-mobility",
     bg: "var(--engagement-50)",
     accent: "var(--engagement-200)",
     iconAccent: "var(--engagement-500)",
-    icon: Gem,
+    icon: CarFront,
   },
   {
-    key: "training",
-    href: "/industries#training-education",
+    key: "fieldServices",
+    href: "/industries#home-field-services",
     bg: "var(--dev-50)",
     accent: "var(--dev-200)",
     iconAccent: "var(--dev-500)",
-    icon: GraduationCap,
-  },
-  {
-    key: "hospitality",
-    href: "/industries#hospitality-tourism",
-    bg: "var(--engagement-50)",
-    accent: "var(--engagement-200)",
-    iconAccent: "var(--engagement-500)",
-    icon: Hotel,
-  },
-  {
-    key: "branches",
-    href: "/industries#multi-branch-businesses",
-    bg: "var(--design-50)",
-    accent: "var(--design-200)",
-    iconAccent: "var(--design-500)",
-    icon: Network,
+    icon: Wrench,
   },
 ];
 
@@ -233,12 +215,6 @@ export function Navbar() {
               locale={locale}
               onLocaleChange={handleLocaleChange}
             />
-            <Button
-              asChild
-              className="rounded-full px-6 py-5 text-md font-semibold bg-blue-500 hover:bg-blue-600"
-            >
-              <Link href="/contact">{t("cta")}</Link>
-            </Button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -384,16 +360,6 @@ export function Navbar() {
                       </div>
                     </div>
 
-                    <div className="mt-10">
-                      <SheetClose asChild>
-                        <Button
-                          asChild
-                          className="h-14 w-full rounded-full bg-blue-600 text-lg font-semibold text-white shadow-[0_15px_45px_rgba(59,130,246,0.35)] hover:bg-blue-500"
-                        >
-                          <Link href="/contact">{t("cta")}</Link>
-                        </Button>
-                      </SheetClose>
-                    </div>
                   </div>
                 </div>
               </SheetContent>
@@ -468,6 +434,9 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isWideMenu = cards.length > 3;
+  const isTwoCardMenu = cards.length === 2;
+  const isFourCardMenu = cards.length === 4;
+  const isCompactMenu = cards.length >= 3;
 
   const handleOpen = () => {
     if (closeTimeout.current) {
@@ -518,9 +487,13 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
           <div
             className={cn(
               "gap-3",
-              isWideMenu
-                ? "grid grid-cols-6"
-                : "grid grid-cols-3 justify-center"
+              isFourCardMenu
+                ? "mx-auto grid max-w-5xl grid-cols-4"
+                : isWideMenu
+                  ? "grid grid-cols-6"
+                : isTwoCardMenu
+                  ? "mx-auto grid max-w-3xl grid-cols-2"
+                  : "mx-auto grid max-w-3xl grid-cols-3"
             )}
           >
             {cards.map((card) => {
@@ -531,7 +504,7 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
                   href={card.href}
                   className={cn(
                     "flex flex-col items-center justify-center gap-5 text-center text-foreground transition-transform duration-200 hover:-translate-y-1",
-                    isWideMenu
+                    isCompactMenu
                       ? "h-52 min-w-0 rounded-2xl p-5"
                       : "h-56 rounded-[1.75rem] p-7"
                   )}
@@ -540,21 +513,21 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
                   <span
                     className={cn(
                       "flex shrink-0 items-center justify-center rounded-full shadow-sm",
-                      isWideMenu ? "h-16 w-16" : "h-20 w-20"
+                      isCompactMenu ? "h-16 w-16" : "h-20 w-20"
                     )}
                     style={{ backgroundColor: card.iconAccent }}
                   >
                     <Icon
                       className={cn(
                         "text-white",
-                        isWideMenu ? "h-7 w-7" : "h-9 w-9"
+                        isCompactMenu ? "h-7 w-7" : "h-9 w-9"
                       )}
                     />
                   </span>
                   <p
                     className={cn(
                       "font-semibold leading-snug text-neutral-900",
-                      isWideMenu ? "text-base xl:text-lg" : "text-xl"
+                      isCompactMenu ? "text-base xl:text-lg" : "text-xl"
                     )}
                   >
                     {card.title}

@@ -1,5 +1,5 @@
 ﻿import InfiniteLogos from "@/components/HeroPage/ClientsSlider";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
@@ -11,11 +11,6 @@ type Technology = {
 };
 
 const TECHNOLOGIES: Technology[] = [
-  {
-    name: ".NET",
-    logo: "https://cdn.simpleicons.org/dotnet/512BD4",
-    alt: ".NET logo",
-  },
   {
     name: "Node.js",
     logo: "https://cdn.simpleicons.org/nodedotjs/5FA04E",
@@ -58,42 +53,49 @@ const TECHNOLOGIES: Technology[] = [
   },
 ];
 
-const LANGUAGES = [
-  ".NET",
-  "Amazon Web Services",
-  "Android (Kotlin)",
-  "Android TV",
-  "Angular",
-  "Artificial Intelligence",
-  "Blockchain",
-  "CircleCI",
-  "Docker",
-  "Flutter",
-  "Google Cloud",
-  "Grafana",
-  "iOS [Swift]",
-  "Javascript",
-  "Kibana",
-  "Kubernetes",
-  "LG TV (webOS)",
-  "MAVLink",
-  "MS Azure",
-  "New Relic",
-  "Node.js",
-  "Prometheus",
-  "Python",
-  "React.js",
-  "Ruby On Rails",
-  "Samsung TV (Tizen)",
-  "Sentry",
-  "Terraform",
-  "Typescript",
-  "Vue.js",
-  "Zabbix",
-].sort((a, b) => a.localeCompare(b));
+const TOOL_GROUPS = [
+  {
+    title: { en: "Frontend & apps", ar: "الواجهات والتطبيقات" },
+    tools: [
+      "React.js",
+      "Vue.js",
+      "Angular",
+      "Flutter",
+      "Android (Kotlin)",
+      "iOS [Swift]",
+    ],
+  },
+  {
+    title: { en: "Backend & languages", ar: "الخلفية ولغات البرمجة" },
+    tools: ["Node.js", "Python", "Typescript", "Javascript", "Go"],
+  },
+  {
+    title: { en: "Cloud & infrastructure", ar: "السحابة والبنية التحتية" },
+    tools: [
+      "Amazon Web Services",
+      "Google Cloud",
+      "MS Azure",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+    ],
+  },
+  {
+    title: { en: "Monitoring & intelligence", ar: "المراقبة والذكاء" },
+    tools: [
+      "Grafana",
+      "Prometheus",
+      "Sentry",
+      "Artificial Intelligence",
+      "Blockchain",
+    ],
+  },
+];
 
 export default async function TechStackSlider() {
   const t = await getTranslations("HomePage.techStack");
+  const locale = await getLocale();
+  const groupLocale = locale === "ar" ? "ar" : "en";
 
   return (
     <section className="w-full px-4">
@@ -124,19 +126,36 @@ export default async function TechStackSlider() {
         </InfiniteLogos>
       </div>
 
-      <div className="mx-auto mt-10 w-full max-w-5xl rounded-[32px] border border-black/5 bg-white p-6 shadow-xl sm:p-8 md:p-12">
+      <div className="mx-auto mt-10 w-full max-w-6xl rounded-[28px] border border-black/5 bg-white p-6 shadow-xl sm:p-8 md:p-10">
         <div className="flex flex-col gap-6">
           <p className="text-left text-2xl font-semibold text-neutral-900">
             {t("languagesTitle")}
           </p>
-          <div className="grid grid-cols-2 gap-y-3 text-left text-sm font-semibold text-neutral-700 sm:grid-cols-3 md:text-base">
-            {LANGUAGES.map((language) => (
-              <span key={language}>{language}</span>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {TOOL_GROUPS.map((group) => (
+              <section
+                key={group.title.en}
+                className="border-t border-neutral-200 pt-4"
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                  {group.title[groupLocale]}
+                </h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {group.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs font-semibold text-neutral-700"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
           <div className="pt-4 text-left">
             <Link
-              href="/services"
+              href="/services#services-blueprints"
               className="group inline-flex items-center gap-2 rounded-full bg-[#3A63FF] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#2b50d0]"
             >
               {t("languagesCta")}

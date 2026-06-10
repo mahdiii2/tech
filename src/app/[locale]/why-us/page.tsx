@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "لماذا نحن - فريق صغير وتنفيذ عملي"
       : "Why Us - Direct Builders & Practical Systems",
     description: isAr
-      ? "لماذا تعمل مع Servicely: فريق صغير، تواصل مباشر، لا تعهيد غير واضح، نطاق واضح، تطوير مدعوم بالذكاء الاصطناعي، ودعم بعد الإطلاق."
-      : "Why work with Servicely: small team, direct builders, no unclear outsourcing, clear scope, AI-assisted development workflow, and post-launch support.",
+      ? "لماذا تعمل مع Servicely: فريق صغير، تواصل مباشر، لا تعهيد غير واضح، نطاق واضح، تنفيذ عملي، ودعم بعد الإطلاق."
+      : "Why work with Servicely: small team, direct builders, no unclear outsourcing, clear scope, practical execution, and post-launch support.",
     alternates: localizedAlternates("/why-us", locale),
     openGraph: {
       title: isAr ? "لماذا نحن | Servicely" : "Why Us | Servicely",
       description: isAr
-        ? "فريق تقني صغير يبني أنظمة عملية للشركات في لبنان والعراق ودبي/الإمارات."
-        : "A small technical team building practical systems for companies in Lebanon, Iraq and Dubai.",
+        ? "فريق تقني صغير يبني أنظمة عملية لشركات MENA، مع تركيز على لبنان والعراق والإمارات."
+        : "A small technical team building practical systems for MENA companies, focused on Lebanon, Iraq and the UAE.",
       url: localePath(locale, "/why-us"),
     },
   };
@@ -53,7 +53,7 @@ export default async function WhyUsPage({ params }: Props) {
         "بدون تعهيد غير واضح",
         "أنظمة عملية",
         "نطاق واضح",
-        "سير عمل مدعوم بالذكاء الاصطناعي",
+        "سير عمل تطوير حديث",
         "تسليم من البداية للنهاية",
         "دعم بعد الإطلاق",
       ]
@@ -63,7 +63,7 @@ export default async function WhyUsPage({ params }: Props) {
         "no unclear outsourcing",
         "practical systems",
         "clear scope",
-        "AI-assisted workflow",
+        "modern development workflow",
         "end-to-end delivery",
         "post-launch support",
       ];
@@ -71,7 +71,10 @@ export default async function WhyUsPage({ params }: Props) {
   return (
     <main className="bg-white text-neutral-950">
       <AnimatedHeroBackground color="var(--design-500)">
-        <div className="mx-auto flex min-h-[50vh] max-w-4xl flex-col items-center justify-center gap-6 text-center">
+        <div
+          id="why-us-overview"
+          className="mx-auto flex min-h-[50vh] max-w-4xl scroll-mt-32 flex-col items-center justify-center gap-6 text-center"
+        >
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#365fd9]">
               {isAr ? "لماذا نحن" : "Why Us"}

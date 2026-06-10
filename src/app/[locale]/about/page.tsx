@@ -53,7 +53,10 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <main className="bg-white text-neutral-950">
-      <section className="mx-auto max-w-6xl px-5 pb-8 pt-10 md:px-6 md:pb-12 md:pt-14 lg:px-8">
+      <section
+        id="about-servicely"
+        className="mx-auto max-w-6xl scroll-mt-32 px-5 pb-8 pt-10 md:px-6 md:pb-12 md:pt-14 lg:px-8"
+      >
         <Reveal>
           <div className="grid gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
             <div>

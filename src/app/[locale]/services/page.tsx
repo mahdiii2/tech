@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: isAr
-      ? "الخدمات - الذكاء الاصطناعي، الأتمتة وأنظمة الأعمال"
-      : "Services - AI, Automation & Business Systems",
+      ? "الخدمات - أنظمة أعمال وبرمجيات عملية"
+      : "Services - Practical Software & Business Systems",
     description: isAr
-      ? "خدمات Servicely للشركات في لبنان والعراق ودبي/الإمارات: الذكاء الاصطناعي، أتمتة واتساب، المواقع، التطبيقات، لوحات التحكم، والدعم."
-      : "Servicely services for companies in Lebanon, Iraq and Dubai: AI automation, WhatsApp workflows, websites, apps, dashboards, support and hosting.",
+      ? "خدمات Servicely لشركات MENA، خصوصاً لبنان والعراق والإمارات: أتمتة تواصل العملاء، واتساب، المواقع، التطبيقات، لوحات التحكم، والدعم."
+      : "Servicely services for MENA companies, especially Lebanon, Iraq and the UAE: customer automation, WhatsApp workflows, websites, apps, dashboards, support and hosting.",
     alternates: localizedAlternates("/services", locale),
     openGraph: {
       title: isAr ? "الخدمات | Servicely" : "Services | Servicely",

@@ -22,16 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isAr = locale === "ar";
 
   return {
-    title: isAr ? "تواصل معنا - ابدأ مشروعك" : "Contact - Start Your Project",
+    title: isAr ? "تواصل معنا - نطاق المشروع" : "Contact - Project Scope",
     description: isAr
-      ? "أخبرنا بما تريد تحسينه: ذكاء اصطناعي، واتساب، موقع، تطبيق، لوحة تحكم، أو نظام داخلي."
-      : "Tell us what you want to improve: AI assistant, WhatsApp automation, website, app, dashboard, or internal system.",
+      ? "أخبرنا بما تريد تحسينه: الاستفسارات، المواعيد، العملاء المحتملون، واتساب، الموقع، التطبيق، لوحة التحكم، أو النظام الداخلي."
+      : "Tell us what you want to improve: inquiries, appointments, leads, WhatsApp, website, app, dashboard, or internal system.",
     alternates: localizedAlternates("/contact", locale),
     openGraph: {
       title: isAr ? "تواصل معنا | Servicely" : "Contact | Servicely",
       description: isAr
-        ? "نموذج تأهيل لمشاريع الشركات في لبنان والعراق ودبي/الإمارات."
-        : "Qualification page for business projects in Lebanon, Iraq and Dubai.",
+        ? "نموذج تأهيل لمشاريع الشركات في MENA، مع تركيز على لبنان والعراق والإمارات."
+        : "Qualification page for business projects in MENA, focused on Lebanon, Iraq and the UAE.",
       url: localePath(locale, "/contact"),
     },
   };
@@ -88,7 +88,7 @@ export default async function ContactPage({ params }: Props) {
               <div className="relative">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold">
                   <CalendarDays className="h-4 w-4 text-blue-400" />
-                  {isAr ? "ابدأ مشروعك" : "Start your project"}
+                  {isAr ? "نطاق المشروع" : "Project scope"}
                 </div>
 
                 <h1 className="mt-6 max-w-md text-4xl font-semibold leading-tight sm:text-5xl">

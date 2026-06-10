@@ -53,9 +53,7 @@ export default async function HomePage({ params }: Props) {
     key,
     title: t(`blueprints.${key}.title`),
     description: t(`blueprints.${key}.description`),
-    tags: t.raw(`blueprints.${key}.tags`) as string[],
     learnHref: t(`blueprints.${key}.learnHref`),
-    contactHref: t(`blueprints.${key}.contactHref`),
   }));
 
   return (
@@ -73,7 +71,6 @@ export default async function HomePage({ params }: Props) {
         blueprints={blueprints}
         ctas={{
           learnMore: t("blueprints.cta.learnMore"),
-          contact: t("blueprints.cta.contact"),
         }}
       />
       <HeroWithFloatingImages />

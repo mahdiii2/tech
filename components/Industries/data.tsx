@@ -2,14 +2,12 @@ import {
   BarChart3,
   Building2,
   CalendarCheck,
-  Gem,
+  CarFront,
   Globe,
-  GraduationCap,
   HeartPulse,
-  Hotel,
   MessageCircle,
-  Network,
   UserCheck,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
 
@@ -112,48 +110,195 @@ const problemAccents = {
 const industryStyle = {
   clinics: { color: "var(--dev-500)", bg: "var(--dev-50)" },
   realEstate: { color: "var(--design-500)", bg: "var(--design-50)" },
-  premium: { color: "var(--engagement-500)", bg: "var(--engagement-50)" },
-  training: { color: "var(--dev-500)", bg: "var(--dev-50)" },
-  hospitality: {
+  automotive: {
     color: "var(--engagement-500)",
     bg: "var(--engagement-50)",
   },
-  branches: { color: "var(--design-500)", bg: "var(--design-50)" },
+  fieldServices: { color: "var(--dev-500)", bg: "var(--dev-50)" },
 };
+
+const enProblems: Problem[] = [
+  {
+    id: "response",
+    title: "Customers wait too long for basic answers",
+    problem:
+      "Staff repeat the same answers across WhatsApp, calls, Instagram, website forms and direct messages.",
+    solution:
+      "We build assistants and structured inquiry flows that answer common questions and collect the right details.",
+    result:
+      "Customers get faster answers and staff handle serious requests with better context.",
+    Icon: MessageCircle,
+    ...problemAccents.response,
+  },
+  {
+    id: "appointments",
+    title: "Appointment requests are messy",
+    problem:
+      "Requests arrive incomplete, double-booking risk increases and staff spend time asking the same follow-up questions.",
+    solution:
+      "We build appointment request flows that collect service, preferred time, branch, contact details and notes before staff confirm.",
+    result:
+      "Teams receive cleaner appointment requests and customers understand the next step.",
+    Icon: CalendarCheck,
+    ...problemAccents.appointments,
+  },
+  {
+    id: "leads",
+    title: "Leads arrive without useful details",
+    problem:
+      "Agents receive vague messages with no budget, location, property type, timeline or preference.",
+    solution:
+      "We build qualification flows for real estate teams before handoff to agents.",
+    result:
+      "Agents spend less time chasing basic information and more time with serious customers.",
+    Icon: UserCheck,
+    ...problemAccents.leads,
+  },
+  {
+    id: "handoff",
+    title: "WhatsApp conversations are hard to organize",
+    problem:
+      "Different people answer from different places and important requests can be missed or forgotten.",
+    solution:
+      "We structure intake, routing, summaries and handoff so the right person receives the right request.",
+    result:
+      "Customer conversations become easier to manage and follow up.",
+    Icon: MessageCircle,
+    ...problemAccents.handoff,
+  },
+  {
+    id: "visibility",
+    title: "Owners cannot see what is happening",
+    problem:
+      "Leads, appointment requests and follow-up status are spread across messages and spreadsheets.",
+    solution:
+      "We build dashboards that show inquiries, requests, status, handoff and follow-up activity.",
+    result:
+      "Owners and managers get a clearer view of customer demand and team response.",
+    Icon: BarChart3,
+    ...problemAccents.visibility,
+  },
+  {
+    id: "credibility",
+    title: "The website does not help customers act",
+    problem:
+      "The site looks outdated, lacks clear service pages or only describes the company without action flows.",
+    solution:
+      "We build websites connected to inquiry, appointment, lead capture, portal or customer support workflows.",
+    result:
+      "The website becomes part of the customer journey, not just a brochure.",
+    Icon: Globe,
+    ...problemAccents.credibility,
+  },
+];
+
+const arProblems: Problem[] = [
+  {
+    id: "response",
+    title: "العملاء ينتظرون طويلاً للإجابات الأساسية",
+    problem:
+      "يكرر الموظفون نفس الإجابات عبر واتساب والمكالمات وإنستغرام ونماذج الموقع والرسائل.",
+    solution:
+      "نبني مساعدين ومسارات استفسار منظمة تجيب عن الأسئلة الشائعة وتجمع التفاصيل الصحيحة.",
+    result:
+      "يحصل العملاء على إجابات أسرع ويتعامل الموظفون مع الطلبات الجدية بسياق أفضل.",
+    Icon: MessageCircle,
+    ...problemAccents.response,
+  },
+  {
+    id: "appointments",
+    title: "طلبات المواعيد غير منظمة",
+    problem:
+      "تصل الطلبات ناقصة، يزيد خطر التداخل، ويقضي الموظفون وقتاً في طرح نفس أسئلة المتابعة.",
+    solution:
+      "نبني مسارات طلب مواعيد تجمع الخدمة والوقت المفضل والفرع وبيانات التواصل والملاحظات قبل التأكيد.",
+    result: "يستقبل الفريق طلبات أوضح ويفهم العملاء الخطوة التالية.",
+    Icon: CalendarCheck,
+    ...problemAccents.appointments,
+  },
+  {
+    id: "leads",
+    title: "العملاء المحتملون يصلون بدون تفاصيل مفيدة",
+    problem:
+      "تصل للوكلاء رسائل عامة بدون ميزانية أو موقع أو نوع عقار أو جدول زمني أو تفضيلات.",
+    solution:
+      "نبني مسارات تأهيل لفرق العقارات قبل تحويل العميل إلى الوكيل.",
+    result:
+      "يقضي الوكلاء وقتاً أقل في جمع المعلومات الأساسية ووقتاً أكثر مع العملاء الجديين.",
+    Icon: UserCheck,
+    ...problemAccents.leads,
+  },
+  {
+    id: "handoff",
+    title: "محادثات واتساب صعبة التنظيم",
+    problem:
+      "يرد أشخاص مختلفون من أماكن مختلفة وقد تضيع الطلبات المهمة أو تُنسى.",
+    solution:
+      "ننظم استقبال الطلبات والتوجيه والملخصات والتحويل حتى يصل الطلب إلى الشخص الصحيح.",
+    result: "تصبح محادثات العملاء أسهل في الإدارة والمتابعة.",
+    Icon: MessageCircle,
+    ...problemAccents.handoff,
+  },
+  {
+    id: "visibility",
+    title: "المالكون لا يرون ما يحدث بوضوح",
+    problem:
+      "العملاء وطلبات المواعيد وحالة المتابعة متفرقة بين الرسائل والجداول.",
+    solution:
+      "نبني لوحات تحكم تعرض الاستفسارات والطلبات والحالة والتحويل ونشاط المتابعة.",
+    result:
+      "يحصل المالكون والمديرون على رؤية أوضح لطلب العملاء واستجابة الفريق.",
+    Icon: BarChart3,
+    ...problemAccents.visibility,
+  },
+  {
+    id: "credibility",
+    title: "الموقع لا يساعد العملاء على اتخاذ إجراء",
+    problem:
+      "الموقع قديم أو لا يحتوي صفحات خدمات واضحة أو يصف الشركة فقط بدون مسارات فعل.",
+    solution:
+      "نبني مواقع مرتبطة بالاستفسارات أو المواعيد أو جمع العملاء أو البوابات أو دعم العملاء.",
+    result: "يصبح الموقع جزءاً من رحلة العميل وليس مجرد بروشور.",
+    Icon: Globe,
+    ...problemAccents.credibility,
+  },
+];
 
 const copy: Record<string, IndustriesCopy> = {
   en: {
-    eyebrow: "Industries we support",
-    title: "AI, automation and websites for customer-driven businesses",
-    body: "Servicely builds practical customer systems for businesses in Lebanon, Iraq and Dubai/UAE: AI assistants, WhatsApp automation, appointment flows, websites, apps, portals and dashboards.",
+    eyebrow: "Primary industries",
+    title: "Practical systems for inquiry-heavy MENA businesses",
+    body:
+      "Servicely builds customer-flow software for clinics, real estate teams, automotive businesses and home service teams across MENA, with a focus on Lebanon, Iraq and the UAE.",
     support:
-      "We start with the real customer journey: questions, messages, handoff, appointments, leads, branches, follow-up and reporting.",
-    cta: "Start a project",
+      "We start with the real customer journey: inquiry, booking, qualification, handoff, follow-up and visibility.",
+    cta: "Request a scope",
     ctaHref: "/contact",
     metrics: [
-      { value: "3", label: "priority markets: Lebanon, Iraq and Dubai/UAE" },
-      { value: "2", label: "languages for customer journeys: English and Arabic" },
-      { value: "AI", label: "assistants, WhatsApp flows and dashboards" },
+      { value: "MENA", label: "built for the Middle East and North Africa" },
+      { value: "3", label: "focus markets: Lebanon, Iraq and the UAE" },
+      { value: "4", label: "primary industries with dedicated use cases" },
     ],
     sectionTitle: "Where Servicely fits",
     sectionBody:
-      "Every business receives inquiries differently. Clinics need appointment clarity. Real estate agencies need qualified leads. Premium service teams need a trustworthy digital journey. We shape the system around the way customers actually contact you.",
+      "Clinics need appointment clarity. Real estate agencies need better-qualified leads. Automotive teams need cleaner vehicle and service requests. Field service teams need scheduling and job follow-up that customers can understand.",
     closingTitle: "Build the customer system your team can actually use",
     closingBody:
-      "Bring your messages, forms, appointment process, property inquiry flow, service catalog or branch routing. We will map the simplest useful system and build it cleanly.",
+      "Bring your appointment process, property inquiry flow, WhatsApp messages, website, forms or follow-up spreadsheet. We will map the simplest useful system and build it cleanly.",
     closingChecklist: [
-      "AI customer support and FAQ assistants",
-      "WhatsApp inquiry and handoff automation",
-      "Appointment request and lead qualification flows",
+      "Clinic appointment intake and patient inquiry routing",
+      "Real estate property matching and lead qualification",
+      "Automotive inquiries, service intake and quote follow-up",
+      "Home and field service requests, scheduling and job status",
+      "WhatsApp intake, handoff and follow-up workflows",
       "Business websites, apps, portals and dashboards",
-      "Support, hosting, monitoring and practical improvements",
     ],
     helpsWithLabel: "We help with",
     viewUseCasesLabel: "View use cases",
     useCasesHeroEyebrow: "Real use cases",
-    useCasesHeroTitle: "Customer problems we turn into working systems",
+    useCasesHeroTitle: "Twelve customer problems we turn into working systems",
     useCasesHeroBody:
-      "The right system makes first contact clearer, response faster and follow-up easier for your team.",
+      "Four primary industries, each with three practical customer-flow use cases.",
     problemsEyebrow: "Common problems",
     problemsTitle: "You do not need digital tools for decoration",
     problemsBody:
@@ -164,9 +309,9 @@ const copy: Record<string, IndustriesCopy> = {
       result: "Result",
     },
     industriesEyebrow: "Where this applies",
-    industriesShortTitle: "Built for businesses that rely on inquiries",
+    industriesShortTitle: "Built for inquiry-heavy businesses",
     industriesShortBody:
-      "Clinics, real estate agencies, premium service businesses, training centers, hospitality teams and multi-branch companies all need cleaner customer workflows.",
+      "Clinics, real estate teams, automotive businesses and field service teams need clearer intake, faster response and better follow-up.",
     detail: {
       backLabel: "All industries",
       exploreLabel: "Explore use cases",
@@ -177,113 +322,50 @@ const copy: Record<string, IndustriesCopy> = {
       useCasesBody: "Practical scenarios we build for this type of business.",
       otherTitle: "Other industries",
     },
-    problems: [
-      {
-        id: "response",
-        title: "Customers wait too long for basic answers",
-        problem:
-          "Staff repeat the same answers across WhatsApp, calls, Instagram, website forms and direct messages.",
-        solution:
-          "We build AI assistants and structured inquiry flows that answer common questions and collect the right details.",
-        result:
-          "Customers get faster answers and staff handle the serious requests with better context.",
-        Icon: MessageCircle,
-        ...problemAccents.response,
-      },
-      {
-        id: "appointments",
-        title: "Appointment requests are messy",
-        problem:
-          "Requests arrive incomplete, double-booking risk increases and staff spend time asking the same follow-up questions.",
-        solution:
-          "We build appointment request flows that collect preferred date, service, contact details and notes before staff confirm.",
-        result:
-          "Teams receive cleaner appointment requests and customers understand the next step.",
-        Icon: CalendarCheck,
-        ...problemAccents.appointments,
-      },
-      {
-        id: "leads",
-        title: "Leads arrive without useful details",
-        problem:
-          "Sales teams receive vague messages like pricing requests with no budget, location, timeline or preference.",
-        solution:
-          "We build qualification flows for real estate and service businesses before handoff to staff.",
-        result:
-          "Teams spend less time chasing basic information and more time with serious customers.",
-        Icon: UserCheck,
-        ...problemAccents.leads,
-      },
-      {
-        id: "handoff",
-        title: "WhatsApp conversations are hard to organize",
-        problem:
-          "Different people answer from different places and important requests can be missed or forgotten.",
-        solution:
-          "We structure intake, routing, summaries and handoff so the right person receives the right request.",
-        result:
-          "Customer conversations become easier to manage and follow up.",
-        Icon: MessageCircle,
-        ...problemAccents.handoff,
-      },
-      {
-        id: "visibility",
-        title: "Owners cannot see what is happening",
-        problem:
-          "Leads, appointments, branch requests and follow-up status are spread across messages and spreadsheets.",
-        solution:
-          "We build dashboards that show inquiries, requests, status, branches and follow-up activity.",
-        result:
-          "Owners and managers get a clearer view of customer demand and team response.",
-        Icon: BarChart3,
-        ...problemAccents.visibility,
-      },
-      {
-        id: "credibility",
-        title: "The website does not help customers act",
-        problem:
-          "The site looks outdated, lacks clear service pages or only describes the company without action flows.",
-        solution:
-          "We build websites connected to inquiry, appointment, lead capture, portal or customer support workflows.",
-        result:
-          "The website becomes part of the customer journey, not just a brochure.",
-        Icon: Globe,
-        ...problemAccents.credibility,
-      },
-    ],
+    problems: enProblems,
     industries: [
       {
         id: "clinics-medical-centers",
         title: "Clinics & medical centers",
-        subtitle: "Appointment requests, patient inquiries and AI support",
-        body: "For clinics that need clearer appointment requests, faster answers to basic non-medical questions and cleaner staff handoff.",
+        subtitle: "Appointment intake, patient inquiries and follow-up",
+        body:
+          "For clinics that need clearer appointment requests, faster answers to basic non-medical questions, and cleaner staff handoff.",
         points: [
-          "Appointment request flows",
-          "Patient inquiry assistants",
+          "Appointment request intake",
+          "Patient inquiry routing",
           "Service and branch information",
-          "Staff handoff and follow-up",
-          "Request dashboards",
+          "After-hours request capture",
+          "Follow-up dashboards",
         ],
-        tags: ["Appointments", "AI assistant", "WhatsApp", "Dashboard"],
-        outcome: "Patients ask clearly, staff receive cleaner requests, and follow-up becomes easier.",
+        tags: ["Appointments", "Patients", "WhatsApp", "Follow-up"],
+        outcome:
+          "Patients send clearer requests, staff receive better context, and follow-up becomes visible.",
         useCases: [
           {
-            title: "Patients ask the same questions every day",
-            problem: "Staff repeat location, hours, services, preparation and contact answers manually.",
-            solution: "An assistant answers common non-medical questions and collects appointment intent.",
-            result: "Staff spend more time confirming serious requests instead of repeating basics.",
+            title: "Appointment scheduling and patient intake",
+            problem:
+              "Patients send vague messages without service, preferred time, branch or contact details.",
+            solution:
+              "A guided flow collects the required details before staff confirm the appointment.",
+            result:
+              "The clinic receives cleaner requests with fewer back-and-forth messages.",
           },
           {
-            title: "Appointment requests arrive incomplete",
-            problem: "Patients send vague messages without service, preferred time or contact details.",
-            solution: "A request flow collects the required details before staff confirmation.",
-            result: "The clinic receives clearer requests and fewer back-and-forth messages.",
+            title: "Service inquiry routing",
+            problem:
+              "Patients ask basic non-medical questions across different channels and often reach the wrong person.",
+            solution:
+              "A structured assistant answers routine information and routes the request by service, doctor or branch.",
+            result:
+              "Patients get faster direction and staff handle requests with better context.",
           },
           {
-            title: "Follow-up is hard to track",
-            problem: "Some requests are answered late or forgotten when messages become busy.",
-            solution: "A dashboard tracks request status, handoff and follow-up.",
-            result: "The team sees what still needs attention.",
+            title: "Follow-up and after-hours tracking",
+            problem:
+              "Requests can be missed when messages arrive after hours or during busy clinic periods.",
+            solution:
+              "A dashboard tracks request status, handoff, reminders and pending follow-up.",
+            result: "The team sees what needs attention before requests go cold.",
           },
         ],
         Icon: HeartPulse,
@@ -292,222 +374,183 @@ const copy: Record<string, IndustriesCopy> = {
       {
         id: "real-estate-agencies",
         title: "Real estate agencies",
-        subtitle: "Qualified property leads and viewing requests",
-        body: "For agencies that need cleaner leads, property inquiry tools, viewing requests and better agent handoff.",
+        subtitle: "Property matching, qualified leads and viewing handoff",
+        body:
+          "For agencies that need cleaner property inquiries, better-qualified buyers or renters, viewing requests and agent follow-up.",
         points: [
-          "Lead qualification flows",
+          "Property matching flows",
+          "Buyer/renter qualification",
           "Viewing request intake",
-          "Property landing pages",
-          "Agent routing",
-          "Lead dashboards",
+          "Agent handoff",
+          "Lead follow-up dashboards",
         ],
-        tags: ["Leads", "Listings", "Viewing", "Agents"],
-        outcome: "Agents receive better-qualified leads with budget, location, timeline and preference.",
+        tags: ["Matching", "Leads", "Viewings", "Agents"],
+        outcome:
+          "Agents receive leads with budget, area, property type, timeline and viewing preference.",
         useCases: [
           {
-            title: "Agents receive vague messages",
-            problem: "A lead asks for prices but gives no budget, location, property type or timeline.",
-            solution: "A qualification flow collects the right details before agent handoff.",
-            result: "Agents can prioritize serious leads faster.",
+            title: "Property matching",
+            problem:
+              "Buyers and renters ask broadly without budget, area, property type, bedrooms or timeline.",
+            solution:
+              "A matching flow collects preferences before suggesting relevant listings or handing the lead to an agent.",
+            result:
+              "Agents start with a clearer buyer or renter profile.",
           },
           {
-            title: "Property inquiries are scattered",
-            problem: "Messages arrive from WhatsApp, social media and website forms without a shared view.",
-            solution: "A lead dashboard centralizes inquiries and status.",
-            result: "The agency sees which leads need follow-up.",
+            title: "Lead qualification and follow-up",
+            problem:
+              "Agents receive incomplete leads and lose track of who needs the next message or call.",
+            solution:
+              "A qualification workflow tracks budget, area, type, urgency, source, status and next action.",
+            result:
+              "The agency can prioritize serious leads and follow up consistently.",
           },
           {
-            title: "Viewings take too much manual coordination",
-            problem: "Staff ask the same availability and property questions repeatedly.",
-            solution: "A viewing request flow collects preferences and availability first.",
-            result: "Scheduling becomes clearer for customers and agents.",
+            title: "Viewing scheduling and agent handoff",
+            problem:
+              "Viewing requests require repeated manual coordination between customer availability, property details and agent assignment.",
+            solution:
+              "A viewing flow collects the property, preferred time, contact details and availability before routing the request.",
+            result:
+              "Scheduling becomes clearer for customers and agents.",
           },
         ],
         Icon: Building2,
         ...industryStyle.realEstate,
       },
       {
-        id: "premium-service-businesses",
-        title: "Premium service businesses",
-        subtitle: "Trustworthy digital journeys for high-value services",
-        body: "For aesthetic, wellness, consulting, legal, financial, repair or specialist service companies that need a polished online journey.",
+        id: "automotive-mobility",
+        title: "Automotive & mobility",
+        subtitle: "Vehicle inquiries, service intake and quote follow-up",
+        body:
+          "For dealerships, rental teams, garages and mobility businesses that need clearer vehicle requests, service bookings, branch routing and follow-up.",
         points: [
-          "Premium service pages",
-          "Inquiry and consultation flows",
-          "Client intake forms",
-          "Customer portals",
-          "Service dashboards",
+          "Vehicle inquiry qualification",
+          "Test-drive scheduling",
+          "Service appointment intake",
+          "Branch routing",
+          "Quote and availability follow-up",
         ],
-        tags: ["Premium", "Consultation", "Intake", "Portal"],
-        outcome: "Customers understand the offer and know exactly how to start.",
+        tags: ["Vehicles", "Service", "Quotes", "Follow-up"],
+        outcome:
+          "Teams receive inquiries with vehicle, budget, service need, branch and timing details.",
         useCases: [
           {
-            title: "Customers do not understand the service quickly",
-            problem: "Service pages are vague and customers need manual explanation before taking action.",
-            solution: "We build clear service pages with inquiry flows and next steps.",
-            result: "Serious customers know what to ask for and how to begin.",
+            title: "Vehicle inquiry qualification and test-drive scheduling",
+            problem:
+              "Buyers ask about vehicles without model, budget, financing, trade-in, location or timing details.",
+            solution:
+              "A qualification flow collects vehicle interest, budget, timeline, branch, contact details and test-drive preference.",
+            result:
+              "Sales teams receive clearer leads and schedule serious test drives faster.",
           },
           {
-            title: "Client intake happens manually",
-            problem: "Staff collect the same customer details through repeated messages.",
-            solution: "A structured intake form or portal collects the important details first.",
-            result: "Teams start conversations with better context.",
+            title: "Service appointment intake and branch routing",
+            problem:
+              "Service requests arrive without vehicle details, issue, urgency or preferred branch.",
+            solution:
+              "An intake flow collects make, model, year, issue, photos if needed, preferred time and branch.",
+            result:
+              "Advisors can route and prepare service requests before the customer arrives.",
           },
           {
-            title: "The brand feels less premium online",
-            problem: "The digital experience does not match the value of the service.",
-            solution: "We create a polished website connected to inquiry and follow-up workflows.",
-            result: "The customer journey feels more professional from first click.",
+            title: "Quote, rental or availability follow-up",
+            problem:
+              "Customers ask for quotes, rental availability or stock updates and follow-up gets lost in WhatsApp.",
+            solution:
+              "A follow-up workflow tracks quote status, availability, customer preference and next action.",
+            result:
+              "Teams follow up consistently and fewer high-intent inquiries go cold.",
           },
         ],
-        Icon: Gem,
-        ...industryStyle.premium,
+        Icon: CarFront,
+        ...industryStyle.automotive,
       },
       {
-        id: "training-education",
-        title: "Training & education",
-        subtitle: "Course pages, registration flows and student inquiries",
-        body: "For academies, training centers and education businesses that need clearer course information, registration and student support.",
+        id: "home-field-services",
+        title: "Home & field services",
+        subtitle: "Service requests, scheduling and job follow-up",
+        body:
+          "For maintenance, repair, cleaning, installation and field teams that need cleaner requests, quote details, scheduling and customer updates.",
         points: [
-          "Course landing pages",
-          "Registration flows",
-          "Student inquiry assistants",
-          "Payment or document intake",
-          "Enrollment dashboards",
+          "Service request triage",
+          "Quote intake",
+          "Technician or crew assignment",
+          "Job status tracking",
+          "Post-service follow-up",
         ],
-        tags: ["Courses", "Registration", "Students", "Support"],
-        outcome: "Students understand courses faster and registration becomes easier to manage.",
+        tags: ["Requests", "Quotes", "Scheduling", "Status"],
+        outcome:
+          "Teams get clearer job details before dispatch and customers know the next step.",
         useCases: [
           {
-            title: "Students ask the same course questions",
-            problem: "Staff repeat dates, prices, schedules and requirements manually.",
-            solution: "An assistant answers common course questions and routes serious inquiries.",
-            result: "The team spends less time repeating basics.",
+            title: "Service request triage and quote intake",
+            problem:
+              "Customers ask for help without explaining the service type, location, photos, urgency or expected scope.",
+            solution:
+              "A triage flow collects job category, location, details, media, preferred timing and quote requirements.",
+            result:
+              "Teams can price, prioritize and route requests with fewer repeated questions.",
           },
           {
-            title: "Registration data is incomplete",
-            problem: "Student details arrive in different formats across messages and forms.",
-            solution: "A registration flow collects required information consistently.",
-            result: "Enrollment data becomes easier to review and follow up.",
+            title: "Scheduling and technician or crew assignment",
+            problem:
+              "Scheduling depends on scattered messages between customers, coordinators and technicians.",
+            solution:
+              "A scheduling workflow captures availability, location, job type and crew capacity before assignment.",
+            result:
+              "Coordinators assign work faster and customers receive clearer appointment windows.",
           },
           {
-            title: "Course demand is hard to see",
-            problem: "Management cannot quickly see which programs are getting attention.",
-            solution: "A dashboard shows inquiries, registrations and course interest.",
-            result: "The center can plan marketing and schedules with better visibility.",
+            title: "Job status, approval and post-service follow-up",
+            problem:
+              "Customers ask for updates, approvals and next steps while job status sits in chats or spreadsheets.",
+            solution:
+              "A status workflow tracks visit outcome, required approval, next action, payment note and follow-up.",
+            result:
+              "Managers see job progress and customers are not left guessing.",
           },
         ],
-        Icon: GraduationCap,
-        ...industryStyle.training,
-      },
-      {
-        id: "hospitality-tourism",
-        title: "Hospitality & tourism",
-        subtitle: "Booking inquiries, guest requests and multilingual flows",
-        body: "For hotels, tour operators and hospitality teams that need cleaner guest inquiries, booking requests and service handoff.",
-        points: [
-          "Booking inquiry flows",
-          "Guest request intake",
-          "Multilingual support journeys",
-          "WhatsApp routing",
-          "Request dashboards",
-        ],
-        tags: ["Bookings", "Guests", "WhatsApp", "Multilingual"],
-        outcome: "Guest requests become easier to answer, route and follow up.",
-        useCases: [
-          {
-            title: "Booking questions repeat all day",
-            problem: "Guests ask the same availability, location, policy and package questions.",
-            solution: "An assistant answers common questions and collects booking intent.",
-            result: "Staff receive better requests and answer serious guests faster.",
-          },
-          {
-            title: "Guest requests are missed between shifts",
-            problem: "Requests move through calls or WhatsApp and can be forgotten.",
-            solution: "A request workflow logs, routes and tracks guest requests.",
-            result: "Teams know what is open, assigned and completed.",
-          },
-          {
-            title: "Tour inquiries need better qualification",
-            problem: "Customers ask broadly without dates, group size, budget or preference.",
-            solution: "A tour inquiry flow collects the details before staff follow-up.",
-            result: "The team can respond with more relevant options.",
-          },
-        ],
-        Icon: Hotel,
-        ...industryStyle.hospitality,
-      },
-      {
-        id: "multi-branch-businesses",
-        title: "Multi-branch businesses",
-        subtitle: "Branch routing, request visibility and owner dashboards",
-        body: "For businesses with several branches, locations or teams that need centralized customer requests and clearer routing.",
-        points: [
-          "Branch-based inquiry routing",
-          "Central request dashboards",
-          "Location pages",
-          "Staff handoff",
-          "Owner reporting",
-        ],
-        tags: ["Branches", "Routing", "Dashboard", "Reporting"],
-        outcome: "Owners see demand across locations and customers reach the right branch faster.",
-        useCases: [
-          {
-            title: "Customers contact the wrong branch",
-            problem: "Requests arrive centrally or to the wrong location and need manual forwarding.",
-            solution: "A branch routing flow sends requests to the right team.",
-            result: "Customers reach the right branch with less delay.",
-          },
-          {
-            title: "Owners cannot compare branch demand",
-            problem: "Each branch handles messages differently and reports are inconsistent.",
-            solution: "A dashboard shows inquiries, requests and response status by branch.",
-            result: "Management sees which locations need attention.",
-          },
-          {
-            title: "Service information changes by location",
-            problem: "Customers receive outdated or inconsistent branch details.",
-            solution: "Location pages and assistant flows present current services, hours and contacts.",
-            result: "Customers get clearer information before contacting staff.",
-          },
-        ],
-        Icon: Network,
-        ...industryStyle.branches,
+        Icon: Wrench,
+        ...industryStyle.fieldServices,
       },
     ],
   },
   ar: {
-    eyebrow: "القطاعات التي نخدمها",
-    title: "ذكاء اصطناعي وأتمتة ومواقع للشركات التي تعتمد على التواصل مع العملاء",
-    body: "تبني Servicely أنظمة عملية للشركات في لبنان والعراق ودبي/الإمارات: مساعدين أذكياء بالذكاء الاصطناعي، أتمتة واتساب، مسارات مواعيد، مواقع، تطبيقات، بوابات، ولوحات تحكم.",
+    eyebrow: "القطاعات الأساسية",
+    title: "أنظمة عملية للشركات التي تعتمد على الاستفسارات في MENA",
+    body:
+      "تبني Servicely برمجيات لتنظيم تدفق العملاء للعيادات وشركات العقارات وقطاع السيارات وفرق الخدمات الميدانية في منطقة MENA، مع تركيز على لبنان والعراق والإمارات.",
     support:
-      "نبدأ من رحلة العميل الفعلية: الأسئلة، الرسائل، تحويل الطلبات، المواعيد، العملاء المحتملون، الفروع، المتابعة، والتقارير.",
-    cta: "ابدأ مشروعاً",
+      "نبدأ من رحلة العميل الفعلية: الاستفسار، الحجز، التأهيل، التحويل، المتابعة، والرؤية الواضحة.",
+    cta: "اطلب نطاقاً واضحاً",
     ctaHref: "/contact",
     metrics: [
-      { value: "3", label: "أسواق رئيسية: لبنان، العراق، ودبي/الإمارات" },
-      { value: "2", label: "لغتان لرحلات العملاء: العربية والإنجليزية" },
-      { value: "AI", label: "مساعدون أذكياء، مسارات واتساب، ولوحات تحكم" },
+      { value: "MENA", label: "مصمم للشرق الأوسط وشمال أفريقيا" },
+      { value: "3", label: "أسواق تركيز: لبنان والعراق والإمارات" },
+      { value: "4", label: "قطاعات أساسية مع حالات استخدام مخصصة" },
     ],
     sectionTitle: "أين يمكن أن تساعدك Servicely؟",
     sectionBody:
-      "كل شركة تستقبل الاستفسارات بطريقة مختلفة. العيادات تحتاج مواعيد أوضح. شركات العقارات تحتاج عملاء مؤهلين. شركات الخدمات المميزة تحتاج رحلة رقمية موثوقة. نشكل النظام حول طريقة تواصل العملاء معك فعلاً.",
-    closingTitle: "ابنِ نظام خدمة العملاء الذي يستطيع فريقك استخدامه فعلاً",
+      "تحتاج العيادات إلى مواعيد أوضح. وتحتاج شركات العقارات إلى عملاء مؤهلين أكثر. وتحتاج فرق السيارات إلى استفسارات مركبات وخدمات أنظف. وتحتاج فرق الخدمات الميدانية إلى جدولة ومتابعة حالة يفهمها العميل.",
+    closingTitle: "ابنِ نظام العملاء الذي يستطيع فريقك استخدامه فعلاً",
     closingBody:
-      "شارك معنا رسائلك، نماذجك، مسار المواعيد، استفسارات العقارات، كتالوج الخدمات، أو طريقة توجيه الفروع. سنرسم أبسط نظام مفيد، ثم نبنيه بطريقة واضحة ومنظمة.",
+      "شارك معنا مسار المواعيد أو استفسارات العقارات أو رسائل واتساب أو الموقع أو النماذج أو جدول المتابعة. سنرسم أبسط نظام مفيد، ثم نبنيه بطريقة واضحة.",
     closingChecklist: [
-      "دعم عملاء بالذكاء الاصطناعي ومساعدو أسئلة متكررة",
-      "أتمتة استفسارات واتساب وتحويلها إلى الفريق",
-      "مسارات مواعيد وتأهيل عملاء محتملين",
+      "استقبال مواعيد العيادات وتوجيه استفسارات المرضى",
+      "مطابقة العقارات وتأهيل العملاء المحتملين",
+      "استفسارات السيارات واستقبال الصيانة ومتابعة العروض",
+      "طلبات الخدمات المنزلية والميدانية والجدولة وحالة العمل",
+      "مسارات واتساب للاستقبال والتحويل والمتابعة",
       "مواقع أعمال وتطبيقات وبوابات ولوحات تحكم",
-      "دعم واستضافة ومراقبة وتحسينات عملية",
     ],
     helpsWithLabel: "نساعد في",
     viewUseCasesLabel: "شاهد حالات الاستخدام",
     useCasesHeroEyebrow: "حالات استخدام عملية",
-    useCasesHeroTitle: "مشكلات العملاء التي نحولها إلى أنظمة تعمل فعلاً",
+    useCasesHeroTitle: "اثنتا عشرة مشكلة عملاء نحولها إلى أنظمة تعمل",
     useCasesHeroBody:
-      "النظام المناسب يجعل أول تواصل أوضح، الاستجابة أسرع، والمتابعة أسهل على فريقك.",
+      "أربعة قطاعات أساسية، ولكل قطاع ثلاث حالات استخدام عملية لتنظيم تدفق العملاء.",
     problemsEyebrow: "مشكلات شائعة",
     problemsTitle: "لا تحتاج أدوات رقمية للزينة",
     problemsBody:
@@ -520,7 +563,7 @@ const copy: Record<string, IndustriesCopy> = {
     industriesEyebrow: "أين ينطبق ذلك",
     industriesShortTitle: "مصمم للشركات التي تعتمد على الاستفسارات",
     industriesShortBody:
-      "العيادات، شركات العقارات، الخدمات المميزة، مراكز التدريب، الضيافة والشركات متعددة الفروع تحتاج جميعها إلى مسارات عملاء أوضح.",
+      "تحتاج العيادات وشركات العقارات وفرق السيارات والخدمات الميدانية إلى استقبال أوضح واستجابة أسرع ومتابعة أفضل.",
     detail: {
       backLabel: "كل القطاعات",
       exploreLabel: "استكشف حالات الاستخدام",
@@ -531,89 +574,51 @@ const copy: Record<string, IndustriesCopy> = {
       useCasesBody: "سيناريوهات عملية نبنيها لهذا النوع من الأعمال.",
       otherTitle: "قطاعات أخرى",
     },
-    problems: [
-      {
-        id: "response",
-        title: "العملاء ينتظرون طويلاً للإجابات الأساسية",
-        problem: "يكرر الموظفون نفس الإجابات عبر واتساب والمكالمات وإنستغرام ونماذج الموقع والرسائل.",
-        solution: "نبني مساعدين أذكياء بالذكاء الاصطناعي ومسارات استفسار منظمة تجيب عن الأسئلة الشائعة وتجمع التفاصيل الصحيحة.",
-        result: "يحصل العملاء على إجابات أسرع ويتعامل الموظفون مع الطلبات الجدية بسياق أفضل.",
-        Icon: MessageCircle,
-        ...problemAccents.response,
-      },
-      {
-        id: "appointments",
-        title: "طلبات المواعيد غير منظمة",
-        problem: "تصل الطلبات ناقصة، يزيد خطر التداخل، ويقضي الموظفون وقتاً في طرح نفس أسئلة المتابعة.",
-        solution: "نبني مسارات طلب مواعيد تجمع التاريخ المفضل والخدمة وبيانات التواصل والملاحظات قبل التأكيد.",
-        result: "يستقبل الفريق طلبات أوضح ويفهم العملاء الخطوة التالية.",
-        Icon: CalendarCheck,
-        ...problemAccents.appointments,
-      },
-      {
-        id: "leads",
-        title: "العملاء المحتملون يصلون بدون تفاصيل مفيدة",
-        problem: "تصل لفرق المبيعات رسائل عامة بدون ميزانية أو موقع أو جدول زمني أو تفضيلات.",
-        solution: "نبني مسارات تأهيل لشركات العقارات والخدمات قبل تسليم العميل للموظفين.",
-        result: "يقضي الفريق وقتاً أقل في جمع المعلومات الأساسية ووقتاً أكثر مع العملاء الجديين.",
-        Icon: UserCheck,
-        ...problemAccents.leads,
-      },
-      {
-        id: "handoff",
-        title: "محادثات واتساب صعبة التنظيم",
-        problem: "يرد أشخاص مختلفون من أماكن مختلفة وقد تضيع الطلبات المهمة أو تُنسى.",
-        solution: "ننظم استقبال الطلبات والتوجيه والملخصات وتحويل الطلب حتى يصل إلى الشخص الصحيح.",
-        result: "تصبح محادثات العملاء أسهل في الإدارة والمتابعة.",
-        Icon: MessageCircle,
-        ...problemAccents.handoff,
-      },
-      {
-        id: "visibility",
-        title: "المالكون لا يرون ما يحدث بوضوح",
-        problem: "العملاء والمواعيد وطلبات الفروع وحالة المتابعة متفرقة بين الرسائل والجداول.",
-        solution: "نبني لوحات تحكم تعرض الاستفسارات والطلبات والحالة والفروع ونشاط المتابعة.",
-        result: "يحصل المالكون والمديرون على رؤية أوضح لطلب العملاء واستجابة الفريق.",
-        Icon: BarChart3,
-        ...problemAccents.visibility,
-      },
-      {
-        id: "credibility",
-        title: "الموقع لا يساعد العملاء على اتخاذ إجراء",
-        problem: "الموقع قديم أو لا يحتوي صفحات خدمات واضحة أو يصف الشركة فقط بدون مسارات فعل.",
-        solution: "نبني مواقع مرتبطة بالاستفسارات أو المواعيد أو جمع العملاء أو البوابات أو دعم العملاء.",
-        result: "يصبح الموقع جزءاً من رحلة العميل وليس مجرد بروشور.",
-        Icon: Globe,
-        ...problemAccents.credibility,
-      },
-    ],
+    problems: arProblems,
     industries: [
       {
         id: "clinics-medical-centers",
         title: "العيادات والمراكز الطبية",
-        subtitle: "طلبات مواعيد واستفسارات مرضى ودعم ذكي",
-        body: "للعيادات التي تحتاج إلى طلبات مواعيد أوضح، إجابات أسرع عن الأسئلة الأساسية غير الطبية، وتحويل أنظف للطلبات إلى الموظفين.",
-        points: ["مسارات طلب مواعيد", "مساعد استفسارات المرضى", "معلومات الخدمات والفروع", "تسليم ومتابعة", "لوحات طلبات"],
-        tags: ["مواعيد", "مساعد ذكي", "واتساب", "لوحة تحكم"],
-        outcome: "يساعد النظام المرضى على إرسال طلبات أوضح، ويمنح الموظفين معلومات أنظف، ويجعل المتابعة أسهل.",
+        subtitle: "استقبال مواعيد واستفسارات مرضى ومتابعة",
+        body:
+          "للعيادات التي تحتاج إلى طلبات مواعيد أوضح، إجابات أسرع عن الأسئلة الأساسية غير الطبية، وتحويل أنظف للطلبات إلى الموظفين.",
+        points: [
+          "استقبال طلبات المواعيد",
+          "توجيه استفسارات المرضى",
+          "معلومات الخدمات والفروع",
+          "استقبال الطلبات خارج الدوام",
+          "لوحات متابعة",
+        ],
+        tags: ["مواعيد", "مرضى", "واتساب", "متابعة"],
+        outcome:
+          "يرسل المرضى طلبات أوضح، ويستقبل الموظفون سياقاً أفضل، وتصبح المتابعة مرئية.",
         useCases: [
           {
-            title: "المرضى يطرحون نفس الأسئلة يومياً",
-            problem: "يكرر الموظفون معلومات الموقع، أوقات الدوام، الخدمات، التحضير، وطرق التواصل يدوياً.",
-            solution: "مساعد ذكي يجيب عن الأسئلة غير الطبية الشائعة ويجمع نية حجز الموعد.",
-            result: "يقضي الموظفون وقتاً أكثر في تأكيد الطلبات الجدية بدلاً من تكرار الأساسيات.",
+            title: "جدولة المواعيد واستقبال بيانات المرضى",
+            problem:
+              "يرسل المرضى رسائل غامضة بدون خدمة أو وقت مفضل أو فرع أو بيانات تواصل.",
+            solution:
+              "يجمع مسار واضح التفاصيل المطلوبة قبل تأكيد الموظفين للموعد.",
+            result:
+              "تستقبل العيادة طلبات أنظف مع رسائل متابعة أقل.",
           },
           {
-            title: "طلبات المواعيد تصل ناقصة",
-            problem: "يرسل المرضى رسائل غامضة بدون خدمة أو وقت مفضل أو بيانات تواصل.",
-            solution: "مسار طلب يجمع التفاصيل المطلوبة قبل تأكيد الموظفين.",
-            result: "تستقبل العيادة طلبات أوضح ورسائل متابعة أقل.",
+            title: "توجيه استفسارات الخدمات",
+            problem:
+              "يسأل المرضى أسئلة أساسية غير طبية عبر قنوات مختلفة وقد يصلون إلى الشخص غير المناسب.",
+            solution:
+              "يجيب مساعد منظم عن المعلومات الروتينية ويوجه الطلب حسب الخدمة أو الطبيب أو الفرع.",
+            result:
+              "يحصل المرضى على توجيه أسرع ويتعامل الموظفون مع الطلبات بسياق أفضل.",
           },
           {
-            title: "المتابعة صعبة التتبع",
-            problem: "بعض الطلبات يتم الرد عليها متأخراً أو تُنسى عندما تصبح الرسائل كثيرة.",
-            solution: "لوحة تحكم تتبع حالة الطلب والتسليم والمتابعة.",
-            result: "يرى الفريق ما الذي لا يزال يحتاج انتباهاً.",
+            title: "المتابعة وتتبع الطلبات خارج الدوام",
+            problem:
+              "قد تضيع الطلبات عندما تصل خارج الدوام أو خلال فترات ازدحام العيادة.",
+            solution:
+              "تتبع لوحة الطلبات الحالة والتحويل والتذكيرات والمتابعة المعلقة.",
+            result:
+              "يرى الفريق ما يحتاج انتباهاً قبل أن تبرد الطلبات.",
           },
         ],
         Icon: HeartPulse,
@@ -622,157 +627,146 @@ const copy: Record<string, IndustriesCopy> = {
       {
         id: "real-estate-agencies",
         title: "شركات العقارات",
-        subtitle: "عملاء عقارات مؤهلون وطلبات معاينة",
-        body: "لشركات العقارات التي تحتاج إلى عملاء محتملين أكثر وضوحاً، أدوات استفسار عن العقارات، طلبات معاينة، وتسليم أفضل للوكلاء.",
-        points: ["تأهيل العملاء", "طلبات معاينة", "صفحات عقارات", "توجيه للوكلاء", "لوحات العملاء"],
-        tags: ["عملاء", "عقارات", "معاينة", "وكلاء"],
-        outcome: "يتلقى الوكلاء عملاء محتملين مؤهلين، مع ميزانية وموقع وجدول زمني وتفضيلات أوضح.",
+        subtitle: "مطابقة عقارات وعملاء مؤهلون وتحويل معاينات",
+        body:
+          "لشركات العقارات التي تحتاج إلى استفسارات عقارية أوضح، تأهيل أفضل للمشترين أو المستأجرين، طلبات معاينة، ومتابعة للوكلاء.",
+        points: [
+          "مسارات مطابقة عقارات",
+          "تأهيل مشتري أو مستأجر",
+          "استقبال طلبات المعاينة",
+          "تحويل إلى الوكيل",
+          "لوحات متابعة العملاء",
+        ],
+        tags: ["مطابقة", "عملاء", "معاينات", "وكلاء"],
+        outcome:
+          "يستقبل الوكلاء عملاء مع ميزانية ومنطقة ونوع عقار وجدول زمني وتفضيل معاينة.",
         useCases: [
           {
-            title: "الوكلاء يستلمون رسائل غامضة",
-            problem: "يسأل العميل عن الأسعار دون توضيح الميزانية، الموقع، نوع العقار، أو الجدول الزمني.",
-            solution: "مسار تأهيل يجمع التفاصيل الصحيحة قبل تسليمها للوكيل.",
-            result: "يمكن للوكلاء ترتيب العملاء الجديين بسرعة أكبر.",
+            title: "مطابقة العقارات",
+            problem:
+              "يسأل المشترون والمستأجرون بشكل عام بدون ميزانية أو منطقة أو نوع عقار أو عدد غرف أو جدول زمني.",
+            solution:
+              "يجمع مسار المطابقة التفضيلات قبل اقتراح عقارات مناسبة أو تحويل العميل إلى الوكيل.",
+            result:
+              "يبدأ الوكلاء بملف أوضح للمشتري أو المستأجر.",
           },
           {
-            title: "استفسارات العقارات متفرقة",
-            problem: "تصل الرسائل من واتساب والسوشيال ونماذج الموقع بدون رؤية مشتركة.",
-            solution: "لوحة عملاء تجمع الاستفسارات والحالة.",
-            result: "ترى الشركة العملاء الذين يحتاجون متابعة.",
+            title: "تأهيل العملاء والمتابعة",
+            problem:
+              "يستقبل الوكلاء عملاء بتفاصيل ناقصة ويصعب تتبع من يحتاج الرسالة أو المكالمة التالية.",
+            solution:
+              "يتتبع مسار التأهيل الميزانية والمنطقة والنوع والاستعجال والمصدر والحالة والخطوة التالية.",
+            result:
+              "تستطيع الشركة ترتيب العملاء الجادين ومتابعتهم بثبات.",
           },
           {
-            title: "تنسيق المعاينات يأخذ وقتاً كبيراً",
-            problem: "يسأل الموظفون نفس أسئلة التوفر والعقار مراراً.",
-            solution: "مسار طلب معاينة يجمع التفضيلات والتوفر أولاً.",
-            result: "يصبح الجدولة أوضح للعملاء والوكلاء.",
+            title: "جدولة المعاينات وتحويلها للوكيل",
+            problem:
+              "تحتاج طلبات المعاينة إلى تنسيق يدوي متكرر بين توفر العميل وتفاصيل العقار وتعيين الوكيل.",
+            solution:
+              "يجمع مسار المعاينة العقار والوقت المفضل وبيانات التواصل والتوفر قبل توجيه الطلب.",
+            result:
+              "تصبح الجدولة أوضح للعملاء والوكلاء.",
           },
         ],
         Icon: Building2,
         ...industryStyle.realEstate,
       },
       {
-        id: "premium-service-businesses",
-        title: "الخدمات المميزة",
-        subtitle: "رحلات رقمية موثوقة للخدمات المميزة",
-        body: "لشركات التجميل، العافية، الاستشارات، والخدمات القانونية أو المالية أو المتخصصة التي تحتاج إلى رحلة رقمية احترافية.",
-        points: ["صفحات خدمات مميزة", "مسارات استفسار واستشارة", "نماذج استقبال العملاء", "بوابات عملاء", "لوحات خدمات"],
-        tags: ["مميز", "استشارة", "استقبال", "بوابة"],
-        outcome: "يفهم العملاء العرض ويعرفون بالضبط كيف يبدأون.",
+        id: "automotive-mobility",
+        title: "السيارات وخدمات التنقل",
+        subtitle: "استفسارات مركبات واستقبال صيانة ومتابعة عروض",
+        body:
+          "للوكلاء وشركات التأجير ومراكز الصيانة وشركات التنقل التي تحتاج إلى طلبات مركبات أوضح، حجوزات خدمة، توجيه للفروع، ومتابعة.",
+        points: [
+          "تأهيل استفسارات المركبات",
+          "جدولة تجربة القيادة",
+          "استقبال مواعيد الصيانة",
+          "توجيه الطلب حسب الفرع",
+          "متابعة العروض والتوفر",
+        ],
+        tags: ["مركبات", "صيانة", "عروض", "متابعة"],
+        outcome:
+          "يستقبل الفريق استفسارات تتضمن المركبة والميزانية واحتياج الخدمة والفرع والتوقيت.",
         useCases: [
           {
-            title: "العملاء لا يفهمون الخدمة بسرعة",
-            problem: "صفحات الخدمات عامة ويحتاج العملاء شرحاً يدوياً قبل اتخاذ خطوة.",
-            solution: "نبني صفحات خدمات واضحة مع مسارات استفسار وخطوات تالية.",
-            result: "يعرف العملاء الجديون ماذا يطلبون وكيف يبدأون.",
+            title: "تأهيل استفسارات المركبات وجدولة تجربة القيادة",
+            problem:
+              "يسأل المشترون عن المركبات بدون تحديد الموديل أو الميزانية أو التمويل أو البدل أو الموقع أو التوقيت.",
+            solution:
+              "يجمع مسار التأهيل المركبة المطلوبة والميزانية والجدول الزمني والفرع وبيانات التواصل وتفضيل تجربة القيادة.",
+            result:
+              "يستقبل فريق المبيعات عملاء أوضح ويجدول تجارب القيادة الجادة بشكل أسرع.",
           },
           {
-            title: "استقبال بيانات العميل يتم يدوياً",
-            problem: "يجمع الموظفون نفس تفاصيل العميل عبر رسائل متكررة.",
-            solution: "نموذج أو بوابة تجمع التفاصيل المهمة أولاً.",
-            result: "يبدأ الفريق المحادثات بسياق أفضل.",
+            title: "استقبال مواعيد الصيانة وتوجيهها للفروع",
+            problem:
+              "تصل طلبات الصيانة بدون تفاصيل المركبة أو المشكلة أو درجة الاستعجال أو الفرع المفضل.",
+            solution:
+              "يجمع مسار الاستقبال نوع المركبة والموديل والسنة والمشكلة والصور عند الحاجة والوقت والفرع المفضل.",
+            result:
+              "يستطيع مستشارو الخدمة توجيه الطلبات وتجهيزها قبل وصول العميل.",
           },
           {
-            title: "العلامة لا تبدو مميزة رقمياً",
-            problem: "التجربة الرقمية لا تعكس قيمة الخدمة.",
-            solution: "ننشئ موقعاً مصقولاً مرتبطاً بالاستفسار والمتابعة.",
-            result: "تشعر رحلة العميل بمهنية أكبر من أول نقرة.",
+            title: "متابعة العروض أو التأجير أو التوفر",
+            problem:
+              "يسأل العملاء عن عروض أو توفر تأجير أو مخزون، ثم تضيع المتابعة داخل واتساب.",
+            solution:
+              "يتتبع سير المتابعة حالة العرض والتوفر وتفضيلات العميل والخطوة التالية.",
+            result:
+              "يتابع الفريق بثبات ولا تبرد الاستفسارات الجادة.",
           },
         ],
-        Icon: Gem,
-        ...industryStyle.premium,
+        Icon: CarFront,
+        ...industryStyle.automotive,
       },
       {
-        id: "training-education",
-        title: "التدريب والتعليم",
-        subtitle: "صفحات دورات وتسجيل واستفسارات طلاب",
-        body: "للأكاديميات ومراكز التدريب التي تحتاج إلى معلومات أوضح عن الدورات، ومسارات تسجيل، ودعم أفضل للطلاب.",
-        points: ["صفحات دورات", "مسارات تسجيل", "مساعد استفسارات الطلاب", "استقبال مستندات أو دفع", "لوحات تسجيل"],
-        tags: ["دورات", "تسجيل", "طلاب", "دعم"],
-        outcome: "يفهم الطلاب تفاصيل الدورات بسرعة، وتصبح إدارة التسجيل أسهل.",
+        id: "home-field-services",
+        title: "الخدمات المنزلية والميدانية",
+        subtitle: "طلبات خدمة وجدولة ومتابعة حالة العمل",
+        body:
+          "لشركات الصيانة والإصلاح والتنظيف والتركيب والفرق الميدانية التي تحتاج إلى طلبات أوضح، تفاصيل عروض، جدولة، وتحديثات للعملاء.",
+        points: [
+          "فرز طلبات الخدمة",
+          "استقبال تفاصيل العرض",
+          "تعيين فني أو فريق",
+          "تتبع حالة العمل",
+          "متابعة ما بعد الخدمة",
+        ],
+        tags: ["طلبات", "عروض", "جدولة", "حالة"],
+        outcome:
+          "يحصل الفريق على تفاصيل أوضح قبل الإرسال ويعرف العميل الخطوة التالية.",
         useCases: [
           {
-            title: "الطلاب يسألون نفس أسئلة الدورات",
-            problem: "يكرر الموظفون المواعيد والأسعار والجداول والمتطلبات يدوياً.",
-            solution: "مساعد يجيب عن الأسئلة الشائعة ويوجه الاستفسارات الجدية.",
-            result: "يقضي الفريق وقتاً أقل في تكرار الأساسيات.",
+            title: "فرز طلبات الخدمة واستقبال تفاصيل العرض",
+            problem:
+              "يطلب العملاء الخدمة بدون توضيح النوع أو الموقع أو الصور أو درجة الاستعجال أو نطاق العمل المتوقع.",
+            solution:
+              "يجمع مسار الفرز نوع العمل والموقع والتفاصيل والوسائط والوقت المفضل ومتطلبات العرض.",
+            result:
+              "يستطيع الفريق التسعير وترتيب الأولويات وتوجيه الطلبات بأسئلة متابعة أقل.",
           },
           {
-            title: "بيانات التسجيل ناقصة",
-            problem: "تصل تفاصيل الطلاب بصيغ مختلفة عبر الرسائل والنماذج.",
-            solution: "مسار تسجيل يجمع المعلومات المطلوبة بشكل ثابت.",
-            result: "تصبح بيانات التسجيل أسهل للمراجعة والمتابعة.",
+            title: "الجدولة وتعيين الفني أو الفريق",
+            problem:
+              "تعتمد الجدولة على رسائل متفرقة بين العملاء والمنسقين والفنيين.",
+            solution:
+              "يلتقط سير الجدولة التوفر والموقع ونوع العمل وسعة الفريق قبل التعيين.",
+            result:
+              "يعين المنسقون العمل أسرع ويحصل العملاء على نافذة موعد أوضح.",
           },
           {
-            title: "طلب الدورات غير واضح",
-            problem: "لا تستطيع الإدارة رؤية البرامج التي تحصل على اهتمام بسرعة.",
-            solution: "لوحة تعرض الاستفسارات والتسجيل والاهتمام بالدورات.",
-            result: "يمكن للمركز تخطيط التسويق والجداول برؤية أفضل.",
+            title: "حالة العمل والموافقة والمتابعة بعد الخدمة",
+            problem:
+              "يسأل العملاء عن التحديثات والموافقات والخطوات التالية بينما تبقى حالة العمل في المحادثات أو الجداول.",
+            solution:
+              "يتتبع سير الحالة نتيجة الزيارة والموافقة المطلوبة والخطوة التالية وملاحظة الدفع والمتابعة.",
+            result:
+              "يرى المديرون تقدم العمل ولا يترك العملاء بلا وضوح.",
           },
         ],
-        Icon: GraduationCap,
-        ...industryStyle.training,
-      },
-      {
-        id: "hospitality-tourism",
-        title: "الضيافة والسياحة",
-        subtitle: "استفسارات حجز وطلبات ضيوف ومسارات متعددة اللغات",
-        body: "للفنادق وشركات السياحة والضيافة التي تحتاج إلى استفسارات ضيوف أوضح، طلبات حجز منظمة، وتسليم أفضل للخدمات.",
-        points: ["مسارات استفسار الحجز", "طلبات الضيوف", "رحلات دعم متعددة اللغات", "توجيه واتساب", "لوحات طلبات"],
-        tags: ["حجوزات", "ضيوف", "واتساب", "متعدد اللغات"],
-        outcome: "تصبح طلبات الضيوف أسهل في الرد عليها، توجيهها، ومتابعتها.",
-        useCases: [
-          {
-            title: "أسئلة الحجز تتكرر طوال اليوم",
-            problem: "يسأل الضيوف نفس أسئلة التوفر والموقع والسياسات والباقات.",
-            solution: "مساعد يجيب عن الأسئلة الشائعة ويجمع نية الحجز.",
-            result: "يستقبل الموظفون طلبات أفضل ويردون على الضيوف الجديين أسرع.",
-          },
-          {
-            title: "طلبات الضيوف تضيع بين المناوبات",
-            problem: "تنتقل الطلبات عبر المكالمات أو واتساب وقد تُنسى.",
-            solution: "مسار طلبات يسجل ويوجه ويتتبع طلبات الضيوف.",
-            result: "يعرف الفريق ما هو مفتوح ومخصص ومكتمل.",
-          },
-          {
-            title: "استفسارات الجولات تحتاج تأهيلاً أفضل",
-            problem: "يسأل العملاء بشكل عام بدون تواريخ أو حجم مجموعة أو ميزانية أو تفضيل.",
-            solution: "مسار استفسار يجمع التفاصيل قبل متابعة الموظفين.",
-            result: "يمكن للفريق الرد بخيارات أكثر صلة.",
-          },
-        ],
-        Icon: Hotel,
-        ...industryStyle.hospitality,
-      },
-      {
-        id: "multi-branch-businesses",
-        title: "الشركات متعددة الفروع",
-        subtitle: "توجيه الفروع ورؤية الطلبات ولوحات المالكين",
-        body: "للشركات التي لديها عدة فروع أو مواقع أو فرق، وتحتاج إلى إدارة مركزية لطلبات العملاء وتوجيه أوضح.",
-        points: ["توجيه حسب الفرع", "لوحات طلبات مركزية", "صفحات مواقع", "تحويل للموظفين", "تقارير للمالك"],
-        tags: ["فروع", "توجيه", "لوحة", "تقارير"],
-        outcome: "يرى المالكون الطلبات عبر الفروع، ويصل العملاء إلى الفرع الصحيح بسرعة أكبر.",
-        useCases: [
-          {
-            title: "العملاء يتواصلون مع الفرع الخطأ",
-            problem: "تصل الطلبات مركزياً أو إلى موقع غير مناسب وتحتاج تحويل يدوي.",
-            solution: "مسار توجيه حسب الفرع يرسل الطلب إلى الفريق الصحيح.",
-            result: "يصل العملاء للفرع المناسب بتأخير أقل.",
-          },
-          {
-            title: "المالكون لا يقارنون طلب الفروع",
-            problem: "كل فرع يتعامل مع الرسائل بطريقة مختلفة والتقارير غير موحدة.",
-            solution: "لوحة تعرض الاستفسارات والطلبات وحالة الرد حسب الفرع.",
-            result: "ترى الإدارة المواقع التي تحتاج اهتماماً.",
-          },
-          {
-            title: "معلومات الخدمة تختلف حسب الموقع",
-            problem: "يحصل العملاء على تفاصيل فروع قديمة أو غير متناسقة.",
-            solution: "صفحات مواقع ومسارات مساعد تعرض الخدمات والدوام ووسائل التواصل الحالية.",
-            result: "يحصل العملاء على معلومات أوضح قبل التواصل مع الموظفين.",
-          },
-        ],
-        Icon: Network,
-        ...industryStyle.branches,
+        Icon: Wrench,
+        ...industryStyle.fieldServices,
       },
     ],
   },

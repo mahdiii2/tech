@@ -242,9 +242,7 @@ import animationdesign from "@/public/lottie/DesignToggle.json";
 import animationengagement from "@/public/lottie/EngagementEye.json";
 import HeroAnimation from "@/components/AnimationVideos.tsx/AnimationVideo";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { getLocale } from "next-intl/server";
 import { useLocale } from "next-intl";
 
 const ANIMATIONS = {
@@ -283,14 +281,11 @@ export type BlueprintCardContent = {
   key: BlueprintKey;
   title: string;
   description: string;
-  tags: string[];
   learnHref: string;
-  contactHref: string;
 };
 
 type CTAContent = {
   learnMore: string;
-  contact: string;
 };
 
 type StickyCardProps = {
@@ -433,8 +428,9 @@ const StickyCard_001 = ({
   const animation = ANIMATIONS[blueprint.key];
   const scale = useTransform(progress, range, [1, targetScale]);
 
-  // Is this card the one mostly visible in the viewport?
-  const isInView = useInView(cardRef, { amount: 0.6 });
+  // Only visible cards should receive clicks; keep the threshold low because
+  // these cards intentionally overlap while scrolling.
+  const isInView = useInView(cardRef, { amount: 0.25 });
 
   const locale = useLocale();
   return (
@@ -457,40 +453,25 @@ const StickyCard_001 = ({
         className="relative -top-1/4 flex w-full max-w-[1064px] origin-top flex-col"
       >
         <div
-          className="rounded-[32px] border border-black/5 p-6 shadow-sm sm:p-10 lg:min-h-[40vh] min-h-[90vh] md:min-h-[60vh]"
+          className="rounded-[32px] border border-black/5 p-6 shadow-sm sm:p-10 lg:min-h-[36vh] min-h-[68vh] md:min-h-[48vh]"
           style={{ backgroundColor: theme.cardBg }}
         >
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] items-center">
-            <div className="space-y-10">
+            <div className="space-y-6">
               <h3
                 className={
                   locale === "ar"
-                    ? "text-4xl leading-loose font-semibold tracking-tight text-neutral-900 "
+                    ? "text-3xl leading-relaxed font-semibold tracking-tight text-neutral-900 "
                     : " leading-relaxed text-3xl font-semibold tracking-tight text-neutral-900 "
                 }
               >
                 {blueprint.title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
-                {blueprint.tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    className="rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wide"
-                    style={{
-                      backgroundColor: theme.chipBg,
-                      color: theme.chipText,
-                    }}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-
               <p
                 className={
                   locale === "ar"
-                    ? "text-xl leading-loose  tracking-tight  text-neutral-700"
+                    ? "text-lg leading-loose  tracking-tight  text-neutral-700"
                     : " leading-relaxed text-base  tracking-tight  text-neutral-700 "
                 }
               >
@@ -515,7 +496,7 @@ const StickyCard_001 = ({
               <div className="flex flex-wrap gap-3 order-2 lg:order-none">
                 <Button
                   asChild
-                  className="rounded-full bg-neutral-900 px-6 py-5 text-sm font-semibold text-white hover:bg-neutral-800"
+                  className="relative z-30 rounded-full bg-neutral-900 px-6 py-5 text-sm font-semibold text-white hover:bg-neutral-800"
                 >
                   <Link href={blueprint.learnHref}>{ctas.learnMore}</Link>
                 </Button>

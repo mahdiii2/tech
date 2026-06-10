@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "حالات الاستخدام - أنظمة عملاء عملية"
       : "Use Cases - Practical Customer Systems",
     description: isAr
-      ? "حالات استخدام لأنظمة الذكاء الاصطناعي، واتساب، المواعيد، العملاء، المواقع والتطبيقات للشركات في لبنان والعراق ودبي/الإمارات."
-      : "Use cases for AI, WhatsApp, appointment, lead, website and app systems for businesses in Lebanon, Iraq and Dubai.",
+      ? "حالات استخدام للعيادات والعقارات والسيارات والخدمات الميدانية في MENA: المواعيد، التأهيل، الطلبات، المتابعة، وواتساب."
+      : "Use cases for clinics, real estate, automotive, and field service teams in MENA: appointments, qualification, requests, follow-up, and WhatsApp.",
     alternates: localizedAlternates("/use-cases", locale),
     openGraph: {
       title: isAr ? "حالات الاستخدام | Servicely" : "Use Cases | Servicely",
@@ -50,7 +50,7 @@ export default async function UseCasesPage({ params }: Props) {
         <div className="mx-auto flex min-h-[42vh] max-w-4xl flex-col items-center justify-center gap-6 text-center">
           <Reveal delay={0}>
             <Link
-              href="/industries"
+              href="/industries#primary-industries"
               className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:border-neutral-400"
             >
               <ArrowLeft className="h-4 w-4" />

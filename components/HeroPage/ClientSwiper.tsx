@@ -20,6 +20,12 @@ const CASE_STUDY_KEYS = [
 ] as const;
 type CaseStudyKey = (typeof CASE_STUDY_KEYS)[number];
 
+const CASE_STUDY_HREFS: Record<CaseStudyKey, string> = {
+  pricingEngine: "/use-cases#clinics-medical-centers",
+  designSystem: "/use-cases#real-estate-agencies",
+  workflowAutomation: "/use-cases#home-field-services",
+};
+
 export default function CaseStudySlider() {
   const swiperRef = useRef<SwiperType | null>(null);
   const t = useTranslations("HomePage.caseStudies");
@@ -31,6 +37,7 @@ export default function CaseStudySlider() {
         title: t(`slides.${key}.title`),
         description: t(`slides.${key}.description`),
         image: t(`slides.${key}.image`),
+        href: CASE_STUDY_HREFS[key],
       })),
     [t]
   );
@@ -91,16 +98,16 @@ export default function CaseStudySlider() {
                   {slide.description}
                 </p>
 
-                <Button
-                  asChild
+                <Link
+                  href={slide.href || ctaHref}
                   className="
-                    mt-10 inline-flex items-center rounded-full bg-neutral-900 px-7 py-3 
-                    text-sm font-semibold text-white shadow hover:bg-neutral-800
+                    relative z-50 mt-10 inline-flex items-center justify-center rounded-full bg-neutral-900 px-7 py-3
+                    text-sm font-semibold text-white shadow transition hover:bg-neutral-800
                     lg:absolute lg:left-[-20] lg:bottom-[-70] lg:mt-0
                   "
                 >
-                  <Link href={ctaHref}>{ctaLabel}</Link>
-                </Button>
+                  {ctaLabel}
+                </Link>
               </div>
             </div>
           </SwiperSlide>

@@ -22,17 +22,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: isAr
-      ? "القطاعات - عيادات، عقارات، خدمات مميزة وتعليم"
-      : "Industries - Clinics, Real Estate, Premium Services & Education",
+      ? "القطاعات - أنظمة عملية للعملاء"
+      : "Industries - Practical Customer Systems",
     description: isAr
-      ? "قطاعات نخدمها في لبنان والعراق ودبي/الإمارات: العيادات، العقارات، الخدمات المميزة، التدريب، السياحة، والشركات متعددة الفروع."
-      : "Industries served in Lebanon, Iraq and Dubai: clinics, real estate, premium services, training, hospitality and multi-branch businesses.",
+      ? "أنظمة عملية للعيادات والعقارات والسيارات والخدمات الميدانية في منطقة MENA، مع تركيز على لبنان والعراق والإمارات."
+      : "Practical systems for clinics, real estate agencies, automotive teams and field service businesses across MENA, with a focus on Lebanon, Iraq and the UAE.",
     alternates: localizedAlternates("/industries", locale),
     openGraph: {
       title: isAr ? "القطاعات | Servicely" : "Industries | Servicely",
       description: isAr
-        ? "أنظمة عملية لتحسين الاستفسارات، المواعيد، واتساب، والتجربة الرقمية."
-        : "Practical systems for inquiries, appointments, WhatsApp, and digital customer journeys.",
+        ? "أنظمة عملية لتحسين الاستفسارات والمواعيد والعملاء المحتملين والطلبات والمتابعة."
+        : "Practical systems for inquiries, appointments, leads, requests, and follow-up.",
       url: localePath(locale, "/industries"),
     },
   };
@@ -77,7 +77,7 @@ export default async function IndustriesPage({ params }: Props) {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/use-cases"
+                href="/use-cases#clinics-medical-centers"
                 className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-7 py-3 text-sm font-semibold text-neutral-800 transition hover:border-neutral-400"
               >
                 {pageCopy.viewUseCasesLabel}
@@ -102,7 +102,10 @@ export default async function IndustriesPage({ params }: Props) {
         ))}
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 lg:px-8 lg:py-16">
+      <section
+        id="primary-industries"
+        className="mx-auto max-w-6xl scroll-mt-32 px-4 py-12 md:px-6 lg:px-8 lg:py-16"
+      >
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#17ac87]">
@@ -117,7 +120,7 @@ export default async function IndustriesPage({ params }: Props) {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {pageCopy.industries.map((industry, index) => {
             const Icon = industry.Icon;
 

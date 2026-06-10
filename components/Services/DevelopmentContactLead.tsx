@@ -3,6 +3,7 @@
 import { ArrowRight, Linkedin } from "lucide-react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 type ContactLeadProps = {
   heading: string;
@@ -78,13 +79,13 @@ export function DevelopmentContactLead({
             {name} {body}
           </p>
           <div className={isRtl ? "flex justify-end" : ""}>
-            <a
+            <Link
               href={ctaHref}
               className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:translate-y-[-2px] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-800"
             >
               {ctaLabel}
               <ArrowRight className="h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

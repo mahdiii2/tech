@@ -1,11 +1,9 @@
 ﻿"use client";
 
 import { useEffect, useState } from "react";
-import { Link } from "@/i18n/navigation";
 
 import { DevelopDesignEngageCanvas } from "@/components/HeroPage/DevDesEngCanvas";
 import { BackgroundCircles } from "./BackgroundCircle";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type VisionContent = {
@@ -78,23 +76,21 @@ export function HomeHeroSequence({
 function VisionCallout({
   heading,
   body,
-  ctaLabel,
-  ctaHref = "/schedule",
   chips,
 }: VisionContent) {
   return (
-    <div className="flex w-full max-w-3xl flex-col items-center text-center">
-      <div className="relative flex w-full items-center justify-center px-4 py-16 sm:px-10 sm:py-20">
+    <div className="flex w-full max-w-2xl flex-col items-center text-center">
+      <div className="relative flex w-full items-center justify-center px-4 py-14 sm:px-8 sm:py-16">
         <div
-          className="absolute h-[420px] w-[420px] rounded-full opacity-25 sm:h-[560px] sm:w-[560px]"
+          className="absolute h-[360px] w-[360px] rounded-full opacity-25 sm:h-[500px] sm:w-[500px]"
           style={{ backgroundColor: "var(--dev-300)" }}
           aria-hidden="true"
         />
-        <div className="relative flex w-full max-w-2xl flex-col items-center gap-5 px-4 py-10 sm:px-10">
-          <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+        <div className="relative flex w-full max-w-md flex-col items-center gap-4 px-4 py-8 sm:max-w-lg sm:px-8">
+          <h1 className="max-w-md text-3xl font-semibold leading-tight tracking-normal text-neutral-900 sm:text-4xl">
             {heading}
           </h1>
-          <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+          <p className="max-w-sm text-sm leading-6 text-neutral-600 sm:max-w-md sm:text-base sm:leading-7">
             {body}
           </p>
           {chips && chips.length > 0 ? (
@@ -102,7 +98,7 @@ function VisionCallout({
               {chips.map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full border border-neutral-200 bg-white/70 px-3 py-1.5 text-xs font-semibold text-neutral-700 backdrop-blur"
+                  className="rounded-full border border-neutral-200 bg-white/75 px-3 py-1.5 text-[11px] font-semibold text-neutral-700 backdrop-blur sm:text-xs"
                 >
                   {chip}
                 </span>

@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useMessages } from "next-intl";
 import type { AbstractIntlMessages } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Industries/Reveal";
 
@@ -177,6 +178,7 @@ export default function ServicesBlueprints() {
               return (
                 <Reveal key={section.id} delay={sectionIndex * 0.08}>
                 <article
+                  id={section.id}
                   ref={(node) => {
                     sectionRefs.current[section.id] = node;
                   }}
@@ -221,7 +223,7 @@ export default function ServicesBlueprints() {
                     {section.description}
                   </p>
 
-                  <a
+                  <Link
                     href={section.ctaHref}
                     className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold text-white transition focus-visible:ring-2 focus-visible:ring-offset-2 hover:brightness-110"
                     style={{
@@ -231,7 +233,7 @@ export default function ServicesBlueprints() {
                   >
                     {section.ctaLabel}
                     <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </article>
                 </Reveal>
               );

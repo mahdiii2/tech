@@ -54,10 +54,10 @@ export default function SiteFooter() {
   return (
     <footer className="w-full border-t bg-white text-black">
       <div className="w-full border-b">
-        <div className="flex w-full flex-wrap items-center justify-between gap-6 px-6 py-10 lg:px-10">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-6 lg:px-10">
           <Link
             href="/"
-            className="flex h-20 items-center text-3xl font-bold tracking-tight text-neutral-950"
+            className="flex h-12 items-center text-2xl font-bold tracking-tight text-neutral-950"
           >
             {t("brand")}
           </Link>
@@ -88,14 +88,14 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col gap-10 px-6 py-10 lg:grid lg:grid-cols-[1.4fr_0.4fr] lg:items-stretch lg:px-10">
+      <div className="flex w-full flex-col gap-8 px-6 py-8 lg:grid lg:grid-cols-[1fr_360px] lg:items-stretch lg:px-10">
         <div
-          className={`border-b pb-10 lg:border-b-0 lg:border-neutral-200 lg:pb-0 ${
+          className={`border-b pb-8 lg:border-b-0 lg:border-neutral-200 lg:pb-0 ${
             isRTL ? "lg:border-l lg:pl-12" : "lg:border-r lg:pr-12"
           }`}
         >
-          <div className="grid gap-10 text-base font-medium sm:grid-cols-2 lg:grid-cols-3">
-            <nav className="space-y-6 text-[15px] leading-relaxed">
+          <div className="grid gap-8 text-base font-medium sm:grid-cols-2 lg:grid-cols-3">
+            <nav className="space-y-4 text-[15px] leading-relaxed">
               {navLinks.map((item) => (
                 <Link
                   key={item.label}
@@ -106,7 +106,7 @@ export default function SiteFooter() {
                 </Link>
               ))}
             </nav>
-            <div className="space-y-6 text-[15px] leading-relaxed">
+            <div className="space-y-4 text-[15px] leading-relaxed">
               {serviceDots.map((dot, index) => (
                 <ServiceDot
                   key={`${dot.label}-${index}`}
@@ -122,7 +122,7 @@ export default function SiteFooter() {
                 />
               ))}
             </div>
-            <div className="space-y-6 text-[15px] leading-relaxed text-neutral-800">
+            <div className="space-y-4 text-[15px] leading-relaxed text-neutral-800">
               {locations.map((loc, idx) => (
                 <div key={`${loc.title}-${idx}`} className="space-y-1">
                   <p className="font-semibold">{loc.title}</p>
@@ -158,27 +158,27 @@ export default function SiteFooter() {
             isRTL ? "lg:pr-12" : "lg:pl-12"
           }`}
         >
-          <div className="w-full max-w-lg overflow-hidden rounded-[32px] bg-gradient-to-r from-[#7d5bff] to-[#a05ffb] p-[6px] shadow-sm lg:self-end">
-            <div className="rounded-[28px] bg-gradient-to-r from-[#7d5bff] to-[#a05ffb] px-10 py-10 text-center text-2xl font-semibold text-white sm:px-12 sm:py-12">
+          <div className="w-full max-w-md rounded-[24px] border border-neutral-200 p-5 shadow-sm sm:p-6 lg:self-end">
+            <p className="text-sm font-semibold text-neutral-900">
               {t("ctaGradient")}
-            </div>
-          </div>
-          <div className="w-full max-w-lg rounded-[24px] border border-neutral-200 p-6 shadow-sm sm:p-8 lg:self-end">
-            <h3 className="text-lg font-semibold">{t("newsletterHeading")}</h3>
+            </p>
+            <h3 className="mt-2 text-lg font-semibold">
+              {t("newsletterHeading")}
+            </h3>
             <p className="mt-3 text-sm leading-6 text-neutral-600">
               {t("newsletterBody")}
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
               >
                 <CalendarDays className="h-4 w-4" />
                 {t("meetingCta")}
               </Link>
               <Link
                 href={gmailComposeHref(email)}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-900 transition hover:border-neutral-300"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:border-neutral-300"
                 target="_blank"
                 rel="noreferrer"
               >

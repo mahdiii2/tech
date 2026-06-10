@@ -11,7 +11,6 @@ type UpgradeAccent = { bubble: string; number: string };
 type DevelopmentUpgradeProps = {
   namespace?: string;
   accent?: UpgradeAccent;
-  ctaHref?: string;
 };
 
 const DEFAULT_ACCENT: UpgradeAccent = { bubble: "#94adff", number: "#2a6ac7" };
@@ -19,12 +18,10 @@ const DEFAULT_ACCENT: UpgradeAccent = { bubble: "#94adff", number: "#2a6ac7" };
 export function DevelopmentUpgrade({
   namespace = "DevelopmentPage.upgrade",
   accent = DEFAULT_ACCENT,
-  ctaHref = "/schedule",
 }: DevelopmentUpgradeProps) {
   const t = useTranslations(namespace);
   const items = (t.raw("items") as UpgradeItem[]) ?? [];
   const heading = t("heading");
-  const ctaLabel = t("ctaLabel");
 
   if (!items.length) return null;
 

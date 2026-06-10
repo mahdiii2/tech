@@ -70,7 +70,7 @@ export default function DevelopmentProcess() {
         </p>
         <div className={`mt-8 flex ${formLayout}`}>
           <Link
-            href="/schedule"
+            href="/contact"
             className={`rounded-full bg-white px-6 py-3 text-base font-semibold text-neutral-900 shadow-lg transition hover:bg-white/90 ${
               isDesktopCard ? "min-w-[170px] text-center" : "w-full text-center"
             }`}

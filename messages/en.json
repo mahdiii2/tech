@@ -6,8 +6,8 @@
     "closeMenu": "Close navigation menu",
     "menuTitle": "Menu",
     "banner": {
-      "text": "Need AI, WhatsApp automation, a website, app, dashboard, or business system?",
-      "cta": "Start here",
+      "text": "Need a clearer system for inquiries, bookings, leads, or your website?",
+      "cta": "Contact us",
       "ctaHref": "/contact"
     },
     "links": {
@@ -22,16 +22,16 @@
     },
     "serviceCards": {
       "development": {
-        "title": "AI & customer automation",
-        "description": "Assistants and flows that answer repeated questions, collect requests, and qualify leads."
+        "title": "Customer automation",
+        "description": "Assistants and flows that collect requests, answer basics, and qualify leads."
       },
       "automation": {
         "title": "Websites, apps & portals",
-        "description": "Modern websites, web apps, mobile apps, portals, and dashboards tied to real workflows."
+        "description": "Digital platforms connected to booking, inquiry, and internal workflows."
       },
       "data": {
-        "title": "WhatsApp & lead automation",
-        "description": "Cleaner inquiry flows, appointment requests, handoff, and follow-up tracking."
+        "title": "WhatsApp & lead workflows",
+        "description": "Cleaner intake, handoff, and follow-up for customer conversations."
       },
       "ai": {
         "title": "AI & customer automation",
@@ -61,31 +61,19 @@
     "industryCards": {
       "clinics": {
         "title": "Clinics",
-        "description": "Appointment requests, patient inquiry flows, and AI support."
-      },
-      "dental": {
-        "title": "Dental & aesthetic",
-        "description": "Premium service pages, WhatsApp intake, and treatment inquiry flows."
+        "description": "Appointment intake, patient inquiries, service routing, and follow-up."
       },
       "realEstate": {
         "title": "Real estate",
-        "description": "Lead qualification, viewing requests, property tools, and agent handoff."
+        "description": "Property matching, lead qualification, viewing requests, and agent handoff."
       },
-      "premium": {
-        "title": "Premium services",
-        "description": "Modern websites, request flows, portals, and customer automation."
+      "automotive": {
+        "title": "Automotive",
+        "description": "Vehicle inquiries, test drives, service intake, and quote follow-up."
       },
-      "training": {
-        "title": "Training centers",
-        "description": "Course pages, registration flows, FAQs, and student inquiry automation."
-      },
-      "hospitality": {
-        "title": "Hospitality & tourism",
-        "description": "Booking inquiries, customer support, and multilingual request flows."
-      },
-      "branches": {
-        "title": "Multi-branch businesses",
-        "description": "Branch routing, centralized requests, and owner visibility."
+      "fieldServices": {
+        "title": "Field services",
+        "description": "Service requests, quote intake, scheduling, and job follow-up."
       }
     },
     "mobile": {
@@ -95,90 +83,71 @@
   },
   "HomePage": {
     "vision": {
-      "heading": "AI, Automation & Custom Software for Businesses in Lebanon, Iraq, and Dubai",
-      "body": "We build practical AI assistants, automation systems, websites, mobile apps, dashboards, and business tools for companies that want to serve customers faster, capture more inquiries, and reduce manual work.",
+      "heading": "Customer flow, made clear",
+      "body": "Practical systems for inquiries, bookings, leads, and follow-up across MENA.",
       "cta": "Book a Free Consultation",
       "ctaHref": "/contact",
       "chips": [
-        "AI assistants",
-        "WhatsApp automation",
-        "Websites & apps",
-        "Business systems"
+        "Inquiries",
+        "Bookings",
+        "Follow-up"
       ]
     },
     "blueprints": {
       "cta": {
         "learnMore": "Learn more",
-        "contact": "Start a project"
+        "contact": "Send project details"
       },
       "development": {
-        "title": "AI & customer automation",
-        "description": "AI assistants and automated flows that answer repeated questions, collect customer requests, qualify leads, and hand serious inquiries to your team.",
-        "tags": [
-          "AI support",
-          "FAQ assistant",
-          "Lead qualification",
-          "Customer intake"
-        ],
-        "learnHref": "/services#ai-customer-automation",
+        "title": "Customer automation",
+        "description": "Turn repeated questions and scattered requests into a clear intake and handoff flow.",
+        "learnHref": "/use-cases#clinics-medical-centers",
         "contactHref": "/contact"
       },
       "design": {
         "title": "Websites, apps & portals",
-        "description": "Modern websites, web apps, customer portals, booking flows, admin dashboards, and mobile apps connected to real business goals.",
-        "tags": [
-          "Websites",
-          "Web apps",
-          "Mobile apps",
-          "Portals"
-        ],
-        "learnHref": "/services#websites-web-apps-portals",
+        "description": "Give customers a clean place to ask, book, view, or submit the next step.",
+        "learnHref": "/use-cases#real-estate-agencies",
         "contactHref": "/contact"
       },
       "engagement": {
-        "title": "WhatsApp & lead automation",
-        "description": "Cleaner WhatsApp inquiry flows, appointment request collection, real estate qualification, staff handoff, and follow-up tracking.",
-        "tags": [
-          "WhatsApp",
-          "Appointments",
-          "Handoff",
-          "Lead tracking"
-        ],
-        "learnHref": "/services#whatsapp-lead-automation",
+        "title": "WhatsApp & lead workflows",
+        "description": "Capture the right details before your team follows up.",
+        "learnHref": "/use-cases#home-field-services",
         "contactHref": "/contact"
       }
     },
     "partnerSection": {
-      "heading": "Build customer workflows that feel fast, clear, and professional",
-      "bodyPrimary": "Servicely helps businesses move from scattered messages, repeated questions, old websites, and manual follow-up to practical digital systems customers can actually use.",
-      "bodySecondary": "We focus on clinics, real estate agencies, premium service businesses, training centers, hospitality businesses, and teams that rely heavily on online inquiries and WhatsApp.",
+      "heading": "Digital systems for serious customer flow",
+      "bodyPrimary": "Servicely helps customer-facing teams replace messy messages and manual follow-up with usable software.",
+      "bodySecondary": "We work across MENA, especially Lebanon, Iraq, and the UAE, where customers expect fast mobile contact and clear next steps.",
       "ctaLabel": "Explore services",
-      "ctaHref": "/services"
+      "ctaHref": "/services#services-blueprints"
     },
     "solutions": {
-      "heading": "AI, automation, websites, apps, and business systems",
-      "body": "Choose focused services for <strong>businesses in Lebanon, Iraq, and Dubai</strong> that want to capture more inquiries, respond faster, reduce manual work, and improve customer experience.",
+      "heading": "What we build",
+      "body": "Focused services for <strong>MENA businesses, especially Lebanon, Iraq, and the UAE</strong> that need clearer inquiries, bookings, lead follow-up, and customer workflows.",
       "support": "What do you need to improve first?",
       "cards": {
         "customDevelopment": {
-          "title": "AI customer support",
-          "body": "Assistants for repeated questions, service information, branch details, contact flows, and customer request collection."
+          "title": "Customer automation",
+          "body": "Assistants and intake flows for routine questions, service details, and customer requests."
         },
         "digitalTransformation": {
-          "title": "WhatsApp automation",
-          "body": "Inquiry flows, customer information collection, appointment requests, lead qualification, and staff handoff."
+          "title": "WhatsApp workflows",
+          "body": "Structured conversations for appointment requests, property leads, handoff, and follow-up."
         },
         "topDevelopers": {
-          "title": "Websites and web apps",
-          "body": "Business websites, landing pages, portals, admin panels, request flows, and dashboards tied to real outcomes."
+          "title": "Websites and portals",
+          "body": "Business websites and portals that help customers ask, book, view listings, or submit requests."
         },
         "consulting": {
           "title": "Mobile apps",
-          "body": "Android and iOS apps for customers, employees, agents, students, patients, or internal teams."
+          "body": "Apps for customers, staff, agents, or internal teams when a mobile workflow makes sense."
         },
         "holisticApproach": {
-          "title": "Lead and request dashboards",
-          "body": "Dashboards for inquiries, appointments, customer requests, branch routing, service status, and follow-up."
+          "title": "Dashboards",
+          "body": "Simple views for inquiries, appointments, leads, status, and follow-up."
         },
         "creativeExpertise": {
           "title": "Support and hosting",
@@ -191,28 +160,28 @@
     },
     "caseStudies": {
       "ctaLabel": "View use cases",
-      "ctaHref": "/use-cases",
+      "ctaHref": "/use-cases#clinics-medical-centers",
       "slides": {
         "pricingEngine": {
-          "title": "Clinic appointment request assistant",
-          "description": "An AI assistant collects appointment requests, answers basic non-medical questions, and sends serious requests to staff.",
+          "title": "Clinic appointment intake",
+          "description": "A guided flow collects service, preferred time, branch, and contact details before staff confirm.",
           "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
         },
         "designSystem": {
-          "title": "Real estate lead qualification",
-          "description": "Automated flows collect budget, location, property type, timeline, viewing preference, and contact details before agent handoff.",
+          "title": "Property matching and follow-up",
+          "description": "A flow collects budget, area, property type, timeline, and viewing preference before agent handoff.",
           "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
         },
         "workflowAutomation": {
-          "title": "WhatsApp support and handoff",
-          "description": "WhatsApp automation organizes customer information, answers repeated questions, and routes serious inquiries to the right person.",
+          "title": "WhatsApp inquiry cleanup",
+          "description": "WhatsApp workflows organize customer details, show status, and route serious requests to the right person.",
           "image": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1200&auto=format&fit=crop"
         }
       }
     },
     "techStack": {
       "title": "Technology toolbox for modern business systems",
-      "languagesTitle": "Tools we can work with",
+      "languagesTitle": "Tools we work with",
       "languagesCta": "Explore services"
     },
     "testimonials": {
@@ -220,10 +189,10 @@
       "heading": "What your system should improve",
       "bodyPrimary": "The goal is not more software for its own sake. The goal is faster response, cleaner requests, better handoff, and less repeated manual work.",
       "bodySecondary": "Every project starts with the business problem and the simplest useful version.",
-      "ctaPrimaryLabel": "Start a project",
+      "ctaPrimaryLabel": "Improve my workflow",
       "ctaPrimaryHref": "/contact",
       "ctaSecondaryLabel": "View use cases",
-      "ctaSecondaryHref": "/use-cases",
+      "ctaSecondaryHref": "/use-cases#clinics-medical-centers",
       "clientLabel": "Outcome",
       "items": [
         {
@@ -248,11 +217,11 @@
           "industry": "Service businesses"
         },
         {
-          "quote": "A website should help customers take action, not only describe the company.",
-          "author": "Website modernization",
-          "role": "Customer journey",
+          "quote": "A website should help customers take the next step, not only describe the company.",
+          "author": "Website workflows",
+          "role": "Action-focused website",
           "company": "Servicely",
-          "industry": "Premium services"
+          "industry": "Customer systems"
         }
       ]
     },
@@ -261,40 +230,40 @@
       "subtitle": "Tell us what you want to improve: customer support, appointment requests, lead follow-up, WhatsApp workflows, apps, dashboards, or your website.",
       "cardTitle": "Start with a practical scope",
       "cardBody": "We will help you define the simplest useful version and turn it into a working system.",
-      "ctaLabel": "Start a project",
+      "ctaLabel": "Send project details",
       "ctaHref": "/contact",
       "followLabel": "Follow us"
     }
   },
   "ServicesPage": {
     "hero": {
-      "titleLine1": "Build customer systems",
-      "titleLine2": "that actually work"
+      "titleLine1": "Business systems",
+      "titleLine2": "for customer flow"
     },
     "blueprints": {
       "heading": "Choose the system your business needs first",
       "sections": [
         {
           "id": "development",
-          "title": "AI assistants",
-          "description": "AI support assistants and intake flows that answer repeated questions, collect customer details, qualify requests, and hand serious inquiries to your team.",
-          "ctaLabel": "Start an AI scope",
+          "title": "Customer automation",
+          "description": "Structured assistants and intake flows that collect customer details, answer routine questions, qualify requests, and hand serious inquiries to your team.",
+          "ctaLabel": "Plan automation",
           "ctaHref": "/contact",
-          "tags": ["AI support", "FAQ assistant", "Lead qualification", "Customer intake"]
+          "tags": ["Routine answers", "Intake", "Qualification", "Handoff"]
         },
         {
           "id": "design",
           "title": "Websites, apps & portals",
           "description": "Modern business websites, web apps, customer portals, booking flows, admin dashboards, and mobile apps connected to real customer actions.",
-          "ctaLabel": "Plan a platform",
+          "ctaLabel": "Plan your platform",
           "ctaHref": "/contact",
           "tags": ["Websites", "Web apps", "Mobile apps", "Portals"]
         },
         {
           "id": "engagement",
           "title": "WhatsApp automation",
-          "description": "Cleaner WhatsApp inquiry flows for appointments, real estate leads, premium service requests, customer handoff, follow-up, and reporting.",
-          "ctaLabel": "Automate inquiries",
+          "description": "Cleaner WhatsApp inquiry flows for appointments, property leads, customer handoff, follow-up, and reporting.",
+          "ctaLabel": "Map the WhatsApp flow",
           "ctaHref": "/contact",
           "tags": ["WhatsApp", "Appointments", "Handoff", "Follow-up"]
         }
@@ -306,8 +275,8 @@
       "hero": {
         "title": "Start practical, then improve",
         "description": "We define the smallest useful system first, launch it cleanly, then improve it with the data and feedback your team gathers.",
-        "tags": ["Lebanon", "Iraq", "Dubai/UAE", "English + Arabic"],
-        "ctaLabel": "Discuss your scope",
+        "tags": ["MENA", "Lebanon", "Iraq", "UAE", "English + Arabic"],
+        "ctaLabel": "Request a scope",
         "ctaHref": "/contact"
       },
       "models": [
@@ -336,7 +305,7 @@
       "items": [
         {
           "title": "Respond faster",
-          "body": "AI and WhatsApp flows can answer common questions and collect information before staff step in."
+          "body": "Assistants and WhatsApp flows can answer common questions and collect information before staff step in."
         },
         {
           "title": "Capture cleaner leads",
@@ -355,7 +324,7 @@
     "testimonial": {
       "quote": "Good software should make the customer journey clearer and the team workload lighter.",
       "name": "Servicely",
-      "role": "AI, automation and business systems"
+      "role": "Software partner for customer systems"
     },
     "process": {
       "title": "How we build",
@@ -389,8 +358,8 @@
       ]
     },
     "partnerGrid": {
-      "title": "Built for businesses in Lebanon, Iraq and Dubai",
-      "body1": "Clinics, real estate agencies, premium service businesses, training centers, hospitality teams, and multi-branch companies all need cleaner customer systems.",
+      "title": "Built for MENA businesses, focused on Lebanon, Iraq and the UAE",
+      "body1": "Customer-facing teams need faster response, clearer requests, and less manual follow-up.",
       "body2": "We keep the design familiar and the workflow practical.",
       "body3": "The goal is a system your customers and staff can actually use."
     }
@@ -398,34 +367,34 @@
   "AboutPage": {
     "meta": {
       "title": "About Servicely",
-      "description": "Servicely is a practical software and automation team helping businesses in Lebanon, Iraq and Dubai build useful digital systems.",
+      "description": "Servicely is a practical software partner for MENA businesses, with a focus on Lebanon, Iraq, and the UAE.",
       "ogTitle": "About | Servicely"
     },
     "hero": {
-      "title": "Practical software, automation and AI for customer-driven businesses",
+      "title": "Practical software partner for customer-driven businesses",
       "bodyLines": [
-        "Servicely helps businesses in Lebanon, Iraq and Dubai build useful digital systems: AI assistants, WhatsApp automation, websites, apps, portals, dashboards and internal tools."
+        "Servicely helps clinics, real estate teams, automotive businesses, field service teams, and growing companies across MENA build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows."
       ],
-      "ctaLabel": "Start a project",
+      "ctaLabel": "Talk to the builders",
       "ctaHref": "/contact",
       "servicesLabel": "About us",
       "servicesHref": "/about",
       "clientsLabel": "Explore services",
-      "clientsHref": "/services"
+      "clientsHref": "/services#services-blueprints"
     },
     "intro": {
       "eyebrow": "What we stand for",
       "title": "Technology should make customer journeys clearer.",
       "body": [
-        "We start from the real workflow: messages, questions, staff handoff, appointments, leads, branches and reporting.",
-        "Then we build the cleanest useful system, from a public website to an AI assistant, portal, app or dashboard."
+        "We start from the real workflow: messages, questions, staff handoff, appointments, leads and reporting.",
+        "Then we build the cleanest useful system, from a public website to an intake flow, portal, app or dashboard."
       ]
     },
     "stats": {
       "items": [
         {
-          "value": "AI",
-          "label": "Assistants, FAQ flows, WhatsApp intake and lead qualification."
+          "value": "Flow",
+          "label": "Inquiry intake, appointment requests, WhatsApp flows and lead qualification."
         },
         {
           "value": "Apps",
@@ -471,28 +440,26 @@
       { "label": "Industries", "href": "/industries" },
       { "label": "Use Cases", "href": "/use-cases" },
       { "label": "Why Us", "href": "/why-us" },
-      { "label": "About", "href": "/about" },
-      { "label": "Support & Hosting", "href": "/support-hosting" },
-      { "label": "Contact", "href": "/contact" }
+      { "label": "About", "href": "/about" }
     ],
     "serviceDots": [
-      { "label": "AI & customer automation", "href": "/services#ai-customer-automation" },
-      { "label": "WhatsApp automation", "href": "/services#whatsapp-lead-automation" },
-      { "label": "Websites, apps & portals", "href": "/services#websites-web-apps-portals" }
+      { "label": "Customer automation", "href": "/services#development" },
+      { "label": "WhatsApp & lead workflows", "href": "/services#engagement" },
+      { "label": "Websites, apps & portals", "href": "/services#design" }
     ],
     "locations": [
       {
-        "title": "Lebanon, Iraq, Dubai/UAE",
-        "subtitle": "AI, automation, websites, apps, WhatsApp workflows, and business systems"
+        "title": "MENA, focused on Lebanon, Iraq and the UAE",
+        "subtitle": "Practical software for inquiries, bookings, leads, websites, apps, and business systems"
       }
     ],
     "phone": "+243 905 600 055",
     "email": "hello@servicely.digital",
     "ctaGradient": "Build the system your business actually needs",
-    "newsletterHeading": "Ready to discuss your project?",
+    "newsletterHeading": "Have a workflow to fix?",
     "newsletterBody": "Send us the problem you want to solve. We will reply with the simplest useful next step.",
-    "meetingCta": "Start a project",
-    "emailCta": "Email us",
+    "meetingCta": "Request a scope",
+    "emailCta": "Email Servicely",
     "privacy": "Privacy Policy",
     "legal": "© Servicely 2026. All Rights Reserved."
   }
