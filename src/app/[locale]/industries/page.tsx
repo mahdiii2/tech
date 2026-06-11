@@ -12,30 +12,13 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
-  return {
-    title: isAr
-      ? "القطاعات - أنظمة عملية للعملاء"
-      : "Industries - Practical Customer Systems",
-    description: isAr
-      ? "أنظمة عملية للعيادات والعقارات والسيارات والخدمات الميدانية في منطقة MENA، مع تركيز على لبنان والعراق والإمارات."
-      : "Practical systems for clinics, real estate agencies, automotive teams and field service businesses across MENA, with a focus on Lebanon, Iraq and the UAE.",
-    alternates: localizedAlternates("/industries", locale),
-    openGraph: {
-      title: isAr ? "القطاعات | Servicely" : "Industries | Servicely",
-      description: isAr
-        ? "أنظمة عملية لتحسين الاستفسارات والمواعيد والعملاء المحتملين والطلبات والمتابعة."
-        : "Practical systems for inquiries, appointments, leads, requests, and follow-up.",
-      url: localePath(locale, "/industries"),
-    },
-  };
+  return buildPageMetadata("industries", locale);
 }
 
 export default async function IndustriesPage({ params }: Props) {

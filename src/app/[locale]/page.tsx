@@ -5,8 +5,7 @@ import { HomeHeroSequence } from "@/components/HeroPage/HomeHeroSequence";
 import { Skiper16 } from "@/components/HeroPage/ServiceCards";
 import { HeroWithFloatingImages } from "@/components/HeroPage/AgencyPartnerSection";
 import { DigitalSolutionsSection } from "@/components/HeroPage/DigitalSolutionsSection";
-import { getMarketContent } from "@/lib/market-content";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 const ImageSlider = dynamic(() => import("@/components/Services/ImageSlider"));
 const CaseStudySlider = dynamic(
@@ -31,18 +30,7 @@ const BLUEPRINT_KEYS = ["development", "design", "engagement"] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const content = getMarketContent(locale);
-
-  return {
-    title: content.home.hero.title,
-    description: content.home.hero.body,
-    alternates: localizedAlternates("/", locale),
-    openGraph: {
-      title: content.home.hero.title,
-      description: content.home.hero.body,
-      url: localePath(locale, "/"),
-    },
-  };
+  return buildPageMetadata("home", locale);
 }
 
 export default async function HomePage({ params }: Props) {

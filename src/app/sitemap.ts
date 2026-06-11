@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteUrl, localePath } from "@/lib/site";
+import { localePath, locales, siteUrl } from "@/lib/site";
 
 const routes: {
   path: string;
@@ -20,16 +20,19 @@ const routes: {
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return routes.map(({ path, priority, changeFrequency }) => ({
-    url: `${siteUrl}${localePath("en", path)}`,
-    lastModified,
-    changeFrequency,
-    priority,
-    alternates: {
-      languages: {
-        en: `${siteUrl}${localePath("en", path)}`,
-        ar: `${siteUrl}${localePath("ar", path)}`,
+  return routes.flatMap(({ path, priority, changeFrequency }) =>
+    locales.map((locale) => ({
+      url: `${siteUrl}${localePath(locale, path)}`,
+      lastModified,
+      changeFrequency,
+      priority,
+      alternates: {
+        languages: {
+          en: `${siteUrl}${localePath("en", path)}`,
+          ar: `${siteUrl}${localePath("ar", path)}`,
+          "x-default": `${siteUrl}${localePath("en", path)}`,
+        },
       },
-    },
-  }));
+    }))
+  );
 }

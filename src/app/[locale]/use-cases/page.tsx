@@ -12,30 +12,13 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
-  return {
-    title: isAr
-      ? "حالات الاستخدام - أنظمة عملاء عملية"
-      : "Use Cases - Practical Customer Systems",
-    description: isAr
-      ? "حالات استخدام للعيادات والعقارات والسيارات والخدمات الميدانية في MENA: المواعيد، التأهيل، الطلبات، المتابعة، وواتساب."
-      : "Use cases for clinics, real estate, automotive, and field service teams in MENA: appointments, qualification, requests, follow-up, and WhatsApp.",
-    alternates: localizedAlternates("/use-cases", locale),
-    openGraph: {
-      title: isAr ? "حالات الاستخدام | Servicely" : "Use Cases | Servicely",
-      description: isAr
-        ? "مشكلات عملاء يومية نحولها إلى أنظمة رقمية تعمل."
-        : "Daily customer problems turned into working digital systems.",
-      url: localePath(locale, "/use-cases"),
-    },
-  };
+  return buildPageMetadata("useCases", locale);
 }
 
 export default async function UseCasesPage({ params }: Props) {

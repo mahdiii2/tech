@@ -8,7 +8,14 @@ import "../globals.css";
 import { Navbar } from "@/components/Layout/navbar";
 import Footer from "@/components/Layout/footer";
 import { routing } from "@/i18n/routing";
-import { siteConfig, siteUrl, localizedAlternates, localePath } from "@/lib/site";
+import {
+  getLocalizedSiteConfig,
+  localizedAlternates,
+  localePath,
+  normalizeLocale,
+  siteConfig,
+  siteUrl,
+} from "@/lib/site";
 
 type Props = {
   children: ReactNode;
@@ -25,17 +32,19 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const ogLocale = locale === "ar" ? "ar_AE" : "en_US";
+  const localeKey = normalizeLocale(locale);
+  const localizedSite = getLocalizedSiteConfig(localeKey);
+  const alternateLocale = localeKey === "ar" ? ["en_US"] : ["ar_AE"];
 
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: `${siteConfig.name} - ${siteConfig.tagline}`,
+      default: `${siteConfig.name} - ${localizedSite.tagline}`,
       template: `%s | ${siteConfig.name}`,
     },
-    description: siteConfig.description,
+    description: localizedSite.description,
     applicationName: siteConfig.name,
-    keywords: [...siteConfig.keywords],
+    keywords: [...localizedSite.keywords],
     authors: [{ name: siteConfig.name, url: siteUrl }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
@@ -55,15 +64,15 @@ export async function generateMetadata({
         },
       ],
     },
-    alternates: localizedAlternates("/", locale),
+    alternates: localizedAlternates("/", localeKey),
     openGraph: {
       type: "website",
       siteName: siteConfig.name,
-      title: `${siteConfig.name} - ${siteConfig.tagline}`,
-      description: siteConfig.description,
-      url: localePath(locale, "/"),
-      locale: ogLocale,
-      alternateLocale: locale === "ar" ? ["en_US"] : ["ar_AE"],
+      title: `${siteConfig.name} - ${localizedSite.tagline}`,
+      description: localizedSite.description,
+      url: localePath(localeKey, "/"),
+      locale: localizedSite.ogLocale,
+      alternateLocale,
       images: [
         {
           url: siteConfig.ogImage,
@@ -75,8 +84,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${siteConfig.name} - ${siteConfig.tagline}`,
-      description: siteConfig.description,
+      title: `${siteConfig.name} - ${localizedSite.tagline}`,
+      description: localizedSite.description,
       images: [siteConfig.ogImage],
     },
     robots: {
@@ -94,51 +103,55 @@ export async function generateMetadata({
   };
 }
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: siteConfig.name,
-      url: siteUrl,
-      logo: siteConfig.logo,
-      image: siteConfig.ogImage,
-      email: siteConfig.email,
-      telephone: siteConfig.phone,
-      description: siteConfig.description,
-      areaServed: siteConfig.areaServed.map((name) => ({
-        "@type": "Place",
-        name,
-      })),
-      ...(siteConfig.sameAs.length ? { sameAs: siteConfig.sameAs } : {}),
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": `${siteUrl}/#business`,
-      name: siteConfig.name,
-      url: siteUrl,
-      image: siteConfig.ogImage,
-      telephone: siteConfig.phone,
-      email: siteConfig.email,
-      priceRange: "$$",
-      description: siteConfig.description,
-      areaServed: siteConfig.areaServed.map((name) => ({
-        "@type": "Place",
-        name,
-      })),
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: siteConfig.name,
-      description: siteConfig.description,
-      publisher: { "@id": `${siteUrl}/#organization` },
-      inLanguage: ["en", "ar"],
-    },
-  ],
-};
+function buildStructuredData(locale: string) {
+  const localizedSite = getLocalizedSiteConfig(locale);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: siteConfig.name,
+        url: siteUrl,
+        logo: siteConfig.logo,
+        image: siteConfig.ogImage,
+        email: siteConfig.email,
+        telephone: siteConfig.phone,
+        description: localizedSite.description,
+        areaServed: siteConfig.areaServed.map((name) => ({
+          "@type": "Place",
+          name,
+        })),
+        ...(siteConfig.sameAs.length ? { sameAs: siteConfig.sameAs } : {}),
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#business`,
+        name: siteConfig.name,
+        url: siteUrl,
+        image: siteConfig.ogImage,
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        priceRange: "$$",
+        description: localizedSite.description,
+        areaServed: siteConfig.areaServed.map((name) => ({
+          "@type": "Place",
+          name,
+        })),
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: siteConfig.name,
+        description: localizedSite.description,
+        publisher: { "@id": `${siteUrl}/#organization` },
+        inLanguage: ["en", "ar"],
+      },
+    ],
+  };
+}
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
@@ -149,7 +162,8 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
-  const dir = locale === "ar" ? "rtl" : "ltr";
+  const localeKey = normalizeLocale(locale);
+  const dir = localeKey === "ar" ? "rtl" : "ltr";
 
   return (
     <html
@@ -163,7 +177,9 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildStructuredData(localeKey)),
+          }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />

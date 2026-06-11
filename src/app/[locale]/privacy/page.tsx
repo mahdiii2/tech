@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { Reveal } from "@/components/Industries/Reveal";
-import { localizedAlternates } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
   return {
-    title: isAr ? "سياسة الخصوصية" : "Privacy Policy",
-    description: isAr
-      ? "كيف تجمع Servicely وتستخدم وتحمي المعلومات التي تشاركها عند التواصل معنا."
-      : "How Servicely collects, uses and protects the information you share when you contact us.",
-    alternates: localizedAlternates("/privacy", locale),
+    ...buildPageMetadata("privacy", locale),
     robots: { index: true, follow: true },
   };
 }

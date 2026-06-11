@@ -13,7 +13,7 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getMarketContent } from "@/lib/market-content";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,26 +21,7 @@ const icons = [LifeBuoy, ShieldCheck, Wrench, Cloud];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
-  return {
-    title: isAr
-      ? "الدعم والاستضافة والصيانة"
-      : "Support, Hosting & Maintenance",
-    description: isAr
-      ? "خيارات دعم واستضافة وصيانة لأنظمة الأعمال، تشمل الدعم القياسي، الأولوية، 24/7، النسخ الاحتياطي، SSL، المراقبة، وإدارة النشر."
-      : "Support, hosting and maintenance options for business systems, including standard support, priority support, 24/7 coverage, backups, SSL, monitoring, and deployment management.",
-    alternates: localizedAlternates("/support-hosting", locale),
-    openGraph: {
-      title: isAr
-        ? "الدعم والاستضافة | Servicely"
-        : "Support & Hosting | Servicely",
-      description: isAr
-        ? "خيارات دعم وصيانة بعد الإطلاق حسب أهمية المشروع."
-        : "Post-launch support and maintenance options based on project importance.",
-      url: localePath(locale, "/support-hosting"),
-    },
-  };
+  return buildPageMetadata("supportHosting", locale);
 }
 
 export default async function SupportHostingPage({ params }: Props) {

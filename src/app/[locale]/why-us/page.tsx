@@ -13,7 +13,7 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getMarketContent } from "@/lib/market-content";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,24 +21,7 @@ const icons = [MessagesSquare, Workflow, Sparkles, CheckCircle2, Code2];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
-  return {
-    title: isAr
-      ? "لماذا نحن - فريق صغير وتنفيذ عملي"
-      : "Why Us - Direct Builders & Practical Systems",
-    description: isAr
-      ? "لماذا تعمل مع Servicely: فريق صغير، تواصل مباشر، لا تعهيد غير واضح، نطاق واضح، تنفيذ عملي، ودعم بعد الإطلاق."
-      : "Why work with Servicely: small team, direct builders, no unclear outsourcing, clear scope, practical execution, and post-launch support.",
-    alternates: localizedAlternates("/why-us", locale),
-    openGraph: {
-      title: isAr ? "لماذا نحن | Servicely" : "Why Us | Servicely",
-      description: isAr
-        ? "فريق تقني صغير يبني أنظمة عملية لشركات MENA، مع تركيز على لبنان والعراق والإمارات."
-        : "A small technical team building practical systems for MENA companies, focused on Lebanon, Iraq and the UAE.",
-      url: localePath(locale, "/why-us"),
-    },
-  };
+  return buildPageMetadata("whyUs", locale);
 }
 
 export default async function WhyUsPage({ params }: Props) {

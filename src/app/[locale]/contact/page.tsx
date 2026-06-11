@@ -13,28 +13,13 @@ import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
 import { gmailComposeHref } from "@/lib/booking";
 import { getMarketContent } from "@/lib/market-content";
-import { localizedAlternates, localePath, siteConfig } from "@/lib/site";
+import { buildPageMetadata, siteConfig } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === "ar";
-
-  return {
-    title: isAr ? "تواصل معنا - نطاق المشروع" : "Contact - Project Scope",
-    description: isAr
-      ? "أخبرنا بما تريد تحسينه: الاستفسارات، المواعيد، العملاء المحتملون، واتساب، الموقع، التطبيق، لوحة التحكم، أو النظام الداخلي."
-      : "Tell us what you want to improve: inquiries, appointments, leads, WhatsApp, website, app, dashboard, or internal system.",
-    alternates: localizedAlternates("/contact", locale),
-    openGraph: {
-      title: isAr ? "تواصل معنا | Servicely" : "Contact | Servicely",
-      description: isAr
-        ? "نموذج تأهيل لمشاريع الشركات في MENA، مع تركيز على لبنان والعراق والإمارات."
-        : "Qualification page for business projects in MENA, focused on Lebanon, Iraq and the UAE.",
-      url: localePath(locale, "/contact"),
-    },
-  };
+  return buildPageMetadata("contact", locale);
 }
 
 export default async function ContactPage({ params }: Props) {

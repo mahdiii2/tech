@@ -4,7 +4,7 @@ import { ArrowRight, BarChart3, Clock3, Code2, Workflow } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
-import { localizedAlternates, localePath } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -28,18 +28,7 @@ const icons = [Code2, Clock3, Workflow, BarChart3];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "AboutPage.meta" });
-
-  return {
-    title: t("title"),
-    description: t("description"),
-    alternates: localizedAlternates("/about", locale),
-    openGraph: {
-      title: t("ogTitle"),
-      description: t("description"),
-      url: localePath(locale, "/about"),
-    },
-  };
+  return buildPageMetadata("about", locale);
 }
 
 export default async function AboutPage({ params }: Props) {
