@@ -161,6 +161,8 @@
     "caseStudies": {
       "ctaLabel": "View use cases",
       "ctaHref": "/use-cases#clinics-medical-centers",
+      "previousSlide": "Previous case study",
+      "nextSlide": "Next case study",
       "slides": {
         "pricingEngine": {
           "title": "Clinic appointment intake",

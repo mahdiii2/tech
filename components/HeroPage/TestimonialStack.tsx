@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import ReactLenis from "lenis/react";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -101,14 +100,13 @@ const TestimonialStack = () => {
   });
 
   return (
-    <ReactLenis root>
-      <section
-        className="relative w-full px-4 pb-24 sm:px-8"
-        style={{
-          background:
-            "linear-gradient(140deg, var(--dev-200) 0%, var(--dev-100) 45%, var(--dev-50) 100%)",
-        }}
-      >
+    <section
+      className="relative w-full px-4 pb-24 sm:px-8"
+      style={{
+        background:
+          "linear-gradient(140deg, var(--dev-200) 0%, var(--dev-100) 45%, var(--dev-50) 100%)",
+      }}
+    >
         <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[minmax(0,360px)_1fr]">
           <aside className="mt-16 rounded-[32px] border border-[color:var(--dev-100)] bg-white/80 p-8 text-left shadow-[0_45px_120px_rgba(15,23,42,0.12)] backdrop-blur-sm lg:sticky lg:top-33 lg:mt-32">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--dev-500)]">
@@ -164,7 +162,6 @@ const TestimonialStack = () => {
           </div>
         </div>
       </section>
-    </ReactLenis>
   );
 };
 

@@ -161,6 +161,8 @@
     "caseStudies": {
       "ctaLabel": "شاهد حالات الاستخدام",
       "ctaHref": "/use-cases#clinics-medical-centers",
+      "previousSlide": "الشريحة السابقة",
+      "nextSlide": "الشريحة التالية",
       "slides": {
         "pricingEngine": {
           "title": "استقبال مواعيد للعيادات",

@@ -458,7 +458,7 @@ const StickyCard_001 = ({
         >
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] items-center">
             <div className="space-y-6">
-              <h3
+              <h2
                 className={
                   locale === "ar"
                     ? "text-3xl leading-relaxed font-semibold tracking-tight text-neutral-900 "
@@ -466,7 +466,7 @@ const StickyCard_001 = ({
                 }
               >
                 {blueprint.title}
-              </h3>
+              </h2>
 
               <p
                 className={
@@ -498,7 +498,10 @@ const StickyCard_001 = ({
                   asChild
                   className="relative z-30 rounded-full bg-neutral-900 px-6 py-5 text-sm font-semibold text-white hover:bg-neutral-800"
                 >
-                  <Link href={blueprint.learnHref}>{ctas.learnMore}</Link>
+                  <Link href={blueprint.learnHref}>
+                    {ctas.learnMore}
+                    <span className="sr-only"> &mdash; {blueprint.title}</span>
+                  </Link>
                 </Button>
               </div>
             </div>

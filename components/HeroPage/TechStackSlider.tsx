@@ -100,9 +100,9 @@ export default async function TechStackSlider() {
   return (
     <section className="w-full px-4">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 text-center">
-        <p className="mt-6 text-3xl font-semibold text-neutral-900 md:text-4xl">
+        <h2 className="mt-6 text-3xl font-semibold text-neutral-900 md:text-4xl">
           {t("title")}
-        </p>
+        </h2>
         <InfiniteLogos speed={40}>
           {TECHNOLOGIES.map((tech) => (
             <div
@@ -128,18 +128,18 @@ export default async function TechStackSlider() {
 
       <div className="mx-auto mt-10 w-full max-w-6xl rounded-[28px] border border-black/5 bg-white p-6 shadow-xl sm:p-8 md:p-10">
         <div className="flex flex-col gap-6">
-          <p className="text-left text-2xl font-semibold text-neutral-900">
+          <h3 className="text-left text-2xl font-semibold text-neutral-900">
             {t("languagesTitle")}
-          </p>
+          </h3>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {TOOL_GROUPS.map((group) => (
               <section
                 key={group.title.en}
                 className="border-t border-neutral-200 pt-4"
               >
-                <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
                   {group.title[groupLocale]}
-                </h3>
+                </h4>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {group.tools.map((tool) => (
                     <span

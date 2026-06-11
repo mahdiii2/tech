@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useMemo, useRef } from "react";
+import Image from "next/image";
 import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectFade, Autoplay } from "swiper/modules";
@@ -65,16 +66,19 @@ export default function CaseStudySlider() {
           <SwiperSlide key={slide.key}>
             <div className="relative flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:items-center h-full lg:pl-10">
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.title}
-                  className="rounded-2xl shadow-xl max-h-[450px] object-cover"
+                  width={600}
+                  height={450}
+                  className="rounded-2xl shadow-xl max-h-[450px] w-auto object-cover"
                 />
               </div>
 
               <div className="order-2 lg:order-1 flex gap-4 px-4 lg:px-0 mt-2 lg:mt-0 lg:absolute lg:top-6 lg:left-6 z-20">
                 <Button
                   variant="outline"
+                  aria-label={t("previousSlide")}
                   className="shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition"
                   onClick={() => swiperRef.current?.slidePrev()}
                 >
@@ -83,6 +87,7 @@ export default function CaseStudySlider() {
 
                 <Button
                   variant="outline"
+                  aria-label={t("nextSlide")}
                   className="shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition"
                   onClick={() => swiperRef.current?.slideNext()}
                 >
@@ -91,9 +96,9 @@ export default function CaseStudySlider() {
               </div>
 
               <div className="order-3 lg:order-1 relative space-y-6 px-4 lg:px-10 pt-2 lg:pt-0">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                   {slide.title}
-                </h1>
+                </h2>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                   {slide.description}
                 </p>
