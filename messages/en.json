@@ -34,8 +34,8 @@
         "description": "Digital platforms connected to booking, inquiry, and internal workflows."
       },
       "data": {
-        "title": "WhatsApp & lead workflows",
-        "description": "Cleaner intake, handoff, and follow-up for customer conversations."
+        "title": "WhatsApp automation",
+        "description": "Automatic replies, customer detail collection, team handoff, and follow-up."
       },
       "ai": {
         "title": "AI & customer automation",
@@ -121,8 +121,8 @@
         "contactHref": "/contact"
       },
       "engagement": {
-        "title": "WhatsApp & lead workflows",
-        "description": "Capture the right details before your team follows up.",
+        "title": "WhatsApp automation",
+        "description": "Automate replies, collect customer details, route conversations to your team, and organize follow-up.",
         "learnHref": "/use-cases#home-field-services",
         "contactHref": "/contact"
       }
@@ -144,8 +144,8 @@
           "body": "Power BI dashboards, KPI reports, data models, data pipelines and AI-assisted business insights."
         },
         "digitalTransformation": {
-          "title": "WhatsApp workflows",
-          "body": "Structured conversations for appointment requests, property leads, handoff, and follow-up."
+          "title": "WhatsApp automation",
+          "body": "Automatic replies and structured conversations for appointments, customer requests, team handoff, and follow-up."
         },
         "topDevelopers": {
           "title": "Websites and portals",
@@ -465,7 +465,7 @@
     "serviceDots": [
       { "label": "Analytics, Power BI & AI", "href": "/services#development" },
       { "label": "Data scraping", "href": "/services#scraping" },
-      { "label": "WhatsApp & lead workflows", "href": "/services#engagement" },
+      { "label": "WhatsApp automation", "href": "/services#engagement" },
       { "label": "Websites, apps & portals", "href": "/services#design" }
     ],
     "locations": [

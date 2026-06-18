@@ -138,9 +138,9 @@ const en = {
     },
     {
       id: "whatsapp-lead-automation",
-      title: "WhatsApp & lead workflows",
+      title: "WhatsApp automation",
       body:
-        "Many MENA businesses depend on WhatsApp. We help organize conversations, collect the right information, qualify leads, and route inquiries to the right person.",
+        "Many MENA businesses depend on WhatsApp. We automate replies, collect customer details, organize conversations, and route requests to the right person.",
       examples: [
         "WhatsApp inquiry flow",
         "appointment request collection",
@@ -745,9 +745,9 @@ const ar = {
     },
     {
       id: "whatsapp-lead-automation",
-      title: "مسارات واتساب والعملاء المحتملين",
+      title: "أتمتة واتساب",
       body:
-        "تعتمد كثير من شركات MENA على واتساب. نساعدك على تنظيم المحادثات، جمع المعلومات الصحيحة، تأهيل العملاء المحتملين، وتوجيه الاستفسار للشخص المناسب.",
+        "تعتمد كثير من شركات MENA على واتساب. نؤتمت الردود ونجمع بيانات العملاء وننظم المحادثات ونوجه الطلبات إلى الشخص المناسب.",
       examples: [
         "مسار استفسار واتساب",
         "جمع طلبات المواعيد",
