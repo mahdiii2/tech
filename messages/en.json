@@ -22,8 +22,12 @@
     },
     "serviceCards": {
       "development": {
-        "title": "Customer automation",
-        "description": "Assistants and flows that collect requests, answer basics, and qualify leads."
+        "title": "Analytics, Power BI & AI",
+        "description": "Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights."
+      },
+      "scraping": {
+        "title": "Data scraping",
+        "description": "Structured data collected from websites and public sources, cleaned and delivered for analysis."
       },
       "automation": {
         "title": "Websites, apps & portals",
@@ -99,9 +103,9 @@
         "contact": "Send project details"
       },
       "development": {
-        "title": "Customer automation",
-        "description": "Turn repeated questions and scattered requests into a clear intake and handoff flow.",
-        "learnHref": "/use-cases#clinics-medical-centers",
+        "title": "Analytics, Power BI & AI",
+        "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
+        "learnHref": "/services#development",
         "contactHref": "/contact"
       },
       "design": {
@@ -126,12 +130,12 @@
     },
     "solutions": {
       "heading": "What we build",
-      "body": "Focused services for <strong>MENA businesses, especially Lebanon, Iraq, and the UAE</strong> that need clearer inquiries, bookings, lead follow-up, and customer workflows.",
+      "body": "Focused services for <strong>MENA businesses, especially Lebanon, Iraq, and the UAE</strong> that need analytics, data collection, clearer inquiries, bookings, lead follow-up, and customer workflows.",
       "support": "What do you need to improve first?",
       "cards": {
         "customDevelopment": {
-          "title": "Customer automation",
-          "body": "Assistants and intake flows for routine questions, service details, and customer requests."
+          "title": "Analytics, Power BI & AI",
+          "body": "Power BI dashboards, KPI reports, data models, data pipelines and AI-assisted business insights."
         },
         "digitalTransformation": {
           "title": "WhatsApp workflows",
@@ -146,8 +150,8 @@
           "body": "Apps for customers, staff, agents, or internal teams when a mobile workflow makes sense."
         },
         "holisticApproach": {
-          "title": "Dashboards",
-          "body": "Simple views for inquiries, appointments, leads, status, and follow-up."
+          "title": "Data scraping",
+          "body": "Automated collection of structured data from websites and public sources, ready for Excel, databases, or dashboards."
         },
         "creativeExpertise": {
           "title": "Support and hosting",
@@ -247,11 +251,19 @@
       "sections": [
         {
           "id": "development",
-          "title": "Customer automation",
-          "description": "Structured assistants and intake flows that collect customer details, answer routine questions, qualify requests, and hand serious inquiries to your team.",
-          "ctaLabel": "Plan automation",
+          "title": "Analytics, Power BI & AI",
+          "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
+          "ctaLabel": "Plan your data solution",
           "ctaHref": "/contact",
-          "tags": ["Routine answers", "Intake", "Qualification", "Handoff"]
+          "tags": ["Power BI", "KPIs", "Dashboards", "Data engineering", "AI insights"]
+        },
+        {
+          "id": "scraping",
+          "title": "Data scraping",
+          "description": "We collect structured data from websites, directories and public sources, then clean, deduplicate and deliver it to Excel, databases, APIs or dashboards.",
+          "ctaLabel": "Plan your scraping project",
+          "ctaHref": "/contact",
+          "tags": ["Web scraping", "Data extraction", "Cleaning", "Automation", "Excel & database exports"]
         },
         {
           "id": "design",
@@ -445,7 +457,8 @@
       { "label": "About", "href": "/about" }
     ],
     "serviceDots": [
-      { "label": "Customer automation", "href": "/services#development" },
+      { "label": "Analytics, Power BI & AI", "href": "/services#development" },
+      { "label": "Data scraping", "href": "/services#scraping" },
       { "label": "WhatsApp & lead workflows", "href": "/services#engagement" },
       { "label": "Websites, apps & portals", "href": "/services#design" }
     ],

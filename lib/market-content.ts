@@ -71,23 +71,41 @@ const en = {
   },
   improve: [
     {
-      id: "ai-customer-automation",
-      title: "Customer automation",
+      id: "analytics-power-bi-ai",
+      title: "Analytics, Power BI & AI",
       body:
-        "We build assistants and intake flows that answer routine questions, collect customer details, qualify requests, and hand serious inquiries to your team.",
+        "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
       bestFor: [
-        "clinics",
-        "real estate agencies",
-        "WhatsApp-heavy businesses",
-        "teams receiving repeated inquiries",
+        "businesses working in Excel",
+        "teams preparing reports manually",
+        "organizations consolidating databases",
+        "leaders who need clearer KPIs",
       ],
       examples: [
-        "appointment intake",
-        "patient inquiry routing",
-        "property lead qualification",
-        "FAQ flow",
-        "customer request collection",
-        "staff handoff",
+        "Power BI",
+        "KPIs",
+        "dashboards",
+        "data engineering",
+        "AI insights",
+      ],
+    },
+    {
+      id: "data-scraping",
+      title: "Data scraping",
+      body:
+        "We collect structured data from websites, directories and public sources, then clean, deduplicate and deliver it for analysis or automation.",
+      bestFor: [
+        "market and competitor research",
+        "product and pricing monitoring",
+        "directory and listing collection",
+        "teams replacing manual data entry",
+      ],
+      examples: [
+        "web scraping",
+        "data extraction",
+        "scheduled collection",
+        "data cleaning",
+        "Excel and database exports",
       ],
     },
     {
@@ -488,7 +506,8 @@ const en = {
     ],
     whatTitle: "What we build",
     what: [
-      "customer automation",
+      "analytics, Power BI and AI",
+      "data scraping and extraction",
       "WhatsApp workflows",
       "appointment request systems",
       "property lead systems",
@@ -659,23 +678,41 @@ const ar = {
   },
   improve: [
     {
-      id: "ai-customer-automation",
-      title: "تنفيذ مهام تواصل العملاء تلقائيًا",
+      id: "analytics-power-bi-ai",
+      title: "التحليلات وPower BI والذكاء الاصطناعي",
       body:
-        "نبني مساعدات رقمية ومسارات استقبال تجيب عن الأسئلة الروتينية، تجمع بيانات العملاء، تؤهل الطلبات، وتحول الاستفسارات الجادة إلى فريقك.",
+        "نحوّل ملفات Excel وقواعد البيانات وسجلات الأعمال إلى لوحات Power BI وتقارير مؤشرات الأداء ونماذج بيانات وخطوط معالجة ورؤى مدعومة بالذكاء الاصطناعي.",
       bestFor: [
-        "العيادات",
-        "شركات العقارات",
-        "الشركات التي تعتمد على واتساب",
-        "الفرق التي تستقبل استفسارات متكررة",
+        "الشركات التي تعمل على ملفات Excel",
+        "الفرق التي تعد التقارير يدويًا",
+        "المؤسسات التي تجمع بيانات من قواعد متعددة",
+        "المديرون الذين يحتاجون مؤشرات أداء أوضح",
       ],
       examples: [
-        "استقبال طلبات المواعيد",
-        "توجيه استفسارات المرضى",
-        "تأهيل العملاء المحتملين في العقارات",
-        "مسار أسئلة شائعة",
-        "جمع طلبات العملاء",
-        "تحويل الطلب إلى الفريق",
+        "Power BI",
+        "مؤشرات الأداء",
+        "لوحات المعلومات",
+        "هندسة البيانات",
+        "رؤى الذكاء الاصطناعي",
+      ],
+    },
+    {
+      id: "data-scraping",
+      title: "استخراج البيانات من الويب",
+      body:
+        "نجمع بيانات منظمة من المواقع والأدلة والمصادر العامة، ثم ننظفها ونزيل التكرار ونسلمها للتحليل أو الأتمتة.",
+      bestFor: [
+        "أبحاث السوق والمنافسين",
+        "مراقبة المنتجات والأسعار",
+        "جمع بيانات الأدلة والقوائم",
+        "الفرق التي تريد تقليل إدخال البيانات يدويًا",
+      ],
+      examples: [
+        "استخراج بيانات الويب",
+        "جمع البيانات",
+        "الجمع المجدول",
+        "تنظيف البيانات",
+        "تصدير Excel وقواعد البيانات",
       ],
     },
     {
@@ -1076,7 +1113,8 @@ const ar = {
     ],
     whatTitle: "ما الذي نبنيه",
     what: [
-      "تنفيذ مهام تواصل العملاء تلقائيًا",
+      "التحليلات وPower BI والذكاء الاصطناعي",
+      "استخراج البيانات من الويب",
       "مسارات واتساب",
       "أنظمة طلب المواعيد",
       "أنظمة العملاء المحتملين في العقارات",

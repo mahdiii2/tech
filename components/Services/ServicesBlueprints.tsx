@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowRight, Code2, PenTool, Users } from "lucide-react";
+import { ArrowRight, BarChart3, Database, PenTool, Users } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useMessages } from "next-intl";
 import type { AbstractIntlMessages } from "next-intl";
@@ -33,7 +34,7 @@ type SectionTheme = {
   accent: string;
   iconBg: string;
   badgeBg: string;
-  Icon: typeof Code2;
+  Icon: LucideIcon;
 };
 
 const sectionThemes: Record<string, SectionTheme> = {
@@ -41,7 +42,13 @@ const sectionThemes: Record<string, SectionTheme> = {
     accent: "var(--dev-500)",
     iconBg: "var(--dev-100)",
     badgeBg: "var(--dev-50)",
-    Icon: Code2,
+    Icon: BarChart3,
+  },
+  scraping: {
+    accent: "#e11d48",
+    iconBg: "#ffe4e6",
+    badgeBg: "#fff1f2",
+    Icon: Database,
   },
   design: {
     accent: "var(--design-500)",
@@ -133,7 +140,7 @@ export default function ServicesBlueprints() {
       id="services-blueprints"
     >
       <div className="mx-auto mb-10 flex w-full max-w-6xl justify-center px-4 sm:px-6">
-        <div className="flex w-full max-w-3xl flex-col items-stretch gap-3 rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-neutral-900/5 sm:inline-flex sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm:gap-3 sm:rounded-full sm:p-2">
+        <div className="flex w-full max-w-5xl flex-col items-stretch gap-3 rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-neutral-900/5 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:p-2 lg:flex-nowrap lg:rounded-full">
           {sections.map((section) => {
             const theme =
               sectionThemes[section.id] ?? sectionThemes.development;

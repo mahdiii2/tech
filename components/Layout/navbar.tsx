@@ -10,7 +10,7 @@ import {
   Building2,
   CarFront,
   Clock3,
-  Code2,
+  Database,
   HeartPulse,
   Menu,
   MessageCircle,
@@ -53,7 +53,15 @@ const SERVICE_CARDS: NavCardConfig[] = [
     bg: "var(--dev-50)",
     accent: "var(--dev-200)",
     iconAccent: "var(--dev-500)",
-    icon: Code2,
+    icon: BarChart3,
+  },
+  {
+    key: "scraping",
+    href: "/services#scraping",
+    bg: "#fff1f2",
+    accent: "#ffe4e6",
+    iconAccent: "#e11d48",
+    icon: Database,
   },
   {
     key: "automation",
@@ -69,7 +77,7 @@ const SERVICE_CARDS: NavCardConfig[] = [
     bg: "var(--engagement-50)",
     accent: "var(--engagement-200)",
     iconAccent: "var(--engagement-500)",
-    icon: BarChart3,
+    icon: MessageCircle,
   },
 ];
 

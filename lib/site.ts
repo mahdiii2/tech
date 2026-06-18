@@ -123,23 +123,29 @@ const pageSeo = {
   services: {
     path: "/services",
     en: {
-      title: "Software, Automation, Websites, Apps & Dashboards",
+      title: "Power BI, AI, Data Scraping, Websites & Apps",
       description:
-        "Explore Servicely services for MENA businesses: customer automation, WhatsApp workflows, websites, apps, portals, dashboards, support and hosting.",
+        "Explore Servicely services for MENA businesses: Power BI dashboards, KPI reports, data engineering, AI insights, data scraping, websites, apps and WhatsApp workflows.",
       keywords: [
-        "customer automation services",
+        "Power BI services",
+        "data engineering services",
+        "AI business insights",
+        "data scraping services",
+        "web scraping MENA",
         "website and app development MENA",
-        "business dashboards",
       ],
     },
     ar: {
-      title: "خدمات البرمجيات والتنفيذ التلقائي والمواقع والتطبيقات",
+      title: "Power BI والذكاء الاصطناعي واستخراج البيانات والمواقع",
       description:
-        "استكشف خدمات Servicely لشركات MENA: تنفيذ مهام تواصل العملاء تلقائيًا، مسارات واتساب، المواقع، التطبيقات، البوابات، لوحات التحكم، الدعم والاستضافة.",
+        "استكشف خدمات Servicely لشركات MENA: لوحات Power BI وتقارير مؤشرات الأداء وهندسة البيانات ورؤى الذكاء الاصطناعي واستخراج بيانات الويب والمواقع والتطبيقات ومسارات واتساب.",
       keywords: [
-        "خدمات تنفيذ مهام العملاء تلقائيًا",
+        "خدمات Power BI",
+        "خدمات هندسة البيانات",
+        "رؤى الأعمال بالذكاء الاصطناعي",
+        "خدمات استخراج البيانات",
+        "استخراج بيانات الويب في MENA",
         "تطوير مواقع وتطبيقات في MENA",
-        "لوحات تحكم للشركات",
       ],
     },
   },
