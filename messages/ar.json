@@ -108,6 +108,12 @@
         "learnHref": "/services#development",
         "contactHref": "/contact"
       },
+      "scraping": {
+        "title": "استخراج البيانات من الويب",
+        "description": "نجمع بيانات منظمة من المواقع والأدلة والمصادر العامة، ثم ننظفها ونسلمها إلى Excel أو قواعد البيانات أو واجهات API أو لوحات المعلومات.",
+        "learnHref": "/services#scraping",
+        "contactHref": "/contact"
+      },
       "design": {
         "title": "المواقع والتطبيقات والبوابات",
         "description": "امنح العملاء مكاناً واضحاً للسؤال أو الحجز أو مشاهدة العقارات أو إرسال الطلب.",

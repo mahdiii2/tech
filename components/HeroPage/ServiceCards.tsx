@@ -238,6 +238,7 @@ import {
 } from "framer-motion";
 import ReactLenis from "lenis/react";
 import animationdev from "@/public/lottie/DevCubes.json";
+import animationscraping from "@/public/lottie/Gear.json";
 import animationdesign from "@/public/lottie/DesignToggle.json";
 import animationengagement from "@/public/lottie/EngagementEye.json";
 import HeroAnimation from "@/components/AnimationVideos.tsx/AnimationVideo";
@@ -247,6 +248,7 @@ import { useLocale } from "next-intl";
 
 const ANIMATIONS = {
   development: animationdev,
+  scraping: animationscraping,
   design: animationdesign,
   engagement: animationengagement,
 } as const;
@@ -258,6 +260,13 @@ const COLOR_THEMES = {
     chipText: "var(--dev-800f)",
     circleBg: "var(--dev-200)",
     circleGlow: "var(--dev-500)",
+  },
+  scraping: {
+    cardBg: "#fff1f2",
+    chipBg: "#ffe4e6",
+    chipText: "#9f1239",
+    circleBg: "#ffe4e6",
+    circleGlow: "#e11d48",
   },
   design: {
     cardBg: "var(--design-50)",

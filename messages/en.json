@@ -108,6 +108,12 @@
         "learnHref": "/services#development",
         "contactHref": "/contact"
       },
+      "scraping": {
+        "title": "Data scraping",
+        "description": "We collect structured data from websites, directories and public sources, then clean and deliver it to Excel, databases, APIs or dashboards.",
+        "learnHref": "/services#scraping",
+        "contactHref": "/contact"
+      },
       "design": {
         "title": "Websites, apps & portals",
         "description": "Give customers a clean place to ask, book, view, or submit the next step.",
