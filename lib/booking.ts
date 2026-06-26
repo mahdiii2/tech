@@ -1,8 +1,7 @@
 export const bookingUrl =
   process.env.NEXT_PUBLIC_BOOKING_URL?.trim() || "";
 
-export const salesEmail =
-  process.env.NEXT_PUBLIC_SALES_EMAIL?.trim() || "hello@servicely.digital";
+export const salesEmail = "sales@servicely.tech";
 
 export function gmailComposeHref(to: string, subject = "", body = "") {
   const params = new URLSearchParams({

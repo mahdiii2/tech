@@ -35,7 +35,7 @@ const copy = {
       },
       {
         title: "Contact",
-        body: "For privacy questions, contact hello@servicely.digital.",
+        body: "For privacy questions, contact sales@servicely.tech.",
       },
     ],
   },
@@ -60,7 +60,7 @@ const copy = {
       },
       {
         title: "التواصل",
-        body: "لأسئلة الخصوصية، تواصل عبر hello@servicely.digital.",
+        body: "لأسئلة الخصوصية، تواصل عبر sales@servicely.tech.",
       },
     ],
   },

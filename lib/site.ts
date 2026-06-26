@@ -17,8 +17,18 @@ export const siteConfig = {
     "Servicely builds practical software for inquiries, bookings, leads, websites, apps, dashboards and business workflows across MENA, focused on Lebanon, Iraq and the UAE.",
   tagline: "Practical software and business systems for MENA",
   email: salesEmail,
-  phone: "+243 905 600 055",
-  phoneHref: "+243905600055",
+  phone: "+961 81 789 355 / +971 50 243 9540",
+  phoneHref: "+96181789355",
+  phones: [
+    {
+      label: "+961 81 789 355",
+      href: "https://wa.me/96181789355",
+    },
+    {
+      label: "+971 50 243 9540",
+      href: "https://wa.me/971502439540",
+    },
+  ],
   locale: "en",
   localeAlternates: ["ar"],
   ogImage: `${siteUrl}/icon.png`,
@@ -54,7 +64,7 @@ export const siteConfig = {
   social: {
     instagram: "",
     facebook: "",
-    whatsapp: "https://wa.me/243905600055",
+    whatsapp: "https://wa.me/96181789355",
   },
   get sameAs(): string[] {
     return [this.social.instagram, this.social.facebook].filter(Boolean);

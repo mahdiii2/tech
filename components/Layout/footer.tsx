@@ -47,9 +47,9 @@ export default function SiteFooter() {
   const navLinks = t.raw("navLinks") as { label: string; href: string }[];
   const serviceDots = t.raw("serviceDots") as { label: string; href: string }[];
   const locations = t.raw("locations") as { title: string; subtitle: string }[];
-  const phone = siteConfig.phone;
+  const phones = siteConfig.phones;
   const email = siteConfig.email;
-  const showPhone = phone && !phone.includes("000 000");
+  const showPhone = phones.length > 0;
 
   return (
     <footer className="w-full border-t bg-white text-black">
@@ -131,14 +131,17 @@ export default function SiteFooter() {
               ))}
               <div className="flex flex-col gap-1">
                 {showPhone ? (
-                  <Link
-                    href={siteConfig.social.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block font-semibold hover:text-neutral-600"
-                  >
-                    {phone}
-                  </Link>
+                  phones.map((phone) => (
+                    <Link
+                      key={phone.href}
+                      href={phone.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block font-semibold hover:text-neutral-600"
+                    >
+                      {phone.label}
+                    </Link>
+                  ))
                 ) : null}
                 <Link
                   href={gmailComposeHref(email)}

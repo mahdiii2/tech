@@ -103,8 +103,8 @@
         "contact": "Send project details"
       },
       "development": {
-        "title": "Analytics, Power BI & AI",
-        "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
+        "title": "Analytics, Power BI, n8n & AI",
+        "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines, n8n automations and AI-assisted insights.",
         "learnHref": "/services#development",
         "contactHref": "/contact"
       },
@@ -474,8 +474,8 @@
         "subtitle": "Practical software for inquiries, bookings, leads, websites, apps, and business systems"
       }
     ],
-    "phone": "+243 905 600 055",
-    "email": "hello@servicely.digital",
+    "phone": "+961 81 789 355 / +971 50 243 9540",
+    "email": "sales@servicely.tech",
     "ctaGradient": "Build the system your business actually needs",
     "newsletterHeading": "Have a workflow to fix?",
     "newsletterBody": "Send us the problem you want to solve. We will reply with the simplest useful next step.",
