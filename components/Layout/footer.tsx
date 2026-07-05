@@ -216,8 +216,11 @@ function ServiceDot({
 }) {
   return (
     <Link href={href} className="flex items-center gap-3 hover:text-neutral-600">
+      <span
+        className={`h-2 w-2 shrink-0 rounded-full ${colorClass}`}
+        aria-hidden="true"
+      />
       <span>{label}</span>
-      <span className={`h-2 w-2 rounded-full ${colorClass}`} />
     </Link>
   );
 }
