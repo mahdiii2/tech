@@ -267,17 +267,17 @@ const arProblems: Problem[] = [
 const copy: Record<string, IndustriesCopy> = {
   en: {
     eyebrow: "Primary industries",
-    title: "Practical systems for inquiry-heavy MENA businesses",
+    title: "Practical systems for inquiry-heavy businesses",
     body:
-      "Servicely builds customer-flow software for clinics, real estate teams, automotive businesses and home service teams across MENA, with a focus on Lebanon, Iraq and the UAE.",
+      "Servicely builds customer-flow software for clinics, real estate teams, automotive businesses and home service teams that need clearer intake, handoff and follow-up.",
     support:
       "We start with the real customer journey: inquiry, booking, qualification, handoff, follow-up and visibility.",
     cta: "Request a scope",
     ctaHref: "/contact",
     metrics: [
-      { value: "MENA", label: "built for the Middle East and North Africa" },
-      { value: "3", label: "focus markets: Lebanon, Iraq and the UAE" },
-      { value: "4", label: "primary industries with dedicated use cases" },
+      { value: "12", label: "practical use cases mapped to real customer problems" },
+      { value: "4", label: "primary industries with dedicated workflows" },
+      { value: "1", label: "connected path from inquiry to follow-up" },
     ],
     sectionTitle: "Where Servicely fits",
     sectionBody:
@@ -519,17 +519,17 @@ const copy: Record<string, IndustriesCopy> = {
   },
   ar: {
     eyebrow: "القطاعات الأساسية",
-    title: "أنظمة عملية للشركات التي تعتمد على الاستفسارات في MENA",
+    title: "أنظمة عملية للشركات التي تعتمد على الاستفسارات",
     body:
-      "تبني Servicely برمجيات لتنظيم تدفق العملاء للعيادات وشركات العقارات وقطاع السيارات وفرق الخدمات الميدانية في منطقة MENA، مع تركيز على لبنان والعراق والإمارات.",
+      "تبني Servicely برمجيات لتنظيم تدفق العملاء للعيادات وشركات العقارات وقطاع السيارات وفرق الخدمات الميدانية التي تحتاج استقبالاً وتحويلاً ومتابعة أكثر وضوحاً.",
     support:
       "نبدأ من رحلة العميل الفعلية: الاستفسار، الحجز، التأهيل، التحويل، المتابعة، والرؤية الواضحة.",
     cta: "اطلب نطاقاً واضحاً",
     ctaHref: "/contact",
     metrics: [
-      { value: "MENA", label: "مصمم للشرق الأوسط وشمال أفريقيا" },
-      { value: "3", label: "أسواق تركيز: لبنان والعراق والإمارات" },
-      { value: "4", label: "قطاعات أساسية مع حالات استخدام مخصصة" },
+      { value: "12", label: "حالة استخدام عملية مبنية على مشكلات عملاء حقيقية" },
+      { value: "4", label: "قطاعات أساسية مع مسارات عمل مخصصة" },
+      { value: "1", label: "مسار متصل من الاستفسار إلى المتابعة" },
     ],
     sectionTitle: "أين يمكن أن تساعدك Servicely؟",
     sectionBody:

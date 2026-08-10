@@ -14,8 +14,8 @@ export const siteConfig = {
   shortName: "Servicely",
   url: siteUrl,
   description:
-    "Servicely builds practical software for inquiries, bookings, leads, websites, apps, dashboards and business workflows across MENA, focused on Lebanon, Iraq and the UAE.",
-  tagline: "Practical software and business systems for MENA",
+    "Servicely builds practical software for inquiries, bookings, lead follow-up, websites, apps, dashboards and connected business workflows.",
+  tagline: "Practical software for clearer customer workflows",
   email: salesEmail,
   phone: "+96171383987",
   phoneHref: "+96171383987",
@@ -29,17 +29,11 @@ export const siteConfig = {
   localeAlternates: ["ar"],
   ogImage: `${siteUrl}/icon.png`,
   logo: `${siteUrl}/icon.png`,
-  areaServed: [
-    "Middle East and North Africa",
-    "Lebanon",
-    "Iraq",
-    "United Arab Emirates",
-  ],
+  areaServed: ["Worldwide"],
   keywords: [
-    "business systems MENA",
-    "custom software Lebanon",
-    "custom software Iraq",
-    "custom software UAE",
+    "customer workflow software",
+    "custom business software",
+    "business process automation",
     "clinic appointment system",
     "real estate lead follow-up",
     "property matching system",
@@ -47,12 +41,9 @@ export const siteConfig = {
     "field service scheduling software",
     "service request intake system",
     "WhatsApp inquiry workflow",
-    "customer automation Lebanon",
-    "customer automation Iraq",
-    "customer automation UAE",
-    "business systems UAE",
-    "web apps UAE",
-    "mobile app development UAE",
+    "lead follow-up automation",
+    "business web apps",
+    "mobile app development",
     "customer support automation",
     "appointment request system",
     "business dashboards",
@@ -75,19 +66,16 @@ const localizedSeo = {
   en: {
     tagline: siteConfig.tagline,
     description: siteConfig.description,
-    ogLocale: "en_US",
     keywords: siteConfig.keywords,
   },
   ar: {
-    tagline: "برمجيات عملية وأنظمة أعمال لشركات MENA",
+    tagline: "برمجيات عملية لمسارات عملاء أكثر وضوحاً",
     description:
-      "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين والمواقع والتطبيقات ولوحات التحكم في منطقة MENA، مع تركيز على لبنان والعراق والإمارات.",
-    ogLocale: "ar_AE",
+      "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين والمواقع والتطبيقات ولوحات التحكم ومسارات الأعمال المترابطة.",
     keywords: [
-      "أنظمة أعمال في الشرق الأوسط",
-      "تطوير برمجيات في لبنان",
-      "تطوير برمجيات في العراق",
-      "تطوير برمجيات في الإمارات",
+      "أنظمة سير عمل العملاء",
+      "تطوير برمجيات مخصصة",
+      "أتمتة عمليات الأعمال",
       "نظام مواعيد للعيادات",
       "متابعة العملاء المحتملين في العقارات",
       "نظام مطابقة عقارات",
@@ -95,7 +83,7 @@ const localizedSeo = {
       "برنامج جدولة الخدمات الميدانية",
       "تنفيذ مهام واتساب تلقائيًا",
       "تنفيذ مهام خدمة العملاء تلقائيًا",
-      "مواقع أعمال في MENA",
+      "مواقع أعمال وتطبيقات ويب",
       "تطبيقات جوال للشركات",
       "لوحات تحكم للأعمال",
     ],
@@ -106,21 +94,21 @@ const pageSeo = {
   home: {
     path: "/",
     en: {
-      title: "Business Systems, Websites & WhatsApp Automation for MENA",
+      title: "Business Systems, Websites & WhatsApp Automation",
       description:
-        "Servicely builds practical software for inquiries, bookings, lead follow-up, WhatsApp workflows, websites, apps and dashboards across Lebanon, Iraq, the UAE and MENA.",
+        "Servicely builds practical software for inquiries, bookings, lead follow-up, WhatsApp workflows, websites, apps and dashboards for customer-facing teams.",
       keywords: [
-        "MENA business systems",
-        "WhatsApp automation MENA",
+        "customer workflow systems",
+        "WhatsApp business automation",
         "lead follow-up software",
       ],
     },
     ar: {
-      title: "أنظمة أعمال ومواقع وتنفيذ مهام واتساب تلقائيًا لشركات MENA",
+      title: "أنظمة أعمال ومواقع وتنفيذ مهام واتساب تلقائيًا",
       description:
-        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين ومسارات واتساب والمواقع والتطبيقات ولوحات التحكم في لبنان والعراق والإمارات.",
+        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين ومسارات واتساب والمواقع والتطبيقات ولوحات التحكم للفرق التي تتعامل مع العملاء.",
       keywords: [
-        "أنظمة أعمال MENA",
+        "أنظمة سير عمل العملاء",
         "تنفيذ مهام واتساب تلقائيًا للشركات",
         "متابعة العملاء المحتملين",
       ],
@@ -131,27 +119,27 @@ const pageSeo = {
     en: {
       title: "Power BI, AI, Data Scraping, Websites & Apps",
       description:
-        "Explore Servicely services for MENA businesses: Power BI dashboards, KPI reports, data engineering, AI insights, data scraping, websites, apps and WhatsApp workflows.",
+        "Explore Servicely services for customer-facing businesses: Power BI dashboards, KPI reports, data engineering, AI insights, data scraping, websites, apps and WhatsApp workflows.",
       keywords: [
         "Power BI services",
         "data engineering services",
         "AI business insights",
         "data scraping services",
-        "web scraping MENA",
-        "website and app development MENA",
+        "web scraping for business",
+        "website and app development",
       ],
     },
     ar: {
       title: "Power BI والذكاء الاصطناعي واستخراج البيانات والمواقع",
       description:
-        "استكشف خدمات Servicely لشركات MENA: لوحات Power BI وتقارير مؤشرات الأداء وهندسة البيانات ورؤى الذكاء الاصطناعي واستخراج بيانات الويب والمواقع والتطبيقات ومسارات واتساب.",
+        "استكشف خدمات Servicely للشركات التي تتعامل مع العملاء: لوحات Power BI وتقارير مؤشرات الأداء وهندسة البيانات ورؤى الذكاء الاصطناعي واستخراج بيانات الويب والمواقع والتطبيقات ومسارات واتساب.",
       keywords: [
         "خدمات Power BI",
         "خدمات هندسة البيانات",
         "رؤى الأعمال بالذكاء الاصطناعي",
         "خدمات استخراج البيانات",
-        "استخراج بيانات الويب في MENA",
-        "تطوير مواقع وتطبيقات في MENA",
+        "استخراج بيانات الويب للأعمال",
+        "تطوير مواقع وتطبيقات",
       ],
     },
   },
@@ -160,7 +148,7 @@ const pageSeo = {
     en: {
       title: "Customer Systems for Clinics, Real Estate & Services",
       description:
-        "Practical customer-flow systems for clinics, real estate agencies, automotive teams and field service businesses across MENA.",
+        "Practical customer-flow systems for clinics, real estate agencies, automotive teams and field service businesses that need clearer intake and follow-up.",
       keywords: [
         "clinic customer system",
         "real estate lead system",
@@ -170,7 +158,7 @@ const pageSeo = {
     ar: {
       title: "أنظمة عملية للعيادات والعقارات والخدمات",
       description:
-        "أنظمة عملية لتنظيم الاستفسارات والمواعيد والعملاء المحتملين والمتابعة للعيادات والعقارات والسيارات والخدمات الميدانية في MENA.",
+        "أنظمة عملية لتنظيم الاستفسارات والمواعيد والعملاء المحتملين والمتابعة للعيادات والعقارات والسيارات والخدمات الميدانية.",
       keywords: [
         "أنظمة العيادات",
         "نظام عملاء العقارات المحتملين",
@@ -206,43 +194,43 @@ const pageSeo = {
     en: {
       title: "Why Servicely: Direct Builders and Practical Systems",
       description:
-        "Work directly with a small technical team that plans, builds and supports practical business systems for MENA companies.",
+        "Work directly with a small technical team that plans, builds and supports practical business systems with clear scope and post-launch care.",
       keywords: [
         "direct software builders",
-        "small technical team MENA",
+        "small technical software team",
         "practical software partner",
       ],
     },
     ar: {
       title: "لماذا Servicely؟ فريق صغير وتنفيذ عملي",
       description:
-        "اعمل مباشرة مع فريق تقني صغير يبني ويدعم أنظمة عملية لشركات MENA، مع نطاق واضح وتنفيذ عملي ودعم بعد الإطلاق.",
+        "اعمل مباشرة مع فريق تقني صغير يبني ويدعم أنظمة عملية، مع نطاق واضح وتنفيذ عملي ودعم بعد الإطلاق.",
       keywords: [
         "فريق برمجي صغير",
         "شريك برمجي عملي",
-        "تطوير أنظمة أعمال MENA",
+        "تطوير أنظمة أعمال عملية",
       ],
     },
   },
   about: {
     path: "/about",
     en: {
-      title: "About Servicely: Practical Software Partner for MENA",
+      title: "About Servicely: Practical Software Partner",
       description:
         "Servicely helps clinics, real estate teams, automotive businesses and field service teams build useful systems for inquiries, bookings, leads and workflows.",
       keywords: [
         "about Servicely",
-        "software partner MENA",
+        "practical software partner",
         "customer workflow software",
       ],
     },
     ar: {
-      title: "من نحن: شريك برمجي عملي لشركات MENA",
+      title: "من نحن: شريك برمجي عملي",
       description:
         "تساعد Servicely العيادات وشركات العقارات والسيارات والخدمات الميدانية على بناء أنظمة عملية للاستفسارات والحجوزات والعملاء المحتملين وسير العمل.",
       keywords: [
         "من نحن Servicely",
-        "شريك برمجي في MENA",
+        "شريك برمجي عملي",
         "برمجيات سير عمل العملاء",
       ],
     },
@@ -277,7 +265,7 @@ const pageSeo = {
       description:
         "Tell Servicely what you want to improve: inquiries, appointments, lead follow-up, WhatsApp workflows, websites, apps, dashboards or internal systems.",
       keywords: [
-        "contact software company MENA",
+        "contact software company",
         "request project scope",
         "business system consultation",
       ],
@@ -338,8 +326,6 @@ export function buildPageMetadata(page: SeoPageKey, locale: string): Metadata {
       title: seo.title,
       description: seo.description,
       url,
-      locale: localizedSite.ogLocale,
-      alternateLocale: localeKey === "ar" ? ["en_US"] : ["ar_AE"],
       images: [
         {
           url: siteConfig.ogImage,

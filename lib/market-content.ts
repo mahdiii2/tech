@@ -43,9 +43,9 @@ const en = {
       eyebrow: "Practical Software for Customer Flow",
       title: "Build the system your customers feel first",
       body:
-        "Servicely builds practical software for inquiries, bookings, leads, and follow-up across MENA.",
+        "Servicely builds practical software for inquiries, bookings, leads, and follow-up for customer-facing teams.",
       trust:
-        "Focused on clinics, real estate, automotive, and field service teams across the Middle East, especially Lebanon, Iraq, and the UAE.",
+        "Focused on clinics, real estate, automotive, and field service teams that need faster response, clearer handoffs, and better follow-up.",
       ctas: [
         { label: "Contact us", href: "/contact" },
         { label: "Explore services", href: "/services#services-blueprints" },
@@ -54,7 +54,7 @@ const en = {
     improveTitle: "What we help you improve",
     improveBody:
       "We focus on inquiry intake, booking requests, lead follow-up, WhatsApp workflows, websites, apps, and dashboards.",
-    marketsTitle: "Built for MENA, focused on Lebanon, Iraq, and the UAE",
+    marketsTitle: "Built around the customer journey",
     industriesTitle: "Primary industries",
     whyTitle: "Why work with us?",
     whyBody:
@@ -140,7 +140,7 @@ const en = {
       id: "whatsapp-lead-automation",
       title: "WhatsApp automation",
       body:
-        "Many MENA businesses depend on WhatsApp. We automate replies, collect customer details, organize conversations, and route requests to the right person.",
+        "Many customer-facing teams depend on WhatsApp. We automate replies, collect customer details, organize conversations, and route requests to the right person.",
       examples: [
         "WhatsApp inquiry flow",
         "appointment request collection",
@@ -182,51 +182,51 @@ const en = {
   ] satisfies BulletSection[],
   markets: [
     {
-      title: "MENA",
+      title: "Fast response",
       body:
-        "We build for businesses across the Middle East and North Africa that depend on fast mobile communication and clear customer next steps.",
+        "Capture and organize inquiries from the channels your customers already use, so every request has a clear owner and next step.",
       points: [
-        "Arabic and English customer journeys",
-        "WhatsApp-heavy inquiry flows",
-        "clinic appointment requests",
-        "real estate lead follow-up",
-        "automotive and field service requests",
+        "web and WhatsApp intake",
+        "automatic answers to common questions",
+        "after-hours request capture",
+        "contact preference collection",
+        "clear response ownership",
       ],
     },
     {
-      title: "Lebanon",
+      title: "Qualified requests",
       body:
-        "Lebanese clinics and agencies often need practical systems that improve response without adding unnecessary operational weight.",
+        "Ask the right questions up front so your team receives the context it needs before spending time on a request.",
       points: [
-        "clinics",
-        "medical centers",
-        "real estate agencies",
-        "automotive and service businesses",
-        "businesses with repeated customer inquiries",
+        "appointment details",
+        "budget and preferences",
+        "service requirements",
+        "timing and availability",
+        "uploads and supporting details",
       ],
     },
     {
-      title: "Iraq",
+      title: "Clear handoff",
       body:
-        "Growing Iraqi businesses need stronger digital presence, better intake, and clearer follow-up for customers who contact them online.",
+        "Move each conversation from automation to the right person without losing the customer details or promised next action.",
       points: [
-        "clinics",
-        "medical centers",
-        "real estate agencies",
-        "automotive and home service teams",
-        "sales teams using WhatsApp",
+        "team and branch routing",
+        "conversation summaries",
+        "assignment and ownership",
+        "status updates",
+        "customer notifications",
       ],
     },
     {
-      title: "UAE",
+      title: "Visible follow-up",
       body:
-        "UAE businesses usually expect a polished digital experience where the website, WhatsApp flow, and team handoff feel connected.",
+        "Keep requests, appointments, leads, and follow-up visible so managers can spot delays and improve the workflow.",
       points: [
-        "clinics",
-        "medical centers",
-        "real estate agencies",
-        "automotive and field service teams",
-        "customer-facing teams",
+        "lead and request dashboards",
+        "follow-up reminders",
+        "response tracking",
+        "pipeline visibility",
+        "practical performance reports",
       ],
     },
   ],
@@ -491,7 +491,7 @@ const en = {
     ],
   },
   about: {
-    heroTitle: "A practical software partner for MENA businesses",
+    heroTitle: "A practical software partner for customer-facing businesses",
     heroBody:
       "We help clinics, real estate teams, automotive businesses, field service teams, and growing companies build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows.",
     processTitle: "How we work",
@@ -650,9 +650,9 @@ const ar = {
       eyebrow: "برمجيات عملية لتدفق العملاء",
       title: "ابنِ النظام الذي يلمسه عملاؤك أولاً",
       body:
-        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات والعملاء المحتملين والمتابعة في منطقة MENA.",
+        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات والعملاء المحتملين والمتابعة للفرق التي تتعامل مباشرة مع العملاء.",
       trust:
-        "تركيزنا على العيادات والعقارات والسيارات والخدمات الميدانية في الشرق الأوسط، خصوصاً لبنان والعراق والإمارات.",
+        "نركز على العيادات والعقارات والسيارات والخدمات الميدانية التي تحتاج استجابة أسرع وتحويلاً أوضح ومتابعة أفضل.",
       ctas: [
         { label: "تواصل معنا", href: "/contact" },
         { label: "استكشف الخدمات", href: "/services#services-blueprints" },
@@ -661,7 +661,7 @@ const ar = {
     improveTitle: "ما الذي نساعدك على تحسينه",
     improveBody:
       "نركز على استقبال الاستفسارات، طلبات المواعيد، متابعة العملاء المحتملين، مسارات واتساب، المواقع، التطبيقات، ولوحات التحكم.",
-    marketsTitle: "مصمم لـ MENA، مع تركيز على لبنان والعراق والإمارات",
+    marketsTitle: "مصمم حول رحلة العميل",
     industriesTitle: "القطاعات الأساسية",
     whyTitle: "لماذا تعمل معنا؟",
     whyBody:
@@ -747,7 +747,7 @@ const ar = {
       id: "whatsapp-lead-automation",
       title: "أتمتة واتساب",
       body:
-        "تعتمد كثير من شركات MENA على واتساب. نؤتمت الردود ونجمع بيانات العملاء وننظم المحادثات ونوجه الطلبات إلى الشخص المناسب.",
+        "تعتمد كثير من الفرق التي تتعامل مع العملاء على واتساب. نؤتمت الردود ونجمع بيانات العملاء وننظم المحادثات ونوجه الطلبات إلى الشخص المناسب.",
       examples: [
         "مسار استفسار واتساب",
         "جمع طلبات المواعيد",
@@ -789,51 +789,51 @@ const ar = {
   ] satisfies BulletSection[],
   markets: [
     {
-      title: "MENA",
+      title: "استجابة أسرع",
       body:
-        "نبني للشركات في الشرق الأوسط وشمال أفريقيا التي تعتمد على تواصل سريع عبر الجوال وخطوة تالية واضحة للعميل.",
+        "نجمع الاستفسارات من القنوات التي يستخدمها عملاؤك وننظمها، ليكون لكل طلب مسؤول وخطوة تالية واضحة.",
       points: [
-        "رحلات عملاء بالعربية والإنجليزية",
-        "مسارات استفسارات تعتمد على واتساب",
-        "طلبات مواعيد للعيادات",
-        "متابعة العملاء المحتملين في العقارات",
-        "طلبات السيارات والخدمات الميدانية",
+        "استقبال عبر الموقع وواتساب",
+        "إجابات تلقائية للأسئلة الشائعة",
+        "استقبال الطلبات خارج ساعات العمل",
+        "جمع وسيلة التواصل المفضلة",
+        "مسؤولية واضحة عن الاستجابة",
       ],
     },
     {
-      title: "لبنان",
+      title: "طلبات أكثر وضوحاً",
       body:
-        "تحتاج الشركات التي تعتمد على الاستفسارات في لبنان غالباً إلى أنظمة عملية تحسن الاستجابة بدون زيادة تعقيد التشغيل.",
+        "نطرح الأسئلة المناسبة من البداية ليصل إلى فريقك السياق الذي يحتاجه قبل تخصيص الوقت للطلب.",
       points: [
-        "العيادات",
-        "المراكز الطبية",
-        "شركات العقارات",
-        "شركات السيارات والخدمات",
-        "الشركات التي تستقبل استفسارات متكررة",
+        "تفاصيل المواعيد",
+        "الميزانية والتفضيلات",
+        "متطلبات الخدمة",
+        "التوقيت والتوافر",
+        "الملفات والتفاصيل الداعمة",
       ],
     },
     {
-      title: "العراق",
+      title: "تحويل منظم إلى الفريق",
       body:
-        "تحتاج الشركات النامية في العراق إلى حضور رقمي أقوى واستقبال أفضل ومتابعة أوضح للعملاء الذين يتواصلون عبر الإنترنت.",
+        "ننقل كل محادثة من الأتمتة إلى الشخص المناسب بدون فقدان بيانات العميل أو الخطوة التالية المتفق عليها.",
       points: [
-        "العيادات",
-        "المراكز الطبية",
-        "شركات العقارات",
-        "فرق السيارات والخدمات المنزلية",
-        "فرق المبيعات التي تستخدم واتساب",
+        "التوجيه إلى الفريق أو الفرع",
+        "ملخصات المحادثات",
+        "التعيين وتحديد المسؤولية",
+        "تحديثات الحالة",
+        "إشعارات العملاء",
       ],
     },
     {
-      title: "الإمارات",
+      title: "متابعة قابلة للقياس",
       body:
-        "تتوقع الشركات في الإمارات تجربة رقمية مصقولة يكون فيها الموقع ومسار واتساب وتحويل الطلب إلى الفريق أجزاء متصلة.",
+        "نُظهر الطلبات والمواعيد والعملاء المحتملين والمتابعة بوضوح ليكتشف المديرون التأخير ويحسنوا سير العمل.",
       points: [
-        "العيادات",
-        "المراكز الطبية",
-        "شركات العقارات",
-        "فرق السيارات والخدمات الميدانية",
-        "الفرق التي تتعامل مباشرة مع العملاء",
+        "لوحات العملاء المحتملين والطلبات",
+        "تذكيرات المتابعة",
+        "تتبع الاستجابة",
+        "رؤية واضحة لمسار العمل",
+        "تقارير أداء عملية",
       ],
     },
   ],
@@ -1098,7 +1098,7 @@ const ar = {
     ],
   },
   about: {
-    heroTitle: "شريك برمجي عملي لشركات MENA",
+    heroTitle: "شريك برمجي عملي للشركات التي تتعامل مباشرة مع العملاء",
     heroBody:
       "نساعد العيادات وشركات العقارات وشركات السيارات وفرق الخدمات الميدانية والشركات النامية على بناء أنظمة مفيدة للاستفسارات والحجوزات والعملاء المحتملين والبوابات ولوحات التحكم وسير العمل الداخلي.",
     processTitle: "كيف نعمل",

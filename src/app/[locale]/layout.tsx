@@ -34,7 +34,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const localeKey = normalizeLocale(locale);
   const localizedSite = getLocalizedSiteConfig(localeKey);
-  const alternateLocale = localeKey === "ar" ? ["en_US"] : ["ar_AE"];
 
   return {
     metadataBase: new URL(siteUrl),
@@ -71,8 +70,6 @@ export async function generateMetadata({
       title: `${siteConfig.name} - ${localizedSite.tagline}`,
       description: localizedSite.description,
       url: localePath(localeKey, "/"),
-      locale: localizedSite.ogLocale,
-      alternateLocale,
       images: [
         {
           url: siteConfig.ogImage,

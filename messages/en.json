@@ -88,7 +88,7 @@
   "HomePage": {
     "vision": {
       "heading": "Customer flow, made clear",
-      "body": "Practical systems for inquiries, bookings, leads, and follow-up across MENA.",
+      "body": "Practical systems for inquiries, bookings, leads, and follow-up for customer-facing teams.",
       "cta": "Book a Free Consultation",
       "ctaHref": "/contact",
       "chips": [
@@ -130,13 +130,13 @@
     "partnerSection": {
       "heading": "Digital systems for serious customer flow",
       "bodyPrimary": "Servicely helps customer-facing teams replace messy messages and manual follow-up with usable software.",
-      "bodySecondary": "We work across MENA, especially Lebanon, Iraq, and the UAE, where customers expect fast mobile contact and clear next steps.",
+      "bodySecondary": "We design around how your customers already communicate, with fast mobile contact, clear team handoffs, and an obvious next step.",
       "ctaLabel": "Explore services",
       "ctaHref": "/services#services-blueprints"
     },
     "solutions": {
       "heading": "What we build",
-      "body": "Focused services for <strong>MENA businesses, especially Lebanon, Iraq, and the UAE</strong> that need analytics, data collection, clearer inquiries, bookings, lead follow-up, and customer workflows.",
+      "body": "Focused services for <strong>customer-facing businesses</strong> that need useful analytics, reliable data collection, clearer inquiries, easier bookings, better lead follow-up, and connected customer workflows.",
       "support": "What do you need to improve first?",
       "cards": {
         "customDevelopment": {
@@ -295,7 +295,7 @@
       "hero": {
         "title": "Start practical, then improve",
         "description": "We define the smallest useful system first, launch it cleanly, then improve it with the data and feedback your team gathers.",
-        "tags": ["MENA", "Lebanon", "Iraq", "UAE", "English + Arabic"],
+        "tags": ["Planning", "Design", "Development", "Launch", "Support"],
         "ctaLabel": "Request a scope",
         "ctaHref": "/contact"
       },
@@ -378,7 +378,7 @@
       ]
     },
     "partnerGrid": {
-      "title": "Built for MENA businesses, focused on Lebanon, Iraq and the UAE",
+      "title": "Built for customer-facing teams that value clarity and speed",
       "body1": "Customer-facing teams need faster response, clearer requests, and less manual follow-up.",
       "body2": "We keep the design familiar and the workflow practical.",
       "body3": "The goal is a system your customers and staff can actually use."
@@ -387,13 +387,13 @@
   "AboutPage": {
     "meta": {
       "title": "About Servicely",
-      "description": "Servicely is a practical software partner for MENA businesses, with a focus on Lebanon, Iraq, and the UAE.",
+      "description": "Servicely is a practical software partner for customer-facing businesses that need clearer workflows and useful digital systems.",
       "ogTitle": "About | Servicely"
     },
     "hero": {
       "title": "Practical software partner for customer-driven businesses",
       "bodyLines": [
-        "Servicely helps clinics, real estate teams, automotive businesses, field service teams, and growing companies across MENA build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows."
+        "Servicely helps clinics, real estate teams, automotive businesses, field service teams, and growing companies build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows."
       ],
       "ctaLabel": "Talk to the builders",
       "ctaHref": "/contact",
@@ -470,7 +470,7 @@
     ],
     "locations": [
       {
-        "title": "MENA, focused on Lebanon, Iraq and the UAE",
+        "title": "Practical systems for customer-facing teams",
         "subtitle": "Practical software for inquiries, bookings, leads, websites, apps, and business systems"
       }
     ],
