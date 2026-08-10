@@ -1,13 +1,7 @@
 import {
-  BarChart3,
   Building2,
-  CalendarCheck,
   CarFront,
-  Globe,
   HeartPulse,
-  MessageCircle,
-  UserCheck,
-  Wrench,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,17 +10,6 @@ export type UseCase = {
   problem: string;
   solution: string;
   result: string;
-};
-
-export type Problem = {
-  id: string;
-  title: string;
-  problem: string;
-  solution: string;
-  result: string;
-  Icon: LucideIcon;
-  accent: string;
-  accentBg: string;
 };
 
 export type Industry = {
@@ -56,717 +39,425 @@ export type IndustriesCopy = {
   closingTitle: string;
   closingBody: string;
   closingChecklist: string[];
+  useCasesClosingTitle: string;
+  useCasesClosingBody: string;
+  useCasesClosingChecklist: string[];
   helpsWithLabel: string;
   viewUseCasesLabel: string;
   useCasesHeroEyebrow: string;
   useCasesHeroTitle: string;
   useCasesHeroBody: string;
-  problemsEyebrow: string;
-  problemsTitle: string;
-  problemsBody: string;
   problemsLabels: {
     problem: string;
     solution: string;
     result: string;
   };
-  industriesEyebrow: string;
-  industriesShortTitle: string;
-  industriesShortBody: string;
   detail: {
     backLabel: string;
-    exploreLabel: string;
-    learnMore: string;
-    overviewLabel: string;
-    benefitsTitle: string;
-    useCasesTitle: string;
-    useCasesBody: string;
-    otherTitle: string;
   };
-  problems: Problem[];
   industries: Industry[];
 };
 
-const problemAccents = {
-  response: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
-  appointments: {
-    accent: "var(--design-500)",
-    accentBg: "var(--design-50)",
-  },
-  leads: {
-    accent: "var(--engagement-500)",
-    accentBg: "var(--engagement-50)",
-  },
-  handoff: { accent: "var(--dev-500)", accentBg: "var(--dev-50)" },
-  visibility: {
-    accent: "var(--design-500)",
-    accentBg: "var(--design-50)",
-  },
-  credibility: {
-    accent: "var(--engagement-500)",
-    accentBg: "var(--engagement-50)",
-  },
-};
-
 const industryStyle = {
+  construction: { color: "var(--design-500)", bg: "var(--design-50)" },
   clinics: { color: "var(--dev-500)", bg: "var(--dev-50)" },
-  realEstate: { color: "var(--design-500)", bg: "var(--design-50)" },
-  automotive: {
+  dealerships: {
     color: "var(--engagement-500)",
     bg: "var(--engagement-50)",
   },
-  fieldServices: { color: "var(--dev-500)", bg: "var(--dev-50)" },
 };
-
-const enProblems: Problem[] = [
-  {
-    id: "response",
-    title: "Customers wait too long for basic answers",
-    problem:
-      "Staff repeat the same answers across WhatsApp, calls, Instagram, website forms and direct messages.",
-    solution:
-      "We build assistants and structured inquiry flows that answer common questions and collect the right details.",
-    result:
-      "Customers get faster answers and staff handle serious requests with better context.",
-    Icon: MessageCircle,
-    ...problemAccents.response,
-  },
-  {
-    id: "appointments",
-    title: "Appointment requests are messy",
-    problem:
-      "Requests arrive incomplete, double-booking risk increases and staff spend time asking the same follow-up questions.",
-    solution:
-      "We build appointment request flows that collect service, preferred time, branch, contact details and notes before staff confirm.",
-    result:
-      "Teams receive cleaner appointment requests and customers understand the next step.",
-    Icon: CalendarCheck,
-    ...problemAccents.appointments,
-  },
-  {
-    id: "leads",
-    title: "Leads arrive without useful details",
-    problem:
-      "Agents receive vague messages with no budget, location, property type, timeline or preference.",
-    solution:
-      "We build qualification flows for real estate teams before handoff to agents.",
-    result:
-      "Agents spend less time chasing basic information and more time with serious customers.",
-    Icon: UserCheck,
-    ...problemAccents.leads,
-  },
-  {
-    id: "handoff",
-    title: "WhatsApp conversations are hard to organize",
-    problem:
-      "Different people answer from different places and important requests can be missed or forgotten.",
-    solution:
-      "We structure intake, routing, summaries and handoff so the right person receives the right request.",
-    result:
-      "Customer conversations become easier to manage and follow up.",
-    Icon: MessageCircle,
-    ...problemAccents.handoff,
-  },
-  {
-    id: "visibility",
-    title: "Owners cannot see what is happening",
-    problem:
-      "Leads, appointment requests and follow-up status are spread across messages and spreadsheets.",
-    solution:
-      "We build dashboards that show inquiries, requests, status, handoff and follow-up activity.",
-    result:
-      "Owners and managers get a clearer view of customer demand and team response.",
-    Icon: BarChart3,
-    ...problemAccents.visibility,
-  },
-  {
-    id: "credibility",
-    title: "The website does not help customers act",
-    problem:
-      "The site looks outdated, lacks clear service pages or only describes the company without action flows.",
-    solution:
-      "We build websites connected to inquiry, appointment, lead capture, portal or customer support workflows.",
-    result:
-      "The website becomes part of the customer journey, not just a brochure.",
-    Icon: Globe,
-    ...problemAccents.credibility,
-  },
-];
-
-const arProblems: Problem[] = [
-  {
-    id: "response",
-    title: "العملاء ينتظرون طويلاً للإجابات الأساسية",
-    problem:
-      "يكرر الموظفون نفس الإجابات عبر واتساب والمكالمات وإنستغرام ونماذج الموقع والرسائل.",
-    solution:
-      "نبني مساعدين ومسارات استفسار منظمة تجيب عن الأسئلة الشائعة وتجمع التفاصيل الصحيحة.",
-    result:
-      "يحصل العملاء على إجابات أسرع ويتعامل الموظفون مع الطلبات الجدية بسياق أفضل.",
-    Icon: MessageCircle,
-    ...problemAccents.response,
-  },
-  {
-    id: "appointments",
-    title: "طلبات المواعيد غير منظمة",
-    problem:
-      "تصل الطلبات ناقصة، يزيد خطر التداخل، ويقضي الموظفون وقتاً في طرح نفس أسئلة المتابعة.",
-    solution:
-      "نبني مسارات طلب مواعيد تجمع الخدمة والوقت المفضل والفرع وبيانات التواصل والملاحظات قبل التأكيد.",
-    result: "يستقبل الفريق طلبات أوضح ويفهم العملاء الخطوة التالية.",
-    Icon: CalendarCheck,
-    ...problemAccents.appointments,
-  },
-  {
-    id: "leads",
-    title: "العملاء المحتملون يصلون بدون تفاصيل مفيدة",
-    problem:
-      "تصل للوكلاء رسائل عامة بدون ميزانية أو موقع أو نوع عقار أو جدول زمني أو تفضيلات.",
-    solution:
-      "نبني مسارات تأهيل لفرق العقارات قبل تحويل العميل إلى الوكيل.",
-    result:
-      "يقضي الوكلاء وقتاً أقل في جمع المعلومات الأساسية ووقتاً أكثر مع العملاء الجديين.",
-    Icon: UserCheck,
-    ...problemAccents.leads,
-  },
-  {
-    id: "handoff",
-    title: "محادثات واتساب صعبة التنظيم",
-    problem:
-      "يرد أشخاص مختلفون من أماكن مختلفة وقد تضيع الطلبات المهمة أو تُنسى.",
-    solution:
-      "ننظم استقبال الطلبات والتوجيه والملخصات والتحويل حتى يصل الطلب إلى الشخص الصحيح.",
-    result: "تصبح محادثات العملاء أسهل في الإدارة والمتابعة.",
-    Icon: MessageCircle,
-    ...problemAccents.handoff,
-  },
-  {
-    id: "visibility",
-    title: "المالكون لا يرون ما يحدث بوضوح",
-    problem:
-      "العملاء المحتملون وطلبات المواعيد وحالة المتابعة متفرقة بين الرسائل والجداول.",
-    solution:
-      "نبني لوحات تحكم تعرض الاستفسارات والطلبات والحالة والتحويل ونشاط المتابعة.",
-    result:
-      "يحصل المالكون والمديرون على رؤية أوضح لطلب العملاء واستجابة الفريق.",
-    Icon: BarChart3,
-    ...problemAccents.visibility,
-  },
-  {
-    id: "credibility",
-    title: "الموقع لا يساعد العملاء على اتخاذ إجراء",
-    problem:
-      "الموقع قديم أو لا يحتوي صفحات خدمات واضحة أو يصف الشركة فقط بدون مسارات فعل.",
-    solution:
-      "نبني مواقع مرتبطة بالاستفسارات أو المواعيد أو جمع بيانات العملاء المحتملين أو البوابات أو دعم العملاء.",
-    result: "يصبح الموقع جزءاً من رحلة العميل وليس مجرد بروشور.",
-    Icon: Globe,
-    ...problemAccents.credibility,
-  },
-];
 
 const copy: Record<string, IndustriesCopy> = {
   en: {
-    eyebrow: "Primary industries",
-    title: "Practical systems for inquiry-heavy businesses",
+    eyebrow: "Built for your workflow",
+    title: "Software and automation for teams that cannot afford slow follow-up",
     body:
-      "Servicely builds customer-flow software for clinics, real estate teams, automotive businesses and home service teams that need clearer intake, handoff and follow-up.",
+      "We focus on construction and trades, dental and medical clinics, and independent car dealerships—three industries where a missed message can become a missed job, appointment, or sale.",
     support:
-      "We start with the real customer journey: inquiry, booking, qualification, handoff, follow-up and visibility.",
-    cta: "Request a scope",
+      "Each solution can combine custom software, AI-assisted workflows, WhatsApp automation, integrations, and reporting around the way your team already operates.",
+    cta: "Map one workflow",
     ctaHref: "/contact",
     metrics: [
-      { value: "12", label: "practical use cases mapped to real customer problems" },
-      { value: "4", label: "primary industries with dedicated workflows" },
-      { value: "1", label: "connected path from inquiry to follow-up" },
+      { value: "Capture", label: "Collect the details your team needs" },
+      { value: "Follow up", label: "Keep every lead and next action visible" },
+      { value: "Operate", label: "Connect staff, systems, and reporting" },
     ],
-    sectionTitle: "Where Servicely fits",
+    sectionTitle: "Three industries with different operating realities",
     sectionBody:
-      "Clinics need appointment clarity. Real estate agencies need better-qualified leads. Automotive teams need cleaner vehicle and service requests. Field service teams need scheduling and job follow-up that customers can understand.",
-    closingTitle: "Build the customer system your team can actually use",
+      "A contractor prices work, a clinic manages appointments, and a dealership moves buyers toward the right vehicle. The system should reflect those differences.",
+    closingTitle: "Start with one lead, booking, or job",
     closingBody:
-      "Bring your appointment process, property inquiry flow, WhatsApp messages, website, forms or follow-up spreadsheet. We will map the simplest useful system and build it cleanly.",
+      "Walk us through a recent request from the first message to the final outcome. We will identify what should stay human, what can be automated, and what belongs in a focused first release.",
     closingChecklist: [
-      "Clinic appointment intake and patient inquiry routing",
-      "Real estate property matching and lead qualification",
-      "Automotive inquiries, service intake and quote follow-up",
-      "Home and field service requests, scheduling and job status",
-      "WhatsApp intake, handoff and follow-up workflows",
-      "Business websites, apps, portals and dashboards",
+      "One recent lead, booking, quote, or job",
+      "The channels and tools involved today",
+      "The people who own each decision and handoff",
+      "The response, status, or report you need at the end",
     ],
-    helpsWithLabel: "We help with",
+    useCasesClosingTitle: "See a familiar bottleneck? Let us scope it around your process",
+    useCasesClosingBody:
+      "Use these examples as a starting point, not a fixed package. We adapt the conversation, rules, human review, integrations, and reporting to your operation.",
+    useCasesClosingChecklist: [
+      "Share one real message thread or request",
+      "Point out where the delay or repeated work begins",
+      "Choose the first outcome worth improving",
+      "Receive a practical first-release direction",
+    ],
+    helpsWithLabel: "Common priorities",
     viewUseCasesLabel: "View use cases",
-    useCasesHeroEyebrow: "Real use cases",
-    useCasesHeroTitle: "Twelve customer problems we turn into working systems",
+    useCasesHeroEyebrow: "Practical use cases",
+    useCasesHeroTitle: "Find the workflow that looks most like yours",
     useCasesHeroBody:
-      "Four primary industries, each with three practical customer-flow use cases.",
-    problemsEyebrow: "Common problems",
-    problemsTitle: "You do not need digital tools for decoration",
-    problemsBody:
-      "You need systems that remove confusion, save time and help customers take the next step.",
+      "See how custom software, AI automation, WhatsApp, and connected follow-up can support the specific work your team handles every day.",
     problemsLabels: {
-      problem: "Problem",
-      solution: "Solution",
-      result: "Result",
+      problem: "Where work breaks down",
+      solution: "What we can build",
+      result: "What this enables",
     },
-    industriesEyebrow: "Where this applies",
-    industriesShortTitle: "Built for inquiry-heavy businesses",
-    industriesShortBody:
-      "Clinics, real estate teams, automotive businesses and field service teams need clearer intake, faster response and better follow-up.",
     detail: {
       backLabel: "All industries",
-      exploreLabel: "Explore use cases",
-      learnMore: "Learn more",
-      overviewLabel: "Overview",
-      benefitsTitle: "What you get",
-      useCasesTitle: "Use cases",
-      useCasesBody: "Practical scenarios we build for this type of business.",
-      otherTitle: "Other industries",
     },
-    problems: enProblems,
     industries: [
       {
-        id: "clinics-medical-centers",
-        title: "Clinics & medical centers",
-        subtitle: "Appointment intake, patient inquiries and follow-up",
+        id: "construction-trades",
+        title: "Construction & trades",
+        subtitle: "Lead intake, estimating, job coordination, and follow-up",
         body:
-          "For clinics that need clearer appointment requests, faster answers to basic non-medical questions, and cleaner staff handoff.",
+          "For contractors and trade businesses that need to turn inquiries into priced work and keep the office, crews, and customers aligned.",
         points: [
-          "Appointment request intake",
-          "Patient inquiry routing",
-          "Service and branch information",
-          "After-hours request capture",
-          "Follow-up dashboards",
+          "Quote-ready lead intake",
+          "WhatsApp lead qualification",
+          "Estimate and deposit follow-up",
+          "Crew scheduling and job updates",
+          "Internal job portals and dashboards",
         ],
-        tags: ["Appointments", "Patients", "WhatsApp", "Follow-up"],
+        tags: ["Leads", "Quotes", "Jobs", "Crews"],
         outcome:
-          "Patients send clearer requests, staff receive better context, and follow-up becomes visible.",
+          "Collect better job details, respond with context, and keep every quote and active job moving toward its next step.",
         useCases: [
           {
-            title: "Appointment scheduling and patient intake",
+            title: "Quote-ready lead intake",
             problem:
-              "Patients send vague messages without service, preferred time, branch or contact details.",
+              "New inquiries arrive without the trade, site details, scope, photos, urgency, or timing needed to estimate the work.",
             solution:
-              "A guided flow collects the required details before staff confirm the appointment.",
+              "A website or WhatsApp flow collects the missing details and creates a review-ready summary for the estimator.",
             result:
-              "The clinic receives cleaner requests with fewer back-and-forth messages.",
+              "The team can assess fit, prioritize the request, and prepare the next response with less back-and-forth.",
           },
           {
-            title: "Service inquiry routing",
+            title: "Estimate, approval, and deposit follow-up",
             problem:
-              "Patients ask basic non-medical questions across different channels and often reach the wrong person.",
+              "Quotes are sent, but reminders, customer questions, approvals, and deposits remain scattered across inboxes and chats.",
             solution:
-              "A structured assistant answers routine information and routes the request by service, doctor or branch.",
+              "A follow-up workflow tracks the estimate stage, owner, next action, approval, and deposit status in one view.",
             result:
-              "Patients get faster direction and staff handle requests with better context.",
+              "Sales and operations know which opportunity needs attention and what was promised next.",
           },
           {
-            title: "Follow-up and after-hours tracking",
+            title: "Job handoff, scheduling, and site updates",
             problem:
-              "Requests can be missed when messages arrive after hours or during busy clinic periods.",
+              "Won work is copied into new sheets and chats, while scope changes, crew updates, and site notes become hard to trace.",
             solution:
-              "A dashboard tracks request status, handoff, reminders and pending follow-up.",
-            result: "The team sees what needs attention before requests go cold.",
+              "A custom job workspace connects scope, schedule, crew, site notes, customer updates, and approvals.",
+            result:
+              "Office and field teams share the same current job status without replacing every existing tool at once.",
+          },
+        ],
+        Icon: Building2,
+        ...industryStyle.construction,
+      },
+      {
+        id: "dental-medical-clinics",
+        title: "Dental & medical clinics",
+        subtitle: "Appointment intake, non-clinical conversations, and follow-up",
+        body:
+          "For independent clinics that want faster responses while reducing repetitive front-desk work and keeping staff in control.",
+        points: [
+          "Appointment requests and reminders",
+          "Non-clinical WhatsApp assistants",
+          "Consultation inquiry follow-up",
+          "Administrative intake workflows",
+          "Clinic dashboards and staff portals",
+        ],
+        tags: ["Appointments", "WhatsApp", "Patients", "Follow-up"],
+        outcome:
+          "Give patients a clear next step, capture the context staff need, and keep operational follow-up visible.",
+        useCases: [
+          {
+            title: "Appointment intake, reminders, and rescheduling",
+            problem:
+              "Patients send incomplete requests, and staff repeat the same questions before they can confirm or change an appointment.",
+            solution:
+              "A guided flow captures service, preferred time, contact details, and scheduling notes, then supports configured reminders and rescheduling.",
+            result:
+              "Staff receive more complete requests and patients understand what happens next.",
+          },
+          {
+            title: "WhatsApp front-desk automation",
+            problem:
+              "The front desk repeatedly answers the same non-clinical questions while time-sensitive requests wait in the same queue.",
+            solution:
+              "An approved WhatsApp assistant handles routine service information, collects intent, and hands the conversation to staff when needed.",
+            result:
+              "Routine conversations move faster without asking automation to provide medical advice.",
+          },
+          {
+            title: "Consultation and inquiry follow-up",
+            problem:
+              "Consultation requests, referrals, and pending follow-up are difficult to track once the first conversation ends.",
+            solution:
+              "A lightweight follow-up workspace records the owner, status, next action, and patient communication history.",
+            result:
+              "The team can see which operational follow-up is pending while keeping human review in the process.",
           },
         ],
         Icon: HeartPulse,
         ...industryStyle.clinics,
       },
       {
-        id: "real-estate-agencies",
-        title: "Real estate agencies",
-        subtitle: "Property matching, qualified leads and viewing handoff",
+        id: "independent-car-dealerships",
+        title: "Independent car dealerships",
+        subtitle: "Inventory inquiries, test drives, trade-ins, and sales follow-up",
         body:
-          "For agencies that need cleaner property inquiries, better-qualified buyers or renters, viewing requests and agent follow-up.",
-        points: [
-          "Property matching flows",
-          "Buyer/renter qualification",
-          "Viewing request intake",
-          "Agent handoff",
-          "Lead follow-up dashboards",
-        ],
-        tags: ["Matching", "Leads", "Viewings", "Agents"],
-        outcome:
-          "Agents receive leads with budget, area, property type, timeline and viewing preference.",
-        useCases: [
-          {
-            title: "Property matching",
-            problem:
-              "Buyers and renters ask broadly without budget, area, property type, bedrooms or timeline.",
-            solution:
-              "A matching flow collects preferences before suggesting relevant listings or handing the lead to an agent.",
-            result:
-              "Agents start with a clearer buyer or renter profile.",
-          },
-          {
-            title: "Lead qualification and follow-up",
-            problem:
-              "Agents receive incomplete leads and lose track of who needs the next message or call.",
-            solution:
-              "A qualification workflow tracks budget, area, type, urgency, source, status and next action.",
-            result:
-              "The agency can prioritize serious leads and follow up consistently.",
-          },
-          {
-            title: "Viewing scheduling and agent handoff",
-            problem:
-              "Viewing requests require repeated manual coordination between customer availability, property details and agent assignment.",
-            solution:
-              "A viewing flow collects the property, preferred time, contact details and availability before routing the request.",
-            result:
-              "Scheduling becomes clearer for customers and agents.",
-          },
-        ],
-        Icon: Building2,
-        ...industryStyle.realEstate,
-      },
-      {
-        id: "automotive-mobility",
-        title: "Automotive & mobility",
-        subtitle: "Vehicle inquiries, service intake and quote follow-up",
-        body:
-          "For dealerships, rental teams, garages and mobility businesses that need clearer vehicle requests, service bookings, branch routing and follow-up.",
+          "For independent dealers that need to respond across lead sources, qualify buyer intent, and keep every salesperson's next action visible.",
         points: [
           "Vehicle inquiry qualification",
+          "WhatsApp sales conversations",
           "Test-drive scheduling",
-          "Service appointment intake",
-          "Branch routing",
-          "Quote and availability follow-up",
+          "Trade-in and finance intake",
+          "Sales pipelines and inventory tools",
         ],
-        tags: ["Vehicles", "Service", "Quotes", "Follow-up"],
+        tags: ["Inventory", "Buyers", "Trade-ins", "Follow-up"],
         outcome:
-          "Teams receive inquiries with vehicle, budget, service need, branch and timing details.",
+          "Route better-qualified vehicle inquiries to the right salesperson and follow each opportunity through its next action.",
         useCases: [
           {
-            title: "Vehicle inquiry qualification and test-drive scheduling",
+            title: "Vehicle inquiry qualification and routing",
             problem:
-              "Buyers ask about vehicles without model, budget, financing, trade-in, location or timing details.",
+              "Leads arrive from multiple sources with little context about the vehicle, budget, financing, trade-in, or purchase timing.",
             solution:
-              "A qualification flow collects vehicle interest, budget, timeline, branch, contact details and test-drive preference.",
+              "A connected intake flow captures buyer intent, matches the inquiry to inventory, and routes it with a concise summary.",
             result:
-              "Sales teams receive clearer leads and schedule serious test drives faster.",
+              "Salespeople begin with useful context and managers can see where each lead came from.",
           },
           {
-            title: "Service appointment intake and branch routing",
+            title: "Test-drive and trade-in intake",
             problem:
-              "Service requests arrive without vehicle details, issue, urgency or preferred branch.",
+              "Booking a test drive or evaluating a trade-in requires repeated messages to collect availability and vehicle details.",
             solution:
-              "An intake flow collects make, model, year, issue, photos if needed, preferred time and branch.",
+              "A guided conversation collects the preferred vehicle and time plus trade-in details, photos, and contact information when relevant.",
             result:
-              "Advisors can route and prepare service requests before the customer arrives.",
+              "The salesperson receives a structured request and the buyer gets a clear next step.",
           },
           {
-            title: "Quote, rental or availability follow-up",
+            title: "WhatsApp lead follow-up and sales pipeline",
             problem:
-              "Customers ask for quotes, rental availability or stock updates and follow-up gets lost in WhatsApp.",
+              "Promising buyers go quiet because follow-up timing, ownership, and conversation history live across individual inboxes.",
             solution:
-              "A follow-up workflow tracks quote status, availability, customer preference and next action.",
+              "A follow-up workflow schedules configured messages, records responses, and returns active conversations to a salesperson.",
             result:
-              "Teams follow up consistently and fewer high-intent inquiries go cold.",
+              "The team follows up consistently while people remain responsible for the sales conversation.",
           },
         ],
         Icon: CarFront,
-        ...industryStyle.automotive,
-      },
-      {
-        id: "home-field-services",
-        title: "Home & field services",
-        subtitle: "Service requests, scheduling and job follow-up",
-        body:
-          "For maintenance, repair, cleaning, installation and field teams that need cleaner requests, quote details, scheduling and customer updates.",
-        points: [
-          "Service request triage",
-          "Quote intake",
-          "Technician or crew assignment",
-          "Job status tracking",
-          "Post-service follow-up",
-        ],
-        tags: ["Requests", "Quotes", "Scheduling", "Status"],
-        outcome:
-          "Teams get clearer job details before dispatch and customers know the next step.",
-        useCases: [
-          {
-            title: "Service request triage and quote intake",
-            problem:
-              "Customers ask for help without explaining the service type, location, photos, urgency or expected scope.",
-            solution:
-              "A triage flow collects job category, location, details, media, preferred timing and quote requirements.",
-            result:
-              "Teams can price, prioritize and route requests with fewer repeated questions.",
-          },
-          {
-            title: "Scheduling and technician or crew assignment",
-            problem:
-              "Scheduling depends on scattered messages between customers, coordinators and technicians.",
-            solution:
-              "A scheduling workflow captures availability, location, job type and crew capacity before assignment.",
-            result:
-              "Coordinators assign work faster and customers receive clearer appointment windows.",
-          },
-          {
-            title: "Job status, approval and post-service follow-up",
-            problem:
-              "Customers ask for updates, approvals and next steps while job status sits in chats or spreadsheets.",
-            solution:
-              "A status workflow tracks visit outcome, required approval, next action, payment note and follow-up.",
-            result:
-              "Managers see job progress and customers are not left guessing.",
-          },
-        ],
-        Icon: Wrench,
-        ...industryStyle.fieldServices,
+        ...industryStyle.dealerships,
       },
     ],
   },
   ar: {
-    eyebrow: "القطاعات الأساسية",
-    title: "أنظمة عملية للشركات التي تعتمد على الاستفسارات",
+    eyebrow: "مصمم وفق سير عملك",
+    title: "برمجيات وأتمتة لفرق لا تحتمل بطء المتابعة",
     body:
-      "تبني Servicely برمجيات لتنظيم تدفق العملاء للعيادات وشركات العقارات وقطاع السيارات وفرق الخدمات الميدانية التي تحتاج استقبالاً وتحويلاً ومتابعة أكثر وضوحاً.",
+      "نركز على شركات المقاولات والخدمات الفنية، وعيادات الأسنان والعيادات الطبية، ومعارض السيارات المستقلة؛ وهي قطاعات قد تعني فيها الرسالة الضائعة خسارة مشروع أو موعد أو صفقة.",
     support:
-      "نبدأ من رحلة العميل الفعلية: الاستفسار، الحجز، التأهيل، التحويل، المتابعة، والرؤية الواضحة.",
-    cta: "اطلب نطاقاً واضحاً",
+      "يمكن أن يجمع الحل بين البرمجيات المخصصة، وسير العمل المدعوم بالذكاء الاصطناعي، وأتمتة واتساب، والتكاملات، والتقارير وفق طريقة عمل فريقك.",
+    cta: "ارسم سير عمل واحداً معنا",
     ctaHref: "/contact",
     metrics: [
-      { value: "12", label: "حالة استخدام عملية مبنية على مشكلات عملاء حقيقية" },
-      { value: "4", label: "قطاعات أساسية مع مسارات عمل مخصصة" },
-      { value: "1", label: "مسار متصل من الاستفسار إلى المتابعة" },
+      { value: "استقبال", label: "اجمع التفاصيل التي يحتاجها الفريق" },
+      { value: "متابعة", label: "أبقِ كل عميل والخطوة التالية واضحين" },
+      { value: "تشغيل", label: "اربط الفريق والأنظمة والتقارير" },
     ],
-    sectionTitle: "أين يمكن أن تساعدك Servicely؟",
+    sectionTitle: "ثلاثة قطاعات بطرق تشغيل مختلفة",
     sectionBody:
-      "تحتاج العيادات إلى مواعيد أوضح. وتحتاج شركات العقارات إلى عملاء محتملين مؤهلين بشكل أفضل. وتحتاج فرق السيارات إلى استفسارات مركبات وخدمات أنظف. وتحتاج فرق الخدمات الميدانية إلى جدولة ومتابعة حالة يفهمها العميل.",
-    closingTitle: "ابنِ نظام العملاء الذي يستطيع فريقك استخدامه فعلاً",
+      "تسعّر شركة المقاولات عملاً، وتنظم العيادة المواعيد، ويوجّه معرض السيارات المشتري إلى المركبة المناسبة. يجب أن يعكس النظام هذه الفروقات.",
+    closingTitle: "ابدأ بعميل أو موعد أو مشروع واحد",
     closingBody:
-      "شارك معنا مسار المواعيد أو استفسارات العقارات أو رسائل واتساب أو الموقع أو النماذج أو جدول المتابعة. سنرسم أبسط نظام مفيد، ثم نبنيه بطريقة واضحة.",
+      "راجع معنا طلباً حديثاً من أول رسالة حتى النتيجة. سنحدد ما يجب أن يبقى بيد الفريق، وما يمكن أتمتته، وما يستحق الدخول في الإصدار الأول.",
     closingChecklist: [
-      "استقبال مواعيد العيادات وتوجيه استفسارات المرضى",
-      "مطابقة العقارات وتأهيل العملاء المحتملين",
-      "استفسارات السيارات واستقبال الصيانة ومتابعة العروض",
-      "طلبات الخدمات المنزلية والميدانية والجدولة وحالة العمل",
-      "مسارات واتساب للاستقبال والتحويل والمتابعة",
-      "مواقع أعمال وتطبيقات وبوابات ولوحات تحكم",
+      "عميل أو موعد أو عرض سعر أو مشروع حديث",
+      "القنوات والأدوات المستخدمة اليوم",
+      "المسؤولون عن كل قرار ونقطة تحويل",
+      "الاستجابة أو الحالة أو التقرير المطلوب في النهاية",
     ],
-    helpsWithLabel: "نساعد في",
+    useCasesClosingTitle: "هل وجدت نقطة تعطّل مألوفة؟ لنحددها وفق عمليتك",
+    useCasesClosingBody:
+      "استخدم هذه الأمثلة كنقطة بداية لا كحزمة ثابتة. نكيّف المحادثة والقواعد والمراجعة البشرية والتكاملات والتقارير مع طريقة عملك.",
+    useCasesClosingChecklist: [
+      "شارك محادثة أو طلباً حقيقياً",
+      "حدد أين يبدأ التأخير أو العمل المتكرر",
+      "اختر أول نتيجة تستحق التحسين",
+      "احصل على اتجاه عملي للإصدار الأول",
+    ],
+    helpsWithLabel: "الأولويات الشائعة",
     viewUseCasesLabel: "شاهد حالات الاستخدام",
     useCasesHeroEyebrow: "حالات استخدام عملية",
-    useCasesHeroTitle: "اثنتا عشرة مشكلة عملاء نحولها إلى أنظمة تعمل",
+    useCasesHeroTitle: "اختر سير العمل الأقرب إلى واقع فريقك",
     useCasesHeroBody:
-      "أربعة قطاعات أساسية، ولكل قطاع ثلاث حالات استخدام عملية لتنظيم تدفق العملاء.",
-    problemsEyebrow: "مشكلات شائعة",
-    problemsTitle: "لا تحتاج أدوات رقمية للزينة",
-    problemsBody:
-      "تحتاج إلى أنظمة تزيل الفوضى، توفر الوقت، وتساعد العملاء على اتخاذ الخطوة التالية.",
+      "شاهد كيف تدعم البرمجيات المخصصة وأتمتة الذكاء الاصطناعي وواتساب والمتابعة المترابطة العمل اليومي لفريقك.",
     problemsLabels: {
-      problem: "المشكلة",
-      solution: "الحل",
-      result: "النتيجة",
+      problem: "أين يتعطل العمل",
+      solution: "ما الذي يمكننا بناءه",
+      result: "ما الذي يتيحه الحل",
     },
-    industriesEyebrow: "أين ينطبق ذلك",
-    industriesShortTitle: "مصمم للشركات التي تعتمد على الاستفسارات",
-    industriesShortBody:
-      "تحتاج العيادات وشركات العقارات وفرق السيارات والخدمات الميدانية إلى استقبال أوضح واستجابة أسرع ومتابعة أفضل.",
     detail: {
       backLabel: "كل القطاعات",
-      exploreLabel: "استكشف حالات الاستخدام",
-      learnMore: "اعرف المزيد",
-      overviewLabel: "نظرة عامة",
-      benefitsTitle: "ما الذي تحصل عليه",
-      useCasesTitle: "حالات الاستخدام",
-      useCasesBody: "سيناريوهات عملية نبنيها لهذا النوع من الأعمال.",
-      otherTitle: "قطاعات أخرى",
     },
-    problems: arProblems,
     industries: [
       {
-        id: "clinics-medical-centers",
-        title: "العيادات والمراكز الطبية",
-        subtitle: "استقبال مواعيد واستفسارات مرضى ومتابعة",
+        id: "construction-trades",
+        title: "المقاولات والخدمات الفنية",
+        subtitle: "استقبال العملاء والتسعير وتنسيق المشاريع والمتابعة",
         body:
-          "للعيادات التي تحتاج إلى طلبات مواعيد أوضح، إجابات أسرع عن الأسئلة الأساسية غير الطبية، وتحويل أنظف للطلبات إلى الموظفين.",
+          "لشركات المقاولات والخدمات الفنية التي تريد تحويل الاستفسارات إلى أعمال مسعّرة، مع إبقاء المكتب والفرق والعملاء على صورة واحدة.",
         points: [
-          "استقبال طلبات المواعيد",
-          "توجيه استفسارات المرضى",
-          "معلومات الخدمات والفروع",
-          "استقبال الطلبات خارج الدوام",
-          "لوحات متابعة",
+          "استقبال طلبات جاهزة للتسعير",
+          "تأهيل العملاء عبر واتساب",
+          "متابعة العروض والدفعات المقدمة",
+          "جدولة الفرق وتحديثات المشروع",
+          "بوابات داخلية ولوحات متابعة",
         ],
-        tags: ["مواعيد", "مرضى", "واتساب", "متابعة"],
+        tags: ["عملاء", "عروض", "مشاريع", "فرق"],
         outcome:
-          "يرسل المرضى طلبات أوضح، ويستقبل الموظفون سياقاً أفضل، وتصبح المتابعة مرئية.",
+          "اجمع تفاصيل أفضل، واستجب بسياق واضح، وأبقِ كل عرض ومشروع نشط متجهاً نحو خطوته التالية.",
         useCases: [
           {
-            title: "جدولة المواعيد واستقبال بيانات المرضى",
+            title: "استقبال طلبات جاهزة للتسعير",
             problem:
-              "يرسل المرضى رسائل غامضة بدون خدمة أو وقت مفضل أو فرع أو بيانات تواصل.",
+              "تصل الاستفسارات من دون نوع العمل أو تفاصيل الموقع أو النطاق أو الصور أو درجة الاستعجال أو التوقيت المطلوب.",
             solution:
-              "يجمع مسار واضح التفاصيل المطلوبة قبل تأكيد الموظفين للموعد.",
+              "يجمع مسار عبر الموقع أو واتساب التفاصيل الناقصة وينتج ملخصاً منظماً يراجعه مسؤول التسعير.",
             result:
-              "تستقبل العيادة طلبات أنظف مع رسائل متابعة أقل.",
+              "يستطيع الفريق تقييم الملاءمة وترتيب الطلب وتجهيز الرد التالي بأسئلة متكررة أقل.",
           },
           {
-            title: "توجيه استفسارات الخدمات",
+            title: "متابعة العرض والموافقة والدفعة المقدمة",
             problem:
-              "يسأل المرضى أسئلة أساسية غير طبية عبر قنوات مختلفة وقد يصلون إلى الشخص غير المناسب.",
+              "تُرسل عروض الأسعار، لكن التذكيرات وأسئلة العميل والموافقات والدفعات تبقى موزعة بين الرسائل والمحادثات.",
             solution:
-              "يجيب مساعد منظم عن المعلومات الروتينية ويوجه الطلب حسب الخدمة أو الطبيب أو الفرع.",
+              "يتتبع سير متابعة واحد مرحلة العرض والمسؤول والخطوة التالية والموافقة وحالة الدفعة المقدمة.",
             result:
-              "يحصل المرضى على توجيه أسرع ويتعامل الموظفون مع الطلبات بسياق أفضل.",
+              "يعرف فريقا المبيعات والتشغيل أي فرصة تحتاج إلى إجراء وما الذي وُعد به العميل.",
           },
           {
-            title: "المتابعة وتتبع الطلبات خارج الدوام",
+            title: "تحويل المشروع والجدولة وتحديثات الموقع",
             problem:
-              "قد تضيع الطلبات عندما تصل خارج الدوام أو خلال فترات ازدحام العيادة.",
+              "تُنقل المشاريع الجديدة إلى جداول ومحادثات أخرى، فيصعب تتبع تغييرات النطاق وتحديثات الفرق وملاحظات الموقع.",
             solution:
-              "تتبع لوحة الطلبات الحالة والتحويل والتذكيرات والمتابعة المعلقة.",
+              "تربط مساحة عمل مخصصة النطاق والجدول والفريق وملاحظات الموقع وتحديثات العميل والموافقات.",
             result:
-              "يرى الفريق ما يحتاج انتباهاً قبل أن تبرد الطلبات.",
+              "يشترك المكتب والفرق الميدانية في حالة محدثة من دون استبدال جميع الأدوات الحالية دفعة واحدة.",
+          },
+        ],
+        Icon: Building2,
+        ...industryStyle.construction,
+      },
+      {
+        id: "dental-medical-clinics",
+        title: "عيادات الأسنان والعيادات الطبية",
+        subtitle: "استقبال المواعيد والمحادثات غير الطبية والمتابعة",
+        body:
+          "للعيادات المستقلة التي تريد استجابة أسرع مع تقليل العمل المتكرر على مكتب الاستقبال وإبقاء القرار بيد الموظفين.",
+        points: [
+          "طلبات المواعيد والتذكيرات",
+          "مساعد واتساب للأسئلة الإدارية غير الطبية",
+          "متابعة طلبات الاستشارة",
+          "مسارات الاستقبال الإداري",
+          "لوحات للعيادة وبوابات للموظفين",
+        ],
+        tags: ["مواعيد", "واتساب", "مرضى", "متابعة"],
+        outcome:
+          "امنح المريض خطوة تالية واضحة، واجمع السياق الذي يحتاجه الموظفون، وأظهر المتابعة التشغيلية بوضوح.",
+        useCases: [
+          {
+            title: "استقبال المواعيد والتذكير وإعادة الجدولة",
+            problem:
+              "يرسل المرضى طلبات ناقصة ويكرر الموظفون الأسئلة نفسها قبل تأكيد الموعد أو تغييره.",
+            solution:
+              "يجمع مسار موجّه الخدمة والوقت المفضل وبيانات التواصل وملاحظات الجدولة، ثم يدعم التذكيرات وإعادة الجدولة وفق إعدادات العيادة.",
+            result:
+              "يستقبل الموظفون طلبات أكثر اكتمالاً ويفهم المرضى الخطوة التالية.",
+          },
+          {
+            title: "أتمتة مكتب الاستقبال عبر واتساب",
+            problem:
+              "يجيب مكتب الاستقبال مراراً عن الأسئلة غير الطبية نفسها بينما تنتظر الطلبات الحساسة للوقت في المحادثة ذاتها.",
+            solution:
+              "يتعامل مساعد واتساب مع معلومات الخدمات المعتمدة، ويحدد غرض المحادثة، ثم يحولها إلى الموظف عند الحاجة.",
+            result:
+              "تتحرك المحادثات الروتينية أسرع من دون استخدام الأتمتة لتقديم نصيحة طبية.",
+          },
+          {
+            title: "متابعة طلبات الاستشارة والاستفسارات",
+            problem:
+              "يصعب تتبع طلبات الاستشارة والإحالات والمتابعة المعلقة بعد انتهاء المحادثة الأولى.",
+            solution:
+              "تسجل مساحة متابعة خفيفة المسؤول والحالة والخطوة التالية وسجل التواصل مع المريض.",
+            result:
+              "يرى الفريق المتابعة التشغيلية المعلقة مع إبقاء المراجعة البشرية ضمن المسار.",
           },
         ],
         Icon: HeartPulse,
         ...industryStyle.clinics,
       },
       {
-        id: "real-estate-agencies",
-        title: "شركات العقارات",
-        subtitle: "مطابقة عقارات وعملاء مؤهلون وتحويل معاينات",
+        id: "independent-car-dealerships",
+        title: "معارض السيارات المستقلة",
+        subtitle:
+          "استفسارات المخزون وتجارب القيادة واستبدال السيارة ومتابعة المبيعات",
         body:
-          "لشركات العقارات التي تحتاج إلى استفسارات عقارية أوضح، تأهيل أفضل للمشترين أو المستأجرين، طلبات معاينة، ومتابعة للوكلاء.",
-        points: [
-          "مسارات مطابقة عقارات",
-          "تأهيل مشتري أو مستأجر",
-          "استقبال طلبات المعاينة",
-          "تحويل إلى الوكيل",
-          "لوحات متابعة العملاء",
-        ],
-        tags: ["مطابقة", "عملاء", "معاينات", "وكلاء"],
-        outcome:
-          "يستقبل الوكلاء عملاء محتملين مع ميزانية ومنطقة ونوع عقار وجدول زمني وتفضيل معاينة.",
-        useCases: [
-          {
-            title: "مطابقة العقارات",
-            problem:
-              "يسأل المشترون والمستأجرون بشكل عام بدون ميزانية أو منطقة أو نوع عقار أو عدد غرف أو جدول زمني.",
-            solution:
-              "يجمع مسار المطابقة التفضيلات قبل اقتراح عقارات مناسبة أو تحويل العميل إلى الوكيل.",
-            result:
-              "يبدأ الوكلاء بملف أوضح للمشتري أو المستأجر.",
-          },
-          {
-            title: "تأهيل العملاء المحتملين والمتابعة",
-            problem:
-              "يستقبل الوكلاء عملاء محتملين بتفاصيل ناقصة ويصعب تتبع من يحتاج الرسالة أو المكالمة التالية.",
-            solution:
-              "يتتبع مسار التأهيل الميزانية والمنطقة والنوع والاستعجال والمصدر والحالة والخطوة التالية.",
-            result:
-              "تستطيع الشركة ترتيب العملاء المحتملين الجادين ومتابعتهم بثبات.",
-          },
-          {
-            title: "جدولة المعاينات وتحويلها للوكيل",
-            problem:
-              "تحتاج طلبات المعاينة إلى تنسيق يدوي متكرر بين توفر العميل وتفاصيل العقار وتعيين الوكيل.",
-            solution:
-              "يجمع مسار المعاينة العقار والوقت المفضل وبيانات التواصل والتوفر قبل توجيه الطلب.",
-            result:
-              "تصبح الجدولة أوضح للعملاء والوكلاء.",
-          },
-        ],
-        Icon: Building2,
-        ...industryStyle.realEstate,
-      },
-      {
-        id: "automotive-mobility",
-        title: "السيارات وخدمات التنقل",
-        subtitle: "استفسارات مركبات واستقبال صيانة ومتابعة عروض",
-        body:
-          "للوكلاء وشركات التأجير ومراكز الصيانة وشركات التنقل التي تحتاج إلى طلبات مركبات أوضح، حجوزات خدمة، توجيه للفروع، ومتابعة.",
+          "للمعارض المستقلة التي تريد الاستجابة عبر مصادر العملاء المختلفة، وتأهيل نية الشراء، وإظهار الخطوة التالية لكل مسؤول مبيعات.",
         points: [
           "تأهيل استفسارات المركبات",
-          "جدولة تجربة القيادة",
-          "استقبال مواعيد الصيانة",
-          "توجيه الطلب حسب الفرع",
-          "متابعة العروض والتوفر",
+          "محادثات المبيعات عبر واتساب",
+          "جدولة تجارب القيادة",
+          "استقبال بيانات استبدال السيارة والتمويل",
+          "مسارات مبيعات وأدوات مخزون",
         ],
-        tags: ["مركبات", "صيانة", "عروض", "متابعة"],
+        tags: ["مخزون", "مشترون", "استبدال", "متابعة"],
         outcome:
-          "يستقبل الفريق استفسارات تتضمن المركبة والميزانية واحتياج الخدمة والفرع والتوقيت.",
+          "وجّه استفسارات أوضح إلى مسؤول المبيعات المناسب وتابع كل فرصة حتى خطوتها التالية.",
         useCases: [
           {
-            title: "تأهيل استفسارات المركبات وجدولة تجربة القيادة",
+            title: "تأهيل استفسارات المركبات وتوجيهها",
             problem:
-              "يسأل المشترون عن المركبات بدون تحديد الموديل أو الميزانية أو التمويل أو البدل أو الموقع أو التوقيت.",
+              "تصل طلبات العملاء المحتملين من مصادر متعددة مع سياق محدود حول المركبة أو الميزانية أو التمويل أو استبدال السيارة أو توقيت الشراء.",
             solution:
-              "يجمع مسار التأهيل المركبة المطلوبة والميزانية والجدول الزمني والفرع وبيانات التواصل وتفضيل تجربة القيادة.",
+              "يجمع مسار مترابط نية المشتري ويربط الاستفسار بالمخزون ويوجهه مع ملخص واضح.",
             result:
-              "يستقبل فريق المبيعات استفسارات أوضح ويجدول تجارب القيادة الجادة بشكل أسرع.",
+              "يبدأ مسؤول المبيعات بسياق مفيد ويرى المدير مصدر كل فرصة وحالتها.",
           },
           {
-            title: "استقبال مواعيد الصيانة وتوجيهها للفروع",
+            title: "تجربة القيادة واستقبال بيانات استبدال السيارة",
             problem:
-              "تصل طلبات الصيانة بدون تفاصيل المركبة أو المشكلة أو درجة الاستعجال أو الفرع المفضل.",
+              "تحتاج جدولة تجربة القيادة أو تقييم السيارة المقدمة للاستبدال إلى رسائل متكررة لجمع التوفر وتفاصيل المركبة.",
             solution:
-              "يجمع مسار الاستقبال نوع المركبة والموديل والسنة والمشكلة والصور عند الحاجة والوقت والفرع المفضل.",
+              "تجمع محادثة موجّهة المركبة والوقت المفضل، إضافة إلى تفاصيل السيارة المقدمة للاستبدال وصورها وبيانات التواصل عند الحاجة.",
             result:
-              "يستطيع مستشارو الخدمة توجيه الطلبات وتجهيزها قبل وصول العميل.",
+              "يستقبل مسؤول المبيعات طلباً منظماً ويحصل المشتري على خطوة تالية واضحة.",
           },
           {
-            title: "متابعة العروض أو التأجير أو التوفر",
+            title: "متابعة العملاء عبر واتساب ومسار المبيعات",
             problem:
-              "يسأل العملاء عن عروض أو توفر تأجير أو مخزون، ثم تضيع المتابعة داخل واتساب.",
+              "تتوقف فرص واعدة لأن توقيت المتابعة والمسؤول وسجل المحادثة موزعة بين صناديق رسائل فردية.",
             solution:
-              "يتتبع سير المتابعة حالة العرض والتوفر وتفضيلات العميل والخطوة التالية.",
+              "يجدول سير المتابعة رسائل محددة مسبقاً، ويسجل الردود، ويعيد المحادثات النشطة إلى مسؤول المبيعات.",
             result:
-              "يتابع الفريق بثبات ولا تبرد الاستفسارات الجادة.",
+              "يتابع الفريق بثبات مع بقاء مسؤولية محادثة البيع بيد الأشخاص.",
           },
         ],
         Icon: CarFront,
-        ...industryStyle.automotive,
-      },
-      {
-        id: "home-field-services",
-        title: "الخدمات المنزلية والميدانية",
-        subtitle: "طلبات خدمة وجدولة ومتابعة حالة العمل",
-        body:
-          "لشركات الصيانة والإصلاح والتنظيف والتركيب والفرق الميدانية التي تحتاج إلى طلبات أوضح، تفاصيل عروض أسعار، جدولة، وتحديثات للعملاء.",
-        points: [
-          "فرز طلبات الخدمة",
-          "استقبال تفاصيل عرض السعر",
-          "تعيين فني أو فريق",
-          "تتبع حالة العمل",
-          "متابعة ما بعد الخدمة",
-        ],
-        tags: ["طلبات", "عروض", "جدولة", "حالة"],
-        outcome:
-          "يحصل الفريق على تفاصيل أوضح قبل الإرسال ويعرف العميل الخطوة التالية.",
-        useCases: [
-          {
-            title: "فرز طلبات الخدمة واستقبال تفاصيل عرض السعر",
-            problem:
-              "يطلب العملاء الخدمة بدون توضيح النوع أو الموقع أو الصور أو درجة الاستعجال أو نطاق العمل المتوقع.",
-            solution:
-              "يجمع مسار الفرز نوع العمل والموقع والتفاصيل والوسائط والوقت المفضل ومتطلبات عرض السعر.",
-            result:
-              "يستطيع الفريق التسعير وترتيب الأولويات وتوجيه الطلبات بأسئلة متابعة أقل.",
-          },
-          {
-            title: "الجدولة وتعيين الفني أو الفريق",
-            problem:
-              "تعتمد الجدولة على رسائل متفرقة بين العملاء والمنسقين والفنيين.",
-            solution:
-              "يلتقط سير الجدولة التوفر والموقع ونوع العمل وسعة الفريق قبل التعيين.",
-            result:
-              "يعين المنسقون العمل أسرع ويحصل العملاء على نافذة موعد أوضح.",
-          },
-          {
-            title: "حالة العمل والموافقة والمتابعة بعد الخدمة",
-            problem:
-              "يسأل العملاء عن التحديثات والموافقات والخطوات التالية بينما تبقى حالة العمل في المحادثات أو الجداول.",
-            solution:
-              "يتتبع سير الحالة نتيجة الزيارة والموافقة المطلوبة والخطوة التالية وملاحظة الدفع والمتابعة.",
-            result:
-              "يرى المديرون تقدم العمل ولا يبقى العملاء بدون وضوح.",
-          },
-        ],
-        Icon: Wrench,
-        ...industryStyle.fieldServices,
+        ...industryStyle.dealerships,
       },
     ],
   },
@@ -775,14 +466,3 @@ const copy: Record<string, IndustriesCopy> = {
 export function getIndustriesCopy(locale: string): IndustriesCopy {
   return copy[locale] ?? copy.en;
 }
-
-export function getIndustry(
-  locale: string,
-  slug: string
-): Industry | undefined {
-  return getIndustriesCopy(locale).industries.find(
-    (industry) => industry.id === slug
-  );
-}
-
-export const INDUSTRY_SLUGS = copy.en.industries.map((industry) => industry.id);

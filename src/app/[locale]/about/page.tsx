@@ -4,6 +4,7 @@ import { ArrowRight, BarChart3, Clock3, Code2, Workflow } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -42,6 +43,7 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <main className="bg-white text-neutral-950">
+      <PageStructuredData page="about" locale={locale} />
       <section
         id="about-servicely"
         className="mx-auto max-w-6xl scroll-mt-32 px-5 pb-8 pt-10 md:px-6 md:pb-12 md:pt-14 lg:px-8"

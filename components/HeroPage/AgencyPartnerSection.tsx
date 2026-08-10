@@ -84,7 +84,10 @@ export function HeroWithFloatingImages() {
                     lg:top-[130px] lg:left-[120px] lg:w-[150px] lg:h-[150px]
                   "
                 >
-                  <MetricTile value="98%" label="clean reports" />
+                  <MetricTile
+                    value={t("metricValue")}
+                    label={t("metricLabel")}
+                  />
                 </div>
               </div>
 

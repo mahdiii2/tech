@@ -22,9 +22,9 @@ const CASE_STUDY_KEYS = [
 type CaseStudyKey = (typeof CASE_STUDY_KEYS)[number];
 
 const CASE_STUDY_HREFS: Record<CaseStudyKey, string> = {
-  pricingEngine: "/use-cases#clinics-medical-centers",
-  designSystem: "/use-cases#real-estate-agencies",
-  workflowAutomation: "/use-cases#home-field-services",
+  pricingEngine: "/use-cases#construction-trades",
+  designSystem: "/use-cases#dental-medical-clinics",
+  workflowAutomation: "/use-cases#independent-car-dealerships",
 };
 
 export default function CaseStudySlider() {
@@ -47,14 +47,26 @@ export default function CaseStudySlider() {
   const ctaHref = t("ctaHref");
 
   return (
-    <div className="relative max-w-screen-2xl mx-auto p-4 lg:p-10 lg:pb-0 pb-80">
+    <section className="relative max-w-screen-2xl mx-auto p-4 lg:p-10 lg:pb-0 pb-80">
+      <div className="mx-auto mb-10 max-w-3xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#365fd9]">
+          {t("eyebrow")}
+        </p>
+        <h2 className="mt-3 text-3xl font-semibold text-neutral-950 md:text-4xl">
+          {t("heading")}
+        </h2>
+        <p className="mt-4 text-base leading-7 text-neutral-600">
+          {t("body")}
+        </p>
+      </div>
       <Swiper
         modules={[Pagination, EffectFade, Autoplay]}
         effect="fade"
         loop
         autoplay={{
-          delay: 2000,
+          delay: 6000,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => {
@@ -65,14 +77,16 @@ export default function CaseStudySlider() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.key}>
             <div className="relative flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:items-center h-full lg:pl-10">
-              <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  width={600}
-                  height={450}
-                  className="rounded-2xl shadow-xl max-h-[450px] w-auto object-cover"
-                />
+              <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+                <div className="relative aspect-[4/3] w-full max-w-[600px] overflow-hidden rounded-2xl shadow-xl">
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    sizes="(max-width: 1024px) calc(100vw - 3rem), 600px"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
               <div className="order-2 lg:order-1 flex gap-4 px-4 lg:px-0 mt-2 lg:mt-0 lg:absolute lg:top-6 lg:left-6 z-20">
@@ -96,9 +110,9 @@ export default function CaseStudySlider() {
               </div>
 
               <div className="order-3 lg:order-1 relative space-y-6 px-4 lg:px-10 pt-2 lg:pt-0">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                   {slide.title}
-                </h2>
+                </h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                   {slide.description}
                 </p>
@@ -118,6 +132,6 @@ export default function CaseStudySlider() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }

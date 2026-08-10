@@ -6,8 +6,8 @@
     "closeMenu": "Close navigation menu",
     "menuTitle": "Menu",
     "banner": {
-      "text": "Need a clearer system for inquiries, bookings, leads, or your website?",
-      "cta": "Contact us",
+      "text": "Still tracking leads, jobs, or appointments across WhatsApp and spreadsheets?",
+      "cta": "Map one workflow",
       "ctaHref": "/contact"
     },
     "links": {
@@ -22,62 +22,34 @@
     },
     "serviceCards": {
       "development": {
-        "title": "Analytics, Power BI & AI",
-        "description": "Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights."
+        "title": "Data, reporting & integrations",
+        "description": "Power BI dashboards, operational reporting, data pipelines, and connected business systems."
       },
       "scraping": {
-        "title": "Data scraping",
-        "description": "Structured data collected from websites and public sources, cleaned and delivered for analysis."
+        "title": "AI & workflow automation",
+        "description": "Repeated intake, updates, and internal steps automated with clear rules and human review."
       },
       "automation": {
-        "title": "Websites, apps & portals",
-        "description": "Digital platforms connected to booking, inquiry, and internal workflows."
+        "title": "Custom software, web & mobile",
+        "description": "Websites, web and mobile apps, customer portals, and internal tools built around the work."
       },
       "data": {
-        "title": "WhatsApp automation",
-        "description": "Automatic replies, customer detail collection, team handoff, and follow-up."
-      },
-      "ai": {
-        "title": "AI & customer automation",
-        "description": "Assistants that answer repeated questions, collect requests, and qualify leads."
-      },
-      "web": {
-        "title": "Websites, apps & portals",
-        "description": "Websites and portals connected to real customer actions."
-      },
-      "mobile": {
-        "title": "Mobile apps",
-        "description": "Android and iOS apps for customers, employees, students, patients, and agents."
-      },
-      "whatsapp": {
-        "title": "WhatsApp automation",
-        "description": "Cleaner inquiry flows, intake, handoff, and follow-up."
-      },
-      "reporting": {
-        "title": "Dashboards & visibility",
-        "description": "Lead, appointment, request, branch, and service dashboards."
-      },
-      "support": {
-        "title": "Support & hosting",
-        "description": "Maintenance, monitoring, deployment, backups, and uptime options."
+        "title": "WhatsApp & lead automation",
+        "description": "Structured conversations, qualification, routing, handoff, reminders, and follow-up visibility."
       }
     },
     "industryCards": {
       "clinics": {
-        "title": "Clinics",
-        "description": "Appointment intake, patient inquiries, service routing, and follow-up."
-      },
-      "realEstate": {
-        "title": "Real estate",
-        "description": "Property matching, lead qualification, viewing requests, and agent handoff."
+        "title": "Dental & medical clinics",
+        "description": "Appointment intake, non-clinical patient questions, staff routing, and follow-up."
       },
       "automotive": {
-        "title": "Automotive",
-        "description": "Vehicle inquiries, test drives, service intake, and quote follow-up."
+        "title": "Independent car dealerships",
+        "description": "Inventory inquiries, buyer qualification, test drives, trade-ins, and lead follow-up."
       },
       "fieldServices": {
-        "title": "Field services",
-        "description": "Service requests, quote intake, scheduling, and job follow-up."
+        "title": "Construction & trades",
+        "description": "Estimate and service requests, scheduling, crew handoff, job updates, and follow-up."
       }
     },
     "mobile": {
@@ -87,14 +59,14 @@
   },
   "HomePage": {
     "vision": {
-      "heading": "Customer flow, made clear",
-      "body": "Practical systems for inquiries, bookings, leads, and follow-up for customer-facing teams.",
-      "cta": "Book a Free Consultation",
+      "heading": "Custom software and automation for leads, jobs, and appointments",
+      "body": "For construction companies and skilled trades, dental and medical clinics, and independent car dealerships. Connect websites, WhatsApp, handoffs, scheduling, and reporting in one practical workflow.",
+      "cta": "Map one workflow",
       "ctaHref": "/contact",
       "chips": [
-        "Inquiries",
-        "Bookings",
-        "Follow-up"
+        "Construction & trades",
+        "Dental & medical clinics",
+        "Independent car dealerships"
       ]
     },
     "blueprints": {
@@ -103,299 +75,309 @@
         "contact": "Send project details"
       },
       "development": {
-        "title": "Analytics, Power BI, n8n & AI",
-        "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines, n8n automations and AI-assisted insights.",
-        "learnHref": "/services#development",
+        "title": "Data, reporting & integrations",
+        "description": "Connect spreadsheets, operational systems, and APIs to reliable data flows, Power BI dashboards, and reports your team can use.",
+        "learnHref": "/services#data-reporting",
         "contactHref": "/contact"
       },
       "scraping": {
-        "title": "Data scraping",
-        "description": "We collect structured data from websites, directories and public sources, then clean and deliver it to Excel, databases, APIs or dashboards.",
-        "learnHref": "/services#scraping",
+        "title": "AI & workflow automation",
+        "description": "Automate repeated intake, updates, and internal steps with clear rules, useful AI assistance, and human review where decisions matter.",
+        "learnHref": "/services#ai-automation",
         "contactHref": "/contact"
       },
       "design": {
-        "title": "Websites, apps & portals",
-        "description": "Give customers a clean place to ask, book, view, or submit the next step.",
-        "learnHref": "/use-cases#real-estate-agencies",
+        "title": "Custom software, web & mobile",
+        "description": "Build websites, web and mobile apps, customer portals, and internal tools with the forms, permissions, admin views, and integrations the workflow needs.",
+        "learnHref": "/services#custom-software",
         "contactHref": "/contact"
       },
       "engagement": {
-        "title": "WhatsApp automation",
-        "description": "Automate replies, collect customer details, route conversations to your team, and organize follow-up.",
-        "learnHref": "/use-cases#home-field-services",
+        "title": "WhatsApp & lead automation",
+        "description": "Guide conversations, collect qualifying details, route each lead, preserve context for staff, send reminders, and keep follow-up visible.",
+        "learnHref": "/services#whatsapp-automation",
         "contactHref": "/contact"
       }
     },
     "partnerSection": {
-      "heading": "Digital systems for serious customer flow",
-      "bodyPrimary": "Servicely helps customer-facing teams replace messy messages and manual follow-up with usable software.",
-      "bodySecondary": "We design around how your customers already communicate, with fast mobile contact, clear team handoffs, and an obvious next step.",
-      "ctaLabel": "Explore services",
+      "heading": "Start with the handoff that loses leads or time",
+      "bodyPrimary": "We map where the request enters, which details are missing, who owns the next step, and what needs to be visible.",
+      "bodySecondary": "Then we scope the smallest useful release: one workflow, clear deliverables, and a practical path to launch.",
+      "metricValue": "1",
+      "metricLabel": "workflow to start",
+      "ctaLabel": "See the deliverables",
       "ctaHref": "/services#services-blueprints"
     },
     "solutions": {
-      "heading": "What we build",
-      "body": "Focused services for <strong>customer-facing businesses</strong> that need useful analytics, reliable data collection, clearer inquiries, easier bookings, better lead follow-up, and connected customer workflows.",
-      "support": "What do you need to improve first?",
+      "heading": "What a connected workflow gives your team",
+      "body": "Connect <strong>the moments where a lead, job, appointment, or decision would otherwise stall</strong>.",
+      "support": "Choose the first operational improvement that matters most.",
       "cards": {
         "customDevelopment": {
-          "title": "Analytics, Power BI & AI",
-          "body": "Power BI dashboards, KPI reports, data models, data pipelines and AI-assisted business insights."
+          "title": "Complete request context",
+          "body": "Capture the details staff need before the lead, job, or appointment reaches them."
         },
         "digitalTransformation": {
-          "title": "WhatsApp automation",
-          "body": "Automatic replies and structured conversations for appointments, customer requests, team handoff, and follow-up."
+          "title": "Consistent first responses",
+          "body": "Acknowledge new conversations, answer approved routine questions, and set a clear next step."
         },
         "topDevelopers": {
-          "title": "Websites and portals",
-          "body": "Business websites and portals that help customers ask, book, view listings, or submit requests."
+          "title": "Useful qualification",
+          "body": "Ask the questions that determine fit, urgency, location, service, budget, or timing."
         },
         "consulting": {
-          "title": "Mobile apps",
-          "body": "Apps for customers, staff, agents, or internal teams when a mobile workflow makes sense."
+          "title": "Clear routing and ownership",
+          "body": "Send each request to the right person with its conversation, status, and next action attached."
         },
         "holisticApproach": {
-          "title": "Data scraping",
-          "body": "Automated collection of structured data from websites and public sources, ready for Excel, databases, or dashboards."
+          "title": "Less repetitive data work",
+          "body": "Schedule collection, cleanup, and delivery so people spend time using data instead of copying it."
         },
         "creativeExpertise": {
-          "title": "Support and hosting",
-          "body": "Post-launch support, deployment management, monitoring, backups, security updates, and hosting options."
+          "title": "Visible follow-up and reporting",
+          "body": "See what is new, qualified, waiting, completed, or overdue without reading every conversation."
         }
       }
     },
     "imageSlider": {
-      "heading": "Compare the messy manual flow with a cleaner digital customer journey"
+      "heading": "From conflicting spreadsheets to trusted, refreshable reporting",
+      "caption": "Illustrative before-and-after example. Metrics shown are sample data, not client results.",
+      "beforeAlt": "Before analytics: disconnected export files, conflicting totals, manual cleanup, and unanswered KPI questions.",
+      "afterAlt": "After analytics: three equal metric cards above aligned trend, department, and quality views.",
+      "sliderLabel": "Compare the reporting workflow before and after analytics"
     },
     "caseStudies": {
-      "ctaLabel": "View use cases",
-      "ctaHref": "/use-cases#clinics-medical-centers",
-      "previousSlide": "Previous case study",
-      "nextSlide": "Next case study",
+      "eyebrow": "First-release examples",
+      "heading": "Recognize the bottleneck. See a practical first release.",
+      "body": "Each example turns one repeated intake or follow-up problem into a trackable workflow for customers and staff.",
+      "ctaLabel": "See more use cases",
+      "ctaHref": "/use-cases#construction-trades",
+      "previousSlide": "Previous workflow example",
+      "nextSlide": "Next workflow example",
       "slides": {
         "pricingEngine": {
-          "title": "Clinic appointment intake",
-          "description": "A guided flow collects service, preferred time, branch, and contact details before staff confirm.",
-          "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
-        },
-        "designSystem": {
-          "title": "Property matching and follow-up",
-          "description": "A flow collects budget, area, property type, timeline, and viewing preference before agent handoff.",
+          "title": "Estimate requests ready for the right trade or crew",
+          "description": "A guided flow collects job type, location, timing, photos, and contact details before office staff route the request.",
           "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
         },
+        "designSystem": {
+          "title": "Appointment requests ready for clinic staff",
+          "description": "A guided flow collects service, preferred time, location, and contact details without handling medical advice.",
+          "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        },
         "workflowAutomation": {
-          "title": "WhatsApp inquiry cleanup",
-          "description": "WhatsApp workflows organize customer details, show status, and route serious requests to the right person.",
+          "title": "Dealership leads qualified before salesperson handoff",
+          "description": "A WhatsApp flow captures vehicle interest, budget, financing, trade-in, location, and timing before routing the lead.",
           "image": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1200&auto=format&fit=crop"
         }
       }
     },
     "techStack": {
-      "title": "Technology toolbox for modern business systems",
-      "languagesTitle": "Tools we work with",
+      "title": "Tools chosen for the job, not the trend",
+      "languagesTitle": "A focused delivery stack",
       "languagesCta": "Explore services"
     },
     "testimonials": {
-      "eyebrow": "Outcomes",
-      "heading": "What your system should improve",
-      "bodyPrimary": "The goal is not more software for its own sake. The goal is faster response, cleaner requests, better handoff, and less repeated manual work.",
-      "bodySecondary": "Every project starts with the business problem and the simplest useful version.",
-      "ctaPrimaryLabel": "Improve my workflow",
+      "eyebrow": "Delivery artifacts",
+      "heading": "Know what gets handed over",
+      "bodyPrimary": "The work should leave behind more than deployed code: it should make the workflow, scope, decisions, and operating ownership clear.",
+      "bodySecondary": "These practical artifacts keep the first release focused and make future improvements easier to plan.",
+      "ctaPrimaryLabel": "Scope my first release",
       "ctaPrimaryHref": "/contact",
-      "ctaSecondaryLabel": "View use cases",
-      "ctaSecondaryHref": "/use-cases#clinics-medical-centers",
-      "clientLabel": "Outcome",
+      "ctaSecondaryLabel": "See how we work",
+      "ctaSecondaryHref": "/why-us",
+      "clientLabel": "Delivery artifact",
       "items": [
         {
-          "quote": "Patients should be able to request appointments without waiting for staff to answer every repeated question manually.",
-          "author": "Clinic automation",
-          "role": "Appointment requests",
-          "company": "Servicely",
-          "industry": "Clinics"
+          "quote": "A workflow map shows where requests enter, what information is required, who owns each handoff, and where exceptions need a human decision.",
+          "author": "Mapped workflow",
+          "role": "Inputs, owners, handoffs, and exceptions",
+          "company": "Used to shape the first scope",
+          "industry": "Before the build"
         },
         {
-          "quote": "Real estate agents should receive cleaner leads, not vague messages that require ten manual follow-up questions.",
-          "author": "Real estate automation",
-          "role": "Lead qualification",
-          "company": "Servicely",
-          "industry": "Real estate"
+          "quote": "A concise scope defines what the first release includes, how it will be reviewed, and which useful ideas deliberately wait for a later phase.",
+          "author": "Written first-release scope",
+          "role": "Priorities, exclusions, and acceptance points",
+          "company": "A shared build reference",
+          "industry": "Before the build"
         },
         {
-          "quote": "WhatsApp conversations should be easier to organize, summarize, and hand to the right person.",
-          "author": "WhatsApp workflows",
-          "role": "Customer handoff",
-          "company": "Servicely",
-          "industry": "Service businesses"
+          "quote": "Working demos at agreed checkpoints turn feedback into visible decisions while there is still time to adjust the system cleanly.",
+          "author": "Review notes and decisions",
+          "role": "Progress tied to the working system",
+          "company": "Feedback with clear follow-through",
+          "industry": "During the build"
         },
         {
-          "quote": "A website should help customers take the next step, not only describe the company.",
-          "author": "Website workflows",
-          "role": "Action-focused website",
-          "company": "Servicely",
-          "industry": "Customer systems"
+          "quote": "Launch notes explain access, configuration, monitoring, ownership, and the support path so the system does not become a black box.",
+          "author": "Handover and support plan",
+          "role": "Ownership after release",
+          "company": "Matched to system criticality",
+          "industry": "At launch"
         }
       ]
     },
     "contactBridge": {
-      "title": "Ready to build the system your business actually needs?",
-      "subtitle": "Tell us what you want to improve: customer support, appointment requests, lead follow-up, WhatsApp workflows, apps, dashboards, or your website.",
-      "cardTitle": "Start with a practical scope",
-      "cardBody": "We will help you define the simplest useful version and turn it into a working system.",
-      "ctaLabel": "Send project details",
+      "title": "Tell us where leads, jobs, or appointments get stuck",
+      "subtitle": "A short description of the current process is enough to start. Include the tools, messages, and handoffs involved.",
+      "cardTitle": "Get a practical first-step recommendation",
+      "cardBody": "We will identify the workflow to map first and what a focused release could include.",
+      "ctaLabel": "Describe the bottleneck",
       "ctaHref": "/contact",
       "followLabel": "Follow us"
     }
   },
   "ServicesPage": {
     "hero": {
-      "titleLine1": "Business systems",
-      "titleLine2": "for customer flow"
+      "titleLine1": "Custom software, AI & automation",
+      "titleLine2": "for the workflow you need to fix"
     },
     "blueprints": {
-      "heading": "Choose the system your business needs first",
+      "heading": "Choose the capability your first release needs",
       "sections": [
         {
-          "id": "development",
-          "title": "Analytics, Power BI & AI",
-          "description": "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
-          "ctaLabel": "Plan your data solution",
+          "id": "data-reporting",
+          "title": "Data, reporting & integrations",
+          "description": "We connect spreadsheets, databases, operational software, and APIs, then deliver reliable data flows, Power BI dashboards, KPI reporting, and the integration notes needed to run them.",
+          "ctaLabel": "Discuss reporting",
           "ctaHref": "/contact",
-          "tags": ["Power BI", "KPIs", "Dashboards", "Data engineering", "AI insights"]
+          "tags": ["Power BI", "Dashboards", "Data pipelines", "APIs", "System integrations"]
         },
         {
-          "id": "scraping",
-          "title": "Data scraping",
-          "description": "We collect structured data from websites, directories and public sources, then clean, deduplicate and deliver it to Excel, databases, APIs or dashboards.",
-          "ctaLabel": "Plan your scraping project",
+          "id": "ai-automation",
+          "title": "AI & workflow automation",
+          "description": "We automate repeated intake, updates, document handling, notifications, and internal steps. AI can assist with classification, summaries, or drafts while defined decisions stay with your team.",
+          "ctaLabel": "Map an automation",
           "ctaHref": "/contact",
-          "tags": ["Web scraping", "Data extraction", "Cleaning", "Automation", "Excel & database exports"]
+          "tags": ["Workflow automation", "AI assistance", "Notifications", "Approvals", "n8n"]
         },
         {
-          "id": "design",
-          "title": "Websites, apps & portals",
-          "description": "Modern business websites, web apps, customer portals, booking flows, admin dashboards, and mobile apps connected to real customer actions.",
-          "ctaLabel": "Plan your platform",
+          "id": "custom-software",
+          "title": "Custom software, web & mobile",
+          "description": "We build customer websites, web and mobile apps, internal portals, field tools, and admin systems with the right forms, roles, integrations, deployment, and handover.",
+          "ctaLabel": "Scope custom software",
           "ctaHref": "/contact",
-          "tags": ["Websites", "Web apps", "Mobile apps", "Portals"]
+          "tags": ["Custom software", "Web apps", "Mobile apps", "Internal portals"]
         },
         {
-          "id": "engagement",
-          "title": "WhatsApp automation",
-          "description": "Cleaner WhatsApp inquiry flows for appointments, property leads, customer handoff, follow-up, and reporting.",
-          "ctaLabel": "Map the WhatsApp flow",
+          "id": "whatsapp-automation",
+          "title": "WhatsApp & lead automation",
+          "description": "We design conversation flows that answer approved routine questions, collect qualifying details, route leads, preserve context for human handoff, trigger reminders, and report on follow-up.",
+          "ctaLabel": "Review a lead workflow",
           "ctaHref": "/contact",
-          "tags": ["WhatsApp", "Appointments", "Handoff", "Follow-up"]
+          "tags": ["WhatsApp", "Lead qualification", "Routing", "Human handoff", "Follow-up"]
         }
       ]
     },
     "cooperation": {
-      "title": "Ways we can work together",
-      "subtitle": "Pick the model that fits the stage of your business.",
+      "title": "Choose a practical way to start",
+      "subtitle": "Launch a defined system, improve an existing workflow, or continue with measured support.",
       "hero": {
-        "title": "Start practical, then improve",
-        "description": "We define the smallest useful system first, launch it cleanly, then improve it with the data and feedback your team gathers.",
-        "tags": ["Planning", "Design", "Development", "Launch", "Support"],
-        "ctaLabel": "Request a scope",
+        "title": "Start with one workflow and clear deliverables",
+        "description": "Before development, we agree on the operating problem, first-release scope, responsibilities, integrations, and review points.",
+        "tags": ["Outcome", "Scope", "Working demos", "Launch", "Support"],
+        "ctaLabel": "Discuss a first release",
         "ctaHref": "/contact"
       },
       "models": [
         {
           "id": "managed",
           "title": "Managed build",
-          "description": "We handle planning, design, development, launch, and support for one clear system.",
+          "description": "Planning, design, development, launch, and handover for one accountable system.",
           "tag": "Best for busy teams"
         },
         {
           "id": "fixed",
-          "title": "Fixed project",
-          "description": "A defined website, app, automation flow, dashboard, or portal with agreed deliverables.",
+          "title": "Defined project",
+          "description": "An agreed website, app, portal, automation, integration, or dashboard with clear deliverables.",
           "tag": "Best for clear scopes"
         },
         {
           "id": "leasing",
           "title": "Ongoing support",
-          "description": "Continuous improvements, hosting help, monitoring, updates, and new workflow additions.",
+          "description": "Prioritized improvements, hosting help, monitoring, updates, and new workflow additions.",
           "tag": "Best after launch"
         }
       ]
     },
     "upgradeGrid": {
-      "heading": "What your business can improve",
+      "heading": "What a focused first release can include",
       "items": [
         {
-          "title": "Respond faster",
-          "body": "Assistants and WhatsApp flows can answer common questions and collect information before staff step in."
+          "title": "A clearer customer entry point",
+          "body": "A website, form, portal, mobile screen, or WhatsApp flow that collects the details needed to act."
         },
         {
-          "title": "Capture cleaner leads",
-          "body": "Inquiry forms and automation can ask the right questions before a customer reaches your team."
+          "title": "Qualification, routing, and ownership",
+          "body": "Rules that identify fit or urgency, assign the right owner, and carry the conversation context forward."
         },
         {
-          "title": "Reduce manual follow-up",
-          "body": "Appointment requests, service requests, and real estate leads can move through a clear workflow."
+          "title": "Connected tools and data",
+          "body": "Integrations that move approved information between WhatsApp, email, spreadsheets, APIs, and core systems."
         },
         {
-          "title": "See what is happening",
-          "body": "Dashboards show inquiries, appointments, requests, branches, status, and follow-up in one place."
+          "title": "An operating view for the team",
+          "body": "A dashboard or internal portal showing new, assigned, waiting, completed, and overdue work."
         }
       ]
     },
     "testimonial": {
-      "quote": "Good software should make the customer journey clearer and the team workload lighter.",
-      "name": "Servicely",
-      "role": "Software partner for customer systems"
+      "quote": "If a feature does not reduce delay, manual work, or uncertainty, it does not belong in the first release.",
+      "name": "Version-one principle",
+      "role": "Prove the workflow before expanding it"
     },
     "process": {
       "title": "How we build",
-      "description": "A simple process for turning scattered customer messages and manual work into a useful digital system.",
+      "description": "A concise path from one operational bottleneck to a working, supported system.",
       "steps": [
         {
           "title": "Map",
-          "body": "We understand your customer journey, current tools, staff handoff, and repeated questions.",
+          "body": "Output: a current-state workflow, bottlenecks, owners, and one success measure.",
           "color": "#365fd9"
         },
         {
           "title": "Scope",
-          "body": "We define the first useful version, the must-have features, and what can wait.",
+          "body": "Output: a prioritized release plan with required integrations, decisions, and clear exclusions.",
           "color": "#17ac87"
         },
         {
           "title": "Build",
-          "body": "We design and develop the website, app, portal, automation flow, dashboard, or assistant.",
+          "body": "Output: working demos reviewed in short cycles, with risks and trade-offs surfaced early.",
           "color": "#7d5bff"
         },
         {
           "title": "Launch",
-          "body": "We test the workflow, connect the needed tools, and prepare the team to use it.",
+          "body": "Output: tested deployment, access setup, operating notes, and a prepared team.",
           "color": "#9fb100"
         },
         {
           "title": "Improve",
-          "body": "We support hosting, updates, analytics, fixes, and practical improvements after launch.",
+          "body": "Output: a prioritized backlog shaped by usage, support needs, and measurable friction.",
           "color": "#365fd9"
         }
       ]
     },
     "partnerGrid": {
-      "title": "Built for customer-facing teams that value clarity and speed",
-      "body1": "Customer-facing teams need faster response, clearer requests, and less manual follow-up.",
-      "body2": "We keep the design familiar and the workflow practical.",
-      "body3": "The goal is a system your customers and staff can actually use."
+      "title": "The system and the operating clarity to use it",
+      "body1": "The agreed solution is deployed with access and ownership made clear.",
+      "body2": "Key workflows, integrations, configuration, and support notes are documented for handover.",
+      "body3": "Open questions and future improvements remain prioritized after launch.",
+      "supportCta": "Explore support and hosting"
     }
   },
   "AboutPage": {
     "meta": {
       "title": "About Servicely",
-      "description": "Servicely is a practical software partner for customer-facing businesses that need clearer workflows and useful digital systems.",
+      "description": "Meet the hands-on software and automation team serving construction and skilled trades, clinics, independent dealerships, and other workflow-heavy businesses.",
       "ogTitle": "About | Servicely"
     },
     "hero": {
-      "title": "Practical software partner for customer-driven businesses",
+      "title": "Direct software and automation builders for workflow-heavy businesses",
       "bodyLines": [
-        "Servicely helps clinics, real estate teams, automotive businesses, field service teams, and growing companies build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows."
+        "We work with construction and trade teams, dental and medical clinics, independent dealerships, and other operators that need leads, jobs, appointments, and reporting to move cleanly."
       ],
-      "ctaLabel": "Talk to the builders",
+      "ctaLabel": "Describe one workflow",
       "ctaHref": "/contact",
       "servicesLabel": "About us",
       "servicesHref": "/about",
@@ -403,52 +385,52 @@
       "clientsHref": "/services#services-blueprints"
     },
     "intro": {
-      "eyebrow": "What we stand for",
-      "title": "Technology should make customer journeys clearer.",
+      "eyebrow": "How we work",
+      "title": "Start with the operating problem, then choose the technology.",
       "body": [
-        "We start from the real workflow: messages, questions, staff handoff, appointments, leads and reporting.",
-        "Then we build the cleanest useful system, from a public website to an intake flow, portal, app or dashboard."
+        "We inspect how work enters, which details are missing, who takes over, and where follow-up or reporting breaks down.",
+        "Then we shape a focused release with concrete deliverables, visible review points, and a clear owner after launch."
       ]
     },
     "stats": {
       "items": [
         {
-          "value": "Flow",
-          "label": "Inquiry intake, appointment requests, WhatsApp flows and lead qualification."
+          "value": "Discover",
+          "label": "Map the current workflow, bottlenecks, owners, and priorities."
         },
         {
-          "value": "Apps",
-          "label": "Websites, portals, mobile apps, admin panels and custom workflow tools."
+          "value": "Build",
+          "label": "Launch a focused first release without inflating the scope."
         },
         {
-          "value": "Care",
-          "label": "Support, hosting and practical improvements after launch."
+          "value": "Improve",
+          "label": "Support and refine the system using real operational feedback."
         }
       ]
     },
     "localTrust": {
       "eyebrow": "Servicely",
-      "title": "Ready to build something useful and easier to run?"
+      "title": "Which lead, job, or appointment workflow should be easier to run?"
     },
     "pillars": {
-      "eyebrow": "Our values",
-      "title": "Small principles, applied every day",
+      "eyebrow": "Delivery principles",
+      "title": "What stays consistent from scope to support",
       "cards": [
         {
-          "title": "Clarity first",
-          "body": "A system should make the next step obvious for customers and staff."
+          "title": "Start with evidence",
+          "body": "We look at real messages, reports, tools, and handoffs before proposing features."
         },
         {
-          "title": "Useful before fancy",
-          "body": "We choose practical features that save time and improve response."
+          "title": "Design for the operator",
+          "body": "The daily user should know what arrived, what is waiting, who owns it, and what happens next."
         },
         {
-          "title": "Direct work",
-          "body": "You work close to the builders, so scope and decisions stay clear."
+          "title": "Show work early",
+          "body": "Working reviews surface weak assumptions before they become expensive changes."
         },
         {
-          "title": "Support after launch",
-          "body": "A useful system should be maintained, monitored and improved."
+          "title": "Stay useful after launch",
+          "body": "Monitoring, support, and measured improvements keep the system aligned with real work."
         }
       ]
     }
@@ -463,23 +445,24 @@
       { "label": "About", "href": "/about" }
     ],
     "serviceDots": [
-      { "label": "Analytics, Power BI & AI", "href": "/services#development" },
-      { "label": "Data scraping", "href": "/services#scraping" },
-      { "label": "WhatsApp automation", "href": "/services#engagement" },
-      { "label": "Websites, apps & portals", "href": "/services#design" }
+      { "label": "Custom software, web & mobile", "href": "/services#custom-software" },
+      { "label": "AI & workflow automation", "href": "/services#ai-automation" },
+      { "label": "WhatsApp & lead automation", "href": "/services#whatsapp-automation" },
+      { "label": "Data, reporting & integrations", "href": "/services#data-reporting" },
+      { "label": "Support, hosting & maintenance", "href": "/support-hosting" }
     ],
     "locations": [
       {
-        "title": "Practical systems for customer-facing teams",
-        "subtitle": "Practical software for inquiries, bookings, leads, websites, apps, and business systems"
+        "title": "Custom software and automation for leads, jobs, and appointments",
+        "subtitle": "For construction and skilled trades, clinics, independent dealerships, and other service teams"
       }
     ],
-    "phone": "+96171383987",
+    "phone": "WhatsApp",
     "email": "sales@servicely.tech",
-    "ctaGradient": "Build the system your business actually needs",
-    "newsletterHeading": "Have a workflow to fix?",
-    "newsletterBody": "Send us the problem you want to solve. We will reply with the simplest useful next step.",
-    "meetingCta": "Request a scope",
+    "ctaGradient": "Start with one workflow, not a feature list",
+    "newsletterHeading": "Where do leads, jobs, or appointments get stuck?",
+    "newsletterBody": "Send a short description of the repeated step that is hard to track. We will identify a practical place to begin.",
+    "meetingCta": "Map one workflow",
     "emailCta": "Email Servicely",
     "privacy": "Privacy Policy",
     "legal": "© Servicely 2026. All Rights Reserved."

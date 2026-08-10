@@ -37,26 +37,36 @@ type SectionTheme = {
   Icon: LucideIcon;
 };
 
+const SECTION_ORDER = [
+  "custom-software",
+  "ai-automation",
+  "whatsapp-automation",
+  "data-reporting",
+];
+const SECTION_RANK = new Map(
+  SECTION_ORDER.map((id, index) => [id, index])
+);
+
 const sectionThemes: Record<string, SectionTheme> = {
-  development: {
+  "data-reporting": {
     accent: "var(--dev-500)",
     iconBg: "var(--dev-100)",
     badgeBg: "var(--dev-50)",
     Icon: BarChart3,
   },
-  scraping: {
+  "ai-automation": {
     accent: "#e11d48",
     iconBg: "#ffe4e6",
     badgeBg: "#fff1f2",
     Icon: Database,
   },
-  design: {
+  "custom-software": {
     accent: "var(--design-500)",
     iconBg: "var(--design-100)",
     badgeBg: "var(--design-100)",
     Icon: PenTool,
   },
-  engagement: {
+  "whatsapp-automation": {
     accent: "var(--engagement-500)",
     iconBg: "var(--engagement-100)",
     badgeBg: "var(--engagement-50)",
@@ -70,7 +80,12 @@ export default function ServicesBlueprints() {
   const blueprintMessages = typedMessages.ServicesPage?.blueprints;
 
   const sections = useMemo(
-    () => blueprintMessages?.sections ?? [],
+    () =>
+      [...(blueprintMessages?.sections ?? [])].sort(
+        (a, b) =>
+          (SECTION_RANK.get(a.id) ?? Number.MAX_SAFE_INTEGER) -
+          (SECTION_RANK.get(b.id) ?? Number.MAX_SAFE_INTEGER)
+      ),
     [blueprintMessages]
   );
   const heading = blueprintMessages?.heading ?? "";
@@ -143,7 +158,7 @@ export default function ServicesBlueprints() {
         <div className="flex w-full max-w-5xl flex-col items-stretch gap-3 rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-neutral-900/5 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:p-2 lg:flex-nowrap lg:rounded-full">
           {sections.map((section) => {
             const theme =
-              sectionThemes[section.id] ?? sectionThemes.development;
+              sectionThemes[section.id] ?? sectionThemes["data-reporting"];
             const isActive = section.id === derivedActiveSection;
             return (
               <button
@@ -169,9 +184,9 @@ export default function ServicesBlueprints() {
         <div className="lg:w-1/3">
           <div className="lg:sticky lg:top-42">
             <Reveal>
-              <p className="text-4xl font-semibold leading-tight text-neutral-900 sm:text-7xl">
+              <h2 className="text-4xl font-semibold leading-tight text-neutral-900 sm:text-7xl">
                 {heading}
-              </p>
+              </h2>
             </Reveal>
           </div>
         </div>
@@ -180,7 +195,7 @@ export default function ServicesBlueprints() {
           <div className="space-y-12">
             {sections.map((section, sectionIndex) => {
               const theme =
-                sectionThemes[section.id] ?? sectionThemes.development;
+                sectionThemes[section.id] ?? sectionThemes["data-reporting"];
               const Icon = theme.Icon;
               return (
                 <Reveal key={section.id} delay={sectionIndex * 0.08}>
@@ -204,9 +219,9 @@ export default function ServicesBlueprints() {
                         <Icon className="h-6 w-6" strokeWidth={1.8} />
                       </span>
                       <div>
-                        <p className="text-2xl font-semibold text-neutral-900">
+                        <h3 className="text-2xl font-semibold text-neutral-900">
                           {section.title}
-                        </p>
+                        </h3>
                       </div>
                     </div>
                   </div>

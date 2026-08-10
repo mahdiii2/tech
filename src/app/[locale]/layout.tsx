@@ -3,13 +3,14 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getMessages } from "next-intl/server";
-import { inter, spaceMono } from "../fonts";
+import { inter, notoSansArabic, spaceMono } from "../fonts";
 import "../globals.css";
 import { Navbar } from "@/components/Layout/navbar";
 import Footer from "@/components/Layout/footer";
 import { routing } from "@/i18n/routing";
 import {
   getLocalizedSiteConfig,
+  isSearchIndexable,
   localizedAlternates,
   localePath,
   normalizeLocale,
@@ -34,6 +35,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const localeKey = normalizeLocale(locale);
   const localizedSite = getLocalizedSiteConfig(localeKey);
+  const socialImageAlt =
+    localeKey === "ar"
+      ? "صورة Servicely التعريفية لخدمات البرمجيات والبيانات والأتمتة"
+      : "Servicely preview for software, data and automation services";
 
   return {
     metadataBase: new URL(siteUrl),
@@ -70,12 +75,14 @@ export async function generateMetadata({
       title: `${siteConfig.name} - ${localizedSite.tagline}`,
       description: localizedSite.description,
       url: localePath(localeKey, "/"),
+      locale: localeKey,
+      alternateLocale: [localeKey === "ar" ? "en" : "ar"],
       images: [
         {
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} mark`,
+          alt: socialImageAlt,
         },
       ],
     },
@@ -83,14 +90,14 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${siteConfig.name} - ${localizedSite.tagline}`,
       description: localizedSite.description,
-      images: [siteConfig.ogImage],
+      images: [{ url: siteConfig.ogImage, alt: socialImageAlt }],
     },
     robots: {
-      index: true,
-      follow: true,
+      index: isSearchIndexable,
+      follow: isSearchIndexable,
       googleBot: {
-        index: true,
-        follow: true,
+        index: isSearchIndexable,
+        follow: isSearchIndexable,
         "max-image-preview": "large",
         "max-snippet": -1,
         "max-video-preview": -1,
@@ -123,21 +130,6 @@ function buildStructuredData(locale: string) {
         ...(siteConfig.sameAs.length ? { sameAs: siteConfig.sameAs } : {}),
       },
       {
-        "@type": "ProfessionalService",
-        "@id": `${siteUrl}/#business`,
-        name: siteConfig.name,
-        url: siteUrl,
-        image: siteConfig.ogImage,
-        telephone: siteConfig.phone,
-        email: siteConfig.email,
-        priceRange: "$$",
-        description: localizedSite.description,
-        areaServed: siteConfig.areaServed.map((name) => ({
-          "@type": "Place",
-          name,
-        })),
-      },
-      {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
@@ -164,18 +156,18 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html
-      className={`${inter.variable} ${spaceMono.variable}`}
+      className={`${inter.variable} ${spaceMono.variable} ${notoSansArabic.variable}`}
       lang={locale}
       dir={dir}
     >
-      <head>
-        <link rel="preconnect" href="https://images.unsplash.com" />
-      </head>
       <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(buildStructuredData(localeKey)),
+            __html: JSON.stringify(buildStructuredData(localeKey)).replace(
+              /</g,
+              "\\u003c"
+            ),
           }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>

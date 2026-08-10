@@ -12,6 +12,7 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -28,6 +29,7 @@ export default async function IndustriesPage({ params }: Props) {
 
   return (
     <main className="bg-white">
+      <PageStructuredData page="industries" locale={locale} />
       <AnimatedHeroBackground color="var(--dev-500)">
         <div className="mx-auto flex min-h-[55vh] max-w-4xl flex-col items-center justify-center gap-6 text-center md:gap-8">
           <Reveal delay={0}>
@@ -60,7 +62,7 @@ export default async function IndustriesPage({ params }: Props) {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/use-cases#clinics-medical-centers"
+                href="/use-cases#construction-trades"
                 className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-7 py-3 text-sm font-semibold text-neutral-800 transition hover:border-neutral-400"
               >
                 {pageCopy.viewUseCasesLabel}
@@ -103,7 +105,7 @@ export default async function IndustriesPage({ params }: Props) {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pageCopy.industries.map((industry, index) => {
             const Icon = industry.Icon;
 

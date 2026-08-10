@@ -5,6 +5,7 @@ import { HomeHeroSequence } from "@/components/HeroPage/HomeHeroSequence";
 import { Skiper16 } from "@/components/HeroPage/ServiceCards";
 import { HeroWithFloatingImages } from "@/components/HeroPage/AgencyPartnerSection";
 import { DigitalSolutionsSection } from "@/components/HeroPage/DigitalSolutionsSection";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { buildPageMetadata } from "@/lib/site";
 
 const ImageSlider = dynamic(() => import("@/components/Services/ImageSlider"));
@@ -27,10 +28,10 @@ const TestimonialStack = dynamic(
 type Props = { params: Promise<{ locale: string }> };
 
 const BLUEPRINT_KEYS = [
-  "development",
-  "scraping",
   "design",
+  "scraping",
   "engagement",
+  "development",
 ] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -51,6 +52,7 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <div className="mb-10 space-y-8">
+      <PageStructuredData page="home" locale={locale} />
       <HomeHeroSequence
         vision={{
           heading: t("vision.heading"),
@@ -70,8 +72,12 @@ export default async function HomePage({ params }: Props) {
       <DigitalSolutionsSection />
       <ImageSlider
         title={t("imageSlider.heading")}
+        caption={t("imageSlider.caption")}
         leftImage="/SliderImages/eng1.png"
-        rightImage="/SliderImages/eng2.png"
+        rightImage="/SliderImages/eng2-centered.svg"
+        leftImageAlt={t("imageSlider.beforeAlt")}
+        rightImageAlt={t("imageSlider.afterAlt")}
+        sliderLabel={t("imageSlider.sliderLabel")}
       />
       <CaseStudySlider />
       <TechStackSlider />

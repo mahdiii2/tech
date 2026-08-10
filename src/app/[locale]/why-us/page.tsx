@@ -12,6 +12,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { getMarketContent } from "@/lib/market-content";
 import { buildPageMetadata } from "@/lib/site";
 
@@ -31,28 +32,36 @@ export default async function WhyUsPage({ params }: Props) {
   const isAr = locale === "ar";
   const points = isAr
     ? [
-        "فريق من شخصين",
-        "تواصل مباشر مع من يبني النظام",
-        "بدون تعهيد غير واضح",
-        "أنظمة عملية",
-        "نطاق واضح",
-        "سير عمل تطوير حديث",
-        "تسليم من البداية للنهاية",
-        "دعم بعد الإطلاق",
+        "خريطة واضحة لسير العمل",
+        "نطاق مكتوب للإصدار الأول",
+        "عروض عملية في نقاط متفق عليها",
+        "ملاحظات للإطلاق والتسليم",
+        "خطة دعم تناسب أهمية النظام",
       ]
     : [
-        "two-person team",
-        "direct builders",
-        "no unclear outsourcing",
-        "practical systems",
-        "clear scope",
-        "modern development workflow",
-        "end-to-end delivery",
-        "post-launch support",
+        "Mapped workflow",
+        "Written first-release scope",
+        "Working demos at agreed checkpoints",
+        "Launch and handover notes",
+        "Support plan matched to system criticality",
       ];
+  const ctaCopy = isAr
+    ? {
+        heroLabel: "ناقش سير العمل معنا",
+        eyebrow: "خطوة أولى واضحة",
+        heading: "شاركنا سير العمل والقيود والنتيجة التي تحتاجها.",
+        finalLabel: "اطلب نطاقاً للمشروع",
+      }
+    : {
+        heroLabel: "Discuss your workflow",
+        eyebrow: "A sensible first step",
+        heading: "Bring us the workflow, the constraints and the outcome you need.",
+        finalLabel: "Request a project scope",
+      };
 
   return (
     <main className="bg-white text-neutral-950">
+      <PageStructuredData page="whyUs" locale={locale} />
       <AnimatedHeroBackground color="var(--design-500)">
         <div
           id="why-us-overview"
@@ -78,16 +87,16 @@ export default async function WhyUsPage({ params }: Props) {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-neutral-800"
             >
-              {content.common.startProject}
+              {ctaCopy.heroLabel}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
       </AnimatedHeroBackground>
 
-      <section className="mx-auto grid max-w-6xl gap-3 px-4 py-10 sm:grid-cols-2 md:px-6 lg:grid-cols-4 lg:px-8">
+      <section className="mx-auto grid max-w-6xl gap-3 px-4 py-10 sm:grid-cols-2 md:px-6 lg:grid-cols-5 lg:px-8">
         {points.map((point, index) => (
-          <Reveal key={point} delay={(index % 4) * 0.06}>
+          <Reveal key={point} delay={(index % 5) * 0.06}>
             <div className="flex h-full items-start gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm font-semibold leading-6 transition hover:border-neutral-300 hover:bg-white hover:shadow-[0_14px_35px_rgba(0,0,0,0.05)]">
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
               <span>{point}</span>
@@ -124,19 +133,17 @@ export default async function WhyUsPage({ params }: Props) {
           <div className="rounded-3xl bg-neutral-950 p-6 text-white sm:p-8 md:flex md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                Servicely
+                {ctaCopy.eyebrow}
               </p>
               <h2 className="mt-2 max-w-2xl text-2xl font-semibold md:text-3xl">
-                {isAr
-                  ? "اعمل مباشرة مع الفريق الذي يبني النظام."
-                  : "Work directly with the team building the system."}
+                {ctaCopy.heading}
               </h2>
             </div>
             <Link
               href="/contact"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-100 md:mt-0"
             >
-              {content.common.startProject}
+              {ctaCopy.finalLabel}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

@@ -12,6 +12,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { getMarketContent } from "@/lib/market-content";
 import { buildPageMetadata } from "@/lib/site";
 
@@ -32,6 +33,7 @@ export default async function SupportHostingPage({ params }: Props) {
 
   return (
     <main className="bg-white text-neutral-950">
+      <PageStructuredData page="supportHosting" locale={locale} />
       <AnimatedHeroBackground color="var(--engagement-500)">
         <div className="mx-auto flex min-h-[50vh] max-w-4xl flex-col items-center justify-center gap-6 text-center">
           <Reveal>
@@ -127,8 +129,8 @@ export default async function SupportHostingPage({ params }: Props) {
               </h2>
               <p className="mt-5 text-base leading-8 text-white/75">
                 {isAr
-                  ? "لا نعد بتوفر غير مدعوم. يمكن ترتيب خيارات بنية تحتية مدعومة باتفاقية مستوى خدمة حتى 99.99% حسب البنية وخطة الاستضافة."
-                  : "We do not promise unsupported uptime. SLA-backed infrastructure options up to 99.99% can be arranged depending on architecture and hosting plan."}
+                  ? "تُحدد أهداف التوفر والاستجابة وفق البنية وخطة الدعم المتفق عليها. لا تتضمن خطة الدعم القياسية ضماناً تلقائياً للتوفر."
+                  : "Availability and response targets are agreed for the specific architecture and support plan. Standard support does not include an automatic uptime guarantee."}
               </p>
             </div>
             <div className="grid content-center gap-3 bg-white p-5 text-neutral-900 sm:p-8">
@@ -138,6 +140,12 @@ export default async function SupportHostingPage({ params }: Props) {
               >
                 {content.common.startProject}
                 <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-neutral-300 bg-white px-5 py-3 text-sm font-semibold text-neutral-950 transition hover:border-neutral-500"
+              >
+                {isAr ? "استكشف خدماتنا" : "Explore our services"}
               </Link>
               <p className="max-w-md text-sm leading-7 text-neutral-600">
                 {isAr

@@ -12,24 +12,14 @@ type Technology = {
 
 const TECHNOLOGIES: Technology[] = [
   {
-    name: "Node.js",
-    logo: "https://cdn.simpleicons.org/nodedotjs/5FA04E",
-    alt: "Node.js logo",
+    name: "Power BI",
+    logo: "https://cdn.simpleicons.org/powerbi/F2C811",
+    alt: "Power BI logo",
   },
   {
-    name: "Angular",
-    logo: "https://cdn.simpleicons.org/angular/DD0031",
-    alt: "Angular logo",
-  },
-  {
-    name: "React",
-    logo: "https://cdn.simpleicons.org/react/61DAFB",
-    alt: "React logo",
-  },
-  {
-    name: "Vue.js",
-    logo: "https://cdn.simpleicons.org/vuedotjs/4FC08D",
-    alt: "Vue.js logo",
+    name: "n8n",
+    logo: "https://cdn.simpleicons.org/n8n/EA4B71",
+    alt: "n8n logo",
   },
   {
     name: "Python",
@@ -37,58 +27,48 @@ const TECHNOLOGIES: Technology[] = [
     alt: "Python logo",
   },
   {
-    name: "Kotlin",
-    logo: "https://cdn.simpleicons.org/kotlin/7F52FF",
-    alt: "Kotlin logo",
+    name: "Next.js",
+    logo: "https://cdn.simpleicons.org/nextdotjs/000000",
+    alt: "Next.js logo",
   },
   {
-    name: "Swift",
-    logo: "https://cdn.simpleicons.org/swift/FA7343",
-    alt: "Swift logo",
+    name: "React",
+    logo: "https://cdn.simpleicons.org/react/61DAFB",
+    alt: "React logo",
   },
   {
-    name: "Go",
-    logo: "https://cdn.simpleicons.org/go/00ADD8",
-    alt: "Go logo",
+    name: "TypeScript",
+    logo: "https://cdn.simpleicons.org/typescript/3178C6",
+    alt: "TypeScript logo",
+  },
+  {
+    name: "PostgreSQL",
+    logo: "https://cdn.simpleicons.org/postgresql/4169E1",
+    alt: "PostgreSQL logo",
+  },
+  {
+    name: "Docker",
+    logo: "https://cdn.simpleicons.org/docker/2496ED",
+    alt: "Docker logo",
   },
 ];
 
 const TOOL_GROUPS = [
   {
-    title: { en: "Frontend & apps", ar: "الواجهات والتطبيقات" },
-    tools: [
-      "React.js",
-      "Vue.js",
-      "Angular",
-      "Flutter",
-      "Android (Kotlin)",
-      "iOS [Swift]",
-    ],
+    title: { en: "Data & reporting", ar: "البيانات والتقارير" },
+    tools: ["Power BI", "SQL", "Excel", "Python", "KPI modeling"],
   },
   {
-    title: { en: "Backend & languages", ar: "الخلفية ولغات البرمجة" },
-    tools: ["Node.js", "Python", "Typescript", "Javascript", "Go"],
+    title: { en: "Automation & integration", ar: "الأتمتة والتكامل" },
+    tools: ["n8n", "REST APIs", "WhatsApp workflows", "Scheduled jobs"],
   },
   {
-    title: { en: "Cloud & infrastructure", ar: "السحابة والبنية التحتية" },
-    tools: [
-      "Amazon Web Services",
-      "Google Cloud",
-      "MS Azure",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-    ],
+    title: { en: "Web & product", ar: "الويب والمنتجات الرقمية" },
+    tools: ["Next.js", "React", "TypeScript", "Node.js", "Mobile apps"],
   },
   {
-    title: { en: "Monitoring & intelligence", ar: "المراقبة والذكاء" },
-    tools: [
-      "Grafana",
-      "Prometheus",
-      "Sentry",
-      "Artificial Intelligence",
-      "Blockchain",
-    ],
+    title: { en: "Delivery & operations", ar: "الإطلاق والتشغيل" },
+    tools: ["PostgreSQL", "Docker", "Cloud deployment", "Monitoring", "Backups"],
   },
 ];
 

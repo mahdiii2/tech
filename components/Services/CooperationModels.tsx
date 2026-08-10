@@ -63,9 +63,9 @@ export default function CooperationModels() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6">
         <Reveal>
           <div className="space-y-4 items-center mx-auto">
-            <div className="items-center mx-auto text-4xl font-semibold text-neutral-900 ">
+            <h2 className="items-center mx-auto text-4xl font-semibold text-neutral-900 ">
               {cooperation.title}
-            </div>
+            </h2>
             <p className="text-lg text-neutral-600">{cooperation.subtitle}</p>
           </div>
         </Reveal>
@@ -132,9 +132,9 @@ export default function CooperationModels() {
                     </div>
                   </div>
                 </div>
-                <h4 className="text-2xl font-semibold text-neutral-900">
+                <h3 className="text-2xl font-semibold text-neutral-900">
                   {model.title}
-                </h4>
+                </h3>
                 <p className="mt-3 flex-1 text-base text-neutral-600">
                   {model.description}
                 </p>

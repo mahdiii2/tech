@@ -8,6 +8,7 @@ import UpgradeGrid from "@/components/Services/UpgradeGrid";
 import TransformationTestimonial from "@/components/Services/TransformationTestimonial";
 import ProcessTimeline from "@/components/Services/ProcessTimeline";
 import PartnerGrid from "@/components/Services/PartnerGrid";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -23,6 +24,7 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <main className="space-y-20">
+      <PageStructuredData page="services" locale={locale} />
       <ServicesBackgroundCircles />
       <CanvasCircles />
       <ServicesBlueprints />

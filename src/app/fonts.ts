@@ -1,4 +1,4 @@
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Noto_Sans_Arabic, Space_Mono } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -10,5 +10,11 @@ export const spaceMono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space-mono",
   weight: ["400", "700"],
+  display: "swap",
+});
+
+export const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-noto-arabic",
   display: "swap",
 });

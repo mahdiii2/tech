@@ -11,8 +11,8 @@ import {
 
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Industries/Reveal";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { gmailComposeHref } from "@/lib/booking";
-import { getMarketContent } from "@/lib/market-content";
 import { buildPageMetadata, siteConfig } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -25,22 +25,112 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const content = getMarketContent(locale);
   const isAr = locale === "ar";
   const subject = isAr ? "طلب مشروع جديد" : "New project request";
   const body = isAr
-    ? "مرحباً Servicely،\n\nنريد مناقشة مشروع جديد.\n\nاسم الشركة:\nالدولة/المدينة:\nنوع المشروع:\nالمشكلة الحالية:\nالميزانية التقريبية:\nالجدول الزمني:\nطريقة التواصل المفضلة:\n\nشكراً."
-    : "Hello Servicely,\n\nWe would like to discuss a new project.\n\nBusiness name:\nCountry/city:\nProject type:\nCurrent problem:\nBudget range:\nTimeline:\nPreferred contact method:\n\nThank you.";
+    ? "مرحباً Servicely،\n\nنريد مناقشة مشروع جديد.\n\nالاسم:\nاسم الشركة:\nالمنطقة الزمنية وأوقات الاجتماع المناسبة:\nمشكلة سير العمل أو التقارير:\nالأدوات أو العملية الحالية:\nالتكاملات الضرورية:\nموعد الإطلاق المستهدف:\nنطاق الميزانية:\nطريقة التواصل المفضلة:\n\nشكراً."
+    : "Hello Servicely,\n\nWe would like to discuss a new project.\n\nName:\nBusiness name:\nTime zone / preferred meeting hours:\nWorkflow or reporting problem:\nCurrent tools or process:\nMust-have integrations:\nTarget launch window:\nBudget range:\nPreferred contact method:\n\nThank you.";
+  const contactCopy = isAr
+    ? {
+        heroTitle: "أخبرنا أين يتعطل سير العمل",
+        heroBody:
+          "شارك العملية البطيئة أو المشتتة أو الصعبة القياس. سنستخدم التفاصيل لفهم الهدف وتحديد التكاملات وصياغة نطاق أولي عملي.",
+        eyebrow: "نقطة بداية مفيدة",
+        detailsTitle: "تفاصيل تساعدنا على فهم سير العمل",
+        cta: "لا تحتاج إلى مواصفات نهائية. ابدأ بالمشكلة والنتيجة التي تحتاجها.",
+        privacyLead: "اطلع على كيفية تعاملنا مع تفاصيل المشروع في",
+        privacyLabel: "سياسة الخصوصية",
+        groups: [
+          {
+            title: "بيانات التواصل",
+            fields: [
+              "الاسم",
+              "اسم الشركة",
+              "البريد الإلكتروني للعمل أو رقم واتساب",
+              "رابط الموقع أو المنتج، إن وجد",
+              "المنطقة الزمنية وأوقات الاجتماع المناسبة",
+            ],
+          },
+          {
+            title: "سير العمل الذي تريد تحسينه",
+            fields: [
+              "العملية البطيئة أو المشتتة حالياً",
+              "الأدوات أو الخطوات المستخدمة الآن",
+              "الأشخاص الذين سيستخدمون النظام",
+              "المعلومات التي يجب جمعها أو عرضها",
+              "الأنظمة أو التكاملات الضرورية",
+              "النتيجة التي تريد تحقيقها",
+            ],
+          },
+          {
+            title: "ملاءمة المشروع",
+            fields: [
+              "مشروع جديد أم تحسين لنظام موجود",
+              "اللغات ومتطلبات سهولة الوصول",
+              "موعد الإطلاق المستهدف",
+              "نطاق الميزانية",
+              "طريقة التواصل المفضلة",
+            ],
+          },
+        ],
+      }
+    : {
+        heroTitle: "Tell us where the workflow breaks down",
+        heroBody:
+          "Share the process that is slow, scattered or difficult to measure. We will use the details to understand the goal, clarify the integrations and shape a sensible first scope.",
+        eyebrow: "A useful starting point",
+        detailsTitle: "Details that help us understand the workflow",
+        cta: "You do not need a finished specification. Start with the problem and the outcome you need.",
+        privacyLead: "See how we handle project details in our",
+        privacyLabel: "Privacy Policy",
+        groups: [
+          {
+            title: "Contact details",
+            fields: [
+              "Name",
+              "Business name",
+              "Work email or WhatsApp number",
+              "Website or product link, if available",
+              "Time zone and preferred meeting hours",
+            ],
+          },
+          {
+            title: "The workflow you want to improve",
+            fields: [
+              "The process that is slow or scattered today",
+              "The tools or steps currently in use",
+              "The people who will use the system",
+              "The information it must capture or show",
+              "The systems or integrations it must connect",
+              "The outcome you want to achieve",
+            ],
+          },
+          {
+            title: "Project fit",
+            fields: [
+              "New project or improvement to an existing system",
+              "Required languages and accessibility needs",
+              "Target launch window",
+              "Budget range",
+              "Preferred contact method",
+            ],
+          },
+        ],
+      };
 
   const infoItems = [
     {
       Icon: Clock3,
-      label: isAr ? "رد أولي عملي" : "Practical first reply",
+      label: isAr
+        ? "رد مباشر من فريق البناء"
+        : "A direct reply from the builders",
       href: null,
     },
     {
       Icon: CalendarDays,
-      label: isAr ? "نطاق واضح قبل البناء" : "Clear scope before building",
+      label: isAr
+        ? "نطاق مكتوب قبل التطوير"
+        : "A written scope before development",
       href: null,
     },
     {
@@ -57,6 +147,7 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <main className="bg-white">
+      <PageStructuredData page="contact" locale={locale} />
       <section className="px-4 py-14 md:px-6 md:py-20 lg:px-8">
         <Reveal>
           <div className="mx-auto max-w-6xl overflow-hidden rounded-[32px] border border-neutral-200 shadow-[0_28px_90px_rgba(15,23,42,0.18)] lg:grid lg:grid-cols-[0.9fr_1.1fr]">
@@ -77,11 +168,11 @@ export default async function ContactPage({ params }: Props) {
                 </div>
 
                 <h1 className="mt-6 max-w-md text-4xl font-semibold leading-tight sm:text-5xl">
-                  {content.contact.heroTitle}
+                  {contactCopy.heroTitle}
                 </h1>
 
                 <p className="mt-5 max-w-md text-base leading-7 text-white/70">
-                  {content.contact.heroBody}
+                  {contactCopy.heroBody}
                 </p>
               </div>
 
@@ -117,15 +208,15 @@ export default async function ContactPage({ params }: Props) {
               <div className="flex h-full flex-col rounded-2xl bg-neutral-50 p-5">
                 <div className="border-b border-neutral-200 pb-5">
                   <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">
-                    {isAr ? "ماذا سنسأل؟" : "What we will ask"}
+                    {contactCopy.eyebrow}
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold text-neutral-950">
-                    {isAr ? "تفاصيل تساعدنا على فهم المشروع" : "Details that help us understand the project"}
+                    {contactCopy.detailsTitle}
                   </h2>
                 </div>
 
                 <div className="grid flex-1 content-start gap-3 py-5">
-                  {content.contact.groups.map((group) => (
+                  {contactCopy.groups.map((group) => (
                     <article
                       key={group.title}
                       className="rounded-2xl border border-neutral-200 bg-white p-5"
@@ -149,7 +240,7 @@ export default async function ContactPage({ params }: Props) {
                 </div>
 
                 <div className="rounded-xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-neutral-600">
-                  {content.contact.cta}
+                  {contactCopy.cta}
                   <div className="mt-4 flex flex-wrap gap-3">
                     <Link
                       href={siteConfig.social.whatsapp}
@@ -169,6 +260,16 @@ export default async function ContactPage({ params }: Props) {
                       {isAr ? "راسلنا" : "Email us"}
                     </Link>
                   </div>
+                  <p className="mt-4 text-xs leading-5 text-neutral-500">
+                    {contactCopy.privacyLead}{" "}
+                    <Link
+                      href="/privacy"
+                      className="font-semibold text-neutral-700 underline underline-offset-2 hover:text-neutral-950"
+                    >
+                      {contactCopy.privacyLabel}
+                    </Link>
+                    .
+                  </p>
                 </div>
               </div>
             </div>

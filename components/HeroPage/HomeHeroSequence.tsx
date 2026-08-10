@@ -1,10 +1,5 @@
-﻿"use client";
-
-import { useEffect, useState } from "react";
-
-import { DevelopDesignEngageCanvas } from "@/components/HeroPage/DevDesEngCanvas";
 import { BackgroundCircles } from "./BackgroundCircle";
-import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
 
 type VisionContent = {
   heading: string;
@@ -16,58 +11,14 @@ type VisionContent = {
 
 type HomeHeroSequenceProps = {
   vision: VisionContent;
-  animationDurationMs?: number;
 };
 
-export function HomeHeroSequence({
-  vision,
-  animationDurationMs = 4800,
-}: HomeHeroSequenceProps) {
-  const [showVision, setShowVision] = useState(false);
-  const [hideAnimation, setHideAnimation] = useState(false);
-  const fadeDurationMs = 700;
-
-  useEffect(() => {
-    const showTimeout = window.setTimeout(
-      () => setShowVision(true),
-      animationDurationMs
-    );
-    const hideTimeout = window.setTimeout(
-      () => setHideAnimation(true),
-      animationDurationMs + fadeDurationMs
-    );
-    return () => {
-      window.clearTimeout(showTimeout);
-      window.clearTimeout(hideTimeout);
-    };
-  }, [animationDurationMs, fadeDurationMs]);
-
+export function HomeHeroSequence({ vision }: HomeHeroSequenceProps) {
   return (
-    <div className="relative flex flex-col items-center justify-center overflow-hidden px-4 pt-24 sm:pt-32 sm:pb-16">
+    <div className="relative flex flex-col items-center justify-center overflow-hidden px-4 pt-24 sm:pb-16 sm:pt-32">
       <BackgroundCircles />
       <div className="relative z-10 grid w-full place-items-center">
-        {!hideAnimation && (
-          <div
-            className={cn(
-              "col-start-1 row-start-1 transition-all duration-700 ease-out",
-              showVision
-                ? "pointer-events-none opacity-0 scale-95"
-                : "opacity-100 scale-100"
-            )}
-          >
-            <DevelopDesignEngageCanvas />
-          </div>
-        )}
-        <div
-          className={cn(
-            "col-start-1 row-start-1 transition-all duration-700 ease-out",
-            showVision
-              ? "opacity-100 scale-100"
-              : "pointer-events-none opacity-0 scale-95"
-          )}
-        >
-          <VisionCallout {...vision} />
-        </div>
+        <VisionCallout {...vision} />
       </div>
     </div>
   );
@@ -76,6 +27,8 @@ export function HomeHeroSequence({
 function VisionCallout({
   heading,
   body,
+  ctaLabel,
+  ctaHref = "/contact",
   chips,
 }: VisionContent) {
   return (
@@ -105,6 +58,12 @@ function VisionCallout({
               ))}
             </div>
           ) : null}
+          <Link
+            href={ctaHref}
+            className="mt-3 inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-neutral-800"
+          >
+            {ctaLabel}
+          </Link>
         </div>
       </div>
     </div>

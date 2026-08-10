@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // Run on every path except API routes, Next internals and files with an
-  // extension (sitemap.xml, robots.txt, manifest.webmanifest, images, etc.).
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Run on localized pages, but leave APIs, Next internals and metadata/image
+  // routes untouched. Generated OG images use an extensionless route.
+  matcher: ["/((?!api|_next|_vercel|opengraph-image|.*\\..*).*)"],
 };

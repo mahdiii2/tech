@@ -24,6 +24,8 @@ const SOCIALS = [
   },
 ];
 
+const VISIBLE_SOCIALS = SOCIALS.filter(({ href }) => Boolean(href));
+
 export default function ContactBridge() {
   const [hoverRight, setHoverRight] = useState(false);
   const t = useTranslations("HomePage.contactBridge");
@@ -67,26 +69,28 @@ export default function ContactBridge() {
               {t("ctaLabel")}
             </Link>
 
-            <div className="mt-4 flex flex-col items-center gap-3">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--neutral-500)]">
-                {t("followLabel")}
-              </span>
-              <div className="flex items-center gap-3">
-                {SOCIALS.map(({ label, Icon, href, color }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white/70 backdrop-blur transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md"
-                    style={{ color }}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </Link>
-                ))}
+            {VISIBLE_SOCIALS.length ? (
+              <div className="mt-4 flex flex-col items-center gap-3">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--neutral-500)]">
+                  {t("followLabel")}
+                </span>
+                <div className="flex items-center gap-3">
+                  {VISIBLE_SOCIALS.map(({ label, Icon, href, color }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white/70 backdrop-blur transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md"
+                      style={{ color }}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type Testimonial = {
@@ -58,7 +58,7 @@ const TestimonialStickyCard = ({
               className="flex h-12 w-12 items-center justify-center rounded-2xl text-3xl font-black text-white shadow-[0_20px_45px_rgba(54,95,217,0.35)]"
               style={{ backgroundColor: "var(--dev-500)" }}
             >
-              <Quote size={24} className="text-white" />
+              <CheckCircle2 size={24} className="text-white" />
             </div>
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--neutral-500)]">
               {clientLabel}

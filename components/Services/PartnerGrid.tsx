@@ -1,7 +1,6 @@
 ﻿"use client";
 
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/Industries/Reveal";
 
@@ -60,6 +59,12 @@ export default function PartnerGrid() {
               <br />
               {t("body3")}
             </p>
+            <Link
+              href="/support-hosting"
+              className="mt-7 inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-5 py-3 text-sm font-semibold text-neutral-900 transition hover:border-neutral-500"
+            >
+              {t("supportCta")}
+            </Link>
 
             <div className="mt-8 flex items-center justify-center gap-5 lg:hidden">
               {[0, 1, 2].map((idx) => {

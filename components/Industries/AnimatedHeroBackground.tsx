@@ -9,7 +9,6 @@ type FloatCircle = {
   duration: number;
   dx: number;
   dy: number;
-  hideOnMobile?: boolean;
 };
 
 const CIRCLES: FloatCircle[] = [
@@ -19,7 +18,6 @@ const CIRCLES: FloatCircle[] = [
     duration: 9,
     dx: 24,
     dy: -28,
-    hideOnMobile: true,
   },
   {
     size: 340,
@@ -27,7 +25,6 @@ const CIRCLES: FloatCircle[] = [
     duration: 11,
     dx: -26,
     dy: 22,
-    hideOnMobile: true,
   },
   {
     size: 160,
@@ -42,7 +39,6 @@ const CIRCLES: FloatCircle[] = [
     duration: 8,
     dx: -18,
     dy: -16,
-    hideOnMobile: true,
   },
   {
     size: 140,
@@ -57,7 +53,6 @@ const CIRCLES: FloatCircle[] = [
     duration: 9,
     dx: 0,
     dy: 24,
-    hideOnMobile: true,
   },
 ];
 
@@ -80,9 +75,7 @@ export function AnimatedHeroBackground({
         {CIRCLES.map((circle, index) => (
           <motion.div
             key={index}
-            className={`absolute rounded-full ${
-              circle.hideOnMobile ? "hidden md:block" : ""
-            }`}
+            className="absolute hidden rounded-full md:block"
             style={{
               width: circle.size,
               height: circle.size,

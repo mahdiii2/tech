@@ -1,1241 +1,206 @@
-export type MarketLocale = "en" | "ar";
-
-export type TextLink = {
-  label: string;
-  href: string;
-};
-
-export type BulletSection = {
-  id?: string;
+type WhyUsSection = {
   title: string;
   body: string;
-  bestFor?: string[];
-  examples?: string[];
-  points?: string[];
-  systems?: string[];
 };
 
-export type UseCase = {
-  id: string;
+type SupportSection = {
   title: string;
-  problem: string;
-  solution: string;
-  result: string[];
+  points: string[];
+};
+
+type MarketCopy = {
+  common: {
+    startProject: string;
+  };
+  whyUs: {
+    heroTitle: string;
+    heroBody: string;
+    sections: WhyUsSection[];
+  };
+  support: {
+    heroTitle: string;
+    heroBody: string;
+    sections: SupportSection[];
+  };
 };
 
 const en = {
-  locale: "en" as const,
-  brand: "Servicely",
   common: {
-    bestFor: "Best for",
-    examples: "Examples",
-    possibleSystems: "Possible systems",
-    problem: "Problem",
-    solution: "Solution",
-    result: "Result",
-    startProject: "Send project details",
-    bookConsultation: "Book a Free Consultation",
-    seeWhatWeBuild: "See What We Build",
-    contactWhatsapp: "Contact Us on WhatsApp",
+    startProject: "Map one workflow",
   },
-  home: {
-    hero: {
-      eyebrow: "Practical Software for Customer Flow",
-      title: "Build the system your customers feel first",
-      body:
-        "Servicely builds practical software for inquiries, bookings, leads, and follow-up for customer-facing teams.",
-      trust:
-        "Focused on clinics, real estate, automotive, and field service teams that need faster response, clearer handoffs, and better follow-up.",
-      ctas: [
-        { label: "Contact us", href: "/contact" },
-        { label: "Explore services", href: "/services#services-blueprints" },
-      ],
-    },
-    improveTitle: "What we help you improve",
-    improveBody:
-      "We focus on inquiry intake, booking requests, lead follow-up, WhatsApp workflows, websites, apps, and dashboards.",
-    marketsTitle: "Built around the customer journey",
-    industriesTitle: "Primary industries",
-    whyTitle: "Why work with us?",
-    whyBody:
-      "We are a small technical team for businesses that want direct access to the people doing the work, clear scope, practical execution, and support after launch.",
-    practicalTitle: "Practical systems, not unnecessary complexity",
-    practicalBody:
-      "Most businesses do not need a giant platform. They need a useful system that solves a clear problem.",
-    supportTitle: "Support, hosting, and maintenance",
-    supportBody:
-      "We provide post-launch support, hosting help, monitoring, deployment management, backups, and maintenance options based on the system's importance.",
-    finalCtaTitle: "Let's build the system your business actually needs",
-    finalCtaBody:
-      "Tell us what you want to improve: appointment requests, patient inquiries, property matching, vehicle inquiries, service requests, lead follow-up, WhatsApp workflows, apps, dashboards, or your website.",
-  },
-  improve: [
-    {
-      id: "analytics-power-bi-ai",
-      title: "Analytics, Power BI & AI",
-      body:
-        "We turn Excel files, databases and business records into Power BI dashboards, KPI reports, data models, pipelines and AI-assisted insights.",
-      bestFor: [
-        "businesses working in Excel",
-        "teams preparing reports manually",
-        "organizations consolidating databases",
-        "leaders who need clearer KPIs",
-      ],
-      examples: [
-        "Power BI",
-        "KPIs",
-        "dashboards",
-        "data engineering",
-        "AI insights",
-      ],
-    },
-    {
-      id: "data-scraping",
-      title: "Data scraping",
-      body:
-        "We collect structured data from websites, directories and public sources, then clean, deduplicate and deliver it for analysis or automation.",
-      bestFor: [
-        "market and competitor research",
-        "product and pricing monitoring",
-        "directory and listing collection",
-        "teams replacing manual data entry",
-      ],
-      examples: [
-        "web scraping",
-        "data extraction",
-        "scheduled collection",
-        "data cleaning",
-        "Excel and database exports",
-      ],
-    },
-    {
-      id: "websites-web-apps-portals",
-      title: "Websites, apps & portals",
-      body:
-        "We build websites and platforms connected to real customer actions: booking, inquiry, listing views, request submission, dashboards, and portals.",
-      examples: [
-        "clinic websites",
-        "real estate websites",
-        "customer portals",
-        "admin dashboards",
-        "booking/request flows",
-        "property inquiry tools",
-      ],
-    },
-    {
-      id: "mobile-apps-store-deployment",
-      title: "Mobile apps & deployment",
-      body:
-        "We build Android and iOS apps when the workflow needs a mobile experience for customers, staff, agents, or internal teams.",
-      examples: [
-        "customer apps",
-        "clinic apps",
-        "real estate apps",
-        "booking/request apps",
-        "agent apps",
-        "Google Play and App Store deployment",
-      ],
-    },
-    {
-      id: "whatsapp-lead-automation",
-      title: "WhatsApp automation",
-      body:
-        "Many customer-facing teams depend on WhatsApp. We automate replies, collect customer details, organize conversations, and route requests to the right person.",
-      examples: [
-        "WhatsApp inquiry flow",
-        "appointment request collection",
-        "property buyer/renter qualification",
-        "clinic appointment requests",
-        "staff handoff",
-        "after-hours capture",
-        "follow-up tracking",
-      ],
-    },
-    {
-      id: "reporting-business-visibility",
-      title: "Dashboards & business visibility",
-      body:
-        "We build dashboards that show inquiries, appointment requests, property leads, status, handoff, and follow-up activity in one place.",
-      examples: [
-        "lead dashboards",
-        "appointment dashboards",
-        "inquiry tracking",
-        "request status",
-        "staff response tracking",
-        "follow-up reports",
-      ],
-    },
-    {
-      id: "support-hosting-maintenance",
-      title: "Support, hosting & maintenance",
-      body:
-        "We support your system after launch with hosting help, SSL, backups, monitoring, deployment management, security updates, and maintenance options.",
-      examples: [
-        "standard post-launch support",
-        "priority maintenance",
-        "monitoring",
-        "backup checks",
-        "security updates",
-        "deployment management",
-      ],
-    },
-  ] satisfies BulletSection[],
-  markets: [
-    {
-      title: "Fast response",
-      body:
-        "Capture and organize inquiries from the channels your customers already use, so every request has a clear owner and next step.",
-      points: [
-        "web and WhatsApp intake",
-        "automatic answers to common questions",
-        "after-hours request capture",
-        "contact preference collection",
-        "clear response ownership",
-      ],
-    },
-    {
-      title: "Qualified requests",
-      body:
-        "Ask the right questions up front so your team receives the context it needs before spending time on a request.",
-      points: [
-        "appointment details",
-        "budget and preferences",
-        "service requirements",
-        "timing and availability",
-        "uploads and supporting details",
-      ],
-    },
-    {
-      title: "Clear handoff",
-      body:
-        "Move each conversation from automation to the right person without losing the customer details or promised next action.",
-      points: [
-        "team and branch routing",
-        "conversation summaries",
-        "assignment and ownership",
-        "status updates",
-        "customer notifications",
-      ],
-    },
-    {
-      title: "Visible follow-up",
-      body:
-        "Keep requests, appointments, leads, and follow-up visible so managers can spot delays and improve the workflow.",
-      points: [
-        "lead and request dashboards",
-        "follow-up reminders",
-        "response tracking",
-        "pipeline visibility",
-        "practical performance reports",
-      ],
-    },
-  ],
-  industries: [
-    {
-      id: "clinics-medical-centers",
-      title: "Clinics and medical centers",
-      body:
-        "Clinics need trust, speed, and clear communication. We help capture appointment requests, route patient inquiries, and keep follow-up visible.",
-      systems: [
-        "appointment request flow",
-        "patient inquiry assistant",
-        "service and branch routing",
-        "after-hours request capture",
-        "clinic website",
-        "request dashboard",
-      ],
-    },
-    {
-      id: "real-estate-agencies",
-      title: "Real estate agencies",
-      body:
-        "Real estate teams need cleaner property inquiries, qualified buyers or renters, viewing coordination, and clear agent handoff.",
-      systems: [
-        "property matching flow",
-        "buyer/renter qualification",
-        "viewing request intake",
-        "property listing website",
-        "agent dashboard",
-        "lead follow-up tracking",
-      ],
-    },
-    {
-      id: "automotive-mobility",
-      title: "Automotive and mobility",
-      body:
-        "Automotive teams need clearer vehicle inquiries, service appointment intake, quote follow-up, and branch routing.",
-      systems: [
-        "vehicle inquiry qualification",
-        "test-drive scheduling",
-        "service appointment intake",
-        "branch routing",
-        "rental or availability follow-up",
-        "quote tracking dashboard",
-      ],
-    },
-    {
-      id: "home-field-services",
-      title: "Home and field services",
-      body:
-        "Field service teams need cleaner service requests, quote details, scheduling, crew assignment, job status, and follow-up.",
-      systems: [
-        "service request triage",
-        "quote intake flow",
-        "technician or crew assignment",
-        "job status tracking",
-        "approval workflow",
-        "post-service follow-up",
-      ],
-    },
-  ] satisfies BulletSection[],
-  useCases: [
-    {
-      id: "clinic-appointment-intake",
-      title: "Clinic appointment intake",
-      problem:
-        "Patients send vague appointment messages without service, preferred time, branch, or contact details.",
-      solution:
-        "A guided intake flow collects the details staff need before confirming the appointment.",
-      result: [
-        "cleaner appointment requests",
-        "less back-and-forth",
-        "faster staff confirmation",
-        "fewer missed inquiries",
-      ],
-    },
-    {
-      id: "clinic-inquiry-routing",
-      title: "Clinic service inquiry routing",
-      problem:
-        "Patients ask basic non-medical questions about services, doctors, branches, hours, and contact options across many channels.",
-      solution:
-        "An assistant or structured flow answers routine information and routes the request to the right team or branch.",
-      result: [
-        "faster answers",
-        "better patient direction",
-        "less repeated manual work",
-        "clearer staff handoff",
-      ],
-    },
-    {
-      id: "clinic-follow-up-tracking",
-      title: "Clinic follow-up and after-hours capture",
-      problem:
-        "Requests can be delayed or forgotten when messages arrive after hours or during busy clinic periods.",
-      solution:
-        "A request dashboard tracks status, handoff, reminders, and pending follow-up.",
-      result: [
-        "after-hours requests are captured",
-        "follow-up is visible",
-        "staff know what needs attention",
-        "patient experience feels more organized",
-      ],
-    },
-    {
-      id: "real-estate-property-matching",
-      title: "Property matching",
-      problem:
-        "Buyers and renters ask broadly without budget, area, property type, bedroom count, or timeline.",
-      solution:
-        "A matching flow collects preferences before suggesting relevant listing categories or handing the lead to an agent.",
-      result: [
-        "more relevant property conversations",
-        "cleaner buyer and renter profiles",
-        "faster agent response",
-        "less time spent asking basics",
-      ],
-    },
-    {
-      id: "real-estate-lead-follow-up",
-      title: "Real estate lead qualification and follow-up",
-      problem:
-        "Agents receive many incomplete leads and lose track of who needs the next call or message.",
-      solution:
-        "A qualification and follow-up system tracks budget, area, type, urgency, source, status, and next action.",
-      result: [
-        "agents prioritize serious leads",
-        "follow-up becomes consistent",
-        "owners see pipeline status",
-        "fewer leads are missed",
-      ],
-    },
-    {
-      id: "real-estate-viewing-handoff",
-      title: "Viewing scheduling and agent handoff",
-      problem:
-        "Viewing requests require repeated manual coordination between customer availability, property details, and agent assignment.",
-      solution:
-        "A viewing request flow collects property, preferred time, contact details, and availability before sending it to the right agent.",
-      result: [
-        "clearer viewing requests",
-        "faster agent handoff",
-        "less manual coordination",
-        "better customer experience",
-      ],
-    },
-    {
-      id: "automotive-test-drive-scheduling",
-      title: "Vehicle inquiry qualification and test-drive scheduling",
-      problem:
-        "Buyers ask about vehicles without model, budget, financing, trade-in, location, or timing details.",
-      solution:
-        "A qualification flow collects vehicle interest, budget, timeline, branch, contact details, and test-drive preference.",
-      result: [
-        "clearer vehicle inquiries",
-        "faster test-drive scheduling",
-        "better sales handoff",
-        "less time spent asking basics",
-      ],
-    },
-    {
-      id: "automotive-service-intake",
-      title: "Automotive service appointment intake",
-      problem:
-        "Service requests arrive without vehicle details, issue, urgency, or preferred branch.",
-      solution:
-        "An intake flow collects make, model, year, issue, photos if needed, preferred time, and branch.",
-      result: [
-        "cleaner service requests",
-        "better branch routing",
-        "faster advisor preparation",
-        "clearer next steps for customers",
-      ],
-    },
-    {
-      id: "automotive-quote-follow-up",
-      title: "Quote, rental, or availability follow-up",
-      problem:
-        "Customers ask for quotes, rental availability, or stock updates and follow-up gets lost in WhatsApp.",
-      solution:
-        "A follow-up workflow tracks quote status, availability, customer preference, and next action.",
-      result: [
-        "more consistent follow-up",
-        "fewer cold inquiries",
-        "clearer quote status",
-        "better visibility for managers",
-      ],
-    },
-    {
-      id: "field-service-request-triage",
-      title: "Service request triage and quote intake",
-      problem:
-        "Customers ask for help without explaining the service type, location, photos, urgency, or expected scope.",
-      solution:
-        "A triage flow collects job category, location, details, media, preferred timing, and quote requirements.",
-      result: [
-        "clearer service requests",
-        "fewer repeated questions",
-        "faster quote preparation",
-        "better request prioritization",
-      ],
-    },
-    {
-      id: "field-service-scheduling",
-      title: "Scheduling and technician or crew assignment",
-      problem:
-        "Scheduling depends on scattered messages between customers, coordinators, and technicians.",
-      solution:
-        "A scheduling workflow captures availability, location, job type, and crew capacity before assignment.",
-      result: [
-        "faster crew assignment",
-        "clearer appointment windows",
-        "less manual coordination",
-        "better customer updates",
-      ],
-    },
-    {
-      id: "field-service-job-follow-up",
-      title: "Job status, approval, and post-service follow-up",
-      problem:
-        "Customers ask for updates, approvals, and next steps while job status sits in chats or spreadsheets.",
-      solution:
-        "A status workflow tracks visit outcome, required approval, next action, payment note, and follow-up.",
-      result: [
-        "visible job progress",
-        "clearer customer approvals",
-        "better manager oversight",
-        "more reliable post-service follow-up",
-      ],
-    },
-  ] satisfies UseCase[],
   whyUs: {
-    heroTitle: "Small technical team. Direct builders. Practical systems.",
+    heroTitle: "Direct access to the people planning and building your system",
     heroBody:
-      "We are built for businesses that want direct access to the people doing the work, clear scope, practical execution, and support after launch.",
+      "Work with one accountable team from workflow mapping through launch. Decisions stay documented, tradeoffs stay visible, and every release has a useful business purpose.",
     sections: [
       {
-        title: "Direct communication",
+        title: "One accountable delivery team",
         body:
-          "You work directly with the people building your system, so scope, decisions, and tradeoffs stay clear.",
+          "The people who shape the scope also build and review the product. You always know who owns the next decision, deliverable, and follow-up.",
       },
       {
-        title: "Practical systems",
+        title: "Scope tied to an outcome",
         body:
-          "We do not build complexity to make the project look bigger. We focus on the useful system your business actually needs.",
+          "We connect every feature to a workflow problem, success signal, or operational requirement before it enters the first release.",
       },
       {
-        title: "Modern development workflow",
+        title: "Working reviews, not long reveals",
         body:
-          "We use current development tools to plan, build, debug, document, and test ideas faster. The final system is still reviewed and delivered by real developers.",
+          "You review working screens and flows at agreed checkpoints, while choices, open questions, and tradeoffs are recorded for the team.",
       },
       {
-        title: "Clear scope and delivery",
+        title: "Launch and handover planned early",
         body:
-          "Before building, we define the problem, first version, required features, realistic timeline, and support needs after launch.",
+          "Deployment, access, documentation, training, backups, and ownership are planned before launch instead of being left to the final week.",
       },
       {
-        title: "Small team advantage",
+        title: "Support matched to the system",
         body:
-          "A small team means direct access, lower overhead, faster communication, more flexibility, and a closer client relationship.",
+          "After launch, choose a support level based on business impact, change frequency, response expectations, and infrastructure needs.",
       },
-    ],
-  },
-  about: {
-    heroTitle: "A practical software partner for customer-facing businesses",
-    heroBody:
-      "We help clinics, real estate teams, automotive businesses, field service teams, and growing companies build useful systems for inquiries, bookings, leads, portals, dashboards, and internal workflows.",
-    processTitle: "How we work",
-    process: [
-      "Understand the problem",
-      "Define the scope",
-      "Suggest the best practical solution",
-      "Build the first version",
-      "Test and revise",
-      "Deploy",
-      "Support after launch if needed",
-    ],
-    whatTitle: "What we build",
-    what: [
-      "analytics, Power BI and AI",
-      "data scraping and extraction",
-      "WhatsApp workflows",
-      "appointment request systems",
-      "property lead systems",
-      "vehicle inquiry systems",
-      "service request systems",
-      "websites",
-      "mobile apps",
-      "web apps",
-      "business portals",
-      "admin dashboards",
-      "reporting tools",
-      "internal systems",
     ],
   },
   support: {
-    heroTitle: "Support, Hosting & Maintenance",
+    heroTitle: "Keep the system reliable after launch",
     heroBody:
-      "A digital system should not be abandoned after launch. We offer support, hosting, and maintenance options depending on project importance and required coverage.",
+      "Choose maintenance, monitoring, deployment, and response coverage based on how often the system changes and what an interruption would mean for your team.",
     sections: [
       {
-        title: "Standard support",
+        title: "Launch care",
         points: [
-          "bug fixes",
-          "small corrections",
-          "technical guidance",
-          "deployment checks",
-          "basic post-launch support",
-          "minor content or configuration help",
+          "post-launch verification",
+          "defect correction within the agreed scope",
+          "configuration and content guidance",
+          "deployment and access checks",
+          "handover questions",
         ],
       },
       {
-        title: "Priority support",
+        title: "Ongoing maintenance",
         points: [
-          "faster response",
-          "higher-priority fixes",
-          "monitoring",
-          "updates",
-          "small improvements",
-          "technical support",
+          "dependency and security updates",
+          "scheduled backup checks",
+          "performance and error review",
           "deployment management",
-          "backup checks",
-          "performance checks",
+          "small agreed improvements",
+          "maintenance notes after each cycle",
         ],
       },
       {
-        title: "24/7 support",
+        title: "Priority incident coverage",
         points: [
-          "urgent production response",
-          "stronger monitoring",
-          "faster escalation",
-          "higher availability",
-          "critical-system support",
-          "extended response coverage",
+          "defined coverage hours",
+          "written response and escalation targets",
+          "production incident triage",
+          "monitoring alerts routed to an owner",
+          "recovery steps documented in advance",
+          "coverage tailored to system criticality",
         ],
       },
       {
         title: "Hosting and deployment",
         points: [
-          "SSL certificate",
-          "domain connection",
-          "backups",
-          "monitoring",
-          "uptime monitoring",
+          "domain and SSL configuration",
+          "application and database hosting",
+          "backup and restore planning",
+          "availability and error monitoring",
           "deployment management",
-          "database hosting",
-          "cloud server setup",
-          "security updates",
-          "environment configuration",
-          "SLA-backed infrastructure options up to 99.99%, depending on architecture and hosting plan",
+          "environment and access configuration",
+          "infrastructure options selected for the workload",
         ],
       },
     ],
   },
-  contact: {
-    heroTitle: "Tell us what you want to improve",
-    heroBody:
-      "Whether you need cleaner inquiries, appointment intake, property lead follow-up, WhatsApp workflows, a website, an app, a dashboard, or an internal system, we can help define the simplest useful version.",
-    cta:
-      "Send your request and we will help you define the most practical system for your business.",
-    groups: [
-      {
-        title: "Basic information",
-        fields: [
-          "Name",
-          "Business name",
-          "Country",
-          "City",
-          "Industry",
-          "Website or social media link",
-          "WhatsApp number",
-          "Email",
-        ],
-      },
-      {
-        title: "What do you need?",
-        fields: [
-          "Inquiry, booking, or lead flow",
-          "Clinic, real estate, automotive, or field service workflow",
-          "Website, app, portal, or dashboard",
-          "WhatsApp automation or handoff",
-          "Support, hosting, or maintenance",
-          "Not sure yet",
-        ],
-      },
-      {
-        title: "Project details",
-        fields: [
-          "What problem do you want to solve?",
-          "What are you using now?",
-          "Do you already have a website?",
-          "Do you receive many inquiries on WhatsApp?",
-          "Do you need Arabic, English, or both?",
-          "Is this a new project or improvement of an existing system?",
-          "Preferred launch timeline",
-          "Budget range",
-          "Preferred contact method",
-        ],
-      },
-    ],
-  },
-};
+} satisfies MarketCopy;
 
 const ar = {
-  locale: "ar" as const,
-  brand: "Servicely",
   common: {
-    bestFor: "مناسب لـ",
-    examples: "أمثلة",
-    possibleSystems: "أنظمة ممكنة",
-    problem: "المشكلة",
-    solution: "الحل",
-    result: "النتيجة",
-    startProject: "أرسل تفاصيل المشروع",
-    bookConsultation: "احجز استشارة مجانية",
-    seeWhatWeBuild: "اطلع على ما نبنيه",
-    contactWhatsapp: "تواصل معنا عبر واتساب",
+    startProject: "ارسم مسار عمل واحداً",
   },
-  home: {
-    hero: {
-      eyebrow: "برمجيات عملية لتدفق العملاء",
-      title: "ابنِ النظام الذي يلمسه عملاؤك أولاً",
-      body:
-        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات والعملاء المحتملين والمتابعة للفرق التي تتعامل مباشرة مع العملاء.",
-      trust:
-        "نركز على العيادات والعقارات والسيارات والخدمات الميدانية التي تحتاج استجابة أسرع وتحويلاً أوضح ومتابعة أفضل.",
-      ctas: [
-        { label: "تواصل معنا", href: "/contact" },
-        { label: "استكشف الخدمات", href: "/services#services-blueprints" },
-      ],
-    },
-    improveTitle: "ما الذي نساعدك على تحسينه",
-    improveBody:
-      "نركز على استقبال الاستفسارات، طلبات المواعيد، متابعة العملاء المحتملين، مسارات واتساب، المواقع، التطبيقات، ولوحات التحكم.",
-    marketsTitle: "مصمم حول رحلة العميل",
-    industriesTitle: "القطاعات الأساسية",
-    whyTitle: "لماذا تعمل معنا؟",
-    whyBody:
-      "نحن فريق تقني صغير للشركات التي تريد تواصلاً مباشراً مع من يبني النظام، نطاقاً واضحاً، تنفيذاً عملياً، ودعماً بعد الإطلاق.",
-    practicalTitle: "أنظمة عملية بدون تعقيد غير ضروري",
-    practicalBody:
-      "معظم الشركات لا تحتاج إلى منصة ضخمة. تحتاج إلى نظام مفيد يحل مشكلة واضحة.",
-    supportTitle: "الدعم، الاستضافة، والصيانة",
-    supportBody:
-      "نوفر دعماً بعد الإطلاق، مساعدة في الاستضافة، مراقبة، إدارة نشر، نسخاً احتياطية، وخيارات صيانة حسب أهمية النظام.",
-    finalCtaTitle: "لنبنِ النظام الذي يحتاجه عملك فعلاً",
-    finalCtaBody:
-      "أخبرنا بما تريد تحسينه: طلبات المواعيد، استفسارات المرضى، مطابقة العقارات، استفسارات المركبات، طلبات الخدمة، متابعة العملاء المحتملين، مسارات واتساب، التطبيقات، لوحات التحكم، أو موقعك.",
-  },
-  improve: [
-    {
-      id: "analytics-power-bi-ai",
-      title: "التحليلات وPower BI والذكاء الاصطناعي",
-      body:
-        "نحوّل ملفات Excel وقواعد البيانات وسجلات الأعمال إلى لوحات Power BI وتقارير مؤشرات الأداء ونماذج بيانات وخطوط معالجة ورؤى مدعومة بالذكاء الاصطناعي.",
-      bestFor: [
-        "الشركات التي تعمل على ملفات Excel",
-        "الفرق التي تعد التقارير يدويًا",
-        "المؤسسات التي تجمع بيانات من قواعد متعددة",
-        "المديرون الذين يحتاجون مؤشرات أداء أوضح",
-      ],
-      examples: [
-        "Power BI",
-        "مؤشرات الأداء",
-        "لوحات المعلومات",
-        "هندسة البيانات",
-        "رؤى الذكاء الاصطناعي",
-      ],
-    },
-    {
-      id: "data-scraping",
-      title: "استخراج البيانات من الويب",
-      body:
-        "نجمع بيانات منظمة من المواقع والأدلة والمصادر العامة، ثم ننظفها ونزيل التكرار ونسلمها للتحليل أو الأتمتة.",
-      bestFor: [
-        "أبحاث السوق والمنافسين",
-        "مراقبة المنتجات والأسعار",
-        "جمع بيانات الأدلة والقوائم",
-        "الفرق التي تريد تقليل إدخال البيانات يدويًا",
-      ],
-      examples: [
-        "استخراج بيانات الويب",
-        "جمع البيانات",
-        "الجمع المجدول",
-        "تنظيف البيانات",
-        "تصدير Excel وقواعد البيانات",
-      ],
-    },
-    {
-      id: "websites-web-apps-portals",
-      title: "المواقع والتطبيقات والبوابات",
-      body:
-        "نبني مواقع ومنصات مرتبطة بإجراءات فعلية للعميل: الحجز، الاستفسار، مشاهدة العقارات، إرسال الطلبات، لوحات التحكم، والبوابات.",
-      examples: [
-        "مواقع العيادات",
-        "مواقع العقارات",
-        "بوابات العملاء",
-        "لوحات إدارة",
-        "مسارات حجز وطلبات",
-        "أدوات استفسار عقارية",
-      ],
-    },
-    {
-      id: "mobile-apps-store-deployment",
-      title: "تطبيقات الجوال والنشر",
-      body:
-        "نبني تطبيقات Android و iOS عندما يحتاج سير العمل إلى تجربة جوال للعملاء أو الموظفين أو الوكلاء أو الفرق الداخلية.",
-      examples: [
-        "تطبيقات العملاء",
-        "تطبيقات العيادات",
-        "تطبيقات العقارات",
-        "تطبيقات الحجز والطلبات",
-        "تطبيقات الوكلاء",
-        "النشر على Google Play و App Store",
-      ],
-    },
-    {
-      id: "whatsapp-lead-automation",
-      title: "أتمتة واتساب",
-      body:
-        "تعتمد كثير من الفرق التي تتعامل مع العملاء على واتساب. نؤتمت الردود ونجمع بيانات العملاء وننظم المحادثات ونوجه الطلبات إلى الشخص المناسب.",
-      examples: [
-        "مسار استفسار واتساب",
-        "جمع طلبات المواعيد",
-        "تأهيل مشتري أو مستأجر عقاري",
-        "طلبات مواعيد العيادات",
-        "تحويل الطلب إلى الفريق",
-        "استقبال الطلبات خارج ساعات العمل",
-        "تتبع المتابعة",
-      ],
-    },
-    {
-      id: "reporting-business-visibility",
-      title: "لوحات تحكم ورؤية أوضح",
-      body:
-        "نبني لوحات تعرض الاستفسارات وطلبات المواعيد والعملاء المحتملين في العقارات والحالة والتحويل والمتابعة في مكان واحد.",
-      examples: [
-        "لوحات العملاء المحتملين",
-        "لوحات المواعيد",
-        "تتبع الاستفسارات",
-        "حالة الطلبات",
-        "تتبع استجابة الموظفين",
-        "تقارير المتابعة",
-      ],
-    },
-    {
-      id: "support-hosting-maintenance",
-      title: "الدعم والاستضافة والصيانة",
-      body:
-        "ندعم نظامك بعد الإطلاق من خلال المساعدة في الاستضافة و SSL والنسخ الاحتياطي والمراقبة وإدارة النشر وتحديثات الأمان وخيارات الصيانة.",
-      examples: [
-        "دعم قياسي بعد الإطلاق",
-        "صيانة ذات أولوية",
-        "مراقبة",
-        "فحص النسخ الاحتياطي",
-        "تحديثات الأمان",
-        "إدارة النشر",
-      ],
-    },
-  ] satisfies BulletSection[],
-  markets: [
-    {
-      title: "استجابة أسرع",
-      body:
-        "نجمع الاستفسارات من القنوات التي يستخدمها عملاؤك وننظمها، ليكون لكل طلب مسؤول وخطوة تالية واضحة.",
-      points: [
-        "استقبال عبر الموقع وواتساب",
-        "إجابات تلقائية للأسئلة الشائعة",
-        "استقبال الطلبات خارج ساعات العمل",
-        "جمع وسيلة التواصل المفضلة",
-        "مسؤولية واضحة عن الاستجابة",
-      ],
-    },
-    {
-      title: "طلبات أكثر وضوحاً",
-      body:
-        "نطرح الأسئلة المناسبة من البداية ليصل إلى فريقك السياق الذي يحتاجه قبل تخصيص الوقت للطلب.",
-      points: [
-        "تفاصيل المواعيد",
-        "الميزانية والتفضيلات",
-        "متطلبات الخدمة",
-        "التوقيت والتوافر",
-        "الملفات والتفاصيل الداعمة",
-      ],
-    },
-    {
-      title: "تحويل منظم إلى الفريق",
-      body:
-        "ننقل كل محادثة من الأتمتة إلى الشخص المناسب بدون فقدان بيانات العميل أو الخطوة التالية المتفق عليها.",
-      points: [
-        "التوجيه إلى الفريق أو الفرع",
-        "ملخصات المحادثات",
-        "التعيين وتحديد المسؤولية",
-        "تحديثات الحالة",
-        "إشعارات العملاء",
-      ],
-    },
-    {
-      title: "متابعة قابلة للقياس",
-      body:
-        "نُظهر الطلبات والمواعيد والعملاء المحتملين والمتابعة بوضوح ليكتشف المديرون التأخير ويحسنوا سير العمل.",
-      points: [
-        "لوحات العملاء المحتملين والطلبات",
-        "تذكيرات المتابعة",
-        "تتبع الاستجابة",
-        "رؤية واضحة لمسار العمل",
-        "تقارير أداء عملية",
-      ],
-    },
-  ],
-  industries: [
-    {
-      id: "clinics-medical-centers",
-      title: "العيادات والمراكز الطبية",
-      body:
-        "تحتاج العيادات إلى الثقة والسرعة والتواصل الواضح. نساعدها على استقبال طلبات المواعيد، توجيه استفسارات المرضى، وإظهار المتابعة بوضوح.",
-      systems: [
-        "مسار طلب موعد",
-        "مساعد استفسارات المرضى",
-        "توجيه حسب الخدمة أو الفرع",
-        "استقبال طلبات خارج ساعات العمل",
-        "موقع للعيادة",
-        "لوحة متابعة الطلبات",
-      ],
-    },
-    {
-      id: "real-estate-agencies",
-      title: "شركات العقارات",
-      body:
-        "تحتاج فرق العقارات إلى استفسارات عقارية أنظف، تأهيل المشترين أو المستأجرين، تنسيق المعاينات، وتحويل واضح إلى الوكلاء.",
-      systems: [
-        "مسار مطابقة عقارات",
-        "تأهيل مشتري أو مستأجر",
-        "استقبال طلبات المعاينة",
-        "موقع قوائم عقارية",
-        "لوحة للوكلاء",
-        "تتبع متابعة العملاء المحتملين",
-      ],
-    },
-    {
-      id: "automotive-mobility",
-      title: "السيارات وخدمات التنقل",
-      body:
-        "تحتاج فرق السيارات إلى استفسارات مركبات أوضح، استقبال مواعيد صيانة، متابعة عروض، وتوجيه حسب الفرع.",
-      systems: [
-        "تأهيل استفسارات المركبات",
-        "جدولة تجربة القيادة",
-        "استقبال مواعيد الصيانة",
-        "توجيه حسب الفرع",
-        "متابعة التأجير أو التوفر",
-        "لوحة متابعة العروض",
-      ],
-    },
-    {
-      id: "home-field-services",
-      title: "الخدمات المنزلية والميدانية",
-      body:
-        "تحتاج فرق الخدمات الميدانية إلى طلبات خدمة أوضح، تفاصيل عروض أسعار، جدولة، تعيين فرق، حالة عمل، ومتابعة.",
-      systems: [
-        "فرز طلبات الخدمة",
-        "مسار استقبال عروض الأسعار",
-        "تعيين فني أو فريق",
-        "تتبع حالة العمل",
-        "مسار الموافقات",
-        "متابعة ما بعد الخدمة",
-      ],
-    },
-  ] satisfies BulletSection[],
-  useCases: [
-    {
-      id: "clinic-appointment-intake",
-      title: "استقبال مواعيد للعيادات",
-      problem:
-        "يرسل المرضى رسائل مواعيد غامضة بدون خدمة أو وقت مفضل أو فرع أو بيانات تواصل.",
-      solution:
-        "يجمع مسار استقبال واضح التفاصيل التي يحتاجها الموظفون قبل تأكيد الموعد.",
-      result: [
-        "طلبات مواعيد أوضح",
-        "رسائل متابعة أقل",
-        "تأكيد أسرع من الفريق",
-        "استفسارات ضائعة أقل",
-      ],
-    },
-    {
-      id: "clinic-inquiry-routing",
-      title: "توجيه استفسارات خدمات العيادة",
-      problem:
-        "يسأل المرضى أسئلة أساسية غير طبية عن الخدمات والأطباء والفروع وأوقات العمل وطرق التواصل عبر قنوات كثيرة.",
-      solution:
-        "يجيب مساعد أو مسار منظم عن المعلومات الروتينية ويوجه الطلب إلى الفريق أو الفرع المناسب.",
-      result: [
-        "إجابات أسرع",
-        "توجيه أفضل للمرضى",
-        "عمل يدوي متكرر أقل",
-        "تحويل أوضح للموظفين",
-      ],
-    },
-    {
-      id: "clinic-follow-up-tracking",
-      title: "متابعة العيادات واستقبال الطلبات خارج الدوام",
-      problem:
-        "قد تتأخر الطلبات أو تُنسى عندما تصل خارج الدوام أو خلال فترات ازدحام العيادة.",
-      solution:
-        "تعرض لوحة الطلبات الحالة والتحويل والتذكيرات والمتابعة المعلقة.",
-      result: [
-        "يتم استقبال طلبات خارج الدوام",
-        "تصبح المتابعة مرئية",
-        "يعرف الفريق ما يحتاج انتباهاً",
-        "تبدو تجربة المريض أكثر تنظيماً",
-      ],
-    },
-    {
-      id: "real-estate-property-matching",
-      title: "مطابقة العقارات",
-      problem:
-        "يسأل المشترون والمستأجرون بشكل عام بدون ميزانية أو منطقة أو نوع عقار أو عدد غرف أو جدول زمني.",
-      solution:
-        "يجمع مسار المطابقة التفضيلات قبل اقتراح فئات قوائم مناسبة أو تحويل العميل إلى الوكيل.",
-      result: [
-        "محادثات عقارية أكثر صلة",
-        "ملفات أوضح للمشترين والمستأجرين",
-        "استجابة أسرع من الوكيل",
-        "وقت أقل في جمع الأساسيات",
-      ],
-    },
-    {
-      id: "real-estate-lead-follow-up",
-      title: "تأهيل ومتابعة العملاء المحتملين في العقارات",
-      problem:
-        "يستقبل الوكلاء عملاء محتملين كثيرين بتفاصيل ناقصة ويصعب تتبع من يحتاج الاتصال أو الرسالة التالية.",
-      solution:
-        "يتتبع نظام التأهيل والمتابعة الميزانية والمنطقة والنوع والاستعجال والمصدر والحالة والخطوة التالية.",
-      result: [
-        "يرتب الوكلاء العملاء المحتملين الجادين",
-        "تصبح المتابعة ثابتة",
-        "يرى المالكون حالة خط المبيعات",
-        "تضيع فرص أقل",
-      ],
-    },
-    {
-      id: "real-estate-viewing-handoff",
-      title: "جدولة المعاينات وتحويلها للوكيل",
-      problem:
-        "تحتاج طلبات المعاينة إلى تنسيق يدوي متكرر بين توفر العميل وتفاصيل العقار وتعيين الوكيل.",
-      solution:
-        "يجمع مسار طلب المعاينة العقار والوقت المفضل وبيانات التواصل والتوفر قبل إرسالها إلى الوكيل المناسب.",
-      result: [
-        "طلبات معاينة أوضح",
-        "تحويل أسرع إلى الوكيل",
-        "تنسيق يدوي أقل",
-        "تجربة عميل أفضل",
-      ],
-    },
-    {
-      id: "automotive-test-drive-scheduling",
-      title: "تأهيل استفسارات المركبات وجدولة تجربة القيادة",
-      problem:
-        "يسأل المشترون عن المركبات بدون تحديد الموديل أو الميزانية أو التمويل أو البدل أو الموقع أو التوقيت.",
-      solution:
-        "يجمع مسار التأهيل المركبة المطلوبة والميزانية والجدول الزمني والفرع وبيانات التواصل وتفضيل تجربة القيادة.",
-      result: [
-        "استفسارات مركبات أوضح",
-        "جدولة أسرع لتجارب القيادة",
-        "تحويل أفضل إلى فريق المبيعات",
-        "وقت أقل في جمع الأساسيات",
-      ],
-    },
-    {
-      id: "automotive-service-intake",
-      title: "استقبال مواعيد صيانة السيارات",
-      problem:
-        "تصل طلبات الصيانة بدون تفاصيل المركبة أو المشكلة أو درجة الاستعجال أو الفرع المفضل.",
-      solution:
-        "يجمع مسار الاستقبال نوع المركبة والموديل والسنة والمشكلة والصور عند الحاجة والوقت والفرع المفضل.",
-      result: [
-        "طلبات صيانة أنظف",
-        "توجيه أفضل حسب الفرع",
-        "تحضير أسرع لمستشار الخدمة",
-        "خطوات تالية أوضح للعملاء",
-      ],
-    },
-    {
-      id: "automotive-quote-follow-up",
-      title: "متابعة العروض أو التأجير أو التوفر",
-      problem:
-        "يسأل العملاء عن عروض أو توفر تأجير أو مخزون، ثم تضيع المتابعة داخل واتساب.",
-      solution:
-        "يتتبع سير المتابعة حالة العرض والتوفر وتفضيلات العميل والخطوة التالية.",
-      result: [
-        "متابعة أكثر ثباتاً",
-        "استفسارات جادة أقل ضياعاً",
-        "حالة عروض أوضح",
-        "رؤية أفضل للمديرين",
-      ],
-    },
-    {
-      id: "field-service-request-triage",
-      title: "فرز طلبات الخدمة واستقبال تفاصيل عرض السعر",
-      problem:
-        "يطلب العملاء الخدمة بدون توضيح النوع أو الموقع أو الصور أو درجة الاستعجال أو نطاق العمل المتوقع.",
-      solution:
-        "يجمع مسار الفرز نوع العمل والموقع والتفاصيل والوسائط والوقت المفضل ومتطلبات عرض السعر.",
-      result: [
-        "طلبات خدمة أوضح",
-        "أسئلة متابعة أقل",
-        "تحضير أسرع لعروض الأسعار",
-        "ترتيب أفضل للأولويات",
-      ],
-    },
-    {
-      id: "field-service-scheduling",
-      title: "الجدولة وتعيين الفني أو الفريق",
-      problem:
-        "تعتمد الجدولة على رسائل متفرقة بين العملاء والمنسقين والفنيين.",
-      solution:
-        "يلتقط سير الجدولة التوفر والموقع ونوع العمل وسعة الفريق قبل التعيين.",
-      result: [
-        "تعيين أسرع للفريق",
-        "نوافذ مواعيد أوضح",
-        "تنسيق يدوي أقل",
-        "تحديثات أفضل للعملاء",
-      ],
-    },
-    {
-      id: "field-service-job-follow-up",
-      title: "حالة العمل والموافقة والمتابعة بعد الخدمة",
-      problem:
-        "يسأل العملاء عن التحديثات والموافقات والخطوات التالية بينما تبقى حالة العمل في المحادثات أو الجداول.",
-      solution:
-        "يتتبع سير الحالة نتيجة الزيارة والموافقة المطلوبة والخطوة التالية وملاحظة الدفع والمتابعة.",
-      result: [
-        "تقدم العمل يصبح مرئياً",
-        "موافقات أوضح من العملاء",
-        "إشراف أفضل للمديرين",
-        "متابعة أكثر انتظاماً بعد الخدمة",
-      ],
-    },
-  ] satisfies UseCase[],
   whyUs: {
-    heroTitle: "فريق تقني صغير. تواصل مباشر. أنظمة عملية.",
+    heroTitle: "وصول مباشر إلى من يخطط لنظامك ويبنيه",
     heroBody:
-      "نناسب الشركات التي تريد الوصول المباشر إلى من يبني النظام، نطاقاً واضحاً، تنفيذاً عملياً، ودعماً بعد الإطلاق.",
+      "تعمل مع فريق واحد مسؤول من رسم سير العمل حتى الإطلاق. تبقى القرارات موثقة، والمفاضلات واضحة، ولكل إصدار غرض عملي.",
     sections: [
       {
-        title: "تواصل مباشر",
+        title: "فريق واحد مسؤول عن التسليم",
         body:
-          "تعمل مباشرة مع الأشخاص الذين يبنون نظامك، لذلك تبقى القرارات والنطاق والمفاضلات واضحة.",
+          "من يحدد النطاق هو نفسه من يبني المنتج ويراجعه، لذلك تعرف دائماً من يملك القرار والتسليم والخطوة التالية.",
       },
       {
-        title: "أنظمة عملية",
+        title: "نطاق مرتبط بنتيجة",
         body:
-          "لا نبني التعقيد فقط ليبدو المشروع أكبر. نركز على النظام المفيد الذي يحتاجه عملك فعلاً.",
+          "نربط كل ميزة بمشكلة في سير العمل أو مؤشر نجاح أو متطلب تشغيلي قبل إدخالها في الإصدار الأول.",
       },
       {
-        title: "سير عمل تطوير حديث",
+        title: "مراجعات عملية لا انتظار طويل",
         body:
-          "نستخدم أدوات تطوير حديثة للتخطيط والبناء والتصحيح والتوثيق واختبار الأفكار بسرعة أكبر. يبقى النظام النهائي مراجعاً ومسلماً من مطورين حقيقيين.",
+          "تراجع شاشات ومسارات تعمل في نقاط متفق عليها، بينما نوثق الخيارات والأسئلة المفتوحة والمفاضلات للفريق.",
       },
       {
-        title: "نطاق وتسليم واضح",
+        title: "الإطلاق والتسليم جزء من الخطة",
         body:
-          "قبل البناء نحدد المشكلة والنسخة الأولى والميزات المطلوبة والجدول الواقعي واحتياجات الدعم بعد الإطلاق.",
+          "نخطط للنشر والصلاحيات والتوثيق والتدريب والنسخ الاحتياطي والملكية مبكراً، لا في الأسبوع الأخير.",
       },
       {
-        title: "ميزة الفريق الصغير",
+        title: "دعم يناسب أهمية النظام",
         body:
-          "الفريق الصغير يعني وصولاً مباشراً، تكلفة تشغيل أقل، تواصلاً أسرع، مرونة أكثر، وعلاقة أقرب مع العميل.",
+          "بعد الإطلاق تختار مستوى الدعم وفق أثر النظام وتكرار التغيير وتوقعات الاستجابة واحتياجات البنية التحتية.",
       },
-    ],
-  },
-  about: {
-    heroTitle: "شريك برمجي عملي للشركات التي تتعامل مباشرة مع العملاء",
-    heroBody:
-      "نساعد العيادات وشركات العقارات وشركات السيارات وفرق الخدمات الميدانية والشركات النامية على بناء أنظمة مفيدة للاستفسارات والحجوزات والعملاء المحتملين والبوابات ولوحات التحكم وسير العمل الداخلي.",
-    processTitle: "كيف نعمل",
-    process: [
-      "نفهم المشكلة",
-      "نحدد النطاق",
-      "نقترح الحل العملي الأفضل",
-      "نبني النسخة الأولى",
-      "نختبر ونعدل",
-      "ننشر النظام",
-      "ندعم بعد الإطلاق عند الحاجة",
-    ],
-    whatTitle: "ما الذي نبنيه",
-    what: [
-      "التحليلات وPower BI والذكاء الاصطناعي",
-      "استخراج البيانات من الويب",
-      "مسارات واتساب",
-      "أنظمة طلب المواعيد",
-      "أنظمة العملاء المحتملين في العقارات",
-      "أنظمة استفسارات المركبات",
-      "أنظمة طلبات الخدمة",
-      "مواقع إلكترونية",
-      "تطبيقات جوال",
-      "تطبيقات ويب",
-      "بوابات أعمال",
-      "لوحات إدارة",
-      "أدوات تقارير",
-      "أنظمة داخلية",
     ],
   },
   support: {
-    heroTitle: "الدعم، الاستضافة والصيانة",
+    heroTitle: "حافظ على موثوقية النظام بعد الإطلاق",
     heroBody:
-      "لا يجب أن يُترك النظام الرقمي بعد الإطلاق. نوفر خيارات دعم واستضافة وصيانة حسب أهمية المشروع ومستوى التغطية المطلوب.",
+      "اختر الصيانة والمراقبة وإدارة النشر وتغطية الاستجابة وفق تكرار التغيير وأثر تعطل النظام على فريقك.",
     sections: [
       {
-        title: "الدعم القياسي",
+        title: "رعاية الإطلاق",
         points: [
-          "إصلاح الأخطاء",
-          "تصحيحات صغيرة",
-          "إرشاد تقني",
-          "فحوصات نشر",
-          "دعم أساسي بعد الإطلاق",
-          "مساعدة بسيطة في المحتوى أو الإعدادات",
+          "التحقق بعد الإطلاق",
+          "تصحيح العيوب ضمن النطاق المتفق عليه",
+          "إرشاد للإعدادات والمحتوى",
+          "فحص النشر والصلاحيات",
+          "الإجابة عن أسئلة التسليم",
         ],
       },
       {
-        title: "الدعم ذو الأولوية",
+        title: "الصيانة المستمرة",
         points: [
-          "استجابة أسرع",
-          "إصلاحات ذات أولوية أعلى",
-          "مراقبة",
-          "تحديثات",
-          "تحسينات صغيرة",
-          "دعم تقني",
+          "تحديثات الاعتماديات والأمان",
+          "فحص دوري للنسخ الاحتياطي",
+          "مراجعة الأداء والأخطاء",
           "إدارة النشر",
-          "فحوصات النسخ الاحتياطي",
-          "فحوصات الأداء",
+          "تحسينات صغيرة متفق عليها",
+          "ملاحظات صيانة بعد كل دورة",
         ],
       },
       {
-        title: "دعم 24/7",
+        title: "تغطية أولوية للحوادث",
         points: [
-          "استجابة عاجلة للأعطال الحية",
-          "مراقبة أقوى",
-          "تصعيد أسرع",
-          "توفر أعلى",
-          "دعم للأنظمة الحرجة",
-          "تغطية استجابة ممتدة",
+          "ساعات تغطية محددة",
+          "أهداف مكتوبة للاستجابة والتصعيد",
+          "فرز حوادث بيئة الإنتاج",
+          "تنبيهات مراقبة تصل إلى مسؤول محدد",
+          "خطوات استعادة موثقة مسبقاً",
+          "تغطية تناسب أهمية النظام",
         ],
       },
       {
         title: "الاستضافة والنشر",
         points: [
-          "شهادة SSL",
-          "ربط النطاق",
-          "نسخ احتياطية",
-          "مراقبة",
-          "مراقبة التوفر",
+          "إعداد النطاق وشهادة SSL",
+          "استضافة التطبيق وقاعدة البيانات",
+          "خطة للنسخ الاحتياطي والاستعادة",
+          "مراقبة التوفر والأخطاء",
           "إدارة النشر",
-          "استضافة قاعدة البيانات",
-          "إعداد خادم سحابي",
-          "تحديثات الأمان",
-          "إعداد البيئة",
-          "خيارات بنية تحتية مدعومة باتفاقية مستوى خدمة حتى 99.99% حسب البنية وخطة الاستضافة",
+          "إعداد البيئة والصلاحيات",
+          "اختيار بنية تحتية تناسب عبء العمل",
         ],
       },
     ],
   },
-  contact: {
-    heroTitle: "أخبرنا بما تريد تحسينه",
-    heroBody:
-      "سواء كنت تحتاج استفسارات أوضح، استقبال مواعيد، متابعة عملاء محتملين في العقارات، مسارات واتساب، موقعاً، تطبيقاً، لوحة تحكم، أو نظاماً داخلياً، يمكننا مساعدتك على تحديد أبسط نسخة مفيدة.",
-    cta:
-      "أرسل طلبك وسنساعدك على تحديد أنسب نظام عملي لعملك.",
-    groups: [
-      {
-        title: "المعلومات الأساسية",
-        fields: [
-          "الاسم",
-          "اسم الشركة",
-          "الدولة",
-          "المدينة",
-          "القطاع",
-          "رابط الموقع أو الحساب الاجتماعي",
-          "رقم واتساب",
-          "البريد الإلكتروني",
-        ],
-      },
-      {
-        title: "ما الذي تحتاجه؟",
-        fields: [
-          "مسار استفسارات أو حجوزات أو عملاء محتملين",
-          "سير عمل للعيادات أو العقارات أو السيارات أو الخدمات الميدانية",
-          "موقع أو تطبيق أو بوابة أو لوحة تحكم",
-          "تنفيذ مهام واتساب تلقائيًا أو تحويل الطلبات",
-          "دعم أو استضافة أو صيانة",
-          "لست متأكداً بعد",
-        ],
-      },
-      {
-        title: "تفاصيل المشروع",
-        fields: [
-          "ما المشكلة التي تريد حلها؟",
-          "ما الذي تستخدمه حالياً؟",
-          "هل لديك موقع بالفعل؟",
-          "هل تستقبل استفسارات كثيرة على واتساب؟",
-          "هل تحتاج العربية أو الإنجليزية أو الاثنين؟",
-          "هل المشروع جديد أم تحسين لنظام موجود؟",
-          "موعد الإطلاق المفضل",
-          "نطاق الميزانية",
-          "طريقة التواصل المفضلة",
-        ],
-      },
-    ],
-  },
-};
+} satisfies MarketCopy;
 
 export const marketContent = { en, ar };
 

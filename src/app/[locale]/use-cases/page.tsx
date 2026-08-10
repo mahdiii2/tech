@@ -12,6 +12,7 @@ import { Link } from "@/i18n/navigation";
 import { AnimatedHeroBackground } from "@/components/Industries/AnimatedHeroBackground";
 import { Reveal } from "@/components/Industries/Reveal";
 import { getIndustriesCopy } from "@/components/Industries/data";
+import { PageStructuredData } from "@/components/Seo/PageStructuredData";
 import { buildPageMetadata } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -29,6 +30,7 @@ export default async function UseCasesPage({ params }: Props) {
 
   return (
     <main className="bg-white">
+      <PageStructuredData page="useCases" locale={locale} />
       <AnimatedHeroBackground color="var(--engagement-500)">
         <div className="mx-auto flex min-h-[42vh] max-w-4xl flex-col items-center justify-center gap-6 text-center">
           <Reveal delay={0}>
@@ -201,14 +203,14 @@ export default async function UseCasesPage({ params }: Props) {
                 </span>
               </div>
               <h2 className="mt-6 text-3xl font-semibold leading-tight md:text-4xl">
-                {pageCopy.closingTitle}
+                {pageCopy.useCasesClosingTitle}
               </h2>
               <p className="mt-5 text-base leading-8 text-white/75">
-                {pageCopy.closingBody}
+                {pageCopy.useCasesClosingBody}
               </p>
             </div>
             <div className="grid gap-3 bg-white p-5 text-neutral-900 sm:p-8">
-              {pageCopy.closingChecklist.map((item) => (
+              {pageCopy.useCasesClosingChecklist.map((item) => (
                 <div
                   key={item}
                   className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm font-semibold leading-6"

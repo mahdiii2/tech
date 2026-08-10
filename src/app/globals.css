@@ -148,6 +148,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+html[lang="ar"] {
+  --font-inter: var(--font-noto-arabic);
+}
+
 body {
   @apply font-sans;
 }

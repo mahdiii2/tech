@@ -139,7 +139,7 @@ export default function SiteFooter() {
                       rel="noopener noreferrer"
                       className="block font-semibold hover:text-neutral-600"
                     >
-                      {phone.label}
+                      {t("phone")}
                     </Link>
                   ))
                 ) : null}

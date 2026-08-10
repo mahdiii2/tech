@@ -6,16 +6,20 @@ import { salesEmail } from "@/lib/booking";
  * sitemap. Override the public URL per environment with NEXT_PUBLIC_SITE_URL.
  */
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://servicely.digital"
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://servicely.tech"
 ).replace(/\/$/, "");
+
+export const isSearchIndexable = process.env.VERCEL_ENV
+  ? process.env.VERCEL_ENV === "production"
+  : process.env.NODE_ENV === "production";
 
 export const siteConfig = {
   name: "Servicely",
   shortName: "Servicely",
   url: siteUrl,
   description:
-    "Servicely builds practical software for inquiries, bookings, lead follow-up, websites, apps, dashboards and connected business workflows.",
-  tagline: "Practical software for clearer customer workflows",
+    "Servicely builds custom software, web and mobile apps, internal portals, AI and WhatsApp automations, integrations, and reporting for workflow-heavy service businesses.",
+  tagline: "Custom software and automation for workflow-heavy businesses",
   email: salesEmail,
   phone: "+96171383987",
   phoneHref: "+96171383987",
@@ -27,26 +31,25 @@ export const siteConfig = {
   ],
   locale: "en",
   localeAlternates: ["ar"],
-  ogImage: `${siteUrl}/icon.png`,
+  ogImage: `${siteUrl}/opengraph-image`,
   logo: `${siteUrl}/icon.png`,
   areaServed: ["Worldwide"],
   keywords: [
-    "customer workflow software",
     "custom business software",
-    "business process automation",
-    "clinic appointment system",
-    "real estate lead follow-up",
-    "property matching system",
-    "automotive inquiry system",
-    "field service scheduling software",
-    "service request intake system",
-    "WhatsApp inquiry workflow",
-    "lead follow-up automation",
-    "business web apps",
-    "mobile app development",
-    "customer support automation",
-    "appointment request system",
-    "business dashboards",
+    "construction workflow software",
+    "contractor lead management automation",
+    "skilled trades scheduling software",
+    "dental clinic appointment automation",
+    "medical clinic inquiry management",
+    "independent car dealership software",
+    "dealership lead follow-up automation",
+    "AI workflow automation",
+    "WhatsApp conversation automation",
+    "lead qualification and routing",
+    "internal portal development",
+    "business system integrations",
+    "Power BI reporting dashboards",
+    "custom web and mobile apps",
   ],
   social: {
     instagram: "",
@@ -69,23 +72,25 @@ const localizedSeo = {
     keywords: siteConfig.keywords,
   },
   ar: {
-    tagline: "برمجيات عملية لمسارات عملاء أكثر وضوحاً",
+    tagline: "برمجيات مخصصة وأتمتة لعمليات الأعمال",
     description:
-      "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين والمواقع والتطبيقات ولوحات التحكم ومسارات الأعمال المترابطة.",
+      "تبني Servicely برمجيات مخصصة وتطبيقات وبوابات وأتمتة بالذكاء الاصطناعي وواتساب وتكاملات وتقارير للشركات الخدمية ذات العمليات المتعددة.",
     keywords: [
-      "أنظمة سير عمل العملاء",
-      "تطوير برمجيات مخصصة",
-      "أتمتة عمليات الأعمال",
-      "نظام مواعيد للعيادات",
-      "متابعة العملاء المحتملين في العقارات",
-      "نظام مطابقة عقارات",
-      "نظام استفسارات سيارات",
-      "برنامج جدولة الخدمات الميدانية",
-      "تنفيذ مهام واتساب تلقائيًا",
-      "تنفيذ مهام خدمة العملاء تلقائيًا",
-      "مواقع أعمال وتطبيقات ويب",
-      "تطبيقات جوال للشركات",
-      "لوحات تحكم للأعمال",
+      "برمجيات أعمال مخصصة",
+      "برمجيات سير العمل لشركات المقاولات",
+      "أتمتة إدارة العملاء المحتملين للمقاولين",
+      "برمجيات جدولة الخدمات الفنية",
+      "أتمتة مواعيد عيادات الأسنان",
+      "إدارة استفسارات العيادات الطبية",
+      "برمجيات معارض السيارات المستقلة",
+      "أتمتة متابعة العملاء المحتملين لمعارض السيارات",
+      "أتمتة سير العمل بالذكاء الاصطناعي",
+      "أتمتة محادثات واتساب",
+      "تأهيل العملاء المحتملين وتوجيههم",
+      "تطوير بوابات داخلية",
+      "تكامل أنظمة الأعمال",
+      "لوحات معلومات وتقارير Power BI",
+      "تطوير تطبيقات ويب وجوال مخصصة",
     ],
   },
 } as const;
@@ -94,107 +99,105 @@ const pageSeo = {
   home: {
     path: "/",
     en: {
-      title: "Business Systems, Websites & WhatsApp Automation",
+      title: "Custom Software & Automation for Service Teams",
       description:
-        "Servicely builds practical software for inquiries, bookings, lead follow-up, WhatsApp workflows, websites, apps and dashboards for customer-facing teams.",
+        "Custom software, AI and WhatsApp automation, integrations, and reporting for construction and skilled trades, clinics, and independent car dealerships.",
       keywords: [
-        "customer workflow systems",
-        "WhatsApp business automation",
-        "lead follow-up software",
+        "custom software for service businesses",
+        "construction workflow automation",
+        "clinic and dealership software",
       ],
     },
     ar: {
-      title: "أنظمة أعمال ومواقع وتنفيذ مهام واتساب تلقائيًا",
+      title: "برمجيات مخصصة وأتمتة للفرق الخدمية",
       description:
-        "تبني Servicely برمجيات عملية للاستفسارات والحجوزات ومتابعة العملاء المحتملين ومسارات واتساب والمواقع والتطبيقات ولوحات التحكم للفرق التي تتعامل مع العملاء.",
+        "برمجيات مخصصة وأتمتة بالذكاء الاصطناعي وواتساب وتكاملات وتقارير للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة.",
       keywords: [
-        "أنظمة سير عمل العملاء",
-        "تنفيذ مهام واتساب تلقائيًا للشركات",
-        "متابعة العملاء المحتملين",
+        "برمجيات مخصصة للشركات الخدمية",
+        "أتمتة سير العمل لشركات المقاولات",
+        "برمجيات للعيادات ومعارض السيارات",
       ],
     },
   },
   services: {
     path: "/services",
     en: {
-      title: "Power BI, AI, Data Scraping, Websites & Apps",
+      title: "Custom Software & Workflow Automation Services",
       description:
-        "Explore Servicely services for customer-facing businesses: Power BI dashboards, KPI reports, data engineering, AI insights, data scraping, websites, apps and WhatsApp workflows.",
+        "Explore custom web and mobile apps, internal portals, AI and workflow automation, WhatsApp lead flows, integrations, Power BI reporting, and support.",
       keywords: [
-        "Power BI services",
-        "data engineering services",
-        "AI business insights",
-        "data scraping services",
-        "web scraping for business",
-        "website and app development",
+        "custom software development services",
+        "AI workflow automation services",
+        "WhatsApp lead automation",
+        "internal portal development",
+        "Power BI and systems integration",
       ],
     },
     ar: {
-      title: "Power BI والذكاء الاصطناعي واستخراج البيانات والمواقع",
+      title: "خدمات البرمجيات المخصصة وأتمتة سير العمل",
       description:
-        "استكشف خدمات Servicely للشركات التي تتعامل مع العملاء: لوحات Power BI وتقارير مؤشرات الأداء وهندسة البيانات ورؤى الذكاء الاصطناعي واستخراج بيانات الويب والمواقع والتطبيقات ومسارات واتساب.",
+        "استكشف تطبيقات الويب والجوال والبوابات الداخلية وأتمتة سير العمل بالذكاء الاصطناعي ومسارات واتساب للعملاء المحتملين والتكاملات وتقارير Power BI والدعم.",
       keywords: [
-        "خدمات Power BI",
-        "خدمات هندسة البيانات",
-        "رؤى الأعمال بالذكاء الاصطناعي",
-        "خدمات استخراج البيانات",
-        "استخراج بيانات الويب للأعمال",
-        "تطوير مواقع وتطبيقات",
+        "خدمات تطوير البرمجيات المخصصة",
+        "خدمات أتمتة سير العمل بالذكاء الاصطناعي",
+        "أتمتة مسارات العملاء المحتملين عبر واتساب",
+        "تطوير بوابات داخلية",
+        "تكامل الأنظمة وتقارير Power BI",
       ],
     },
   },
   industries: {
     path: "/industries",
     en: {
-      title: "Customer Systems for Clinics, Real Estate & Services",
+      title: "Software for Construction, Clinics & Dealerships",
       description:
-        "Practical customer-flow systems for clinics, real estate agencies, automotive teams and field service businesses that need clearer intake and follow-up.",
+        "See intake, scheduling, lead-handoff, follow-up, and reporting workflows for construction and trade teams, clinics, and independent dealerships.",
       keywords: [
-        "clinic customer system",
-        "real estate lead system",
-        "field service customer workflow",
+        "construction company workflow software",
+        "dental and medical clinic automation",
+        "independent car dealership lead software",
       ],
     },
     ar: {
-      title: "أنظمة عملية للعيادات والعقارات والخدمات",
+      title: "برمجيات للمقاولات والعيادات ومعارض السيارات",
       description:
-        "أنظمة عملية لتنظيم الاستفسارات والمواعيد والعملاء المحتملين والمتابعة للعيادات والعقارات والسيارات والخدمات الميدانية.",
+        "شاهد مسارات استقبال الطلبات والجدولة وتوجيه العملاء المحتملين والمتابعة والتقارير للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة.",
       keywords: [
-        "أنظمة العيادات",
-        "نظام عملاء العقارات المحتملين",
-        "أنظمة الخدمات الميدانية",
+        "برمجيات سير العمل لشركات المقاولات",
+        "أتمتة عيادات الأسنان والعيادات الطبية",
+      "برمجيات إدارة العملاء المحتملين لمعارض السيارات المستقلة",
       ],
     },
   },
   useCases: {
     path: "/use-cases",
     en: {
-      title: "Use Cases for Customer Automation and Lead Workflows",
+      title: "Lead, Job & Appointment Automation Use Cases",
       description:
-        "See practical use cases for appointment intake, real estate lead qualification, vehicle inquiries, service requests, WhatsApp workflows and dashboards.",
+        "See repeatable ways to capture complete requests, qualify and route leads, automate WhatsApp handoffs, track follow-up, schedule work, and report on status.",
       keywords: [
-        "customer automation use cases",
-        "appointment intake workflow",
-        "property lead qualification",
+        "lead qualification automation use cases",
+        "job and estimate intake workflow",
+        "clinic appointment automation workflow",
       ],
     },
     ar: {
-      title: "حالات استخدام لتنفيذ مهام العملاء تلقائيًا ومسارات المتابعة",
+      title: "حالات استخدام لأتمتة العملاء المحتملين والمواعيد",
       description:
-        "شاهد حالات استخدام عملية لاستقبال المواعيد، تأهيل العملاء المحتملين في العقارات، استفسارات المركبات، طلبات الخدمة، مسارات واتساب ولوحات التحكم.",
+        "شاهد طرقاً متكررة لجمع الطلبات المكتملة وتأهيل العملاء المحتملين وتوجيههم ونقل محادثات واتساب إلى الفريق ومتابعة الأعمال والمواعيد والتقارير.",
       keywords: [
-        "حالات استخدام تنفيذ مهام العملاء تلقائيًا",
-        "مسار استقبال المواعيد",
-        "تأهيل العملاء المحتملين في العقارات",
+        "حالات استخدام أتمتة تأهيل العملاء المحتملين",
+        "مسار استقبال الأعمال وعروض الأسعار",
+        "مسار أتمتة مواعيد العيادات",
       ],
     },
   },
   whyUs: {
     path: "/why-us",
     en: {
-      title: "Why Servicely: Direct Builders and Practical Systems",
+      title: "Direct Software Team: Clear Scope & Support",
       description:
-        "Work directly with a small technical team that plans, builds and supports practical business systems with clear scope and post-launch care.",
+        "Work directly with the team that maps, scopes, builds, launches, and supports your workflow, with concrete deliverables and visible review points.",
       keywords: [
         "direct software builders",
         "small technical software team",
@@ -202,9 +205,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "لماذا Servicely؟ فريق صغير وتنفيذ عملي",
+      title: "فريق برمجي تتعامل معه مباشرة",
       description:
-        "اعمل مباشرة مع فريق تقني صغير يبني ويدعم أنظمة عملية، مع نطاق واضح وتنفيذ عملي ودعم بعد الإطلاق.",
+        "اعمل مباشرة مع الفريق الذي يرسم سير العمل ويحدد نطاقه ويبنيه ويطلقه ويدعمه، بمخرجات واضحة ونقاط مراجعة مرئية.",
       keywords: [
         "فريق برمجي صغير",
         "شريك برمجي عملي",
@@ -215,9 +218,9 @@ const pageSeo = {
   about: {
     path: "/about",
     en: {
-      title: "About Servicely: Practical Software Partner",
+      title: "About Servicely: Software & Automation Builders",
       description:
-        "Servicely helps clinics, real estate teams, automotive businesses and field service teams build useful systems for inquiries, bookings, leads and workflows.",
+        "Meet the hands-on team building custom software and automation for construction and trade businesses, clinics, independent dealerships, and other operators.",
       keywords: [
         "about Servicely",
         "practical software partner",
@@ -225,9 +228,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "من نحن: شريك برمجي عملي",
+      title: "عن Servicely: فريق لبناء البرمجيات والأتمتة",
       description:
-        "تساعد Servicely العيادات وشركات العقارات والسيارات والخدمات الميدانية على بناء أنظمة عملية للاستفسارات والحجوزات والعملاء المحتملين وسير العمل.",
+        "تعرّف إلى الفريق العملي الذي يبني برمجيات مخصصة وأتمتة للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة وغيرها من الفرق التشغيلية.",
       keywords: [
         "من نحن Servicely",
         "شريك برمجي عملي",
@@ -238,9 +241,9 @@ const pageSeo = {
   supportHosting: {
     path: "/support-hosting",
     en: {
-      title: "Support, Hosting and Maintenance for Business Systems",
+      title: "Software Support, Hosting & Maintenance Services",
       description:
-        "Post-launch support, hosting, monitoring, backups, SSL, deployment management and maintenance options for business systems.",
+        "Explore post-launch support, maintenance, monitoring, backups, deployment, and hosting options for custom apps, portals, automations, and websites.",
       keywords: [
         "software support and hosting",
         "business system maintenance",
@@ -248,9 +251,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "الدعم والاستضافة والصيانة للأنظمة",
+      title: "خدمات دعم واستضافة وصيانة البرمجيات",
       description:
-        "خيارات دعم واستضافة وصيانة بعد الإطلاق لأنظمة الأعمال، تشمل المراقبة والنسخ الاحتياطي و SSL وإدارة النشر والتحديثات.",
+        "استكشف خيارات الدعم والصيانة والمراقبة والنسخ الاحتياطي والنشر والاستضافة للتطبيقات المخصصة والبوابات والأتمتة والمواقع بعد الإطلاق.",
       keywords: [
         "دعم واستضافة الأنظمة",
         "صيانة أنظمة الأعمال",
@@ -261,9 +264,9 @@ const pageSeo = {
   contact: {
     path: "/contact",
     en: {
-      title: "Contact Servicely to Scope Your Project",
+      title: "Discuss a Custom Software or Automation Workflow",
       description:
-        "Tell Servicely what you want to improve: inquiries, appointments, lead follow-up, WhatsApp workflows, websites, apps, dashboards or internal systems.",
+        "Send a short description of the lead, job, appointment, reporting, or internal workflow that is hard to run. Servicely will identify a practical place to start.",
       keywords: [
         "contact software company",
         "request project scope",
@@ -271,9 +274,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "تواصل معنا لتحديد نطاق مشروعك",
+      title: "ناقش مساراً لبرمجيات مخصصة أو أتمتة",
       description:
-        "أخبر Servicely بما تريد تحسينه: الاستفسارات، المواعيد، متابعة العملاء المحتملين، مسارات واتساب، المواقع، التطبيقات، لوحات التحكم أو الأنظمة الداخلية.",
+        "أرسل وصفاً قصيراً لمسار عميل محتمل أو عمل أو موعد أو تقرير أو عملية داخلية يصعب تشغيلها، وستحدد Servicely بداية عملية.",
       keywords: [
         "تواصل مع شركة برمجيات",
         "طلب نطاق مشروع",
@@ -284,16 +287,24 @@ const pageSeo = {
   privacy: {
     path: "/privacy",
     en: {
-      title: "Privacy Policy",
+      title: "Privacy Policy: Data Use, Security & Retention",
       description:
-        "How Servicely collects, uses and protects the information you share when you contact us about a project.",
-      keywords: ["Servicely privacy policy"],
+        "Learn what project inquiry data Servicely collects, why it is used, how it is protected, how long it is retained and how to request access or deletion.",
+      keywords: [
+        "Servicely privacy policy",
+        "project inquiry data security",
+        "data retention and deletion",
+      ],
     },
     ar: {
-      title: "سياسة الخصوصية في Servicely",
+      title: "سياسة الخصوصية: استخدام البيانات وأمنها والاحتفاظ بها",
       description:
-        "كيف تجمع Servicely وتستخدم وتحمي المعلومات التي تشاركها عند التواصل معنا بخصوص مشروع.",
-      keywords: ["سياسة الخصوصية Servicely"],
+        "تعرف على بيانات استفسارات المشاريع التي تجمعها Servicely، وأسباب استخدامها، وكيفية حمايتها، ومدة الاحتفاظ بها، وطريقة طلب الوصول إليها أو حذفها.",
+      keywords: [
+        "سياسة الخصوصية Servicely",
+        "أمن بيانات استفسارات المشاريع",
+        "الاحتفاظ بالبيانات وحذفها",
+      ],
     },
   },
 } as const;
@@ -314,6 +325,10 @@ export function buildPageMetadata(page: SeoPageKey, locale: string): Metadata {
   const entry = pageSeo[page];
   const seo = entry[localeKey];
   const url = `${siteUrl}${localePath(localeKey, entry.path)}`;
+  const socialImageAlt =
+    localeKey === "ar"
+      ? "صورة Servicely التعريفية للبرمجيات المخصصة والأتمتة في الشركات الخدمية"
+      : "Servicely custom software and automation for workflow-heavy service businesses";
 
   return {
     title: seo.title,
@@ -326,12 +341,14 @@ export function buildPageMetadata(page: SeoPageKey, locale: string): Metadata {
       title: seo.title,
       description: seo.description,
       url,
+      locale: localeKey,
+      alternateLocale: [localeKey === "ar" ? "en" : "ar"],
       images: [
         {
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} mark`,
+          alt: socialImageAlt,
         },
       ],
     },
@@ -339,7 +356,7 @@ export function buildPageMetadata(page: SeoPageKey, locale: string): Metadata {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [siteConfig.ogImage],
+      images: [{ url: siteConfig.ogImage, alt: socialImageAlt }],
     },
   };
 }
@@ -362,5 +379,59 @@ export function localizedAlternates(path: string, locale: string) {
       ar: localePath("ar", path),
       "x-default": localePath("en", path),
     },
+  };
+}
+
+export function buildPageStructuredData(page: SeoPageKey, locale: string) {
+  const localeKey = normalizeLocale(locale);
+  const entry = pageSeo[page];
+  const seo = entry[localeKey];
+  const url = `${siteUrl}${localePath(localeKey, entry.path)}`;
+  const breadcrumbId = `${url}#breadcrumb`;
+  const pageType =
+    page === "about"
+      ? "AboutPage"
+      : page === "contact"
+        ? "ContactPage"
+        : "WebPage";
+
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": pageType,
+      "@id": `${url}#webpage`,
+      url,
+      name: seo.title,
+      description: seo.description,
+      inLanguage: localeKey,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
+      ...(entry.path === "/" ? {} : { breadcrumb: { "@id": breadcrumbId } }),
+    },
+  ];
+
+  if (entry.path !== "/") {
+    graph.push({
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: localeKey === "ar" ? "الرئيسية" : "Home",
+          item: `${siteUrl}${localePath(localeKey, "/")}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: seo.title,
+          item: url,
+        },
+      ],
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
   };
 }

@@ -131,9 +131,9 @@ export function DigitalSolutionsSection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 pb-20 lg:grid lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16 lg:pb-28 pt-0 mt-0">
         <div className="space-y-6 lg:sticky lg:top-40 lg:self-start">
           <div className="space-y-4">
-            <p className="text-4xl font-semibold leading-tight text-neutral-900">
+            <h2 className="text-4xl font-semibold leading-tight text-neutral-900">
               {t("heading")}
-            </p>
+            </h2>
             <p className="text-lg leading-relaxed text-neutral-600">
               {introBody}
             </p>
@@ -150,7 +150,8 @@ export function DigitalSolutionsSection() {
                   <CapabilityCard
                     key={card.key}
                     title={card.title}
-                                        theme={CARD_THEMES[card.key]}
+                    body={card.body}
+                    theme={CARD_THEMES[card.key]}
                     artwork={renderArtwork(card.key)}
                     className=""
                   />
@@ -163,7 +164,8 @@ export function DigitalSolutionsSection() {
               <CapabilityCard
                 key={card.key}
                 title={card.title}
-                                theme={CARD_THEMES[card.key]}
+                body={card.body}
+                theme={CARD_THEMES[card.key]}
                 artwork={renderArtwork(card.key)}
               />
             ))}

@@ -18,12 +18,9 @@ const routes: {
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return routes.flatMap(({ path, priority, changeFrequency }) =>
     locales.map((locale) => ({
       url: `${siteUrl}${localePath(locale, path)}`,
-      lastModified,
       changeFrequency,
       priority,
       alternates: {
