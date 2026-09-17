@@ -133,6 +133,9 @@ export default async function TechStackSlider() {
               </section>
             ))}
           </div>
+          <p className="max-w-4xl text-left text-sm leading-6 text-neutral-500">
+            {t("note")}
+          </p>
           <div className="pt-4 text-left">
             <Link
               href="/services#services-blueprints"

@@ -21,21 +21,17 @@
       "contact": "Contact"
     },
     "serviceCards": {
-      "development": {
-        "title": "Data, reporting & integrations",
-        "description": "Power BI dashboards, operational reporting, data pipelines, and connected business systems."
+      "aiBusiness": {
+        "title": "AI & Business Automation",
+        "description": "WhatsApp and email replies, lead follow-ups, reminders, document handling, and repetitive workflow automation."
       },
-      "scraping": {
-        "title": "AI & workflow automation",
-        "description": "Repeated intake, updates, and internal steps automated with clear rules and human review."
+      "customBusiness": {
+        "title": "Custom Business Software",
+        "description": "Dashboards, CRM systems, internal tools, booking systems, and platforms built around your operations."
       },
-      "automation": {
-        "title": "Custom software, web & mobile",
-        "description": "Websites, web and mobile apps, customer portals, and internal tools built around the work."
-      },
-      "data": {
-        "title": "WhatsApp & lead automation",
-        "description": "Structured conversations, qualification, routing, handoff, reminders, and follow-up visibility."
+      "customerPlatforms": {
+        "title": "Websites & Customer Platforms",
+        "description": "Business websites, customer portals, online booking pages, and custom web or mobile applications."
       }
     },
     "industryCards": {
@@ -59,8 +55,8 @@
   },
   "HomePage": {
     "vision": {
-      "heading": "Custom software and automation for leads, jobs, and appointments",
-      "body": "For construction companies and skilled trades, dental and medical clinics, and independent car dealerships. Connect websites, WhatsApp, handoffs, scheduling, and reporting in one practical workflow.",
+      "heading": "AI automation, business software, and customer platforms",
+      "body": "For construction companies and skilled trades, dental and medical clinics, and independent car dealerships. Choose AI and business automation, custom business software, or a customer platform built around one practical workflow.",
       "cta": "Map one workflow",
       "ctaHref": "/contact",
       "chips": [
@@ -74,28 +70,22 @@
         "learnMore": "Learn more",
         "contact": "Send project details"
       },
-      "development": {
-        "title": "Data, reporting & integrations",
-        "description": "Connect spreadsheets, operational systems, and APIs to reliable data flows, Power BI dashboards, and reports your team can use.",
-        "learnHref": "/services#data-reporting",
+      "aiBusiness": {
+        "title": "AI & Business Automation",
+        "description": "Automate approved WhatsApp and email replies, lead follow-ups, reminders, document handling, and repetitive internal workflows while keeping important decisions with your team.",
+        "learnHref": "/services#ai-business-automation",
         "contactHref": "/contact"
       },
-      "scraping": {
-        "title": "AI & workflow automation",
-        "description": "Automate repeated intake, updates, and internal steps with clear rules, useful AI assistance, and human review where decisions matter.",
-        "learnHref": "/services#ai-automation",
+      "customBusiness": {
+        "title": "Custom Business Software",
+        "description": "Build company dashboards, CRM systems, internal tools, booking systems, and operational platforms around how your business actually works.",
+        "learnHref": "/services#custom-business-software",
         "contactHref": "/contact"
       },
-      "design": {
-        "title": "Custom software, web & mobile",
-        "description": "Build websites, web and mobile apps, customer portals, and internal tools with the forms, permissions, admin views, and integrations the workflow needs.",
-        "learnHref": "/services#custom-software",
-        "contactHref": "/contact"
-      },
-      "engagement": {
-        "title": "WhatsApp & lead automation",
-        "description": "Guide conversations, collect qualifying details, route each lead, preserve context for staff, send reminders, and keep follow-up visible.",
-        "learnHref": "/services#whatsapp-automation",
+      "customerPlatforms": {
+        "title": "Websites & Customer Platforms",
+        "description": "Create business websites, customer portals, online booking pages, and web or mobile applications that connect customer actions to your team.",
+        "learnHref": "/services#websites-customer-platforms",
         "contactHref": "/contact"
       }
     },
@@ -147,13 +137,14 @@
       "sliderLabel": "Compare the reporting workflow before and after analytics"
     },
     "caseStudies": {
-      "eyebrow": "First-release examples",
+      "eyebrow": "Illustrative first-release examples",
       "heading": "Recognize the bottleneck. See a practical first release.",
-      "body": "Each example turns one repeated intake or follow-up problem into a trackable workflow for customers and staff.",
+      "body": "These are illustrative workflow patterns, not client case studies or promised results. Each shows how one repeated intake or follow-up problem could become a trackable first release.",
       "ctaLabel": "See more use cases",
       "ctaHref": "/use-cases#construction-trades",
       "previousSlide": "Previous workflow example",
       "nextSlide": "Next workflow example",
+      "slideLabel": "Illustrative concept — not client work or reported results",
       "slides": {
         "pricingEngine": {
           "title": "Estimate requests ready for the right trade or crew",
@@ -175,46 +166,47 @@
     "techStack": {
       "title": "Tools chosen for the job, not the trend",
       "languagesTitle": "A focused delivery stack",
-      "languagesCta": "Explore services"
+      "languagesCta": "Explore services",
+      "note": "Technology names show tools and solution patterns we can evaluate. They do not imply a partnership, certification, or a commitment to use every tool; the final stack follows feasibility, security, ownership, and scope."
     },
     "testimonials": {
-      "eyebrow": "Delivery artifacts",
-      "heading": "Know what gets handed over",
-      "bodyPrimary": "The work should leave behind more than deployed code: it should make the workflow, scope, decisions, and operating ownership clear.",
-      "bodySecondary": "These practical artifacts keep the first release focused and make future improvements easier to plan.",
-      "ctaPrimaryLabel": "Scope my first release",
+      "eyebrow": "Evidence before promises",
+      "heading": "Inspect how the work will be delivered",
+      "bodyPrimary": "Our public examples illustrate workflow patterns; they are not presented as named client projects or guaranteed results.",
+      "bodySecondary": "Before you commit, we can walk through a relevant example, sample scope, review checkpoints, and handover approach. Client names, quotes, metrics, or references are shared only when approved.",
+      "ctaPrimaryLabel": "Request a relevant walkthrough",
       "ctaPrimaryHref": "/contact",
       "ctaSecondaryLabel": "See how we work",
       "ctaSecondaryHref": "/why-us",
-      "clientLabel": "Delivery artifact",
+      "clientLabel": "Evidence you can inspect",
       "items": [
         {
-          "quote": "A workflow map shows where requests enter, what information is required, who owns each handoff, and where exceptions need a human decision.",
-          "author": "Mapped workflow",
+          "quote": "Walk through an illustrative version of your intake, follow-up, booking, reporting, or internal process before discussing features.",
+          "author": "Relevant workflow walkthrough",
           "role": "Inputs, owners, handoffs, and exceptions",
-          "company": "Used to shape the first scope",
-          "industry": "Before the build"
+          "company": "Clearly labelled as an example",
+          "industry": "Explore the fit"
         },
         {
-          "quote": "A concise scope defines what the first release includes, how it will be reviewed, and which useful ideas deliberately wait for a later phase.",
-          "author": "Written first-release scope",
-          "role": "Priorities, exclusions, and acceptance points",
-          "company": "A shared build reference",
-          "industry": "Before the build"
+          "quote": "Review a sample scope format that separates the first release, exclusions, dependencies, acceptance points, and decisions still to be confirmed.",
+          "author": "Sample first-release scope",
+          "role": "Deliverables, boundaries, and dependencies",
+          "company": "Adapted only after discovery",
+          "industry": "Understand the scope"
         },
         {
-          "quote": "Working demos at agreed checkpoints turn feedback into visible decisions while there is still time to adjust the system cleanly.",
-          "author": "Review notes and decisions",
-          "role": "Progress tied to the working system",
-          "company": "Feedback with clear follow-through",
-          "industry": "During the build"
+          "quote": "See how working demos, decision notes, testing, access, launch, and support are handled so delivery does not feel like a black box.",
+          "author": "Review and handover method",
+          "role": "Visible checkpoints and operating ownership",
+          "company": "A practical delivery process",
+          "industry": "Know the method"
         },
         {
-          "quote": "Launch notes explain access, configuration, monitoring, ownership, and the support path so the system does not become a black box.",
-          "author": "Handover and support plan",
-          "role": "Ownership after release",
-          "company": "Matched to system criticality",
-          "industry": "At launch"
+          "quote": "When a relevant client has approved it, we can check whether a named reference, quote, screenshot, or result can be shared for the conversation.",
+          "author": "Permission-based client reference",
+          "role": "Relevant and approved before it is used",
+          "company": "Never implied from sample material",
+          "industry": "When available"
         }
       ]
     },
@@ -230,43 +222,46 @@
   },
   "ServicesPage": {
     "hero": {
-      "titleLine1": "Custom software, AI & automation",
-      "titleLine2": "for the workflow you need to fix"
+      "titleLine1": "Three practical services",
+      "titleLine2": "built around your workflow"
     },
     "blueprints": {
-      "heading": "Choose the capability your first release needs",
+      "heading": "Three ways we can help",
+      "supportingLabel": "Supporting capabilities included where the project needs them",
+      "supportingCapabilities": ["Integrations", "Data & reporting", "Hosting, maintenance & support"],
+      "feasibilityNote": "Feasibility depends on platform and API access, data quality, permissions, exception handling, security requirements, and third-party terms. We confirm these before committing to integrations, automation coverage, accuracy, or launch timing.",
+      "typicalReleaseLabel": "A typical first release",
+      "scopeBoundaryLabel": "Confirmed during scope",
       "sections": [
         {
-          "id": "data-reporting",
-          "title": "Data, reporting & integrations",
-          "description": "We connect spreadsheets, databases, operational software, and APIs, then deliver reliable data flows, Power BI dashboards, KPI reporting, and the integration notes needed to run them.",
-          "ctaLabel": "Discuss reporting",
-          "ctaHref": "/contact",
-          "tags": ["Power BI", "Dashboards", "Data pipelines", "APIs", "System integrations"]
-        },
-        {
-          "id": "ai-automation",
-          "title": "AI & workflow automation",
-          "description": "We automate repeated intake, updates, document handling, notifications, and internal steps. AI can assist with classification, summaries, or drafts while defined decisions stay with your team.",
+          "id": "ai-business-automation",
+          "title": "AI & Business Automation",
+          "description": "We automate approved WhatsApp and email replies, lead follow-ups, reminders, document handling, and repetitive internal workflows. Integrations connect the tools involved, while human review stays in place for important decisions.",
+          "typicalRelease": "One intake or follow-up workflow with defined rules, human handoff, testing, and basic reporting.",
+          "scopeBoundary": "Channel access, message approval, AI-provider use, integrations, volume, and exception handling.",
           "ctaLabel": "Map an automation",
           "ctaHref": "/contact",
-          "tags": ["Workflow automation", "AI assistance", "Notifications", "Approvals", "n8n"]
+          "tags": ["WhatsApp & email", "Lead follow-up", "Reminders", "Document handling", "Workflow integration"]
         },
         {
-          "id": "custom-software",
-          "title": "Custom software, web & mobile",
-          "description": "We build customer websites, web and mobile apps, internal portals, field tools, and admin systems with the right forms, roles, integrations, deployment, and handover.",
-          "ctaLabel": "Scope custom software",
+          "id": "custom-business-software",
+          "title": "Custom Business Software",
+          "description": "We build company dashboards, CRM systems, internal tools, booking and scheduling systems, and operational platforms around how your business actually works. Reporting, permissions, and integrations are designed into the workflow.",
+          "typicalRelease": "One operational workflow with role-based screens, essential reporting, and agreed integrations.",
+          "scopeBoundary": "Data migration, accounting or hardware links, multi-branch rules, and advanced reporting.",
+          "ctaLabel": "Scope business software",
           "ctaHref": "/contact",
-          "tags": ["Custom software", "Web apps", "Mobile apps", "Internal portals"]
+          "tags": ["Dashboards", "Custom CRM", "Internal tools", "Booking systems", "Operations platforms"]
         },
         {
-          "id": "whatsapp-automation",
-          "title": "WhatsApp & lead automation",
-          "description": "We design conversation flows that answer approved routine questions, collect qualifying details, route leads, preserve context for human handoff, trigger reminders, and report on follow-up.",
-          "ctaLabel": "Review a lead workflow",
+          "id": "websites-customer-platforms",
+          "title": "Websites & Customer Platforms",
+          "description": "We create business websites, customer portals, online booking pages, and custom web or mobile applications that collect the right details and connect customer actions to your team.",
+          "typicalRelease": "Core pages or one customer journey, responsive delivery, lead capture or booking, and launch essentials.",
+          "scopeBoundary": "Content production, e-commerce, native mobile, multiple languages, and third-party services.",
+          "ctaLabel": "Plan a customer platform",
           "ctaHref": "/contact",
-          "tags": ["WhatsApp", "Lead qualification", "Routing", "Human handoff", "Follow-up"]
+          "tags": ["Business websites", "Customer portals", "Online booking", "Web apps", "Mobile apps"]
         }
       ]
     },
@@ -369,11 +364,11 @@
   "AboutPage": {
     "meta": {
       "title": "About Servicely",
-      "description": "Meet the hands-on software and automation team serving construction and skilled trades, clinics, independent dealerships, and other workflow-heavy businesses.",
+      "description": "Learn how Servicely works as a software and automation agency for construction and skilled trades, clinics, independent dealerships, and other workflow-heavy businesses.",
       "ogTitle": "About | Servicely"
     },
     "hero": {
-      "title": "Direct software and automation builders for workflow-heavy businesses",
+      "title": "Direct builders for automation, business software, and customer platforms",
       "bodyLines": [
         "We work with construction and trade teams, dental and medical clinics, independent dealerships, and other operators that need leads, jobs, appointments, and reporting to move cleanly."
       ],
@@ -385,11 +380,11 @@
       "clientsHref": "/services#services-blueprints"
     },
     "intro": {
-      "eyebrow": "How we work",
-      "title": "Start with the operating problem, then choose the technology.",
+      "eyebrow": "Company identity",
+      "title": "A software and automation agency for workflow-heavy businesses.",
       "body": [
-        "We inspect how work enters, which details are missing, who takes over, and where follow-up or reporting breaks down.",
-        "Then we shape a focused release with concrete deliverables, visible review points, and a clear owner after launch."
+        "Servicely plans, builds, and supports practical systems that reduce repetitive manual work and connect the tools a business already uses.",
+        "Our services are AI & Business Automation, Custom Business Software, and Websites & Customer Platforms."
       ]
     },
     "stats": {
@@ -418,7 +413,7 @@
       "cards": [
         {
           "title": "Start with evidence",
-          "body": "We look at real messages, reports, tools, and handoffs before proposing features."
+          "body": "We review redacted message examples, report structures, tools, and handoffs before proposing features."
         },
         {
           "title": "Design for the operator",
@@ -442,18 +437,17 @@
       { "label": "Industries", "href": "/industries" },
       { "label": "Use Cases", "href": "/use-cases" },
       { "label": "Why Us", "href": "/why-us" },
-      { "label": "About", "href": "/about" }
+      { "label": "About", "href": "/about" },
+      { "label": "Post-launch support", "href": "/support-hosting" }
     ],
     "serviceDots": [
-      { "label": "Custom software, web & mobile", "href": "/services#custom-software" },
-      { "label": "AI & workflow automation", "href": "/services#ai-automation" },
-      { "label": "WhatsApp & lead automation", "href": "/services#whatsapp-automation" },
-      { "label": "Data, reporting & integrations", "href": "/services#data-reporting" },
-      { "label": "Support, hosting & maintenance", "href": "/support-hosting" }
+      { "label": "AI & Business Automation", "href": "/services#ai-business-automation" },
+      { "label": "Custom Business Software", "href": "/services#custom-business-software" },
+      { "label": "Websites & Customer Platforms", "href": "/services#websites-customer-platforms" }
     ],
     "locations": [
       {
-        "title": "Custom software and automation for leads, jobs, and appointments",
+        "title": "AI automation, business software, and customer platforms for practical workflows",
         "subtitle": "For construction and skilled trades, clinics, independent dealerships, and other service teams"
       }
     ],

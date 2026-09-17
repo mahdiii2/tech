@@ -208,7 +208,7 @@ export function AboutHeroOrbits({
   clientsHref,
 }: AboutHeroOrbitsProps) {
   const circleButtonClass =
-    "flex items-center justify-center rounded-full bg-neutral-900 text-white text-xs font-semibold text-center transition-transform duration-200 hover:scale-95";
+    "flex items-center justify-center rounded-full bg-neutral-900 px-3 text-center text-[10px] font-semibold leading-[1.2] text-white transition-transform duration-200 hover:scale-95 sm:text-[11px]";
 
   return (
     <section className="relative isolate overflow-hidden rounded-[32px] border border-neutral-200 bg-white text-neutral-900 shadow-[0_14px_50px_rgba(0,0,0,0.08)] min-h-[520px] sm:min-h-[480px] flex items-center">
@@ -221,7 +221,7 @@ export function AboutHeroOrbits({
             href={servicesHref}
             className={`${circleButtonClass} hidden h-28 w-28 lg:flex`}
           >
-            <span className="leading-tight">{servicesLabel}</span>
+            <span className="max-w-[5rem] break-words">{servicesLabel}</span>
           </Link>
 
           <div className="space-y-4">
@@ -239,7 +239,7 @@ export function AboutHeroOrbits({
             href={clientsHref}
             className={`${circleButtonClass} hidden h-28 w-28 lg:flex`}
           >
-            <span className="leading-tight">{clientsLabel}</span>
+            <span className="max-w-[5rem] break-words">{clientsLabel}</span>
           </Link>
         </div>
 
@@ -248,10 +248,10 @@ export function AboutHeroOrbits({
             href={servicesHref}
             className={`${circleButtonClass} h-24 w-24`}
           >
-            <span className="leading-tight">{servicesLabel}</span>
+            <span className="max-w-[4.25rem] break-words">{servicesLabel}</span>
           </Link>
           <Link href={clientsHref} className={`${circleButtonClass} h-24 w-24`}>
-            <span className="leading-tight">{clientsLabel}</span>
+            <span className="max-w-[4.25rem] break-words">{clientsLabel}</span>
           </Link>
         </div>
       </div>

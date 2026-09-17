@@ -240,42 +240,33 @@ import ReactLenis from "lenis/react";
 import animationdev from "@/public/lottie/DevCubes.json";
 import animationscraping from "@/public/lottie/Gear.json";
 import animationdesign from "@/public/lottie/DesignToggle.json";
-import animationengagement from "@/public/lottie/EngagementEye.json";
 import HeroAnimation from "@/components/AnimationVideos.tsx/AnimationVideo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
 
 const ANIMATIONS = {
-  development: animationdev,
-  scraping: animationscraping,
-  design: animationdesign,
-  engagement: animationengagement,
+  aiBusiness: animationscraping,
+  customBusiness: animationdev,
+  customerPlatforms: animationdesign,
 } as const;
 
 const COLOR_THEMES = {
-  development: {
-    cardBg: "var(--dev-50)",
-    chipBg: "var(--dev-200)",
-    chipText: "var(--dev-800f)",
-    circleBg: "var(--dev-200)",
-    circleGlow: "var(--dev-500)",
-  },
-  scraping: {
+  aiBusiness: {
     cardBg: "#fff1f2",
     chipBg: "#ffe4e6",
     chipText: "#9f1239",
     circleBg: "#ffe4e6",
     circleGlow: "#e11d48",
   },
-  design: {
+  customBusiness: {
     cardBg: "var(--design-50)",
     chipBg: "var(--design-200)",
     chipText: "var(--design-800)",
     circleBg: "var(--design-200)",
     circleGlow: "var(--design-500)",
   },
-  engagement: {
+  customerPlatforms: {
     cardBg: "var(--engagement-50)",
     chipBg: "var(--engagement-200)",
     chipText: "var(--engagement-800)",

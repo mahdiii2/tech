@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowRight, BarChart3, Database, PenTool, Users } from "lucide-react";
+import { ArrowRight, Bot, Code2, Globe2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useMessages } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
 import type { AbstractIntlMessages } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
@@ -17,10 +17,17 @@ type BlueprintSectionMessage = {
   ctaLabel: string;
   ctaHref: string;
   tags: string[];
+  typicalRelease?: string;
+  scopeBoundary?: string;
 };
 
 type BlueprintMessages = {
   heading?: string;
+  supportingLabel?: string;
+  supportingCapabilities?: string[];
+  feasibilityNote?: string;
+  typicalReleaseLabel?: string;
+  scopeBoundaryLabel?: string;
   sections?: BlueprintSectionMessage[];
 };
 
@@ -38,43 +45,42 @@ type SectionTheme = {
 };
 
 const SECTION_ORDER = [
-  "custom-software",
-  "ai-automation",
-  "whatsapp-automation",
-  "data-reporting",
+  "ai-business-automation",
+  "custom-business-software",
+  "websites-customer-platforms",
 ];
 const SECTION_RANK = new Map(
   SECTION_ORDER.map((id, index) => [id, index])
 );
 
+const LEGACY_SECTION_ALIASES: Record<string, string[]> = {
+  "ai-business-automation": ["ai-automation", "whatsapp-automation"],
+  "custom-business-software": ["custom-software", "data-reporting"],
+};
+
 const sectionThemes: Record<string, SectionTheme> = {
-  "data-reporting": {
-    accent: "var(--dev-500)",
-    iconBg: "var(--dev-100)",
-    badgeBg: "var(--dev-50)",
-    Icon: BarChart3,
-  },
-  "ai-automation": {
+  "ai-business-automation": {
     accent: "#e11d48",
     iconBg: "#ffe4e6",
     badgeBg: "#fff1f2",
-    Icon: Database,
+    Icon: Bot,
   },
-  "custom-software": {
+  "custom-business-software": {
     accent: "var(--design-500)",
     iconBg: "var(--design-100)",
     badgeBg: "var(--design-100)",
-    Icon: PenTool,
+    Icon: Code2,
   },
-  "whatsapp-automation": {
+  "websites-customer-platforms": {
     accent: "var(--engagement-500)",
     iconBg: "var(--engagement-100)",
     badgeBg: "var(--engagement-50)",
-    Icon: Users,
+    Icon: Globe2,
   },
 };
 
 export default function ServicesBlueprints() {
+  const locale = useLocale();
   const messages = useMessages();
   const typedMessages = messages as MessagesWithServicesPage;
   const blueprintMessages = typedMessages.ServicesPage?.blueprints;
@@ -89,6 +95,12 @@ export default function ServicesBlueprints() {
     [blueprintMessages]
   );
   const heading = blueprintMessages?.heading ?? "";
+  const supportingLabel = blueprintMessages?.supportingLabel ?? "";
+  const supportingCapabilities =
+    blueprintMessages?.supportingCapabilities ?? [];
+  const feasibilityNote = blueprintMessages?.feasibilityNote ?? "";
+  const typicalReleaseLabel = blueprintMessages?.typicalReleaseLabel ?? "";
+  const scopeBoundaryLabel = blueprintMessages?.scopeBoundaryLabel ?? "";
 
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const [activeSection, setActiveSection] = useState<string>(
@@ -158,7 +170,8 @@ export default function ServicesBlueprints() {
         <div className="flex w-full max-w-5xl flex-col items-stretch gap-3 rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-neutral-900/5 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:p-2 lg:flex-nowrap lg:rounded-full">
           {sections.map((section) => {
             const theme =
-              sectionThemes[section.id] ?? sectionThemes["data-reporting"];
+              sectionThemes[section.id] ??
+              sectionThemes["ai-business-automation"];
             const isActive = section.id === derivedActiveSection;
             return (
               <button
@@ -180,6 +193,35 @@ export default function ServicesBlueprints() {
           })}
         </div>
       </div>
+      {supportingCapabilities.length ? (
+        <div className="mx-auto mb-12 flex max-w-5xl flex-col items-center gap-4 px-6 text-center">
+          <p
+            className={cn(
+              "text-xs font-semibold text-neutral-500",
+              locale === "ar"
+                ? "tracking-normal"
+                : "uppercase tracking-[0.18em]"
+            )}
+          >
+            {supportingLabel}
+          </p>
+          <ul className="flex flex-wrap justify-center gap-2.5" aria-label={supportingLabel}>
+            {supportingCapabilities.map((capability) => (
+              <li
+                key={capability}
+                className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-700"
+              >
+                {capability}
+              </li>
+            ))}
+          </ul>
+          {feasibilityNote ? (
+            <p className="max-w-3xl rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-sm leading-6 text-neutral-600">
+              {feasibilityNote}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 lg:flex-row lg:gap-16">
         <div className="lg:w-1/3">
           <div className="lg:sticky lg:top-42">
@@ -195,7 +237,8 @@ export default function ServicesBlueprints() {
           <div className="space-y-12">
             {sections.map((section, sectionIndex) => {
               const theme =
-                sectionThemes[section.id] ?? sectionThemes["data-reporting"];
+                sectionThemes[section.id] ??
+                sectionThemes["ai-business-automation"];
               const Icon = theme.Icon;
               return (
                 <Reveal key={section.id} delay={sectionIndex * 0.08}>
@@ -207,6 +250,14 @@ export default function ServicesBlueprints() {
                   data-section-id={section.id}
                   className="scroll-mt-32 rounded-3xl border border-neutral-200 bg-white p-8 shadow-[0_10px_35px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
                 >
+                  {(LEGACY_SECTION_ALIASES[section.id] ?? []).map((alias) => (
+                    <span
+                      key={alias}
+                      id={alias}
+                      className="block scroll-mt-32"
+                      aria-hidden="true"
+                    />
+                  ))}
                   <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div className="flex items-center gap-4">
                       <span
@@ -244,6 +295,31 @@ export default function ServicesBlueprints() {
                   <p className="mt-6 text-base leading-relaxed text-neutral-600">
                     {section.description}
                   </p>
+
+                  {section.typicalRelease || section.scopeBoundary ? (
+                    <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                      {section.typicalRelease ? (
+                        <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+                          <p className={cn("text-xs font-semibold text-neutral-500", locale === "ar" ? "tracking-normal" : "uppercase tracking-[0.12em]")}>
+                            {typicalReleaseLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-neutral-700">
+                            {section.typicalRelease}
+                          </p>
+                        </div>
+                      ) : null}
+                      {section.scopeBoundary ? (
+                        <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+                          <p className={cn("text-xs font-semibold text-neutral-500", locale === "ar" ? "tracking-normal" : "uppercase tracking-[0.12em]")}>
+                            {scopeBoundaryLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-neutral-700">
+                            {section.scopeBoundary}
+                          </p>
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
 
                   <Link
                     href={section.ctaHref}

@@ -45,6 +45,7 @@ export default function CaseStudySlider() {
 
   const ctaLabel = t("ctaLabel");
   const ctaHref = t("ctaHref");
+  const slideLabel = t("slideLabel");
 
   return (
     <section className="relative max-w-screen-2xl mx-auto p-4 lg:p-10 lg:pb-0 pb-80">
@@ -79,6 +80,9 @@ export default function CaseStudySlider() {
             <div className="relative flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:items-center h-full lg:pl-10">
               <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
                 <div className="relative aspect-[4/3] w-full max-w-[600px] overflow-hidden rounded-2xl shadow-xl">
+                  <span className="absolute start-3 top-3 z-10 max-w-[calc(100%-1.5rem)] rounded-full bg-neutral-950/85 px-3 py-1.5 text-xs font-semibold leading-5 text-white backdrop-blur-sm">
+                    {slideLabel}
+                  </span>
                   <Image
                     src={slide.image}
                     alt={slide.title}

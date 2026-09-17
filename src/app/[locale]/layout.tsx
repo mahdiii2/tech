@@ -37,8 +37,8 @@ export async function generateMetadata({
   const localizedSite = getLocalizedSiteConfig(localeKey);
   const socialImageAlt =
     localeKey === "ar"
-      ? "صورة Servicely التعريفية لخدمات البرمجيات والبيانات والأتمتة"
-      : "Servicely preview for software, data and automation services";
+      ? "صورة Servicely لخدمات الذكاء الاصطناعي وأتمتة الأعمال وبرمجيات الأعمال ومنصات العملاء"
+      : "Servicely preview for AI automation, custom business software and customer platforms";
 
   return {
     metadataBase: new URL(siteUrl),
@@ -156,11 +156,11 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html
-      className={`${inter.variable} ${spaceMono.variable} ${notoSansArabic.variable}`}
+      className={`${inter.variable} ${spaceMono.variable} ${notoSansArabic.variable} overflow-x-clip`}
       lang={locale}
       dir={dir}
     >
-      <body>
+      <body className="overflow-x-clip">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

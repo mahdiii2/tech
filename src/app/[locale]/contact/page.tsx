@@ -28,8 +28,8 @@ export default async function ContactPage({ params }: Props) {
   const isAr = locale === "ar";
   const subject = isAr ? "طلب مشروع جديد" : "New project request";
   const body = isAr
-    ? "مرحباً Servicely،\n\nنريد مناقشة مشروع جديد.\n\nالاسم:\nاسم الشركة:\nالمنطقة الزمنية وأوقات الاجتماع المناسبة:\nمشكلة سير العمل أو التقارير:\nالأدوات أو العملية الحالية:\nالتكاملات الضرورية:\nموعد الإطلاق المستهدف:\nنطاق الميزانية:\nطريقة التواصل المفضلة:\n\nشكراً."
-    : "Hello Servicely,\n\nWe would like to discuss a new project.\n\nName:\nBusiness name:\nTime zone / preferred meeting hours:\nWorkflow or reporting problem:\nCurrent tools or process:\nMust-have integrations:\nTarget launch window:\nBudget range:\nPreferred contact method:\n\nThank you.";
+    ? "مرحباً Servicely،\n\nنريد مناقشة مشروع جديد. سنشارك في هذه الرسالة ملخصاً أو مثالاً منقحاً فقط، من دون بيانات حساسة أو بيانات دخول.\n\nالاسم:\nاسم الشركة:\nالمنطقة الزمنية وأوقات الاجتماع المناسبة:\nمشكلة سير العمل أو التقارير:\nالأدوات أو العملية الحالية:\nالتكاملات الضرورية:\nموعد الإطلاق المستهدف:\nنطاق الميزانية:\nطريقة التواصل المفضلة:\n\nشكراً."
+    : "Hello Servicely,\n\nWe would like to discuss a new project. We will include only a summary or redacted example here, with no sensitive data or credentials.\n\nName:\nBusiness name:\nTime zone / preferred meeting hours:\nWorkflow or reporting problem:\nCurrent tools or process:\nMust-have integrations:\nTarget launch window:\nBudget range:\nPreferred contact method:\n\nThank you.";
   const contactCopy = isAr
     ? {
         heroTitle: "أخبرنا أين يتعطل سير العمل",
@@ -40,6 +40,8 @@ export default async function ContactPage({ params }: Props) {
         cta: "لا تحتاج إلى مواصفات نهائية. ابدأ بالمشكلة والنتيجة التي تحتاجها.",
         privacyLead: "اطلع على كيفية تعاملنا مع تفاصيل المشروع في",
         privacyLabel: "سياسة الخصوصية",
+        sensitiveNote:
+          "للتواصل الأولي، استخدم ملخصاً أو مثالاً منقحاً. لا ترسل سجلات مرضى أو بيانات دفع أو كلمات مرور أو مفاتيح API أو وثائق هوية أو بيانات إنتاج سرية.",
         groups: [
           {
             title: "بيانات التواصل",
@@ -83,6 +85,8 @@ export default async function ContactPage({ params }: Props) {
         cta: "You do not need a finished specification. Start with the problem and the outcome you need.",
         privacyLead: "See how we handle project details in our",
         privacyLabel: "Privacy Policy",
+        sensitiveNote:
+          "For initial contact, use a summary or redacted example. Do not send patient records, payment details, passwords, API keys, identity documents, or confidential production data.",
         groups: [
           {
             title: "Contact details",
@@ -122,8 +126,8 @@ export default async function ContactPage({ params }: Props) {
     {
       Icon: Clock3,
       label: isAr
-        ? "رد مباشر من فريق البناء"
-        : "A direct reply from the builders",
+        ? "رد مباشر من فريقنا"
+        : "A direct reply from our team",
       href: null,
     },
     {
@@ -269,6 +273,9 @@ export default async function ContactPage({ params }: Props) {
                       {contactCopy.privacyLabel}
                     </Link>
                     .
+                  </p>
+                  <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2.5 text-xs font-medium leading-5 text-amber-950">
+                    {contactCopy.sensitiveNote}
                   </p>
                 </div>
               </div>

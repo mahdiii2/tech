@@ -74,7 +74,7 @@ const copy: Record<string, IndustriesCopy> = {
     body:
       "We focus on construction and trades, dental and medical clinics, and independent car dealerships—three industries where a missed message can become a missed job, appointment, or sale.",
     support:
-      "Each solution can combine custom software, AI-assisted workflows, WhatsApp automation, integrations, and reporting around the way your team already operates.",
+      "Each solution can combine AI and business automation, custom business software, and customer-facing platforms around the way your team already operates.",
     cta: "Map one workflow",
     ctaHref: "/contact",
     metrics: [
@@ -87,7 +87,7 @@ const copy: Record<string, IndustriesCopy> = {
       "A contractor prices work, a clinic manages appointments, and a dealership moves buyers toward the right vehicle. The system should reflect those differences.",
     closingTitle: "Start with one lead, booking, or job",
     closingBody:
-      "Walk us through a recent request from the first message to the final outcome. We will identify what should stay human, what can be automated, and what belongs in a focused first release.",
+      "Walk us through a recent request using a redacted or synthetic example, from the first message to the final outcome. We will identify what should stay human, what can be automated, and what belongs in a focused first release.",
     closingChecklist: [
       "One recent lead, booking, quote, or job",
       "The channels and tools involved today",
@@ -98,7 +98,7 @@ const copy: Record<string, IndustriesCopy> = {
     useCasesClosingBody:
       "Use these examples as a starting point, not a fixed package. We adapt the conversation, rules, human review, integrations, and reporting to your operation.",
     useCasesClosingChecklist: [
-      "Share one real message thread or request",
+      "Share one recent, redacted message thread or a synthetic example",
       "Point out where the delay or repeated work begins",
       "Choose the first outcome worth improving",
       "Receive a practical first-release direction",
@@ -108,7 +108,7 @@ const copy: Record<string, IndustriesCopy> = {
     useCasesHeroEyebrow: "Practical use cases",
     useCasesHeroTitle: "Find the workflow that looks most like yours",
     useCasesHeroBody:
-      "See how custom software, AI automation, WhatsApp, and connected follow-up can support the specific work your team handles every day.",
+      "See how AI and business automation, custom business software, and customer platforms can support the specific work your team handles every day.",
     problemsLabels: {
       problem: "Where work breaks down",
       solution: "What we can build",
@@ -270,7 +270,7 @@ const copy: Record<string, IndustriesCopy> = {
     body:
       "نركز على شركات المقاولات والخدمات الفنية، وعيادات الأسنان والعيادات الطبية، ومعارض السيارات المستقلة؛ وهي قطاعات قد تعني فيها الرسالة الضائعة خسارة مشروع أو موعد أو صفقة.",
     support:
-      "يمكن أن يجمع الحل بين البرمجيات المخصصة، وسير العمل المدعوم بالذكاء الاصطناعي، وأتمتة واتساب، والتكاملات، والتقارير وفق طريقة عمل فريقك.",
+      "يمكن أن يجمع الحل بين الذكاء الاصطناعي وأتمتة الأعمال، وبرمجيات الأعمال المخصصة، والمنصات الموجهة للعملاء وفق طريقة عمل فريقك.",
     cta: "ارسم سير عمل واحداً معنا",
     ctaHref: "/contact",
     metrics: [
@@ -283,7 +283,7 @@ const copy: Record<string, IndustriesCopy> = {
       "تسعّر شركة المقاولات عملاً، وتنظم العيادة المواعيد، ويوجّه معرض السيارات المشتري إلى المركبة المناسبة. يجب أن يعكس النظام هذه الفروقات.",
     closingTitle: "ابدأ بعميل أو موعد أو مشروع واحد",
     closingBody:
-      "راجع معنا طلباً حديثاً من أول رسالة حتى النتيجة. سنحدد ما يجب أن يبقى بيد الفريق، وما يمكن أتمتته، وما يستحق الدخول في الإصدار الأول.",
+      "راجع معنا طلباً حديثاً باستخدام مثال منقح أو اصطناعي، من أول رسالة حتى النتيجة. سنحدد ما يجب أن يبقى بيد الفريق، وما يمكن أتمتته، وما يستحق الدخول في الإصدار الأول.",
     closingChecklist: [
       "عميل أو موعد أو عرض سعر أو مشروع حديث",
       "القنوات والأدوات المستخدمة اليوم",
@@ -294,7 +294,7 @@ const copy: Record<string, IndustriesCopy> = {
     useCasesClosingBody:
       "استخدم هذه الأمثلة كنقطة بداية لا كحزمة ثابتة. نكيّف المحادثة والقواعد والمراجعة البشرية والتكاملات والتقارير مع طريقة عملك.",
     useCasesClosingChecklist: [
-      "شارك محادثة أو طلباً حقيقياً",
+      "شارك محادثة حديثة منقحة أو مثالاً اصطناعياً",
       "حدد أين يبدأ التأخير أو العمل المتكرر",
       "اختر أول نتيجة تستحق التحسين",
       "احصل على اتجاه عملي للإصدار الأول",
@@ -304,7 +304,7 @@ const copy: Record<string, IndustriesCopy> = {
     useCasesHeroEyebrow: "حالات استخدام عملية",
     useCasesHeroTitle: "اختر سير العمل الأقرب إلى واقع فريقك",
     useCasesHeroBody:
-      "شاهد كيف تدعم البرمجيات المخصصة وأتمتة الذكاء الاصطناعي وواتساب والمتابعة المترابطة العمل اليومي لفريقك.",
+      "شاهد كيف يدعم الذكاء الاصطناعي وأتمتة الأعمال وبرمجيات الأعمال المخصصة ومنصات العملاء العمل اليومي لفريقك.",
     problemsLabels: {
       problem: "أين يتعطل العمل",
       solution: "ما الذي يمكننا بناءه",

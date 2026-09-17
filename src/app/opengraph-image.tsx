@@ -3,14 +3,14 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
 export const alt =
-  "Servicely software, data and automation services for better business workflows";
+  "Servicely AI automation, custom business software and customer platforms";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const capabilities = [
-  "Power BI & analytics",
-  "Workflow automation",
-  "Web & mobile products",
+  "AI & business automation",
+  "Custom business software",
+  "Customer platforms",
 ];
 
 export default function OpenGraphImage() {
@@ -108,7 +108,7 @@ export default function OpenGraphImage() {
                 textTransform: "uppercase",
               }}
             >
-              Software · Data · Automation
+              Automation · Software · Customer platforms
             </div>
             <div
               style={{
@@ -132,8 +132,8 @@ export default function OpenGraphImage() {
                 lineHeight: 1.4,
               }}
             >
-              Practical software and data products designed around how teams
-              work.
+              Practical systems that connect customer conversations with the
+              people and processes responsible for the next step.
             </div>
           </div>
 

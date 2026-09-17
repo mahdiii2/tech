@@ -6,10 +6,10 @@ import { useLocale, useTranslations } from "next-intl";
 import {
   ArrowLeft,
   ArrowRight,
-  BarChart3,
   Building2,
   CarFront,
   Code2,
+  Globe2,
   HeartPulse,
   Menu,
   MessageCircle,
@@ -47,36 +47,28 @@ type NavCardConfig = {
 
 const SERVICE_CARDS: NavCardConfig[] = [
   {
-    key: "automation",
-    href: "/services#custom-software",
-    bg: "var(--design-50)",
-    accent: "var(--design-200)",
-    iconAccent: "var(--design-500)",
-    icon: Code2,
-  },
-  {
-    key: "scraping",
-    href: "/services#ai-automation",
+    key: "aiBusiness",
+    href: "/services#ai-business-automation",
     bg: "#fff1f2",
     accent: "#ffe4e6",
     iconAccent: "#e11d48",
     icon: Sparkles,
   },
   {
-    key: "data",
-    href: "/services#whatsapp-automation",
+    key: "customBusiness",
+    href: "/services#custom-business-software",
+    bg: "var(--design-50)",
+    accent: "var(--design-200)",
+    iconAccent: "var(--design-500)",
+    icon: Code2,
+  },
+  {
+    key: "customerPlatforms",
+    href: "/services#websites-customer-platforms",
     bg: "var(--engagement-50)",
     accent: "var(--engagement-200)",
     iconAccent: "var(--engagement-500)",
-    icon: MessageCircle,
-  },
-  {
-    key: "development",
-    href: "/services#data-reporting",
-    bg: "var(--dev-50)",
-    accent: "var(--dev-200)",
-    iconAccent: "var(--dev-500)",
-    icon: BarChart3,
+    icon: Globe2,
   },
 ];
 
@@ -351,6 +343,9 @@ export function Navbar() {
                                   <p className="text-xl font-semibold">
                                     {card.title}
                                   </p>
+                                  <p className="mt-2 text-sm leading-6 text-neutral-600">
+                                    {card.description}
+                                  </p>
                                 </div>
                               </Link>
                             </SheetClose>
@@ -434,7 +429,6 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isWideMenu = cards.length > 3;
   const isTwoCardMenu = cards.length === 2;
-  const isFourCardMenu = cards.length === 4;
   const isCompactMenu = cards.length >= 3;
 
   const handleOpen = () => {
@@ -486,13 +480,11 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
           <div
             className={cn(
               "gap-3",
-              isFourCardMenu
-                ? "mx-auto grid max-w-5xl grid-cols-4"
-                : isWideMenu
+              isWideMenu
                   ? "grid grid-cols-6"
                 : isTwoCardMenu
                   ? "mx-auto grid max-w-3xl grid-cols-2"
-                  : "mx-auto grid max-w-3xl grid-cols-3"
+                  : "mx-auto grid max-w-5xl grid-cols-3"
             )}
           >
             {cards.map((card) => {
@@ -504,7 +496,7 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
                   className={cn(
                     "flex flex-col items-center justify-center gap-5 text-center text-foreground transition-transform duration-200 hover:-translate-y-1",
                     isCompactMenu
-                      ? "h-52 min-w-0 rounded-2xl p-5"
+                      ? "min-h-60 min-w-0 rounded-2xl p-5"
                       : "h-56 rounded-[1.75rem] p-7"
                   )}
                   style={{ backgroundColor: card.bg }}
@@ -530,6 +522,9 @@ function NavCardsDropdown({ label, href, cards }: NavCardsDropdownProps) {
                     )}
                   >
                     {card.title}
+                  </p>
+                  <p className="max-w-[17rem] text-sm leading-5 text-neutral-600">
+                    {card.description}
                   </p>
                 </Link>
               );

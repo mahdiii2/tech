@@ -22,15 +22,19 @@ export default function TransformationTestimonial({
     <section className="w-full mt-20 p-10 sm:py-30" style={{ backgroundColor }}>
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 px-6 text-center">
         <Reveal>
-          <p className="text-2xl font-semibold leading-[1.6] text-neutral-900 sm:text-3xl">
-            &quot;{quote}&quot;
-          </p>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-600">
+              {name}
+            </p>
+            <p className="mt-5 text-2xl font-semibold leading-[1.6] text-neutral-900 sm:text-3xl">
+              {quote}
+            </p>
+          </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <div className="space-y-2 text-center text-sm font-semibold text-neutral-900 sm:text-base">
-            <div>{name}</div>
-            <div className="text-neutral-700">{role}</div>
-          </div>
+          <p className="text-center text-sm font-semibold text-neutral-700 sm:text-base">
+            {role}
+          </p>
         </Reveal>
       </div>
     </section>

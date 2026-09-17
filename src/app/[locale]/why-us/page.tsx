@@ -33,29 +33,29 @@ export default async function WhyUsPage({ params }: Props) {
   const points = isAr
     ? [
         "خريطة واضحة لسير العمل",
+        "فحص الوصول والبيانات وواجهات API",
         "نطاق مكتوب للإصدار الأول",
         "عروض عملية في نقاط متفق عليها",
-        "ملاحظات للإطلاق والتسليم",
-        "خطة دعم تناسب أهمية النظام",
+        "خطة للإطلاق والتسليم والدعم",
       ]
     : [
         "Mapped workflow",
+        "Access, data, and API feasibility check",
         "Written first-release scope",
         "Working demos at agreed checkpoints",
-        "Launch and handover notes",
-        "Support plan matched to system criticality",
+        "Launch, handover, and support plan",
       ];
   const ctaCopy = isAr
     ? {
         heroLabel: "ناقش سير العمل معنا",
         eyebrow: "خطوة أولى واضحة",
-        heading: "شاركنا سير العمل والقيود والنتيجة التي تحتاجها.",
+        heading: "شاركنا سير العمل والأدوات والبيانات والقيود والنتيجة التي تحتاجها.",
         finalLabel: "اطلب نطاقاً للمشروع",
       }
     : {
         heroLabel: "Discuss your workflow",
         eyebrow: "A sensible first step",
-        heading: "Bring us the workflow, the constraints and the outcome you need.",
+        heading: "Bring us the workflow, tools, data, constraints, and outcome you need.",
         finalLabel: "Request a project scope",
       };
 
@@ -68,7 +68,7 @@ export default async function WhyUsPage({ params }: Props) {
           className="mx-auto flex min-h-[50vh] max-w-4xl scroll-mt-32 flex-col items-center justify-center gap-6 text-center"
         >
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#365fd9]">
+            <p className={`text-sm font-semibold text-[#365fd9] ${isAr ? "tracking-normal" : "uppercase tracking-[0.18em]"}`}>
               {isAr ? "لماذا نحن" : "Why Us"}
             </p>
           </Reveal>
@@ -132,7 +132,7 @@ export default async function WhyUsPage({ params }: Props) {
         <Reveal>
           <div className="rounded-3xl bg-neutral-950 p-6 text-white sm:p-8 md:flex md:items-center md:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
+              <p className={`text-sm font-semibold text-white/55 ${isAr ? "tracking-normal" : "uppercase tracking-[0.18em]"}`}>
                 {ctaCopy.eyebrow}
               </p>
               <h2 className="mt-2 max-w-2xl text-2xl font-semibold md:text-3xl">

@@ -28,10 +28,9 @@ const TestimonialStack = dynamic(
 type Props = { params: Promise<{ locale: string }> };
 
 const BLUEPRINT_KEYS = [
-  "design",
-  "scraping",
-  "engagement",
-  "development",
+  "aiBusiness",
+  "customBusiness",
+  "customerPlatforms",
 ] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

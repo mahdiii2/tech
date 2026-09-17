@@ -38,7 +38,7 @@ export default async function SupportHostingPage({ params }: Props) {
         <div className="mx-auto flex min-h-[50vh] max-w-4xl flex-col items-center justify-center gap-6 text-center">
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#365fd9]">
-              {isAr ? "الدعم والاستضافة" : "Support & Hosting"}
+              {isAr ? "قدرة داعمة بعد الإطلاق" : "Post-launch supporting capability"}
             </p>
           </Reveal>
           <Reveal delay={0.08}>

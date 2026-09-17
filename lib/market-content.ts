@@ -29,34 +29,34 @@ const en = {
     startProject: "Map one workflow",
   },
   whyUs: {
-    heroTitle: "Direct access to the people planning and building your system",
+    heroTitle: "A direct delivery team with clear scope and visible decisions",
     heroBody:
-      "Work with one accountable team from workflow mapping through launch. Decisions stay documented, tradeoffs stay visible, and every release has a useful business purpose.",
+      "Servicely is a software and automation agency. We map the workflow, define a focused first release, and stay involved through build, launch, and handover. Feasibility, responsibilities, decisions, and tradeoffs are documented along the way.",
     sections: [
       {
         title: "One accountable delivery team",
         body:
-          "The people who shape the scope also build and review the product. You always know who owns the next decision, deliverable, and follow-up.",
+          "The people who shape the scope also stay involved in the build and reviews. The project names an owner for decisions, deliverables, questions, and follow-up.",
       },
       {
-        title: "Scope tied to an outcome",
+        title: "Feasibility before commitments",
         body:
-          "We connect every feature to a workflow problem, success signal, or operational requirement before it enters the first release.",
+          "We check platform and API access, permissions, data quality, exceptions, vendor terms, security needs, and technical ownership before confirming the approach or timing.",
       },
       {
-        title: "Working reviews, not long reveals",
+        title: "Scope tied to a workflow result",
         body:
-          "You review working screens and flows at agreed checkpoints, while choices, open questions, and tradeoffs are recorded for the team.",
+          "Each first-release feature connects to a specific operating problem, review point, or useful success signal, with exclusions and dependencies written down.",
       },
       {
-        title: "Launch and handover planned early",
+        title: "Working reviews, not a long reveal",
         body:
-          "Deployment, access, documentation, training, backups, and ownership are planned before launch instead of being left to the final week.",
+          "You review working screens and flows at agreed checkpoints while choices, open questions, test findings, and tradeoffs are recorded for the team.",
       },
       {
-        title: "Support matched to the system",
+        title: "Launch, handover, and support planned early",
         body:
-          "After launch, choose a support level based on business impact, change frequency, response expectations, and infrastructure needs.",
+          "Deployment, access, documentation, training, backups, ownership, and the appropriate support level are planned before launch rather than left to the final week.",
       },
     ],
   },
@@ -118,34 +118,34 @@ const ar = {
     startProject: "ارسم مسار عمل واحداً",
   },
   whyUs: {
-    heroTitle: "وصول مباشر إلى من يخطط لنظامك ويبنيه",
+    heroTitle: "فريق تنفيذ مباشر بنطاق واضح وقرارات مرئية",
     heroBody:
-      "تعمل مع فريق واحد مسؤول من رسم سير العمل حتى الإطلاق. تبقى القرارات موثقة، والمفاضلات واضحة، ولكل إصدار غرض عملي.",
+      "Servicely وكالة للبرمجيات والأتمتة. نرسم سير العمل ونحدد إصداراً أول واضحاً ونبقى مشاركين خلال البناء والإطلاق والتسليم، مع توثيق الجدوى والمسؤوليات والقرارات والمفاضلات طوال المشروع.",
     sections: [
       {
         title: "فريق واحد مسؤول عن التسليم",
         body:
-          "من يحدد النطاق هو نفسه من يبني المنتج ويراجعه، لذلك تعرف دائماً من يملك القرار والتسليم والخطوة التالية.",
+          "يبقى من يحدد النطاق مشاركاً في البناء والمراجعات، ويسمّي المشروع مسؤولاً عن القرارات والمخرجات والأسئلة والمتابعة.",
       },
       {
-        title: "نطاق مرتبط بنتيجة",
+        title: "التحقق من الجدوى قبل الالتزام",
         body:
-          "نربط كل ميزة بمشكلة في سير العمل أو مؤشر نجاح أو متطلب تشغيلي قبل إدخالها في الإصدار الأول.",
+          "نتحقق من الوصول إلى المنصات وواجهات API والصلاحيات وجودة البيانات والاستثناءات وشروط الموردين واحتياجات الأمان والملكية التقنية قبل تأكيد النهج أو التوقيت.",
+      },
+      {
+        title: "نطاق مرتبط بنتيجة في سير العمل",
+        body:
+          "نربط كل ميزة في الإصدار الأول بمشكلة تشغيلية محددة أو نقطة مراجعة أو مؤشر نجاح مفيد، مع توثيق الاستثناءات والاعتماديات.",
       },
       {
         title: "مراجعات عملية لا انتظار طويل",
         body:
-          "تراجع شاشات ومسارات تعمل في نقاط متفق عليها، بينما نوثق الخيارات والأسئلة المفتوحة والمفاضلات للفريق.",
+          "تراجع شاشات ومسارات تعمل في نقاط متفق عليها، بينما نوثق الخيارات والأسئلة المفتوحة ونتائج الاختبار والمفاضلات للفريق.",
       },
       {
-        title: "الإطلاق والتسليم جزء من الخطة",
+        title: "التخطيط المبكر للإطلاق والتسليم والدعم",
         body:
-          "نخطط للنشر والصلاحيات والتوثيق والتدريب والنسخ الاحتياطي والملكية مبكراً، لا في الأسبوع الأخير.",
-      },
-      {
-        title: "دعم يناسب أهمية النظام",
-        body:
-          "بعد الإطلاق تختار مستوى الدعم وفق أثر النظام وتكرار التغيير وتوقعات الاستجابة واحتياجات البنية التحتية.",
+          "نخطط للنشر والصلاحيات والتوثيق والتدريب والنسخ الاحتياطي والملكية ومستوى الدعم المناسب قبل الإطلاق، لا في الأسبوع الأخير.",
       },
     ],
   },

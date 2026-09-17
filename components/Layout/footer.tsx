@@ -114,7 +114,7 @@ export default function SiteFooter() {
                   href={dot.href}
                   colorClass={
                     index === 0
-                      ? "bg-[#365fd9]"
+                      ? "bg-[#e11d48]"
                       : index === 1
                         ? "bg-[#e3f94c]"
                         : "bg-[#17ac87]"

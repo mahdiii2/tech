@@ -18,15 +18,15 @@ export const siteConfig = {
   shortName: "Servicely",
   url: siteUrl,
   description:
-    "Servicely builds custom software, web and mobile apps, internal portals, AI and WhatsApp automations, integrations, and reporting for workflow-heavy service businesses.",
-  tagline: "Custom software and automation for workflow-heavy businesses",
+    "Servicely delivers AI and business automation, custom business software, and websites and customer platforms for workflow-heavy service businesses.",
+  tagline: "AI automation, business software, and customer platforms",
   email: salesEmail,
-  phone: "+96171383987",
-  phoneHref: "+96171383987",
+  phone: "+961 81 789 355",
+  phoneHref: "+96181789355",
   phones: [
     {
-      label: "+96171383987",
-      href: "https://wa.me/96171383987",
+      label: "+961 81 789 355",
+      href: "https://wa.me/96181789355",
     },
   ],
   locale: "en",
@@ -43,9 +43,13 @@ export const siteConfig = {
     "medical clinic inquiry management",
     "independent car dealership software",
     "dealership lead follow-up automation",
-    "AI workflow automation",
-    "WhatsApp conversation automation",
+    "AI business automation",
+    "WhatsApp and email automation",
     "lead qualification and routing",
+    "custom CRM development",
+    "online booking platform",
+    "customer portal development",
+    "business website development",
     "internal portal development",
     "business system integrations",
     "Power BI reporting dashboards",
@@ -54,7 +58,7 @@ export const siteConfig = {
   social: {
     instagram: "",
     facebook: "",
-    whatsapp: "https://wa.me/96171383987",
+    whatsapp: "https://wa.me/96181789355",
   },
   get sameAs(): string[] {
     return [this.social.instagram, this.social.facebook].filter(Boolean);
@@ -72,9 +76,9 @@ const localizedSeo = {
     keywords: siteConfig.keywords,
   },
   ar: {
-    tagline: "برمجيات مخصصة وأتمتة لعمليات الأعمال",
+    tagline: "أتمتة بالذكاء الاصطناعي وبرمجيات أعمال ومنصات للعملاء",
     description:
-      "تبني Servicely برمجيات مخصصة وتطبيقات وبوابات وأتمتة بالذكاء الاصطناعي وواتساب وتكاملات وتقارير للشركات الخدمية ذات العمليات المتعددة.",
+      "تقدم Servicely الذكاء الاصطناعي وأتمتة الأعمال وبرمجيات أعمال مخصصة ومواقع ومنصات للعملاء للشركات الخدمية ذات العمليات المتعددة.",
     keywords: [
       "برمجيات أعمال مخصصة",
       "برمجيات سير العمل لشركات المقاولات",
@@ -85,8 +89,12 @@ const localizedSeo = {
       "برمجيات معارض السيارات المستقلة",
       "أتمتة متابعة العملاء المحتملين لمعارض السيارات",
       "أتمتة سير العمل بالذكاء الاصطناعي",
-      "أتمتة محادثات واتساب",
+      "أتمتة واتساب والبريد الإلكتروني",
       "تأهيل العملاء المحتملين وتوجيههم",
+      "تطوير أنظمة CRM مخصصة",
+      "منصات الحجز عبر الإنترنت",
+      "تطوير بوابات العملاء",
+      "تطوير مواقع الأعمال",
       "تطوير بوابات داخلية",
       "تكامل أنظمة الأعمال",
       "لوحات معلومات وتقارير Power BI",
@@ -99,50 +107,54 @@ const pageSeo = {
   home: {
     path: "/",
     en: {
-      title: "Custom Software & Automation for Service Teams",
+      title: "AI Automation, Custom Software & Websites",
       description:
-        "Custom software, AI and WhatsApp automation, integrations, and reporting for construction and skilled trades, clinics, and independent car dealerships.",
+        "AI and business automation, custom software, websites, portals, and booking apps for construction and trades, clinics, and independent car dealerships.",
       keywords: [
-        "custom software for service businesses",
+        "AI automation for service businesses",
+        "custom business software",
         "construction workflow automation",
-        "clinic and dealership software",
+        "clinic booking and dealership lead software",
       ],
     },
     ar: {
-      title: "برمجيات مخصصة وأتمتة للفرق الخدمية",
+      title: "أتمتة ذكية وبرمجيات مخصصة ومواقع للأعمال",
       description:
-        "برمجيات مخصصة وأتمتة بالذكاء الاصطناعي وواتساب وتكاملات وتقارير للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة.",
+        "أتمتة أعمال بالذكاء الاصطناعي وبرمجيات مخصصة ومواقع وبوابات وتطبيقات حجز للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة.",
       keywords: [
-        "برمجيات مخصصة للشركات الخدمية",
+        "أتمتة أعمال للشركات الخدمية",
+        "برمجيات أعمال مخصصة",
         "أتمتة سير العمل لشركات المقاولات",
-        "برمجيات للعيادات ومعارض السيارات",
+        "برمجيات حجز للعيادات وإدارة عملاء معارض السيارات",
       ],
     },
   },
   services: {
     path: "/services",
     en: {
-      title: "Custom Software & Workflow Automation Services",
+      title: "AI Automation, Business Software & Websites",
       description:
-        "Explore custom web and mobile apps, internal portals, AI and workflow automation, WhatsApp lead flows, integrations, Power BI reporting, and support.",
+        "Explore AI and business automation, custom CRM, dashboards and internal tools, plus websites, customer portals, online booking, and web or mobile apps.",
       keywords: [
+        "AI business automation services",
+        "WhatsApp and email reply automation",
         "custom software development services",
-        "AI workflow automation services",
-        "WhatsApp lead automation",
-        "internal portal development",
-        "Power BI and systems integration",
+        "custom CRM and dashboard development",
+        "business websites and customer portals",
+        "online booking app development",
       ],
     },
     ar: {
-      title: "خدمات البرمجيات المخصصة وأتمتة سير العمل",
+      title: "خدمات أتمتة الأعمال والبرمجيات والمواقع",
       description:
-        "استكشف تطبيقات الويب والجوال والبوابات الداخلية وأتمتة سير العمل بالذكاء الاصطناعي ومسارات واتساب للعملاء المحتملين والتكاملات وتقارير Power BI والدعم.",
+        "استكشف أتمتة الأعمال بالذكاء الاصطناعي وأنظمة CRM واللوحات والأدوات الداخلية، إضافة إلى المواقع وبوابات العملاء والحجز وتطبيقات الويب والجوال.",
       keywords: [
+        "خدمات أتمتة الأعمال بالذكاء الاصطناعي",
+        "أتمتة ردود واتساب والبريد الإلكتروني",
         "خدمات تطوير البرمجيات المخصصة",
-        "خدمات أتمتة سير العمل بالذكاء الاصطناعي",
-        "أتمتة مسارات العملاء المحتملين عبر واتساب",
-        "تطوير بوابات داخلية",
-        "تكامل الأنظمة وتقارير Power BI",
+        "تطوير CRM ولوحات معلومات مخصصة",
+        "مواقع أعمال وبوابات عملاء",
+        "تطوير تطبيقات الحجز عبر الإنترنت",
       ],
     },
   },
@@ -195,45 +207,45 @@ const pageSeo = {
   whyUs: {
     path: "/why-us",
     en: {
-      title: "Direct Software Team: Clear Scope & Support",
+      title: "Software & Automation Agency: Scope Before Build",
       description:
-        "Work directly with the team that maps, scopes, builds, launches, and supports your workflow, with concrete deliverables and visible review points.",
+        "See how Servicely checks feasibility, maps workflows, writes the first-release scope, reviews working software, and plans launch, handover, and support.",
       keywords: [
-        "direct software builders",
-        "small technical software team",
-        "practical software partner",
+        "software automation agency",
+        "software feasibility and scope",
+        "custom software delivery process",
       ],
     },
     ar: {
-      title: "فريق برمجي تتعامل معه مباشرة",
+      title: "وكالة برمجيات وأتمتة: نطاق واضح قبل البناء",
       description:
-        "اعمل مباشرة مع الفريق الذي يرسم سير العمل ويحدد نطاقه ويبنيه ويطلقه ويدعمه، بمخرجات واضحة ونقاط مراجعة مرئية.",
+        "تعرف إلى طريقة Servicely في التحقق من الجدوى ورسم سير العمل وكتابة نطاق الإصدار الأول ومراجعة النظام والتخطيط للإطلاق والتسليم والدعم.",
       keywords: [
-        "فريق برمجي صغير",
-        "شريك برمجي عملي",
-        "تطوير أنظمة أعمال عملية",
+        "وكالة برمجيات وأتمتة",
+        "جدوى ونطاق البرمجيات",
+        "عملية تنفيذ برمجيات مخصصة",
       ],
     },
   },
   about: {
     path: "/about",
     en: {
-      title: "About Servicely: Software & Automation Builders",
+      title: "About Servicely: Automation, Software & Customer Platforms",
       description:
-        "Meet the hands-on team building custom software and automation for construction and trade businesses, clinics, independent dealerships, and other operators.",
+        "Learn how Servicely works as a software and automation agency delivering scoped systems and ongoing support for workflow-heavy businesses.",
       keywords: [
         "about Servicely",
-        "practical software partner",
+        "software and automation agency",
         "customer workflow software",
       ],
     },
     ar: {
-      title: "عن Servicely: فريق لبناء البرمجيات والأتمتة",
+      title: "عن Servicely: أتمتة وبرمجيات أعمال ومنصات للعملاء",
       description:
-        "تعرّف إلى الفريق العملي الذي يبني برمجيات مخصصة وأتمتة للمقاولات والخدمات الفنية والعيادات ومعارض السيارات المستقلة وغيرها من الفرق التشغيلية.",
+        "تعرّف إلى طريقة عمل Servicely كوكالة للبرمجيات والأتمتة تقدم أنظمة محددة النطاق ودعماً مستمراً للشركات كثيفة العمليات.",
       keywords: [
         "من نحن Servicely",
-        "شريك برمجي عملي",
+        "وكالة برمجيات وأتمتة",
         "برمجيات سير عمل العملاء",
       ],
     },
@@ -241,9 +253,9 @@ const pageSeo = {
   supportHosting: {
     path: "/support-hosting",
     en: {
-      title: "Software Support, Hosting & Maintenance Services",
+      title: "Post-launch Software Support, Hosting & Maintenance",
       description:
-        "Explore post-launch support, maintenance, monitoring, backups, deployment, and hosting options for custom apps, portals, automations, and websites.",
+        "Explore post-launch support, maintenance, monitoring, backups, deployment, and hosting options for systems delivered through a scoped Servicely project.",
       keywords: [
         "software support and hosting",
         "business system maintenance",
@@ -251,9 +263,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "خدمات دعم واستضافة وصيانة البرمجيات",
+      title: "دعم البرمجيات واستضافتها وصيانتها بعد الإطلاق",
       description:
-        "استكشف خيارات الدعم والصيانة والمراقبة والنسخ الاحتياطي والنشر والاستضافة للتطبيقات المخصصة والبوابات والأتمتة والمواقع بعد الإطلاق.",
+        "استكشف خيارات الدعم والصيانة والمراقبة والنسخ الاحتياطي والنشر والاستضافة للأنظمة المنفذة ضمن مشروع محدد النطاق مع Servicely.",
       keywords: [
         "دعم واستضافة الأنظمة",
         "صيانة أنظمة الأعمال",
@@ -287,9 +299,9 @@ const pageSeo = {
   privacy: {
     path: "/privacy",
     en: {
-      title: "Privacy Policy: Data Use, Security & Retention",
+      title: "Privacy & Data Notice: Outreach, Inquiries and Projects",
       description:
-        "Learn what project inquiry data Servicely collects, why it is used, how it is protected, how long it is retained and how to request access or deletion.",
+        "See how Servicely handles business outreach, website inquiries, contact channels, functional cookies, project and AI data, security, choices, and retention.",
       keywords: [
         "Servicely privacy policy",
         "project inquiry data security",
@@ -297,9 +309,9 @@ const pageSeo = {
       ],
     },
     ar: {
-      title: "سياسة الخصوصية: استخدام البيانات وأمنها والاحتفاظ بها",
+      title: "إشعار الخصوصية والبيانات: التواصل والاستفسارات والمشاريع",
       description:
-        "تعرف على بيانات استفسارات المشاريع التي تجمعها Servicely، وأسباب استخدامها، وكيفية حمايتها، ومدة الاحتفاظ بها، وطريقة طلب الوصول إليها أو حذفها.",
+        "تعرف إلى تعامل Servicely مع التواصل التجاري والاستفسارات وقنوات التواصل وملفات الارتباط الوظيفية وبيانات المشاريع والذكاء الاصطناعي والأمان والخيارات والاحتفاظ.",
       keywords: [
         "سياسة الخصوصية Servicely",
         "أمن بيانات استفسارات المشاريع",
@@ -307,6 +319,49 @@ const pageSeo = {
       ],
     },
   },
+} as const;
+
+const localizedServiceCatalog = {
+  en: [
+    {
+      id: "ai-business-automation",
+      name: "AI & Business Automation",
+      description:
+        "WhatsApp and email replies, lead follow-ups, reminders, document handling, and repetitive workflow automation.",
+    },
+    {
+      id: "custom-business-software",
+      name: "Custom Business Software",
+      description:
+        "Company dashboards, CRM systems, internal tools, booking systems, and operational platforms built around the business.",
+    },
+    {
+      id: "websites-customer-platforms",
+      name: "Websites & Customer Platforms",
+      description:
+        "Business websites, customer portals, online booking pages, and custom web or mobile applications.",
+    },
+  ],
+  ar: [
+    {
+      id: "ai-business-automation",
+      name: "الذكاء الاصطناعي وأتمتة الأعمال",
+      description:
+        "ردود واتساب والبريد الإلكتروني ومتابعة العملاء المحتملين والتذكيرات ومعالجة المستندات وأتمتة الأعمال المتكررة.",
+    },
+    {
+      id: "custom-business-software",
+      name: "برمجيات أعمال مخصصة",
+      description:
+        "لوحات معلومات وأنظمة CRM وأدوات داخلية وأنظمة حجز ومنصات تشغيلية مبنية حول العمل.",
+    },
+    {
+      id: "websites-customer-platforms",
+      name: "المواقع ومنصات العملاء",
+      description:
+        "مواقع أعمال وبوابات للعملاء وصفحات حجز عبر الإنترنت وتطبيقات ويب أو جوال مخصصة.",
+    },
+  ],
 } as const;
 
 export type SeoPageKey = keyof typeof pageSeo;
@@ -327,10 +382,11 @@ export function buildPageMetadata(page: SeoPageKey, locale: string): Metadata {
   const url = `${siteUrl}${localePath(localeKey, entry.path)}`;
   const socialImageAlt =
     localeKey === "ar"
-      ? "صورة Servicely التعريفية للبرمجيات المخصصة والأتمتة في الشركات الخدمية"
-      : "Servicely custom software and automation for workflow-heavy service businesses";
+      ? "صورة Servicely للذكاء الاصطناعي وأتمتة الأعمال وبرمجيات الأعمال ومنصات العملاء"
+      : "Servicely AI automation, custom business software and customer platforms";
 
   return {
+    metadataBase: new URL(siteUrl),
     title: seo.title,
     description: seo.description,
     keywords: [...localizedSite.keywords, ...seo.keywords],
@@ -427,6 +483,32 @@ export function buildPageStructuredData(page: SeoPageKey, locale: string) {
           item: url,
         },
       ],
+    });
+  }
+
+  if (page === "services") {
+    const services = localizedServiceCatalog[localeKey];
+    graph.push({
+      "@type": "ItemList",
+      "@id": `${url}#service-catalog`,
+      name:
+        localeKey === "ar"
+          ? "خدمات Servicely الأساسية"
+          : "Servicely core services",
+      numberOfItems: services.length,
+      itemListElement: services.map((service, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Service",
+          "@id": `${url}#${service.id}`,
+          name: service.name,
+          description: service.description,
+          url: `${url}#${service.id}`,
+          provider: { "@id": `${siteUrl}/#organization` },
+          areaServed: "Worldwide",
+        },
+      })),
     });
   }
 
